@@ -16,6 +16,7 @@ const featureLinks = features.map((f) => ({
 const links = [
   { label: "How it Works", href: "/how-it-works" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Blog", href: "/blog" },
   { label: "Roadmap", href: "/roadmap" },
 ];
 

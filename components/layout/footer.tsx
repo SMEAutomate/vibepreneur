@@ -53,6 +53,14 @@ export function Footer() {
                   Roadmap
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-sm text-neutral-500 hover:text-neutral-700"
+                >
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 
