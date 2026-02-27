@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -18,11 +19,17 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-100 bg-white/90 backdrop-blur-md">
       <nav className="container-content flex items-center justify-between px-6 py-4 sm:px-8 lg:px-12">
-        <Link
-          href="/"
-          className="text-lg font-bold tracking-tight text-neutral-900"
-        >
-          vibepreneur
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/logo.png"
+            alt="Vibepreneur"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
+          <span className="text-lg font-bold tracking-tight text-neutral-900">
+            vibepreneur
+          </span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">

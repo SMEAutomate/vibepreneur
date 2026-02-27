@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -6,11 +7,17 @@ export function Footer() {
       <div className="container-content px-6 py-16 sm:px-8 lg:px-12">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <Link
-              href="/"
-              className="text-lg font-bold tracking-tight text-neutral-900"
-            >
-              vibepreneur
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/logo.png"
+                alt="Vibepreneur"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
+              <span className="text-lg font-bold tracking-tight text-neutral-900">
+                vibepreneur
+              </span>
             </Link>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-neutral-500">
               Transform real-world experience into scalable solutions with
