@@ -1,3 +1,5 @@
+import type { ScreenCallout } from "@/components/marketing/annotated-screen-explainer";
+
 export interface FeatureCapability {
   icon: string;
   title: string;
@@ -14,6 +16,7 @@ export interface FeatureConfig {
   capabilities: FeatureCapability[];
   featuredScreen: string;
   screenNames: string[];
+  callouts?: ScreenCallout[];
 }
 
 export const features: FeatureConfig[] = [
@@ -151,6 +154,56 @@ export const features: FeatureConfig[] = [
       "ValuePropWorkshop",
       "ComparisonPageBuilder",
       "ICPDefinition",
+    ],
+    callouts: [
+      {
+        number: 1,
+        label: "Ideal Customer Profile",
+        description:
+          "Define exactly who you're building for — role, company size, and buying triggers.",
+        x: "8%",
+        y: "14%",
+      },
+      {
+        number: 2,
+        label: "Core Pains",
+        description:
+          "The specific problems your ICP faces, in their own words. Drives all messaging.",
+        x: "38%",
+        y: "14%",
+      },
+      {
+        number: 3,
+        label: "Promise",
+        description:
+          "Your one-sentence transformation statement — the outcome buyers pay for.",
+        x: "68%",
+        y: "14%",
+      },
+      {
+        number: 4,
+        label: "Differentiation",
+        description:
+          "What makes you different from alternatives. Not features — positioning angles.",
+        x: "8%",
+        y: "52%",
+      },
+      {
+        number: 5,
+        label: "Why Now",
+        description:
+          "The timing signal that creates urgency. Market shifts, regulatory changes, or emerging trends.",
+        x: "38%",
+        y: "52%",
+      },
+      {
+        number: 6,
+        label: "Competitive Landscape",
+        description:
+          "Named competitors with their specific gaps — your entry points.",
+        x: "68%",
+        y: "52%",
+      },
     ],
   },
   {

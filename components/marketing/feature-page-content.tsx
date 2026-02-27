@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AnimatedHeadline } from "@/components/ui/animated-headline";
 import { InlineScreenMock } from "./inline-screen-mock";
+import { AnnotatedScreenExplainer } from "./annotated-screen-explainer";
 import { FeatureScreenGallery } from "./feature-screen-gallery";
 import { mockScreens } from "@/lib/mockScreens";
 import type { FeatureConfig } from "@/content/features";
@@ -66,6 +67,16 @@ export function FeaturePageContent({ feature }: FeaturePageContentProps) {
             {feature.description}
           </motion.p>
         </div>
+
+        {/* Hero mockup */}
+        {featuredScreenData && (
+          <div className="mx-auto mt-12 max-w-5xl">
+            <InlineScreenMock
+              componentName={feature.featuredScreen}
+              caption={`${featuredScreenData.title} — ${featuredScreenData.description}`}
+            />
+          </div>
+        )}
       </Section>
 
       {/* Capabilities */}
@@ -108,15 +119,30 @@ export function FeaturePageContent({ feature }: FeaturePageContentProps) {
         </div>
       </Section>
 
-      {/* Featured Screen */}
+      {/* Annotated Screen Explainer (when callouts exist) or plain featured screen */}
       {featuredScreenData && (
         <Section>
-          <h2 className="text-center text-display-sm">See it in action</h2>
+          <h2 className="text-center text-display-sm">
+            {feature.callouts ? "How it works" : "See it in action"}
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-neutral-600">
+            {feature.callouts
+              ? `Every section of the ${featuredScreenData.title} serves a specific purpose.`
+              : featuredScreenData.description}
+          </p>
           <div className="mx-auto mt-12 max-w-5xl">
-            <InlineScreenMock
-              componentName={feature.featuredScreen}
-              caption={`${featuredScreenData.title} — ${featuredScreenData.description}`}
-            />
+            {feature.callouts ? (
+              <AnnotatedScreenExplainer
+                componentName={feature.featuredScreen}
+                callouts={feature.callouts}
+                title={featuredScreenData.title}
+              />
+            ) : (
+              <InlineScreenMock
+                componentName={feature.featuredScreen}
+                caption={`${featuredScreenData.title} — ${featuredScreenData.description}`}
+              />
+            )}
           </div>
         </Section>
       )}
