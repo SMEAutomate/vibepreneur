@@ -2,6 +2,7 @@ import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { howItWorksCopy } from "@/content/how-it-works";
 import { AnimatedTimeline } from "./animated-timeline";
+import { TechnicalPillars } from "./technical-pillars";
 import { StaggeredExamples } from "./staggered-examples";
 import type { Metadata } from "next";
 
@@ -50,6 +51,10 @@ export default function HowItWorksPage() {
       </Section>
 
       <Section background="light">
+        <TechnicalPillars />
+      </Section>
+
+      <Section>
         <h2 className="text-center text-display-sm">See it in action</h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-neutral-600">
           Two real examples of how professionals could turn their expertise into
