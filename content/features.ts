@@ -65,6 +65,48 @@ export const features: FeatureConfig[] = [
       "CompetitorRadar",
       "AIAssistant",
     ],
+    callouts: [
+      {
+        number: 1,
+        label: "Search & Filters",
+        description:
+          "Narrow by industry, urgency, or keyword to find the opportunities that match your background.",
+        x: "6%",
+        y: "12%",
+      },
+      {
+        number: 2,
+        label: "Opportunity Score",
+        description:
+          "Each opportunity scored 0–100 based on market size, urgency, and your personal fit.",
+        x: "6%",
+        y: "25%",
+      },
+      {
+        number: 3,
+        label: "Buyer & Industry Context",
+        description:
+          "See who actually pays and which industry vertical the opportunity belongs to.",
+        x: "35%",
+        y: "25%",
+      },
+      {
+        number: 4,
+        label: "Urgency Signal",
+        description:
+          "High, Medium, or Low — based on market timing, competitive density, and demand velocity.",
+        x: "72%",
+        y: "25%",
+      },
+      {
+        number: 5,
+        label: "Deep-Dive Action",
+        description:
+          "Click Explore to open the full opportunity detail — buyer profile, wedge strategy, and next steps.",
+        x: "85%",
+        y: "25%",
+      },
+    ],
   },
   {
     slug: "solution-builder",
@@ -108,6 +150,48 @@ export const features: FeatureConfig[] = [
       "PricingPackaging",
       "UserJourneyMap",
       "FeaturePrioritizer",
+    ],
+    callouts: [
+      {
+        number: 1,
+        label: "Offer Definition",
+        description:
+          "Name, one-line promise, and format — the foundation of your solution concept.",
+        x: "6%",
+        y: "14%",
+      },
+      {
+        number: 2,
+        label: "Core Features",
+        description:
+          "Numbered feature list with prioritisation. What you actually build first.",
+        x: "6%",
+        y: "48%",
+      },
+      {
+        number: 3,
+        label: "Buyer Outcomes",
+        description:
+          "Quantified results your buyer gets — the language that closes deals.",
+        x: "52%",
+        y: "14%",
+      },
+      {
+        number: 4,
+        label: "Pricing Tiers",
+        description:
+          "Suggested pricing based on value metrics, not feature checklists.",
+        x: "52%",
+        y: "48%",
+      },
+      {
+        number: 5,
+        label: "Solution Readiness",
+        description:
+          "Completeness score showing what's done and what's needed before launch.",
+        x: "52%",
+        y: "72%",
+      },
     ],
   },
   {
@@ -249,6 +333,56 @@ export const features: FeatureConfig[] = [
       "ICPDefinition",
       "RevenueProjection",
     ],
+    callouts: [
+      {
+        number: 1,
+        label: "Week 1 — Foundation",
+        description:
+          "Start with positioning content, landing page, and your first lead magnet.",
+        x: "4%",
+        y: "12%",
+      },
+      {
+        number: 2,
+        label: "Week 2 — Outreach",
+        description:
+          "Direct outreach to 50 target buyers plus content publishing for inbound.",
+        x: "27%",
+        y: "12%",
+      },
+      {
+        number: 3,
+        label: "Week 3 — Content Push",
+        description:
+          "Webinars, polls, and follow-ups to build momentum from initial conversations.",
+        x: "52%",
+        y: "12%",
+      },
+      {
+        number: 4,
+        label: "Week 4 — Conversion",
+        description:
+          "Convert leads to demos, publish comparison content, and run a traction review.",
+        x: "76%",
+        y: "12%",
+      },
+      {
+        number: 5,
+        label: "Task Status Tracking",
+        description:
+          "Every task has a status — done, in progress, or planned — so nothing falls through.",
+        x: "18%",
+        y: "55%",
+      },
+      {
+        number: 6,
+        label: "Resources & Budget",
+        description:
+          "Realistic estimates: time commitment, budget, and tools needed to execute.",
+        x: "4%",
+        y: "80%",
+      },
+    ],
   },
   {
     slug: "distribution",
@@ -295,6 +429,48 @@ export const features: FeatureConfig[] = [
       "ComparisonPageBuilder",
       "ReferralProgram",
       "SEOKeywordPlanner",
+    ],
+    callouts: [
+      {
+        number: 1,
+        label: "Channel Fit Score",
+        description:
+          "Each channel scored 0–100 based on your ICP, content style, and competitive density.",
+        x: "4%",
+        y: "12%",
+      },
+      {
+        number: 2,
+        label: "Stage Prioritisation",
+        description:
+          "Start here, Next, or Later — so you focus on what works now, not everything at once.",
+        x: "45%",
+        y: "12%",
+      },
+      {
+        number: 3,
+        label: "Effort Estimate",
+        description:
+          "Low, Medium, or High — realistic assessment of what each channel demands.",
+        x: "82%",
+        y: "12%",
+      },
+      {
+        number: 4,
+        label: "Channel Description",
+        description:
+          "Why this channel works (or doesn't) for your specific solution and market.",
+        x: "30%",
+        y: "35%",
+      },
+      {
+        number: 5,
+        label: "Recommended Sequence",
+        description:
+          "The suggested order to launch channels — start narrow, then expand as you learn.",
+        x: "4%",
+        y: "80%",
+      },
     ],
   },
   {
@@ -345,6 +521,40 @@ export const features: FeatureConfig[] = [
       "SocialProofCollector",
       "WinLossAnalysis",
       "RevenueProjection",
+    ],
+    callouts: [
+      {
+        number: 1,
+        label: "Key Metrics",
+        description:
+          "Signups, activations, demo requests, and conversion rate — the numbers that matter at your stage.",
+        x: "4%",
+        y: "8%",
+      },
+      {
+        number: 2,
+        label: "Traffic Sources",
+        description:
+          "Which channels drive visitors and signups, with conversion rates per source.",
+        x: "4%",
+        y: "38%",
+      },
+      {
+        number: 3,
+        label: "Experiment Results",
+        description:
+          "Structured tests with clear outcomes — Winners get scaled, losers get cut.",
+        x: "52%",
+        y: "38%",
+      },
+      {
+        number: 4,
+        label: "Next Growth Moves",
+        description:
+          "AI-suggested next actions based on what's working in your data right now.",
+        x: "4%",
+        y: "78%",
+      },
     ],
   },
 ];

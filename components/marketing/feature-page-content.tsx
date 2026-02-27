@@ -159,6 +159,7 @@ export function FeaturePageContent({ feature }: FeaturePageContentProps) {
           <div className="mt-12">
             <FeatureScreenGallery
               screens={galleryScreens as typeof mockScreens}
+              featureSlug={feature.slug}
             />
           </div>
         </Section>
