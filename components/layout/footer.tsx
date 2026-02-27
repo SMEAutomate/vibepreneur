@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { features } from "@/content/features";
 
 export function Footer() {
   return (
     <footer className="border-t border-neutral-100 bg-white">
       <div className="container-content px-6 py-16 sm:px-8 lg:px-12">
-        <div className="grid gap-12 md:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-5">
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2">
               <Image
@@ -52,6 +53,22 @@ export function Footer() {
                   Roadmap
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-neutral-900">Features</h4>
+            <ul className="mt-4 space-y-3">
+              {features.map((f) => (
+                <li key={f.slug}>
+                  <Link
+                    href={`/features/${f.slug}`}
+                    className="text-sm text-neutral-500 hover:text-neutral-700"
+                  >
+                    {f.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

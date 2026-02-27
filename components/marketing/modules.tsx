@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Section } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { siteCopy } from "@/content/copy";
+import { features } from "@/content/features";
 
 const icons = [
   <svg
@@ -85,27 +87,34 @@ export function Modules() {
     <Section id="modules" background="light">
       <h2 className="text-center text-display-sm">{modules.headline}</h2>
       <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {modules.items.map((item, i) => (
-          <motion.div
-            key={item.title}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-          >
-            <Card hover className="h-full">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
-                {icons[i]}
-              </div>
-              <h3 className="text-base font-semibold text-neutral-900">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-600">
-                {item.description}
-              </p>
-            </Card>
-          </motion.div>
-        ))}
+        {modules.items.map((item, i) => {
+          const feature = features.find((f) => f.name === item.title);
+          const href = feature ? `/features/${feature.slug}` : "#";
+
+          return (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+            >
+              <Link href={href} className="block h-full">
+                <Card hover className="h-full">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
+                    {icons[i]}
+                  </div>
+                  <h3 className="text-base font-semibold text-neutral-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                    {item.description}
+                  </p>
+                </Card>
+              </Link>
+            </motion.div>
+          );
+        })}
       </div>
     </Section>
   );
