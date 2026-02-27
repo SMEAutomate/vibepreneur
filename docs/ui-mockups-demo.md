@@ -8,7 +8,7 @@ Visit `/demo` locally or on the deployed site. The page is marked `noindex, nofo
 
 ## Features
 
-- **20 product screens** covering the full Insight → Solution → Positioning → GTM → Distribution → Growth flow
+- **40 product screens** covering the full Insight → Solution → Positioning → GTM → Distribution → Growth flow
 - **Search** — filter by screen title or tag
 - **Tag filters** — multi-select to narrow by category
 - **Density toggle** — comfortable (3-col) or compact (4-col) layout
@@ -16,7 +16,7 @@ Visit `/demo` locally or on the deployed site. The page is marked `noindex, nofo
 - **Full-screen preview modal** — click any card to open; supports keyboard navigation (← → Esc)
 - **"Include on site" toggle** — mark screens for the marketing site; persists in localStorage
 - **Copy notes** — copies screen title, description, tags, and inclusion status to clipboard
-- **Selected counter** — header shows "Selected: X/20"
+- **Selected counter** — header shows "Selected: X/40"
 
 ## File Structure
 
@@ -49,6 +49,26 @@ components/demo/
     RoadmapIteration.tsx          — #18
     WorkspaceSettings.tsx         — #19
     OnboardingFlow.tsx            — #20
+    ExpertiseAnalyzer.tsx         — #21
+    MarketSignals.tsx             — #22
+    CompetitorRadar.tsx           — #23
+    BuyerPersonaEditor.tsx        — #24
+    ObjectionHandler.tsx          — #25
+    ValuePropWorkshop.tsx         — #26
+    UserJourneyMap.tsx            — #27
+    FeaturePrioritizer.tsx        — #28
+    ComparisonPageBuilder.tsx     — #29
+    ICPDefinition.tsx             — #30
+    ChannelExperiments.tsx        — #31
+    ReferralProgram.tsx           — #32
+    SEOKeywordPlanner.tsx         — #33
+    SocialProofCollector.tsx      — #34
+    AIAssistant.tsx               — #35
+    ExportCenter.tsx              — #36
+    TeamWorkspace.tsx             — #37
+    NotificationCenter.tsx        — #38
+    WinLossAnalysis.tsx           — #39
+    RevenueProjection.tsx         — #40
 app/demo/
   layout.tsx                      — Standalone layout (no marketing nav/footer)
   page.tsx                        — Entry point

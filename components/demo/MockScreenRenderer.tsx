@@ -141,6 +141,146 @@ const screenComponents: Record<string, React.ComponentType> = {
       })),
     { loading: () => <ScreenLoading /> }
   ),
+  ExpertiseAnalyzer: dynamic(
+    () =>
+      import("./screens/ExpertiseAnalyzer").then((m) => ({
+        default: m.ExpertiseAnalyzer,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  MarketSignals: dynamic(
+    () =>
+      import("./screens/MarketSignals").then((m) => ({
+        default: m.MarketSignals,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CompetitorRadar: dynamic(
+    () =>
+      import("./screens/CompetitorRadar").then((m) => ({
+        default: m.CompetitorRadar,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  BuyerPersonaEditor: dynamic(
+    () =>
+      import("./screens/BuyerPersonaEditor").then((m) => ({
+        default: m.BuyerPersonaEditor,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  ObjectionHandler: dynamic(
+    () =>
+      import("./screens/ObjectionHandler").then((m) => ({
+        default: m.ObjectionHandler,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  ValuePropWorkshop: dynamic(
+    () =>
+      import("./screens/ValuePropWorkshop").then((m) => ({
+        default: m.ValuePropWorkshop,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  UserJourneyMap: dynamic(
+    () =>
+      import("./screens/UserJourneyMap").then((m) => ({
+        default: m.UserJourneyMap,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  FeaturePrioritizer: dynamic(
+    () =>
+      import("./screens/FeaturePrioritizer").then((m) => ({
+        default: m.FeaturePrioritizer,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  ComparisonPageBuilder: dynamic(
+    () =>
+      import("./screens/ComparisonPageBuilder").then((m) => ({
+        default: m.ComparisonPageBuilder,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  ICPDefinition: dynamic(
+    () =>
+      import("./screens/ICPDefinition").then((m) => ({
+        default: m.ICPDefinition,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  ChannelExperiments: dynamic(
+    () =>
+      import("./screens/ChannelExperiments").then((m) => ({
+        default: m.ChannelExperiments,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  ReferralProgram: dynamic(
+    () =>
+      import("./screens/ReferralProgram").then((m) => ({
+        default: m.ReferralProgram,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SEOKeywordPlanner: dynamic(
+    () =>
+      import("./screens/SEOKeywordPlanner").then((m) => ({
+        default: m.SEOKeywordPlanner,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SocialProofCollector: dynamic(
+    () =>
+      import("./screens/SocialProofCollector").then((m) => ({
+        default: m.SocialProofCollector,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  AIAssistant: dynamic(
+    () =>
+      import("./screens/AIAssistant").then((m) => ({
+        default: m.AIAssistant,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  ExportCenter: dynamic(
+    () =>
+      import("./screens/ExportCenter").then((m) => ({
+        default: m.ExportCenter,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  TeamWorkspace: dynamic(
+    () =>
+      import("./screens/TeamWorkspace").then((m) => ({
+        default: m.TeamWorkspace,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  NotificationCenter: dynamic(
+    () =>
+      import("./screens/NotificationCenter").then((m) => ({
+        default: m.NotificationCenter,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  WinLossAnalysis: dynamic(
+    () =>
+      import("./screens/WinLossAnalysis").then((m) => ({
+        default: m.WinLossAnalysis,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  RevenueProjection: dynamic(
+    () =>
+      import("./screens/RevenueProjection").then((m) => ({
+        default: m.RevenueProjection,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
 };
 
 function ScreenLoading() {

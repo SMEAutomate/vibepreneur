@@ -473,4 +473,444 @@ export const mockScreens: MockScreen[] = [
       },
     ],
   },
+  {
+    id: "expertise-analyzer",
+    title: "Expertise Analyzer",
+    description:
+      "Upload your CV or describe your role — the platform maps skills to market gaps and scores your fit.",
+    tags: ["Insight"],
+    componentName: "ExpertiseAnalyzer",
+    annotations: [
+      {
+        label: "Source input",
+        description: "CV upload, LinkedIn, or manual description",
+        x: "10%",
+        y: "20%",
+      },
+      {
+        label: "Gap matching",
+        description: "Skills mapped to underserved market segments",
+        x: "55%",
+        y: "45%",
+      },
+    ],
+  },
+  {
+    id: "market-signals",
+    title: "Market Signals",
+    description:
+      "Real-time demand intelligence: search trends, hiring signals, funding data, and complaint patterns.",
+    tags: ["Insight", "Growth"],
+    componentName: "MarketSignals",
+    annotations: [
+      {
+        label: "Signal feed",
+        description: "Curated signals from multiple data sources",
+        x: "10%",
+        y: "35%",
+      },
+      {
+        label: "Strength scoring",
+        description: "Not all signals are equal — strength helps prioritise",
+        x: "55%",
+        y: "20%",
+      },
+    ],
+  },
+  {
+    id: "competitor-radar",
+    title: "Competitor Radar",
+    description:
+      "Track competitors: strengths, weaknesses, pricing, threat level, and your competitive edge.",
+    tags: ["Insight", "Positioning"],
+    componentName: "CompetitorRadar",
+    annotations: [
+      {
+        label: "Threat level",
+        description: "Ranked by how directly they compete with you",
+        x: "70%",
+        y: "12%",
+      },
+      {
+        label: "Your edge",
+        description: "What you do better, distilled clearly",
+        x: "10%",
+        y: "75%",
+      },
+    ],
+  },
+  {
+    id: "buyer-persona-editor",
+    title: "Buyer Persona Editor",
+    description:
+      "Detailed personas: demographics, goals, pains, buying triggers, and where they hang out.",
+    tags: ["Positioning", "GTM"],
+    componentName: "BuyerPersonaEditor",
+    annotations: [
+      {
+        label: "Full profile",
+        description: "Every detail your GTM team needs",
+        x: "10%",
+        y: "20%",
+      },
+      {
+        label: "Completeness",
+        description: "Track how well-defined each persona is",
+        x: "70%",
+        y: "55%",
+      },
+    ],
+  },
+  {
+    id: "objection-handler",
+    title: "Objection Handler",
+    description:
+      "Pre-written responses for every buyer pushback, scored by confidence and frequency.",
+    tags: ["Positioning", "Distribution"],
+    componentName: "ObjectionHandler",
+    annotations: [
+      {
+        label: "Responses",
+        description: "Copy-ready answers grounded in your positioning",
+        x: "10%",
+        y: "35%",
+      },
+      {
+        label: "Confidence",
+        description: "How strong each response is — improve weak ones",
+        x: "70%",
+        y: "20%",
+      },
+    ],
+  },
+  {
+    id: "value-prop-workshop",
+    title: "Value Prop Workshop",
+    description:
+      "Generate and score multiple value proposition variants. Test them across channels.",
+    tags: ["Positioning"],
+    componentName: "ValuePropWorkshop",
+    annotations: [
+      {
+        label: "Variants",
+        description: "Outcome-led, pain-led, identity-led angles",
+        x: "10%",
+        y: "20%",
+      },
+      {
+        label: "Test plan",
+        description: "Where and how to validate each variant",
+        x: "10%",
+        y: "70%",
+      },
+    ],
+  },
+  {
+    id: "user-journey-map",
+    title: "User Journey Map",
+    description:
+      "Five-stage journey from stranger to advocate: touchpoints, emotions, and drop-off analysis.",
+    tags: ["Solution"],
+    componentName: "UserJourneyMap",
+    annotations: [
+      {
+        label: "Stages",
+        description: "Aware → Consider → Decide → Onboard → Expand",
+        x: "10%",
+        y: "15%",
+      },
+      {
+        label: "Drop-offs",
+        description: "Where you lose people and how to fix it",
+        x: "10%",
+        y: "75%",
+      },
+    ],
+  },
+  {
+    id: "feature-prioritizer",
+    title: "Feature Prioritizer",
+    description:
+      "Impact vs effort scoring for every feature. Quadrant-based recommendations for your MVP.",
+    tags: ["Solution", "Validation"],
+    componentName: "FeaturePrioritizer",
+    annotations: [
+      {
+        label: "Scoring",
+        description: "Visual impact and effort bars for quick comparison",
+        x: "10%",
+        y: "20%",
+      },
+      {
+        label: "Quadrants",
+        description: "Do first, quick win, schedule, or deprioritise",
+        x: "70%",
+        y: "15%",
+      },
+    ],
+  },
+  {
+    id: "comparison-page-builder",
+    title: "Comparison Page Builder",
+    description:
+      "Build SEO-optimised 'vs' pages with feature tables, meta, and performance tracking.",
+    tags: ["Distribution", "Positioning"],
+    componentName: "ComparisonPageBuilder",
+    annotations: [
+      {
+        label: "Feature table",
+        description: "Side-by-side comparison that sells your strengths",
+        x: "10%",
+        y: "20%",
+      },
+      {
+        label: "SEO meta",
+        description: "Title, description, and target keywords included",
+        x: "10%",
+        y: "60%",
+      },
+    ],
+  },
+  {
+    id: "icp-definition",
+    title: "ICP Definition",
+    description:
+      "Define your ideal customer: firmographics, technographics, intent signals, and disqualifiers.",
+    tags: ["GTM", "Positioning"],
+    componentName: "ICPDefinition",
+    annotations: [
+      {
+        label: "Firmographics",
+        description: "Size, revenue, industry, growth stage",
+        x: "10%",
+        y: "15%",
+      },
+      {
+        label: "Intent signals",
+        description: "How to spot ready buyers in the wild",
+        x: "55%",
+        y: "20%",
+      },
+    ],
+  },
+  {
+    id: "channel-experiments",
+    title: "Channel Experiments",
+    description:
+      "Run structured experiments across channels: hypothesis, metric, result, and scale/iterate/pivot.",
+    tags: ["Growth", "Validation"],
+    componentName: "ChannelExperiments",
+    annotations: [
+      {
+        label: "Experiments",
+        description: "Each one has a clear hypothesis and success metric",
+        x: "10%",
+        y: "30%",
+      },
+      {
+        label: "Decisions",
+        description: "Scale what works, iterate what shows promise",
+        x: "55%",
+        y: "20%",
+      },
+    ],
+  },
+  {
+    id: "referral-program",
+    title: "Referral Program",
+    description:
+      "Design your referral program: incentives, sharing channels, projections, and leaderboard.",
+    tags: ["Growth", "Distribution"],
+    componentName: "ReferralProgram",
+    annotations: [
+      {
+        label: "Incentives",
+        description: "Two-sided rewards that motivate sharing",
+        x: "10%",
+        y: "20%",
+      },
+      {
+        label: "Projections",
+        description: "Expected referrals, leads, and LTV:CAC ratio",
+        x: "55%",
+        y: "15%",
+      },
+    ],
+  },
+  {
+    id: "seo-keyword-planner",
+    title: "SEO Keyword Planner",
+    description:
+      "Keyword research with volume, difficulty, intent, and a 3-month content roadmap.",
+    tags: ["Distribution", "Growth"],
+    componentName: "SEOKeywordPlanner",
+    annotations: [
+      {
+        label: "Keywords",
+        description: "Ranked by volume, difficulty, and commercial intent",
+        x: "10%",
+        y: "30%",
+      },
+      {
+        label: "Roadmap",
+        description: "Phased content plan from quick wins to pillar content",
+        x: "10%",
+        y: "75%",
+      },
+    ],
+  },
+  {
+    id: "social-proof-collector",
+    title: "Social Proof Collector",
+    description:
+      "Collect, organise, and deploy testimonials across your marketing pages.",
+    tags: ["Growth", "Validation"],
+    componentName: "SocialProofCollector",
+    annotations: [
+      {
+        label: "Testimonials",
+        description: "Quotes with attribution, rating, and source",
+        x: "10%",
+        y: "30%",
+      },
+      {
+        label: "Deployment",
+        description: "Track where each testimonial is being used",
+        x: "55%",
+        y: "55%",
+      },
+    ],
+  },
+  {
+    id: "ai-assistant",
+    title: "AI Strategy Assistant",
+    description:
+      "Chat-based GTM co-pilot that knows your positioning, ICP, and current traction.",
+    tags: ["Insight", "Solution"],
+    componentName: "AIAssistant",
+    annotations: [
+      {
+        label: "Context-aware",
+        description: "Loaded with your positioning, persona, and results",
+        x: "70%",
+        y: "15%",
+      },
+      {
+        label: "Actionable",
+        description: "Answers tied to your specific GTM situation",
+        x: "10%",
+        y: "40%",
+      },
+    ],
+  },
+  {
+    id: "export-center",
+    title: "Export Center",
+    description:
+      "All your GTM assets in one place: briefs, plans, sequences, and landing pages.",
+    tags: ["Export", "Settings"],
+    componentName: "ExportCenter",
+    annotations: [
+      {
+        label: "All assets",
+        description: "Every exportable artifact from your workspace",
+        x: "10%",
+        y: "30%",
+      },
+      {
+        label: "Formats",
+        description: "PDF, CSV, HTML, Notion, clipboard — your choice",
+        x: "55%",
+        y: "40%",
+      },
+    ],
+  },
+  {
+    id: "team-workspace",
+    title: "Team Workspace",
+    description:
+      "Invite teammates, assign roles, track activity, and manage your GTM collaboration.",
+    tags: ["Settings"],
+    componentName: "TeamWorkspace",
+    annotations: [
+      {
+        label: "Roles",
+        description: "Owner, Editor, Viewer — control who does what",
+        x: "10%",
+        y: "20%",
+      },
+      {
+        label: "Activity",
+        description: "See who did what and when",
+        x: "70%",
+        y: "40%",
+      },
+    ],
+  },
+  {
+    id: "notification-center",
+    title: "Notification Center",
+    description:
+      "Activity feed with market signals, experiment results, team updates, and content reminders.",
+    tags: ["Settings"],
+    componentName: "NotificationCenter",
+    annotations: [
+      {
+        label: "Categories",
+        description: "Insights, growth, team, content, system",
+        x: "10%",
+        y: "10%",
+      },
+      {
+        label: "Actionable",
+        description: "Each notification links to the relevant screen",
+        x: "70%",
+        y: "35%",
+      },
+    ],
+  },
+  {
+    id: "win-loss-analysis",
+    title: "Win/Loss Analysis",
+    description:
+      "Track every deal outcome: reasons, channels, cycle length, and pattern analysis.",
+    tags: ["Validation", "Growth"],
+    componentName: "WinLossAnalysis",
+    annotations: [
+      {
+        label: "Outcomes",
+        description: "Won and lost deals with clear reasons",
+        x: "10%",
+        y: "30%",
+      },
+      {
+        label: "Patterns",
+        description: "Why you win and why you lose — distilled",
+        x: "10%",
+        y: "75%",
+      },
+    ],
+  },
+  {
+    id: "revenue-projection",
+    title: "Revenue Projection",
+    description:
+      "6-month MRR forecast with scenario modelling, assumptions, and growth visualisation.",
+    tags: ["Growth", "GTM"],
+    componentName: "RevenueProjection",
+    annotations: [
+      {
+        label: "MRR chart",
+        description: "Month-by-month revenue projection",
+        x: "10%",
+        y: "30%",
+      },
+      {
+        label: "Scenarios",
+        description: "Conservative, base, and optimistic models",
+        x: "10%",
+        y: "60%",
+      },
+    ],
+  },
 ];
