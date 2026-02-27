@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Nav } from "@/components/layout/nav";
-import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Vibepreneur — Future-Proof Your Skills. Build What the Market Needs.",
@@ -23,11 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans">
-        <Nav />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }

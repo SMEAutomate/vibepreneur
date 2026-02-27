@@ -1,0 +1,135 @@
+import { AppShell } from "../AppShell";
+
+export function SolutionBriefExport() {
+  return (
+    <AppShell
+      activeNav="Solutions"
+      title="Solution Brief"
+      subtitle="OnboardFlow — Ready to export"
+      actions={
+        <>
+          <button className="rounded-lg border border-neutral-200 px-4 py-2 text-xs font-medium text-neutral-600">
+            Copy link
+          </button>
+          <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
+            Export PDF
+          </button>
+        </>
+      }
+    >
+      <div className="mx-auto max-w-2xl">
+        <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+          <div className="border-b border-neutral-100 pb-6">
+            <p className="text-[10px] font-medium uppercase tracking-widest text-brand-600">
+              Solution Brief
+            </p>
+            <h2 className="mt-2 text-xl font-bold text-neutral-900">
+              OnboardFlow
+            </h2>
+            <p className="mt-1 text-sm text-neutral-500">
+              Cut onboarding time by 80% — without changing your existing tools.
+            </p>
+          </div>
+
+          <div className="mt-6 space-y-6">
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+                The Problem
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                HR teams at growing companies spend 12+ hours per week on
+                repetitive onboarding tasks. Manual processes create errors,
+                slow down new hires, and distract from strategic work.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+                Who It&apos;s For
+              </h3>
+              <p className="mt-2 text-sm text-neutral-600">
+                VP People Ops and HR leads at 50–200 person companies in tech
+                and professional services.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+                Positioning
+              </h3>
+              <p className="mt-2 text-sm text-neutral-600">
+                The only onboarding platform built for mid-market teams that
+                want enterprise-grade automation without enterprise-grade
+                complexity.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+                Key Proof Points
+              </h3>
+              <div className="mt-2 grid grid-cols-3 gap-3">
+                {[
+                  { value: "80%", label: "Time reduction" },
+                  { value: "0", label: "Missed steps" },
+                  { value: "+35", label: "NPS improvement" },
+                ].map((p) => (
+                  <div
+                    key={p.label}
+                    className="rounded-lg bg-neutral-50 p-3 text-center"
+                  >
+                    <p className="text-lg font-bold text-brand-700">
+                      {p.value}
+                    </p>
+                    <p className="mt-0.5 text-[10px] text-neutral-500">
+                      {p.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+                Pricing
+              </h3>
+              <p className="mt-2 text-sm text-neutral-600">
+                Starting at $49/mo for teams up to 50 employees. Growth and
+                Scale tiers available.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+                Scope
+              </h3>
+              <div className="mt-2 space-y-1">
+                {[
+                  "Document collection & e-signatures",
+                  "Tool provisioning workflows",
+                  "Training schedule builder",
+                  "Compliance checklist with audit trail",
+                  "New hire portal",
+                ].map((f) => (
+                  <div
+                    key={f}
+                    className="flex items-center gap-2 text-sm text-neutral-600"
+                  >
+                    <span className="h-1 w-1 rounded-full bg-brand-400" />
+                    {f}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 border-t border-neutral-100 pt-6">
+            <p className="text-[10px] text-neutral-400">
+              Generated by Vibepreneur · Last updated 27 Feb 2026
+            </p>
+          </div>
+        </div>
+      </div>
+    </AppShell>
+  );
+}
