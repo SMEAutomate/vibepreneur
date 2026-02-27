@@ -1,5 +1,6 @@
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
+import { InlineScreenMock } from "@/components/marketing/inline-screen-mock";
 import { howItWorksCopy } from "@/content/how-it-works";
 import { AnimatedTimeline } from "./animated-timeline";
 import { TechnicalPillars } from "./technical-pillars";
@@ -23,6 +24,13 @@ export default function HowItWorksPage() {
           <p className="mt-6 text-lg leading-relaxed text-neutral-600">
             {hero.subheadline}
           </p>
+        </div>
+
+        <div className="mx-auto mt-12 max-w-5xl">
+          <InlineScreenMock
+            componentName="HomeOverview"
+            caption="Your strategic dashboard: opportunities, GTM moves, and launch readiness at a glance."
+          />
         </div>
       </Section>
 

@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { InlineScreenMock } from "@/components/marketing/inline-screen-mock";
 import { roadmapColumns, weeklyUpdates } from "@/content/roadmap";
 
 const statusVariant: Record<string, "live" | "progress" | "planned"> = {
@@ -31,6 +32,13 @@ export function RoadmapContent() {
             We share what we&apos;re building, why, and what&apos;s coming next.
             No roadmaps locked behind a login.
           </p>
+        </div>
+
+        <div className="mx-auto mt-12 max-w-5xl">
+          <InlineScreenMock
+            componentName="RoadmapIteration"
+            caption="Track feature progress, plan iterations, and prioritise what ships next."
+          />
         </div>
       </Section>
 
