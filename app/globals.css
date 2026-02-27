@@ -29,3 +29,14 @@
     @apply mx-auto max-w-content;
   }
 }
+
+@layer utilities {
+  .bg-dotgrid {
+    background-image: radial-gradient(
+      circle,
+      theme(colors.neutral.200) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+}

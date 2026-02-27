@@ -1,30 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Counter } from "@/components/ui/counter";
 
 const metrics = [
   {
     label: "Opportunity Score",
-    value: "87",
+    value: 87,
     suffix: "/100",
+    display: "counter",
     color: "text-emerald-600",
   },
   {
     label: "Buyer Clarity",
-    value: "High",
+    value: 0,
     suffix: "",
+    display: "High",
     color: "text-brand-600",
   },
   {
     label: "Channel Fit",
-    value: "3 strong",
+    value: 0,
     suffix: "",
+    display: "3 strong",
     color: "text-brand-600",
   },
   {
     label: "Launch Readiness",
-    value: "72%",
-    suffix: "",
+    value: 72,
+    suffix: "%",
+    display: "counter",
     color: "text-amber-600",
   },
 ];
@@ -68,10 +73,11 @@ export function DashboardMock() {
                 {metric.label}
               </p>
               <p className={`mt-1 text-lg font-bold ${metric.color}`}>
-                {metric.value}
-                <span className="text-xs font-normal text-neutral-400">
-                  {metric.suffix}
-                </span>
+                {metric.display === "counter" ? (
+                  <Counter target={metric.value} suffix={metric.suffix} />
+                ) : (
+                  metric.display
+                )}
               </p>
             </motion.div>
           ))}

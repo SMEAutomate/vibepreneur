@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,21 +32,28 @@ export function BuildingInPublic() {
       </div>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {[...nowItems, ...nextItems].slice(0, 3).map((item) => (
-          <div
+        {[...nowItems, ...nextItems].slice(0, 3).map((item, i) => (
+          <motion.div
             key={item.title}
-            className="rounded-lg border border-neutral-100 p-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ delay: i * 0.08, duration: 0.4 }}
           >
-            <div className="flex items-center justify-between">
-              <h4 className="text-sm font-semibold text-neutral-900">
-                {item.title}
-              </h4>
-              <Badge variant={statusBadge[item.status]}>
-                {statusLabel[item.status]}
-              </Badge>
+            <div className="rounded-lg border border-neutral-100 bg-white p-4">
+              <div className="flex items-center justify-between">
+                <h4 className="text-sm font-semibold text-neutral-900">
+                  {item.title}
+                </h4>
+                <Badge variant={statusBadge[item.status]}>
+                  {statusLabel[item.status]}
+                </Badge>
+              </div>
+              <p className="mt-2 text-xs text-neutral-500">
+                {item.description}
+              </p>
             </div>
-            <p className="mt-2 text-xs text-neutral-500">{item.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
