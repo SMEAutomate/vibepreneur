@@ -112,7 +112,12 @@ export function BlogPostArticle({ post }: { post: BlogPost }) {
           )}
           {i === pullquoteIndex && <PullQuote text={post.pullquote} />}
           <motion.p
-            className={`mb-6 text-lg leading-[1.8] text-neutral-600${i === 0 ? "blog-drop-cap" : ""}`}
+            className={[
+              "mb-6 text-lg leading-[1.8] text-neutral-600",
+              i === 0 && "blog-drop-cap",
+            ]
+              .filter(Boolean)
+              .join(" ")}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
