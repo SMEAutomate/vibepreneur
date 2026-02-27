@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Section } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { InlineScreenMock } from "@/components/marketing/inline-screen-mock";
 import { pricingTiers, pricingFaq } from "@/content/pricing";
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
@@ -60,13 +59,6 @@ export default function PricingPage() {
           <p className="mt-4 text-lg text-neutral-600">
             Start free. Scale as you build and launch more solutions.
           </p>
-        </div>
-
-        <div className="mx-auto mt-12 max-w-5xl">
-          <InlineScreenMock
-            componentName="PricingPackaging"
-            caption="Define your pricing model, packaging, and revenue projections in one place."
-          />
         </div>
       </Section>
 
