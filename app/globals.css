@@ -28,6 +28,10 @@
   .container-content {
     @apply mx-auto max-w-content;
   }
+
+  .blog-drop-cap::first-letter {
+    @apply float-left mr-2 text-5xl font-bold leading-none text-brand-700;
+  }
 }
 
 @layer utilities {

@@ -6,6 +6,13 @@ export interface BlogPost {
   excerpt: string;
   readTime: string;
   body: string[];
+  pullquote: string;
+  steps?: { label: string; text: string }[];
+  comparison?: {
+    left: string;
+    right: string;
+    items: { left: string; right: string }[];
+  };
 }
 
 export const blogPosts: BlogPost[] = [
@@ -29,6 +36,27 @@ export const blogPosts: BlogPost[] = [
       "The goal of week one is not to have a business. The goal is to stop thinking like a job seeker and start thinking like someone who solves problems for a market. That shift changes everything that follows.",
       "Most displaced professionals spend their first week refreshing job boards. The ones who recover fastest spend it identifying what the market actually needs from someone with their specific experience.",
     ],
+    pullquote:
+      "The goal of week one is not to have a business. The goal is to stop thinking like a job seeker and start thinking like someone who solves problems for a market.",
+    steps: [
+      {
+        label: "Day 1-2",
+        text: "Grieve, then audit every problem you have solved professionally",
+      },
+      {
+        label: "Day 3-4",
+        text: "Research demand for those problems across industries",
+      },
+      {
+        label: "Day 5",
+        text: "Identify three opportunities with visible demand",
+      },
+      { label: "Day 6", text: "Talk to five people who fit the buyer profile" },
+      {
+        label: "Day 7",
+        text: "Pick one opportunity to validate over the next three weeks",
+      },
+    ],
   },
   {
     slug: "30-day-plan-replace-salary",
@@ -50,6 +78,22 @@ export const blogPosts: BlogPost[] = [
       "By day 30, you should have one paying client, a documented process, and a clear understanding of whether this business can scale. That is more progress than most people make in six months of job searching.",
       "This plan works because it leverages what you already have: professional knowledge, an industry network, and the ability to solve complex problems. You are not starting from zero. You are redirecting skills that someone already paid you to develop.",
     ],
+    pullquote: "Replacing a salary sounds impossible until you break it down.",
+    steps: [
+      {
+        label: "Week 1",
+        text: "Validate the problem with ten potential buyers",
+      },
+      {
+        label: "Week 2",
+        text: "Package the solution in a one-page offer document",
+      },
+      { label: "Week 3", text: "Sell before you build. Get one paid pilot." },
+      {
+        label: "Week 4",
+        text: "Deliver, document every step, and systematise",
+      },
+    ],
   },
   {
     slug: "learning-tools-vs-building-assets",
@@ -70,6 +114,29 @@ export const blogPosts: BlogPost[] = [
       "This does not mean you should never learn new tools. It means you should learn them in service of building an asset. Learn Webflow because you are building a landing page for your service. Learn automation tools because you are productising your consulting. The tool serves the asset, not the other way around.",
       "The professionals who recover fastest from AI displacement are the ones who spend 80% of their time building assets and 20% learning just enough tooling to support those assets. The ones who struggle are still taking courses six months later, waiting to feel ready.",
     ],
+    pullquote: "Tools make you employable. Assets make you independent.",
+    comparison: {
+      left: "Learning Tools",
+      right: "Building Assets",
+      items: [
+        {
+          left: "Skills with a shelf life",
+          right: "Value that compounds over time",
+        },
+        {
+          left: "Someone else decides your worth",
+          right: "The market decides your worth",
+        },
+        {
+          left: "Requires your presence to earn",
+          right: "Generates revenue while you sleep",
+        },
+        {
+          left: "Certification courses, tutorials",
+          right: "Products, content libraries, email lists",
+        },
+      ],
+    },
   },
   {
     slug: "not-technical-is-your-advantage",
@@ -90,6 +157,30 @@ export const blogPosts: BlogPost[] = [
       "If you have spent ten or fifteen years in a domain and you call yourself 'non-technical,' you are dramatically undervaluing your position. You are not missing a skill. You have the skill that matters most, and the technical gap that used to hold you back has been closed by the same technology that displaced you.",
       "The irony is real: AI eliminated your role and simultaneously made your domain expertise more valuable than ever. The question is whether you will use it.",
     ],
+    pullquote:
+      "AI eliminated your role and simultaneously made your domain expertise more valuable than ever.",
+    comparison: {
+      left: "Technical Skills",
+      right: "Domain Expertise",
+      items: [
+        {
+          left: "Increasingly automated by AI",
+          right: "Cannot be replicated by any model",
+        },
+        {
+          left: "Generic and transferable",
+          right: "Built from years inside an industry",
+        },
+        {
+          left: "Knowing how to build",
+          right: "Knowing what to build and for whom",
+        },
+        {
+          left: "Commoditised and competitive",
+          right: "Irreplaceable context and insight",
+        },
+      ],
+    },
   },
   {
     slug: "pick-business-idea-low-confidence",
@@ -110,6 +201,30 @@ export const blogPosts: BlogPost[] = [
       "Step five: pick the problem where conversations were easiest and buyers were most frustrated. Not the one that excites you most. Not the one with the biggest market. The one where real people told you real things about a real problem and you understood exactly what they meant.",
       "This framework works because it externalises the decision. You are not asking 'what am I confident enough to do?' You are asking 'where does the market need someone with my exact experience?' Confidence follows from seeing demand for what you already know.",
     ],
+    pullquote:
+      "Confidence is a lagging indicator. It follows action, not the other way around.",
+    steps: [
+      {
+        label: "Step 1",
+        text: "List ten problems you have solved for employers with measurable results",
+      },
+      {
+        label: "Step 2",
+        text: "Search for people currently complaining about those problems",
+      },
+      {
+        label: "Step 3",
+        text: "Rank by demand, competition, and fit. Score and multiply.",
+      },
+      {
+        label: "Step 4",
+        text: "Have five research conversations about your top-ranked problem",
+      },
+      {
+        label: "Step 5",
+        text: "Pick where conversations were easiest and buyers most frustrated",
+      },
+    ],
   },
   {
     slug: "employee-operator-owner",
@@ -128,6 +243,22 @@ export const blogPosts: BlogPost[] = [
       "AI has accelerated this ladder. The employee rung is getting shorter as companies need fewer people to do the same work. But the operator and owner rungs are getting more accessible because the tools to build, automate, and distribute are cheaper and more powerful than ever.",
       "If you have just been displaced from the employee rung, do not try to climb back onto it at a different company. The rung is getting shorter everywhere. Instead, use your severance period to jump to operator. It is a harder transition but a more durable position.",
       "The most important thing to understand about this ladder is that each rung requires a different mindset. Employees optimise for performance within a system. Operators optimise for building a system. Owners optimise for building systems that build systems. The skills transfer, but the focus changes at each level.",
+    ],
+    pullquote:
+      "The employee rung is getting shorter. The operator and owner rungs are getting more accessible.",
+    steps: [
+      {
+        label: "Employee",
+        text: "Trade time for salary. Someone else owns the system.",
+      },
+      {
+        label: "Operator",
+        text: "Run a system that generates revenue with leverage.",
+      },
+      {
+        label: "Owner",
+        text: "Own the assets, customer relationships, and IP.",
+      },
     ],
   },
   {
@@ -148,6 +279,7 @@ export const blogPosts: BlogPost[] = [
       "For LinkedIn: update your headline to '[Problem] Consultant | Helping [buyer] achieve [outcome].' Remove the 'Open to Work' banner unless you genuinely want a traditional role. Your profile should look like someone who chose this path, because you did.",
       "The confidence in your explanation will grow over time. But even at the start, using specific language about the problem you solve and the buyer you serve signals competence. People trust specificity. 'I help mid-market finance teams cut their monthly close from 15 days to 5' is a hundred times more powerful than 'I am exploring my options.'",
     ],
+    pullquote: "People trust specificity.",
   },
   {
     slug: "cv-to-business-ideas",
@@ -169,6 +301,26 @@ export const blogPosts: BlogPost[] = [
       "The CV exercise works because it grounds your thinking in evidence rather than aspiration. You are not inventing problems. You are recognising ones you have already solved. The market is already paying people to address these issues. The question is whether you can capture some of that spend independently.",
       "One final note: the best business idea from your CV is rarely the one that excites you most. It is the one where your expertise creates the widest gap between you and anyone else trying to solve the same problem. Excitement fades. Competitive advantage compounds.",
     ],
+    pullquote:
+      "The best business idea from your CV is rarely the one that excites you most.",
+    steps: [
+      {
+        label: "Filter 1",
+        text: "Universality: does this problem exist at 50+ companies?",
+      },
+      {
+        label: "Filter 2",
+        text: "Pain intensity: how much does it cost in money, time, or reputation?",
+      },
+      {
+        label: "Filter 3",
+        text: "Existing solutions: zero means no market, ten mediocre means opportunity",
+      },
+      {
+        label: "Filter 4",
+        text: "Your edge: what would take an outsider two years to learn?",
+      },
+    ],
   },
   {
     slug: "stop-applying-for-jobs",
@@ -188,6 +340,29 @@ export const blogPosts: BlogPost[] = [
       "The professionals who recover fastest in 2026 are the ones running both tracks simultaneously. They apply for select roles that genuinely fit their expertise, while also exploring independent paths. They treat the job search as one option, not the only option.",
       "The worst outcome is not failing to start a business. The worst outcome is spending six months in the application cycle, burning through savings and confidence, only to accept a role that pays 30% less and gets automated two years later. The default path is not safe. It just feels familiar.",
     ],
+    pullquote: "The default path is not safe. It just feels familiar.",
+    comparison: {
+      left: "Apply for Jobs",
+      right: "Build Something",
+      items: [
+        {
+          left: "Compete with AI-generated applications",
+          right: "Build direct relationships with buyers",
+        },
+        {
+          left: "Race to the bottom on salary",
+          right: "Set your own value in the market",
+        },
+        {
+          left: "One option, all-or-nothing",
+          right: "Parallel track alongside selective applications",
+        },
+        {
+          left: "Risk: accept 30% less, get automated again",
+          right: "Risk: spend weeks validating, learn the market",
+        },
+      ],
+    },
   },
   {
     slug: "weekly-operating-system-pivot",
@@ -208,6 +383,29 @@ export const blogPosts: BlogPost[] = [
       "Friday is reflection day. Spend 30 minutes reviewing the week. What worked? What did you avoid? What conversations surprised you? Write three goals for next week based on what you learned. Then stop working. Rest is not optional in a pivot. Burnout kills more businesses than bad ideas do.",
       "This system works because it is simple enough to follow when you are exhausted and structured enough to compound over time. Five outreach messages per week does not feel like much. But after four weeks, you have had 20 conversations. After eight weeks, 40. That is more market validation than most startups do in a year.",
       "The goal is not intensity. The goal is consistency. A calm, repeatable weekly rhythm that moves you forward without requiring motivation, confidence, or inspiration. Those things come later, as a byproduct of the progress you have already made.",
+    ],
+    pullquote: "The goal is not intensity. The goal is consistency.",
+    steps: [
+      {
+        label: "Monday",
+        text: "Research: read industry forums, LinkedIn, competitor sites",
+      },
+      {
+        label: "Tuesday",
+        text: "Outreach: send five genuine messages to potential buyers",
+      },
+      {
+        label: "Wednesday",
+        text: "Build: work on your product, service, or content",
+      },
+      {
+        label: "Thursday",
+        text: "Follow-up: reply, thank, adjust based on conversations",
+      },
+      {
+        label: "Friday",
+        text: "Reflect: review the week, write three goals for next week",
+      },
     ],
   },
 ];

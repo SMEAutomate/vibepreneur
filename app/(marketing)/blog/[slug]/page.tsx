@@ -1,8 +1,11 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { blogPosts, getBlogPostBySlug } from "@/content/blog";
+import { ReadingProgress } from "./reading-progress";
+import { BlogPostArticle } from "./blog-post-article";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -30,8 +33,29 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <ReadingProgress />
+
       <Section>
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-[680px]">
+          <Link
+            href="/blog"
+            className="mb-6 inline-flex items-center gap-1.5 text-sm text-neutral-400 transition-colors hover:text-neutral-600"
+          >
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+              />
+            </svg>
+            All articles
+          </Link>
           <span className="inline-block rounded-full bg-brand-50 px-3 py-0.5 text-xs font-medium text-brand-700">
             {post.category}
           </span>
@@ -50,13 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
       </Section>
 
       <Section background="light">
-        <div className="mx-auto max-w-3xl space-y-6">
-          {post.body.map((paragraph, i) => (
-            <p key={i} className="leading-relaxed text-neutral-600">
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        <BlogPostArticle post={post} />
       </Section>
 
       <Section background="brand">
