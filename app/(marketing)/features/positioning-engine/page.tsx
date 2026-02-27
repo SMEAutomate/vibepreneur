@@ -5,7 +5,7 @@ import { FeaturePageContent } from "@/components/marketing/feature-page-content"
 const feature = features.find((f) => f.slug === "positioning-engine")!;
 
 export const metadata: Metadata = {
-  title: `${feature.name} — Vibepreneur`,
+  title: `${feature.name} | Vibepreneur`,
   description: feature.description,
 };
 

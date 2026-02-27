@@ -1,8 +1,8 @@
-# Vibepreneur — Strategic Dashboard Mock Specification
+# Vibepreneur. Strategic Dashboard Mock Specification
 
 ## Overview
 
-The dashboard mock is a visual component shown in the homepage hero section. It represents the Vibepreneur platform's strategic output — not a technical admin panel but a decision-making interface for professionals building solutions from their expertise.
+The dashboard mock is a visual component shown in the homepage hero section. It represents the Vibepreneur platform's strategic output. not a technical admin panel but a decision-making interface for professionals building solutions from their expertise.
 
 ## Design Philosophy
 
@@ -60,7 +60,7 @@ The dashboard mock is a visual component shown in the homepage hero section. It 
 
 These are planned for the full platform but not shown in the mock:
 
-- **Traction Velocity** — Week-over-week growth in early signals (signups, replies, conversations)
-- **Competitive Position** — Where the solution sits relative to alternatives
-- **Revenue Readiness** — How close the solution is to monetisation
-- **Growth Loop Health** — Whether sustainable growth mechanics are in place
+- **Traction Velocity**. Week-over-week growth in early signals (signups, replies, conversations)
+- **Competitive Position**. Where the solution sits relative to alternatives
+- **Revenue Readiness**. How close the solution is to monetisation
+- **Growth Loop Health**. Whether sustainable growth mechanics are in place

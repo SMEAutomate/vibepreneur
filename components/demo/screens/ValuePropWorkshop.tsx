@@ -53,7 +53,7 @@ export function ValuePropWorkshop() {
     <AppShell
       activeNav="Positioning"
       title="Value Prop Workshop"
-      subtitle="OnboardFlow — Test and refine your core message"
+      subtitle="OnboardFlow. Test and refine your core message"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Generate variants

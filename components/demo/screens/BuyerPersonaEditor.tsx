@@ -5,7 +5,7 @@ export function BuyerPersonaEditor() {
     <AppShell
       activeNav="Positioning"
       title="Buyer Persona Editor"
-      subtitle="OnboardFlow — Know exactly who you're selling to"
+      subtitle="OnboardFlow. Know exactly who you're selling to"
       actions={
         <>
           <button className="rounded-lg border border-neutral-200 px-4 py-2 text-xs font-medium text-neutral-600">

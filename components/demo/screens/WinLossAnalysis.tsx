@@ -32,8 +32,8 @@ const deals = [
     company: "CloudBase",
     size: "67 employees",
     outcome: "Lost",
-    value: "—",
-    reason: "Chose Rippling — wanted all-in-one HR platform",
+    value: "-",
+    reason: "Chose Rippling. wanted all-in-one HR platform",
     channel: "Referral",
     cycle: "30 days",
   },
@@ -41,8 +41,8 @@ const deals = [
     company: "GrowthCo",
     size: "45 employees",
     outcome: "Lost",
-    value: "—",
-    reason: "Too small — decided to keep manual process for now",
+    value: "-",
+    reason: "Too small. decided to keep manual process for now",
     channel: "Website",
     cycle: "14 days",
   },
@@ -50,8 +50,8 @@ const deals = [
     company: "InnovateLab",
     size: "178 employees",
     outcome: "Lost",
-    value: "—",
-    reason: "Budget frozen — interested but timing wrong",
+    value: "-",
+    reason: "Budget frozen. interested but timing wrong",
     channel: "LinkedIn DM",
     cycle: "45 days",
   },
@@ -62,7 +62,7 @@ export function WinLossAnalysis() {
     <AppShell
       activeNav="Growth"
       title="Win/Loss Analysis"
-      subtitle="OnboardFlow — Learn from every outcome"
+      subtitle="OnboardFlow. Learn from every outcome"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Log deal
@@ -146,7 +146,7 @@ export function WinLossAnalysis() {
             {[
               "Buyers wanting all-in-one HR suite (not our play)",
               "Companies too small for automation ROI",
-              "Budget timing — not a product issue",
+              "Budget timing. not a product issue",
             ].map((r) => (
               <li
                 key={r}

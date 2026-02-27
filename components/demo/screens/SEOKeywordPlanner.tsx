@@ -6,7 +6,7 @@ const keywords = [
     volume: "4,400",
     difficulty: 42,
     intent: "Commercial",
-    position: "—",
+    position: "-",
     content: "Pillar page",
   },
   {
@@ -22,7 +22,7 @@ const keywords = [
     volume: "2,900",
     difficulty: 38,
     intent: "Commercial",
-    position: "—",
+    position: "-",
     content: "Landing page",
   },
   {
@@ -30,7 +30,7 @@ const keywords = [
     volume: "1,600",
     difficulty: 31,
     intent: "Commercial",
-    position: "—",
+    position: "-",
     content: "Comparison page",
   },
   {
@@ -46,7 +46,7 @@ const keywords = [
     volume: "6,600",
     difficulty: 33,
     intent: "Informational",
-    position: "—",
+    position: "-",
     content: "Template kit (lead magnet)",
   },
   {
@@ -62,7 +62,7 @@ const keywords = [
     volume: "720",
     difficulty: 14,
     intent: "Informational",
-    position: "—",
+    position: "-",
     content: "Timely blog post",
   },
 ];
@@ -79,7 +79,7 @@ export function SEOKeywordPlanner() {
     <AppShell
       activeNav="Distribution"
       title="SEO Keyword Planner"
-      subtitle="OnboardFlow — Organic growth strategy"
+      subtitle="OnboardFlow. Organic growth strategy"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Export plan

@@ -5,7 +5,7 @@ export function SolutionBriefExport() {
     <AppShell
       activeNav="Solutions"
       title="Solution Brief"
-      subtitle="OnboardFlow — Ready to export"
+      subtitle="OnboardFlow. Ready to export"
       actions={
         <>
           <button className="rounded-lg border border-neutral-200 px-4 py-2 text-xs font-medium text-neutral-600">
@@ -27,7 +27,7 @@ export function SolutionBriefExport() {
               OnboardFlow
             </h2>
             <p className="mt-1 text-sm text-neutral-500">
-              Cut onboarding time by 80% — without changing your existing tools.
+              Cut onboarding time by 80%. without changing your existing tools.
             </p>
           </div>
 

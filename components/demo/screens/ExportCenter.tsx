@@ -84,7 +84,7 @@ export function ExportCenter() {
     <AppShell
       activeNav="Settings"
       title="Export Center"
-      subtitle="OnboardFlow — All your assets in one place"
+      subtitle="OnboardFlow. All your assets in one place"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Export all

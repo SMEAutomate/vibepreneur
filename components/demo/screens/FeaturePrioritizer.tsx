@@ -71,7 +71,7 @@ export function FeaturePrioritizer() {
     <AppShell
       activeNav="Solutions"
       title="Feature Prioritizer"
-      subtitle="OnboardFlow — Impact vs effort scoring"
+      subtitle="OnboardFlow. Impact vs effort scoring"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Add feature

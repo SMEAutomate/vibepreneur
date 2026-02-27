@@ -43,7 +43,7 @@ export function GrowthDashboard() {
     <AppShell
       activeNav="Growth"
       title="Growth Dashboard"
-      subtitle="OnboardFlow — Last 30 days"
+      subtitle="OnboardFlow. Last 30 days"
     >
       <div className="grid gap-4 md:grid-cols-4">
         {metrics.map((m) => (

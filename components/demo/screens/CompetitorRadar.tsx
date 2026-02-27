@@ -46,7 +46,7 @@ export function CompetitorRadar() {
     <AppShell
       activeNav="Insights"
       title="Competitor Radar"
-      subtitle="OnboardFlow — Know your landscape"
+      subtitle="OnboardFlow. Know your landscape"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Add competitor
@@ -128,7 +128,7 @@ export function CompetitorRadar() {
           {[
             "Purpose-built for mid-market (50–200 employees)",
             "Works with existing tools, not instead of them",
-            "Visible ROI from day one — no 6-month rollout",
+            "Visible ROI from day one. no 6-month rollout",
           ].map((edge, i) => (
             <div
               key={edge}

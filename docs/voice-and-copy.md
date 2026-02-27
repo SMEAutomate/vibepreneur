@@ -1,4 +1,4 @@
-# Vibepreneur — Editorial Voice & Copy Guidelines
+# Vibepreneur. Editorial Voice & Copy Guidelines
 
 ## Voice
 
@@ -106,4 +106,4 @@ Emails are sharper than web copy. They read like strategic memos from someone wh
 - Get to the point in the first paragraph
 - Include one actionable insight the reader can use regardless of whether they buy
 - Close with subtle product mention (never more than 2 sentences)
-- Sign off consistently: "See you next week. — The Vibepreneur Team"
+- Sign off consistently: "See you next week.. The Vibepreneur Team"

@@ -48,7 +48,7 @@ export function SocialProofCollector() {
     <AppShell
       activeNav="Growth"
       title="Social Proof Collector"
-      subtitle="OnboardFlow — Testimonials and social proof"
+      subtitle="OnboardFlow. Testimonials and social proof"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Request testimonial

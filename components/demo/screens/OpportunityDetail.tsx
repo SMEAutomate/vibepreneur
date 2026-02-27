@@ -50,7 +50,7 @@ export function OpportunityDetail() {
             </h2>
             <div className="mt-4 space-y-3">
               {[
-                "Growing companies are hiring 5–10 people/month — pain compounds fast",
+                "Growing companies are hiring 5–10 people/month. pain compounds fast",
                 "Remote-first policies make manual handoffs even harder",
                 "Compliance requirements tightening in 2026 across multiple sectors",
               ].map((signal) => (

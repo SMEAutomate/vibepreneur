@@ -2,7 +2,7 @@ export const siteCopy = {
   hero: {
     headline: "Future-Proof Your Skills. Build What the Market Needs.",
     subheadline:
-      "Vibepreneur helps professionals transform real-world experience into scalable solutions — and brings them to market with structured go-to-market and growth systems built in.",
+      "Vibepreneur helps professionals transform real-world experience into scalable solutions and brings them to market with structured go-to-market and growth systems built in.",
     ctaPrimary: "Join the Waitlist",
     ctaSecondary: "See How It Works",
     trustLine: "Early access launching soon.",
@@ -10,7 +10,7 @@ export const siteCopy = {
 
   theShift: {
     headline: "The advantage is no longer experience alone. It's ownership.",
-    body: "You already know where workflows break, where teams waste time, and what buyers actually need. That knowledge has value — but only if you act on it. Vibepreneur helps you package that insight into scalable solutions, position them for the right buyers, and bring them to market with a structured system.",
+    body: "You already know where workflows break, where teams waste time, and what buyers actually need. That knowledge has value, but only if you act on it. Vibepreneur helps you package that insight into scalable solutions, position them for the right buyers, and bring them to market with a structured system.",
   },
 
   howItWorks: {
@@ -26,7 +26,7 @@ export const siteCopy = {
         number: "02",
         title: "Build the solution",
         description:
-          "Turn insight into structure. Get a complete concept with positioning, pricing, user journey, and launch plan — all based on real demand signals, not guesswork.",
+          "Turn insight into structure. Get a complete concept with positioning, pricing, user journey, and launch plan, all based on real demand signals, not guesswork.",
       },
       {
         number: "03",
@@ -61,7 +61,7 @@ export const siteCopy = {
       {
         title: "Solution Builder",
         description:
-          "Structures your idea into a complete concept — positioning, pricing model, user journey, and feature scope. Ready for validation.",
+          "Structures your idea into a complete concept: positioning, pricing model, user journey, and feature scope. Ready for validation.",
       },
       {
         title: "Positioning Engine",
@@ -71,7 +71,7 @@ export const siteCopy = {
       {
         title: "Go-To-Market Engine",
         description:
-          "Generates a launch plan with ICP definition, channel strategy, outreach sequences, and content angles. Not theory — executable steps.",
+          "Generates a launch plan with ICP definition, channel strategy, outreach sequences, and content angles. Not theory. Executable steps.",
       },
       {
         title: "Growth System",

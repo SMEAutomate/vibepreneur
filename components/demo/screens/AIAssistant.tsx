@@ -9,7 +9,7 @@ const messages = [
   {
     role: "assistant",
     content:
-      '1. **Double down on LinkedIn DMs** — your question-first variant is converting at 7.2%. Scale to 100 prospects/week.\n\n2. **Rewrite your landing page hero** — the current headline doesn&apos;t match the pain point that resonates most (time waste, not compliance).\n\n3. **Create a comparison page vs BambooHR** — 1,600 monthly searches for "bamboohr alternative" with low competition.',
+      '1. **Double down on LinkedIn DMs**. your question-first variant is converting at 7.2%. Scale to 100 prospects/week.\n\n2. **Rewrite your landing page hero**. the current headline doesn&apos;t match the pain point that resonates most (time waste, not compliance).\n\n3. **Create a comparison page vs BambooHR**. 1,600 monthly searches for "bamboohr alternative" with low competition.',
   },
   {
     role: "user",
@@ -19,7 +19,7 @@ const messages = [
   {
     role: "assistant",
     content:
-      'Great question. BambooHR is an HRIS — onboarding is a small add-on feature for them. Your angle:\n\n**"BambooHR is great for HR management. OnboardFlow is purpose-built for the onboarding workflow — automated provisioning, compliance tracking, and a new hire portal that BambooHR doesn&apos;t offer. Most of our customers use both."**\n\nThis positions you as complementary, not competitive. It lowers the switching cost in the buyer&apos;s mind.',
+      'Great question. BambooHR is an HRIS. onboarding is a small add-on feature for them. Your angle:\n\n**"BambooHR is great for HR management. OnboardFlow is purpose-built for the onboarding workflow. automated provisioning, compliance tracking, and a new hire portal that BambooHR doesn&apos;t offer. Most of our customers use both."**\n\nThis positions you as complementary, not competitive. It lowers the switching cost in the buyer&apos;s mind.',
   },
 ];
 
@@ -37,7 +37,7 @@ export function AIAssistant() {
     <AppShell
       activeNav="Home"
       title="AI Strategy Assistant"
-      subtitle="OnboardFlow — Your GTM co-pilot"
+      subtitle="OnboardFlow. Your GTM co-pilot"
     >
       <div className="grid gap-6 lg:grid-cols-[1fr_280px]">
         <div className="flex flex-col rounded-2xl border border-neutral-200 bg-white">

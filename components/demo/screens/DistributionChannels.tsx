@@ -61,7 +61,7 @@ export function DistributionChannels() {
     <AppShell
       activeNav="Distribution"
       title="Distribution Channels"
-      subtitle="OnboardFlow — Channel fit analysis"
+      subtitle="OnboardFlow. Channel fit analysis"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Save sequence

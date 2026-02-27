@@ -7,7 +7,7 @@ const experiments = [
     hypothesis: "Question-first DMs get 2x more replies",
     metric: "Reply rate",
     status: "completed",
-    result: "7.2% vs 3.1% — question-first wins",
+    result: "7.2% vs 3.1%. question-first wins",
     decision: "Scale",
   },
   {
@@ -16,7 +16,7 @@ const experiments = [
     hypothesis: "Shorter checklist has higher completion rate",
     metric: "Completion rate",
     status: "completed",
-    result: "72% vs 64% — short form wins",
+    result: "72% vs 64%. short form wins",
     decision: "Iterate",
   },
   {
@@ -25,7 +25,7 @@ const experiments = [
     hypothesis: "Pain-focused subject lines get higher open rates",
     metric: "Open rate",
     status: "running",
-    result: "48% vs 39% — 247 emails sent, 3 days remaining",
+    result: "48% vs 39%. 247 emails sent, 3 days remaining",
     decision: "Pending",
   },
   {
@@ -34,7 +34,7 @@ const experiments = [
     hypothesis: "Interactive content doubles time on page",
     metric: "Time on page + signups",
     status: "running",
-    result: "Avg 3m 12s vs 1m 44s — tracking signups",
+    result: "Avg 3m 12s vs 1m 44s. tracking signups",
     decision: "Pending",
   },
   {
@@ -43,8 +43,8 @@ const experiments = [
     hypothesis: "AMA drives 50+ landing page visits",
     metric: "Referral traffic",
     status: "planned",
-    result: "—",
-    decision: "—",
+    result: "-",
+    decision: "-",
   },
   {
     name: "Partner webinar with Gusto",
@@ -52,8 +52,8 @@ const experiments = [
     hypothesis: "Co-branded webinar generates 30+ qualified leads",
     metric: "Lead quality score",
     status: "planned",
-    result: "—",
-    decision: "—",
+    result: "-",
+    decision: "-",
   },
 ];
 
@@ -67,7 +67,7 @@ const decisionColors: Record<string, string> = {
   Scale: "bg-emerald-50 text-emerald-700",
   Iterate: "bg-brand-50 text-brand-700",
   Pending: "bg-neutral-100 text-neutral-500",
-  "—": "",
+  "-": "",
 };
 
 export function ChannelExperiments() {
@@ -75,7 +75,7 @@ export function ChannelExperiments() {
     <AppShell
       activeNav="Growth"
       title="Channel Experiments"
-      subtitle="OnboardFlow — Test, measure, decide"
+      subtitle="OnboardFlow. Test, measure, decide"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           New experiment
@@ -115,7 +115,7 @@ export function ChannelExperiments() {
                   <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-[10px] text-neutral-500">
                     {e.channel}
                   </span>
-                  {e.decision !== "—" && (
+                  {e.decision !== "-" && (
                     <span
                       className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${decisionColors[e.decision]}`}
                     >
@@ -135,7 +135,7 @@ export function ChannelExperiments() {
               </span>
             </div>
 
-            {e.result !== "—" && (
+            {e.result !== "-" && (
               <div className="mt-3 rounded-lg bg-neutral-50 p-3">
                 <p className="text-xs text-neutral-700">{e.result}</p>
               </div>

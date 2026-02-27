@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     if (process.env.POSTGRES_URL) {
       await createWaitlistSignup(data);
     } else {
-      console.log("[Waitlist] No POSTGRES_URL — skipping DB write:", data);
+      console.log("[Waitlist] No POSTGRES_URL, skipping DB write:", data);
     }
 
     await sendWelcomeEmail(data.email, data.role).catch((err) => {

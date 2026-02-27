@@ -5,7 +5,7 @@ export function PositioningCanvas() {
     <AppShell
       activeNav="Positioning"
       title="Positioning Canvas"
-      subtitle="OnboardFlow — Define how you win."
+      subtitle="OnboardFlow. Define how you win."
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Export canvas
@@ -38,7 +38,7 @@ export function PositioningCanvas() {
             items: [
               "Built for mid-market (not enterprise bloat)",
               "Works with existing tools, not instead of them",
-              "Visible from day one — no 6-month implementation",
+              "Visible from day one. no 6-month implementation",
               "Human-first design, not IT-first",
             ],
           },
@@ -81,7 +81,7 @@ export function PositioningCanvas() {
                     ) : (
                       <span>
                         {item.name}{" "}
-                        <span className="text-neutral-400">— {item.gap}</span>
+                        <span className="text-neutral-400">- {item.gap}</span>
                       </span>
                     )}
                   </li>

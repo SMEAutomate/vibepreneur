@@ -185,11 +185,11 @@ export const roleTemplates: Record<string, RoleTemplates> = {
           "Exit interviews happen too late. By the time someone leaves, the damage is done and the real reasons are sanitised.",
         buyer: "Chief People Officer at companies with 500+ employees",
         offer:
-          "Continuous retention signal system that detects flight risk early through engagement patterns, manager interactions, and workplace sentiment — before the resignation email.",
+          "Continuous retention signal system that detects flight risk early through engagement patterns, manager interactions, and workplace sentiment, before the resignation email.",
         pricingModel: "Per-employee monthly pricing with annual commitment",
         distributionWedge: "CHRO peer networks and HR technology conferences.",
         firstMoves: [
-          "Publish 'The 7 signals someone will quit — 90 days before they do'",
+          "Publish 'The 7 signals someone will quit, 90 days before they do'",
           "Offer free retention risk assessment to 20 companies",
           "Speak at 2 HR technology events on predictive retention",
         ],
@@ -323,7 +323,7 @@ export const roleTemplates: Record<string, RoleTemplates> = {
         pricingModel: "Monthly subscription by data source",
         distributionWedge: "Product management communities and PM newsletters.",
         firstMoves: [
-          "Publish 'Why your roadmap is wrong — and how to fix it with data'",
+          "Publish 'Why your roadmap is wrong (and how to fix it with data)'",
           "Create a free 'Feature prioritisation framework' template",
           "Host a product leadership roundtable with 20 VPs of Product",
         ],
@@ -372,7 +372,7 @@ export const roleTemplates: Record<string, RoleTemplates> = {
         pricingModel: "Monthly subscription by ticket volume",
         distributionWedge: "Customer support communities and CX newsletters.",
         firstMoves: [
-          "Publish 'The 80/20 rule of support tickets — and how to eliminate the 80'",
+          "Publish 'The 80/20 rule of support tickets (and how to eliminate the 80)'",
           "Create a free 'Ticket deflection calculator'",
           "Partner with helpdesk platforms for co-marketing",
         ],
@@ -422,7 +422,7 @@ export const roleTemplates: Record<string, RoleTemplates> = {
         distributionWedge:
           "PMO communities and project management newsletters.",
         firstMoves: [
-          "Publish 'The status report nobody believes — and how to fix it'",
+          "Publish 'The status report nobody believes (and how to fix it)'",
           "Create a free 'Project health diagnostic' tool",
           "Partner with PM tool vendors for integration announcements",
         ],
@@ -519,7 +519,7 @@ export const roleTemplates: Record<string, RoleTemplates> = {
           "Engineering teams don't know the business impact of their work. They ship features but can't connect code to revenue.",
         buyer: "VP of Engineering at B2B SaaS companies",
         offer:
-          "Engineering impact dashboard that maps releases to business metrics — feature adoption, revenue impact, and customer satisfaction changes.",
+          "Engineering impact dashboard that maps releases to business metrics: feature adoption, revenue impact, and customer satisfaction changes.",
         pricingModel: "Monthly subscription by team size",
         distributionWedge:
           "Engineering leadership communities and CTO newsletters.",
@@ -620,7 +620,7 @@ export const roleTemplates: Record<string, RoleTemplates> = {
           "Consultants trade time for money. Their expertise doesn't scale beyond billable hours.",
         buyer: "Independent consultants and small consulting firms",
         offer:
-          "Expertise productization system that packages consulting methodologies into scalable digital products — assessments, frameworks, and guided implementations.",
+          "Expertise productization system that packages consulting methodologies into scalable digital products: assessments, frameworks, and guided implementations.",
         pricingModel: "Revenue share or monthly subscription",
         distributionWedge:
           "Consulting communities and freelance professional networks.",

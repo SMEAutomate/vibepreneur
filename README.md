@@ -1,6 +1,6 @@
 # Vibepreneur
 
-Marketing website and waitlist system for Vibepreneur — a platform that helps professionals transform real-world experience into scalable solutions with built-in go-to-market and growth systems.
+Marketing website and waitlist system for Vibepreneur. a platform that helps professionals transform real-world experience into scalable solutions with built-in go-to-market and growth systems.
 
 ## Tech Stack
 
@@ -36,7 +36,7 @@ Required variables:
 | `EMAIL_FROM`           | Sender address (e.g., `Vibepreneur <hello@vibepreneur.com>`) |
 | `NEXT_PUBLIC_SITE_URL` | Site URL (e.g., `http://localhost:3000`)                     |
 
-The app runs without these — DB writes and emails are skipped when keys are missing.
+The app runs without these. DB writes and emails are skipped when keys are missing.
 
 ### Install Dependencies
 

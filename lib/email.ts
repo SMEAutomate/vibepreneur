@@ -11,14 +11,14 @@ function getFrom(): string {
 
 export async function sendWelcomeEmail(email: string, role: string) {
   if (!process.env.RESEND_API_KEY) {
-    console.log("[Email] Skipping welcome email — no RESEND_API_KEY");
+    console.log("[Email] Skipping welcome email, no RESEND_API_KEY");
     return;
   }
 
   await getResend().emails.send({
     from: getFrom(),
     to: email,
-    subject: "You're in — here's what happens next",
+    subject: "You're in. Here's what happens next",
     html: welcomeEmailHtml(role),
   });
 }
@@ -29,7 +29,7 @@ export async function sendSolutionsEmail(
   solutions: GeneratedSolution[]
 ) {
   if (!process.env.RESEND_API_KEY) {
-    console.log("[Email] Skipping solutions email — no RESEND_API_KEY");
+    console.log("[Email] Skipping solutions email, no RESEND_API_KEY");
     return;
   }
 
@@ -59,7 +59,7 @@ function welcomeEmailHtml(role: string): string {
 
   <ul style="padding-left: 20px;">
     <li><strong>Right now:</strong> Get 3 personalised solution ideas based on your experience</li>
-    <li><strong>Weekly:</strong> Strategic insights on building from expertise — no fluff, no hype</li>
+    <li><strong>Weekly:</strong> Strategic insights on building from expertise. No fluff, no hype</li>
     <li><strong>At launch:</strong> Early access before the public</li>
   </ul>
 
@@ -72,10 +72,10 @@ function welcomeEmailHtml(role: string): string {
 
   <p>The advantage isn't experience alone anymore. It's ownership.</p>
 
-  <p style="color: #666;">— The Vibepreneur Team</p>
+  <p style="color: #666;">The Vibepreneur Team</p>
 
   <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;">
-  <p style="font-size: 12px; color: #999;">You received this because you joined the Vibepreneur waitlist. We respect your inbox — expect one email per week, max.</p>
+  <p style="font-size: 12px; color: #999;">You received this because you joined the Vibepreneur waitlist. We respect your inbox. Expect one email per week, max.</p>
 </body>
 </html>`;
 }
@@ -119,7 +119,7 @@ function solutionsEmailHtml(
 
   <p>When Vibepreneur launches, you'll be able to take any of these from concept to market with full positioning, go-to-market, and growth systems built in.</p>
 
-  <p style="color: #666;">— The Vibepreneur Team</p>
+  <p style="color: #666;">The Vibepreneur Team</p>
 
   <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;">
   <p style="font-size: 12px; color: #999;">You received this because you joined the Vibepreneur waitlist.</p>

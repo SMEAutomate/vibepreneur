@@ -39,7 +39,7 @@ export const pricingTiers: PricingTier[] = [
       "Email outreach templates",
     ],
     capacity: "Standard capacity",
-    cta: "Join Waitlist — Pro",
+    cta: "Join Waitlist: Pro",
     highlighted: true,
   },
   {
@@ -56,7 +56,7 @@ export const pricingTiers: PricingTier[] = [
       "Priority support",
     ],
     capacity: "High capacity",
-    cta: "Join Waitlist — Max",
+    cta: "Join Waitlist: Max",
   },
   {
     name: "Ultra",
@@ -73,7 +73,7 @@ export const pricingTiers: PricingTier[] = [
       "White-glove onboarding",
     ],
     capacity: "Maximum capacity",
-    cta: "Join Waitlist — Ultra",
+    cta: "Join Waitlist: Ultra",
   },
 ];
 
@@ -81,12 +81,12 @@ export const pricingFaq = [
   {
     question: "Do I need to code?",
     answer:
-      "No. Vibepreneur handles the technical structuring. You bring the expertise and market knowledge — the platform handles everything from concept to go-to-market plan.",
+      "No. Vibepreneur handles the technical structuring. You bring the expertise and market knowledge. The platform handles everything from concept to go-to-market plan.",
   },
   {
     question: "Is this a course?",
     answer:
-      "No. Vibepreneur is a platform, not educational content. It produces real outputs — solution concepts, positioning frameworks, launch playbooks, and growth experiments — that you execute.",
+      "No. Vibepreneur is a platform, not educational content. It produces real outputs (solution concepts, positioning frameworks, launch playbooks, and growth experiments) that you execute.",
   },
   {
     question: "When do you launch?",
@@ -96,6 +96,6 @@ export const pricingFaq = [
   {
     question: "How is capacity measured?",
     answer:
-      "Each tier includes a simple usage allocation based on the outputs you generate — solution concepts, GTM plans, growth experiments, and more. Full details will be available at launch.",
+      "Each tier includes a simple usage allocation based on the outputs you generate: solution concepts, GTM plans, growth experiments, and more. Full details will be available at launch.",
   },
 ];

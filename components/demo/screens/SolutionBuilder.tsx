@@ -37,7 +37,7 @@ export function SolutionBuilder() {
                   One-line promise
                 </label>
                 <div className="mt-1 rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-2.5 text-sm text-neutral-800">
-                  Cut onboarding time by 80% — without changing your existing
+                  Cut onboarding time by 80%. without changing your existing
                   tools.
                 </div>
               </div>

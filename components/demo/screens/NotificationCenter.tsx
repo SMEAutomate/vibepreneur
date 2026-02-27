@@ -28,7 +28,7 @@ const notifications = [
   {
     type: "validation",
     title: "Hypothesis validated",
-    body: "VP People Ops will trade email for a free audit checklist — 42 downloads in first week, 18% demo conversion.",
+    body: "VP People Ops will trade email for a free audit checklist. 42 downloads in first week, 18% demo conversion.",
     time: "1d ago",
     read: true,
     action: "View tracker",

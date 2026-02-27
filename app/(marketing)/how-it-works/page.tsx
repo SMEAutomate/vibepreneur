@@ -7,7 +7,7 @@ import { StaggeredExamples } from "./staggered-examples";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "How It Works — Vibepreneur",
+  title: "How It Works | Vibepreneur",
   description:
     "From insight to growth: how Vibepreneur turns your expertise into scalable solutions with built-in distribution.",
 };

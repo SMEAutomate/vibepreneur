@@ -98,7 +98,7 @@ export function GoToMarketPlan() {
     <AppShell
       activeNav="Go-To-Market"
       title="Go-To-Market Plan"
-      subtitle="OnboardFlow — 30-day launch plan"
+      subtitle="OnboardFlow. 30-day launch plan"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Export plan

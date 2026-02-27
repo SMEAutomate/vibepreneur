@@ -70,7 +70,7 @@ export function MessagingMatrix() {
     <AppShell
       activeNav="Positioning"
       title="Messaging Matrix"
-      subtitle="3 audiences × 3 angles — ready to use."
+      subtitle="3 audiences × 3 angles. ready to use."
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Copy all

@@ -5,7 +5,7 @@ export function ReferralProgram() {
     <AppShell
       activeNav="Growth"
       title="Referral Program"
-      subtitle="OnboardFlow — Turn customers into advocates"
+      subtitle="OnboardFlow. Turn customers into advocates"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Launch program

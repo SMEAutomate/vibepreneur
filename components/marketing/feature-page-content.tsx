@@ -73,7 +73,7 @@ export function FeaturePageContent({ feature }: FeaturePageContentProps) {
           <div className="mx-auto mt-12 max-w-5xl">
             <InlineScreenMock
               componentName={feature.featuredScreen}
-              caption={`${featuredScreenData.title} — ${featuredScreenData.description}`}
+              caption={`${featuredScreenData.title}: ${featuredScreenData.description}`}
             />
           </div>
         )}
@@ -140,7 +140,7 @@ export function FeaturePageContent({ feature }: FeaturePageContentProps) {
             ) : (
               <InlineScreenMock
                 componentName={feature.featuredScreen}
-                caption={`${featuredScreenData.title} — ${featuredScreenData.description}`}
+                caption={`${featuredScreenData.title}: ${featuredScreenData.description}`}
               />
             )}
           </div>

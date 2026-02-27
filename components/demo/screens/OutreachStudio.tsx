@@ -14,13 +14,13 @@ const sequences = [
         day: "Day 3",
         subject: "Follow-up with value",
         preview:
-          "Thanks for connecting! I put together a quick onboarding audit checklist — thought your team might find it useful.",
+          "Thanks for connecting! I put together a quick onboarding audit checklist. thought your team might find it useful.",
       },
       {
         day: "Day 7",
         subject: "Soft ask",
         preview:
-          "Curious — what does onboarding look like for you right now? I've been talking to a lot of HR leads about this.",
+          "Curious. what does onboarding look like for you right now? I've been talking to a lot of HR leads about this.",
       },
     ],
   },
@@ -37,7 +37,7 @@ const sequences = [
         day: "Day 4",
         subject: "Quick follow-up",
         preview:
-          "Just wanted to make sure this didn't get buried. Here's the free audit checklist I mentioned — no strings attached.",
+          "Just wanted to make sure this didn't get buried. Here's the free audit checklist I mentioned. no strings attached.",
       },
       {
         day: "Day 8",
@@ -54,7 +54,7 @@ export function OutreachStudio() {
     <AppShell
       activeNav="Distribution"
       title="Outreach Studio"
-      subtitle="OnboardFlow — Human-tone templates"
+      subtitle="OnboardFlow. Human-tone templates"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Export sequences

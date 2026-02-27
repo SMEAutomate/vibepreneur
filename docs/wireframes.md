@@ -1,4 +1,4 @@
-# Vibepreneur — Page Wireframes
+# Vibepreneur. Page Wireframes
 
 ## Homepage
 

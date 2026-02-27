@@ -171,7 +171,7 @@ export const mockScreens: MockScreen[] = [
     id: "messaging-matrix",
     title: "Messaging Matrix",
     description:
-      "Three audiences, three angles — each with headline, hook, and proof point.",
+      "Three audiences, three angles. each with headline, hook, and proof point.",
     tags: ["Positioning"],
     componentName: "MessagingMatrix",
     annotations: [
@@ -248,7 +248,7 @@ export const mockScreens: MockScreen[] = [
       },
       {
         label: "Sequence",
-        description: "Order matters — start narrow, then expand",
+        description: "Order matters. start narrow, then expand",
         x: "55%",
         y: "45%",
       },
@@ -302,7 +302,7 @@ export const mockScreens: MockScreen[] = [
     id: "landing-page-builder",
     title: "Landing Page Builder",
     description:
-      "Section outline, preview cards, and CTA variants — marketing-ready.",
+      "Section outline, preview cards, and CTA variants. marketing-ready.",
     tags: ["Distribution", "Export"],
     componentName: "LandingPageBuilder",
     annotations: [
@@ -477,7 +477,7 @@ export const mockScreens: MockScreen[] = [
     id: "expertise-analyzer",
     title: "Expertise Analyzer",
     description:
-      "Upload your CV or describe your role — the platform maps skills to market gaps and scores your fit.",
+      "Upload your CV or describe your role. the platform maps skills to market gaps and scores your fit.",
     tags: ["Insight"],
     componentName: "ExpertiseAnalyzer",
     annotations: [
@@ -511,7 +511,7 @@ export const mockScreens: MockScreen[] = [
       },
       {
         label: "Strength scoring",
-        description: "Not all signals are equal — strength helps prioritise",
+        description: "Not all signals are equal. strength helps prioritise",
         x: "55%",
         y: "20%",
       },
@@ -577,7 +577,7 @@ export const mockScreens: MockScreen[] = [
       },
       {
         label: "Confidence",
-        description: "How strong each response is — improve weak ones",
+        description: "How strong each response is. improve weak ones",
         x: "70%",
         y: "20%",
       },
@@ -819,7 +819,7 @@ export const mockScreens: MockScreen[] = [
       },
       {
         label: "Formats",
-        description: "PDF, CSV, HTML, Notion, clipboard — your choice",
+        description: "PDF, CSV, HTML, Notion, clipboard. your choice",
         x: "55%",
         y: "40%",
       },
@@ -835,7 +835,7 @@ export const mockScreens: MockScreen[] = [
     annotations: [
       {
         label: "Roles",
-        description: "Owner, Editor, Viewer — control who does what",
+        description: "Owner, Editor, Viewer. control who does what",
         x: "10%",
         y: "20%",
       },
@@ -885,7 +885,7 @@ export const mockScreens: MockScreen[] = [
       },
       {
         label: "Patterns",
-        description: "Why you win and why you lose — distilled",
+        description: "Why you win and why you lose. distilled",
         x: "10%",
         y: "75%",
       },

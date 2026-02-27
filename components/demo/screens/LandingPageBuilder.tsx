@@ -42,7 +42,7 @@ export function LandingPageBuilder() {
     <AppShell
       activeNav="Distribution"
       title="Landing Page Builder"
-      subtitle="OnboardFlow — Section outline"
+      subtitle="OnboardFlow. Section outline"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Preview page

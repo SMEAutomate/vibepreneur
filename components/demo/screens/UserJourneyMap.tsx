@@ -71,7 +71,7 @@ export function UserJourneyMap() {
     <AppShell
       activeNav="Solutions"
       title="User Journey Map"
-      subtitle="OnboardFlow — From stranger to advocate"
+      subtitle="OnboardFlow. From stranger to advocate"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Export journey

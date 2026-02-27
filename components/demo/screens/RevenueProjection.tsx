@@ -41,7 +41,7 @@ export function RevenueProjection() {
     <AppShell
       activeNav="Growth"
       title="Revenue Projection"
-      subtitle="OnboardFlow — 6-month financial outlook"
+      subtitle="OnboardFlow. 6-month financial outlook"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Export model

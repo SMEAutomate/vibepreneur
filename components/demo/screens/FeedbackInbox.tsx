@@ -31,7 +31,7 @@ const feedback = [
   },
   {
     from: "David L., Head of HR",
-    text: "Tried the cold outreach templates — got 3 replies from 20 messages. Better than expected.",
+    text: "Tried the cold outreach templates. got 3 replies from 20 messages. Better than expected.",
     tags: ["Positive", "Outreach"],
     action: "Track as validation data",
     time: "2d ago",

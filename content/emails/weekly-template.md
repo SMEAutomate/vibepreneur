@@ -1,8 +1,8 @@
-# Weekly Email Template — Vibepreneur
+# Weekly Email Template | Vibepreneur
 
 ## Subject Line Format
 
-[Problem insight] — [unexpected angle or contrarian take]
+[Problem insight] + [unexpected angle or contrarian take]
 
 Example: "The skill that made you successful is now your biggest risk"
 
@@ -12,7 +12,7 @@ Example: "The skill that made you successful is now your biggest risk"
 
 - Start with a sharp observation about the professional world
 - Name a specific problem or pattern the reader recognises
-- No "Hi [Name]" — start with substance
+- No "Hi [Name]", start with substance
 
 ### Problem Insight (3-5 sentences)
 
@@ -24,7 +24,7 @@ Example: "The skill that made you successful is now your biggest risk"
 
 - Introduce a different way to think about the problem
 - Frame it as turning expertise into ownership
-- Keep it practical — what could someone do about this?
+- Keep it practical. What could someone do about this?
 
 ### Distribution Wedge (2-3 sentences)
 
@@ -42,12 +42,12 @@ Example: "The skill that made you successful is now your biggest risk"
 
 - Brief mention of what we shipped or what's coming
 - Link to roadmap or feature page
-- Keep it subtle — this isn't a sales pitch
+- Keep it subtle. This isn't a sales pitch
 
 ### Sign-off
 
 "See you next week."
-— The Vibepreneur Team
+The Vibepreneur Team
 
 ## Tone Rules
 

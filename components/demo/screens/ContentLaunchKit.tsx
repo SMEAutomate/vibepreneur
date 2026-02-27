@@ -64,7 +64,7 @@ export function ContentLaunchKit() {
     <AppShell
       activeNav="Distribution"
       title="Content Launch Kit"
-      subtitle="OnboardFlow — 7-day calendar"
+      subtitle="OnboardFlow. 7-day calendar"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Export calendar

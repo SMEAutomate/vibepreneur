@@ -5,7 +5,7 @@ export function ICPDefinition() {
     <AppShell
       activeNav="Go-To-Market"
       title="ICP Definition"
-      subtitle="OnboardFlow — Your ideal customer, precisely defined"
+      subtitle="OnboardFlow. Your ideal customer, precisely defined"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Export ICP

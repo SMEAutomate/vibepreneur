@@ -91,7 +91,7 @@ export function ComparisonPageBuilder() {
                       </span>
                     ) : (
                       <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-neutral-100 text-[10px] text-neutral-400">
-                        —
+                        -
                       </span>
                     )}
                   </span>
@@ -102,7 +102,7 @@ export function ComparisonPageBuilder() {
                       </span>
                     ) : (
                       <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-neutral-100 text-[10px] text-neutral-400">
-                        —
+                        -
                       </span>
                     )}
                   </span>

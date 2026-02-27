@@ -28,14 +28,14 @@ const hypotheses = [
   {
     hypothesis: "Webinar co-hosted with HRIS vendor drives 50+ signups",
     status: "planned",
-    result: "—",
-    decision: "—",
+    result: "-",
+    decision: "-",
   },
   {
     hypothesis: "Product Hunt launch generates 200+ waitlist signups",
     status: "planned",
-    result: "—",
-    decision: "—",
+    result: "-",
+    decision: "-",
   },
 ];
 
@@ -50,7 +50,7 @@ const decisionColors: Record<string, string> = {
   Iterate: "bg-brand-50 text-brand-700",
   Pivot: "bg-red-50 text-red-700",
   Pending: "bg-neutral-100 text-neutral-500",
-  "—": "",
+  "-": "",
 };
 
 export function ValidationTracker() {
@@ -58,7 +58,7 @@ export function ValidationTracker() {
     <AppShell
       activeNav="Growth"
       title="Validation Tracker"
-      subtitle="OnboardFlow — Hypotheses and results"
+      subtitle="OnboardFlow. Hypotheses and results"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Add hypothesis
@@ -79,7 +79,7 @@ export function ValidationTracker() {
                   >
                     {h.status}
                   </span>
-                  {h.decision !== "—" && (
+                  {h.decision !== "-" && (
                     <span
                       className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${decisionColors[h.decision]}`}
                     >

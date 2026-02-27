@@ -68,7 +68,7 @@ export function TeamWorkspace() {
     <AppShell
       activeNav="Settings"
       title="Team Workspace"
-      subtitle="OnboardFlow — Collaborate on your GTM"
+      subtitle="OnboardFlow. Collaborate on your GTM"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Invite member

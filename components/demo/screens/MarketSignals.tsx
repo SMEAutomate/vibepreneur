@@ -56,7 +56,7 @@ export function MarketSignals() {
     <AppShell
       activeNav="Insights"
       title="Market Signals"
-      subtitle="OnboardFlow — Real-time demand intelligence"
+      subtitle="OnboardFlow. Real-time demand intelligence"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Set alerts

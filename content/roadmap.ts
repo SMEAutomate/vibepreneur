@@ -87,7 +87,7 @@ export const weeklyUpdates: WeeklyUpdate[] = [
     week: "Week 1",
     date: "March 2026",
     title: "Foundation and first impressions",
-    body: "Launched the marketing site and waitlist system. Built the Insight Engine core — the part that surfaces opportunities from your experience. Early feedback from 50+ signups is shaping what we build next.",
+    body: "Launched the marketing site and waitlist system. Built the Insight Engine core, the part that surfaces opportunities from your experience. Early feedback from 50+ signups is shaping what we build next.",
   },
   {
     week: "Week 2",

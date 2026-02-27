@@ -5,7 +5,7 @@ const objections = [
     objection: "We already have BambooHR for onboarding.",
     category: "Competition",
     response:
-      "BambooHR is great for core HR, but onboarding is a bolt-on feature there. OnboardFlow is purpose-built for the onboarding workflow — automated provisioning, compliance tracking, and a new hire portal that BambooHR doesn&apos;t offer.",
+      "BambooHR is great for core HR, but onboarding is a bolt-on feature there. OnboardFlow is purpose-built for the onboarding workflow. automated provisioning, compliance tracking, and a new hire portal that BambooHR doesn&apos;t offer.",
     confidence: 92,
     frequency: "High",
   },
@@ -13,7 +13,7 @@ const objections = [
     objection: "We don&apos;t have budget for another tool right now.",
     category: "Budget",
     response:
-      "Your team spends 12+ hours a week on manual onboarding. At an average HR salary, that&apos;s roughly $2,400/month in hidden costs. OnboardFlow starts at $49/mo — the ROI is immediate.",
+      "Your team spends 12+ hours a week on manual onboarding. At an average HR salary, that&apos;s roughly $2,400/month in hidden costs. OnboardFlow starts at $49/mo. the ROI is immediate.",
     confidence: 88,
     frequency: "High",
   },
@@ -29,7 +29,7 @@ const objections = [
     objection: "How long does implementation take?",
     category: "Implementation",
     response:
-      "Most teams are live in under a week. OnboardFlow integrates with your existing tools (Slack, Google Workspace, your HRIS) — no rip-and-replace. You can run your first automated onboarding on day one.",
+      "Most teams are live in under a week. OnboardFlow integrates with your existing tools (Slack, Google Workspace, your HRIS). no rip-and-replace. You can run your first automated onboarding on day one.",
     confidence: 95,
     frequency: "Medium",
   },
@@ -37,7 +37,7 @@ const objections = [
     objection: "I need to get buy-in from IT first.",
     category: "Decision process",
     response:
-      "Totally understand. OnboardFlow is designed for People Ops teams — no IT involvement needed for setup. We can share a security overview for your IT team, and most approve it in under a day.",
+      "Totally understand. OnboardFlow is designed for People Ops teams. no IT involvement needed for setup. We can share a security overview for your IT team, and most approve it in under a day.",
     confidence: 82,
     frequency: "Low",
   },
@@ -55,7 +55,7 @@ export function ObjectionHandler() {
     <AppShell
       activeNav="Positioning"
       title="Objection Handler"
-      subtitle="OnboardFlow — Prepared responses for every pushback"
+      subtitle="OnboardFlow. Prepared responses for every pushback"
       actions={
         <button className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-medium text-white">
           Add objection

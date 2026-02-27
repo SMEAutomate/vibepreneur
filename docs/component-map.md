@@ -1,4 +1,4 @@
-# Vibepreneur — Component Map
+# Vibepreneur. Component Map
 
 ## Layout Components
 
