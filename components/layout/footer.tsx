@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { features } from "@/content/features";
 
@@ -9,12 +8,11 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-5">
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/logo.png"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-icon.gif"
                 alt="Vibepreneur"
-                width={120}
-                height={120}
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </Link>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-neutral-500">

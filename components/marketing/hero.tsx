@@ -56,11 +56,11 @@ export function Hero() {
 
           <motion.div className="hidden lg:block" style={{ y: mockY }}>
             <Image
-              src="/logo.png"
+              src="/logo-portrait.png"
               alt="Vibepreneur"
-              width={500}
-              height={500}
-              className="mx-auto w-full max-w-md"
+              width={815}
+              height={624}
+              className="mx-auto w-full max-w-lg"
               priority
             />
           </motion.div>

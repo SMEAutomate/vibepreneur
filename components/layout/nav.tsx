@@ -47,10 +47,10 @@ export function Nav() {
       <nav className="container-content flex items-center justify-between px-6 py-4 sm:px-8 lg:px-12">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src="/logo-landscape.png"
             alt="Vibepreneur"
-            width={120}
-            height={120}
+            width={859}
+            height={260}
             className="h-8 w-auto"
           />
         </Link>
