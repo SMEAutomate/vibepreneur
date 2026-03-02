@@ -58,8 +58,8 @@ export function Hero() {
             <Image
               src="/logo-portrait.png"
               alt="Vibepreneur"
-              width={815}
-              height={624}
+              width={749}
+              height={620}
               className="mx-auto w-full max-w-lg"
               priority
             />
