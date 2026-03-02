@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { DashboardMock } from "./dashboard-mock";
 import { GradientOrb } from "@/components/ui/gradient-orb";
 import { siteCopy } from "@/content/copy";
 
@@ -55,7 +55,14 @@ export function Hero() {
           </motion.div>
 
           <motion.div className="hidden lg:block" style={{ y: mockY }}>
-            <DashboardMock />
+            <Image
+              src="/logo.png"
+              alt="Vibepreneur"
+              width={500}
+              height={500}
+              className="mx-auto w-full max-w-md"
+              priority
+            />
           </motion.div>
         </div>
       </div>

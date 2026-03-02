@@ -49,13 +49,10 @@ export function Nav() {
           <Image
             src="/logo.png"
             alt="Vibepreneur"
-            width={32}
-            height={32}
-            className="h-8 w-8"
+            width={120}
+            height={120}
+            className="h-8 w-auto"
           />
-          <span className="text-lg font-bold tracking-tight text-neutral-900">
-            vibepreneur
-          </span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
