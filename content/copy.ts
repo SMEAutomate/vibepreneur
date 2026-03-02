@@ -92,6 +92,41 @@ export const siteCopy = {
     ],
   },
 
+  whatIsVibepreneur: {
+    headline: "What is Vibepreneur?",
+    definition:
+      "Vibepreneur is a platform that helps professionals turn their real-world expertise into scalable digital products and services. It combines opportunity discovery, solution design, positioning, go-to-market planning, and growth systems in one workspace, so experienced professionals can launch solutions without needing a technical co-founder, an audience, or venture capital.",
+    comparison: {
+      left: "Traditional approach",
+      right: "With Vibepreneur",
+      items: [
+        {
+          left: "Months of market research before starting",
+          right: "Opportunity scoring from your background in minutes",
+        },
+        {
+          left: "Guessing at positioning and pricing",
+          right:
+            "Structured positioning canvas with ICP, messaging, and pricing tiers",
+        },
+        {
+          left: "Building first, finding customers later",
+          right: "Validating demand before writing a single line of code",
+        },
+        {
+          left: "Scattered tools for launch and growth",
+          right:
+            "Complete GTM playbook with channel strategy and outreach templates",
+        },
+        {
+          left: "No system for measuring traction",
+          right:
+            "Built-in growth dashboard with experiments and feedback loops",
+        },
+      ],
+    },
+  },
+
   buildingInPublic: {
     headline: "We build in public.",
     body: "Follow our progress as we ship features, share decisions, and grow alongside our early users.",

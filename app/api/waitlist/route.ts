@@ -14,9 +14,11 @@ export async function POST(req: NextRequest) {
       console.log("[Waitlist] No POSTGRES_URL, skipping DB write:", data);
     }
 
-    await sendWelcomeEmail(data.email, data.role).catch((err) => {
-      console.error("[Waitlist] Email send failed:", err);
-    });
+    await sendWelcomeEmail(data.email, data.role, data.industry).catch(
+      (err) => {
+        console.error("[Waitlist] Email send failed:", err);
+      }
+    );
 
     return NextResponse.json({ success: true });
   } catch (err) {

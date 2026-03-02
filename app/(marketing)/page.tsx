@@ -1,5 +1,6 @@
 import { Hero } from "@/components/marketing/hero";
 import { TheShift } from "@/components/marketing/the-shift";
+import { WhatIsVibepreneur } from "@/components/marketing/what-is-vibepreneur";
 import { HowItWorksPreview } from "@/components/marketing/how-it-works-preview";
 import { Differentiator } from "@/components/marketing/differentiator";
 import { Modules } from "@/components/marketing/modules";
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <Hero />
       <TheShift />
+      <WhatIsVibepreneur />
       <HowItWorksPreview />
       <Differentiator />
       <Modules />

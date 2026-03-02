@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
-import { blogPosts, getBlogPostBySlug } from "@/content/blog";
+import { JsonLd } from "@/components/seo/json-ld";
+import { blogPosts, getBlogPostBySlug, defaultAuthor } from "@/content/blog";
 import { ReadingProgress } from "./reading-progress";
 import { BlogPostArticle } from "./blog-post-article";
 
@@ -21,8 +22,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   return {
-    title: `${post.title} | Vibepreneur`,
+    title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      publishedTime: post.date,
+      ...(post.updatedDate && { modifiedTime: post.updatedDate }),
+      authors: [(post.author ?? defaultAuthor).name],
+    },
   };
 }
 
@@ -31,8 +41,34 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPostBySlug(slug);
   if (!post) notFound();
 
+  const author = post.author ?? defaultAuthor;
+
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: post.title,
+          description: post.excerpt,
+          datePublished: post.date,
+          ...(post.updatedDate && { dateModified: post.updatedDate }),
+          author: {
+            "@type": "Person",
+            name: author.name,
+            jobTitle: author.role,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Vibepreneur",
+            url: "https://vibepreneur.com",
+          },
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://vibepreneur.com/blog/${slug}`,
+          },
+        }}
+      />
       <ReadingProgress />
 
       <Section>
@@ -60,7 +96,9 @@ export default async function BlogPostPage({ params }: Props) {
             {post.category}
           </span>
           <h1 className="mt-4 text-display-sm">{post.title}</h1>
-          <div className="mt-4 flex items-center gap-3 text-sm text-neutral-400">
+          <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-neutral-400">
+            <span>{author.name}</span>
+            <span aria-hidden="true">·</span>
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString("en-GB", {
                 day: "numeric",
@@ -68,6 +106,22 @@ export default async function BlogPostPage({ params }: Props) {
                 year: "numeric",
               })}
             </time>
+            {post.updatedDate && (
+              <>
+                <span aria-hidden="true">·</span>
+                <span>
+                  Updated{" "}
+                  <time dateTime={post.updatedDate}>
+                    {new Date(post.updatedDate).toLocaleDateString("en-GB", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </time>
+                </span>
+              </>
+            )}
+            <span aria-hidden="true">·</span>
             <span>{post.readTime}</span>
           </div>
         </div>

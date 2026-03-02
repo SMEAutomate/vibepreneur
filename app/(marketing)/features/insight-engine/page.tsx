@@ -5,8 +5,9 @@ import { FeaturePageContent } from "@/components/marketing/feature-page-content"
 const feature = features.find((f) => f.slug === "insight-engine")!;
 
 export const metadata: Metadata = {
-  title: `${feature.name} | Vibepreneur`,
+  title: feature.name,
   description: feature.description,
+  alternates: { canonical: `/features/${feature.slug}` },
 };
 
 export default function InsightEnginePage() {

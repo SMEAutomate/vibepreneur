@@ -3,7 +3,7 @@ import { z } from "zod";
 export const waitlistSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   role: z.string().min(1, "Please select your role"),
-  industry: z.string().optional(),
+  industry: z.string().min(1, "Please select your industry"),
   consent: z.boolean().default(true),
   source: z.string().optional(),
   ref: z.string().optional(),

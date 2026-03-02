@@ -31,7 +31,7 @@ export const industries = [
 ];
 
 export const waitlistBenefits = [
-  "Get 3 personalised solution ideas based on your experience",
+  "Get your fit test: 3 sector-specific opportunities matched to your expertise",
   "Early access when we launch",
   "Weekly insights on building from expertise",
   "Shape the platform with your feedback",

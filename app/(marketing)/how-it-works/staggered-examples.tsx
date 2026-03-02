@@ -20,8 +20,8 @@ const SECTIONS = [
   { key: "buyer", label: "Buyer", icon: SECTION_ICONS.buyer },
   { key: "offer", label: "Offer", icon: SECTION_ICONS.offer },
   {
-    key: "distributionWedge",
-    label: "Distribution Wedge",
+    key: "distributionChannel",
+    label: "Go-to-market channel",
     icon: SECTION_ICONS.distribution,
   },
 ] as const;

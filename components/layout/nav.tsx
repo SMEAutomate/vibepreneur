@@ -48,7 +48,7 @@ export function Nav() {
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/logo-landscape.png"
-            alt="Vibepreneur"
+            alt="Vibepreneur home"
             width={859}
             height={260}
             className="h-8 w-auto"

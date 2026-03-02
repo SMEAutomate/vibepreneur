@@ -57,7 +57,7 @@ export function Hero() {
           <motion.div className="hidden lg:block" style={{ y: mockY }}>
             <Image
               src="/logo-portrait.png"
-              alt="Vibepreneur"
+              alt="Vibepreneur logo: turn expertise into scalable products"
               width={567}
               height={479}
               className="mx-auto w-full max-w-lg"

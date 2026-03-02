@@ -1,12 +1,26 @@
+export interface BlogAuthor {
+  name: string;
+  role: string;
+  bio: string;
+}
+
+export const defaultAuthor: BlogAuthor = {
+  name: "The Vibepreneur Team",
+  role: "Vibepreneur",
+  bio: "Practical frameworks for professionals turning expertise into scalable solutions.",
+};
+
 export interface BlogPost {
   slug: string;
   title: string;
   category: "Career Pivot" | "Building" | "Mindset";
   date: string;
+  updatedDate?: string;
   excerpt: string;
   readTime: string;
   body: string[];
   pullquote: string;
+  author?: BlogAuthor;
   steps?: { label: string; text: string }[];
   comparison?: {
     left: string;

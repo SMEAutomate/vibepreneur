@@ -1,5 +1,10 @@
 import { describe, it, expect } from "vitest";
-import { generateSolutions, getRoleLabel } from "@/lib/solutionGenerator";
+import {
+  generateSolutions,
+  getRoleLabel,
+  getSectorContext,
+  getIndustryLabel,
+} from "@/lib/solutionGenerator";
 
 describe("generateSolutions", () => {
   it("returns 3 solutions for a known role", () => {
@@ -14,22 +19,35 @@ describe("generateSolutions", () => {
       expect(s.buyer).toBeTruthy();
       expect(s.offer).toBeTruthy();
       expect(s.pricingModel).toBeTruthy();
-      expect(s.distributionWedge).toBeTruthy();
+      expect(s.distributionChannel).toBeTruthy();
       expect(s.firstMoves).toHaveLength(3);
+      expect(s.solutionType).toBeTruthy();
+      expect(s.solutionTypeLabel).toBeTruthy();
+      expect(s.valueProposition).toBeTruthy();
+      expect(s.vibepreneurHook).toBeTruthy();
       for (const move of s.firstMoves) {
         expect(move).toBeTruthy();
       }
     }
   });
 
-  it("applies industry modifier to problem text", () => {
+  it("returns industry-specific solutions when pool has content", () => {
     const baseSolutions = generateSolutions("hr");
     const healthcareSolutions = generateSolutions("hr", "healthcare");
 
+    expect(healthcareSolutions).toHaveLength(3);
     expect(healthcareSolutions[0].problem).not.toBe(baseSolutions[0].problem);
-    expect(healthcareSolutions[0].problem.toLowerCase()).toContain(
-      "healthcare"
+  });
+
+  it("falls back to role templates when industry is unknown", () => {
+    const baseSolutions = generateSolutions("marketing");
+    const unknownSolutions = generateSolutions(
+      "marketing",
+      "underwater-basket-weaving"
     );
+
+    expect(unknownSolutions).toHaveLength(3);
+    expect(unknownSolutions[0].problem).toBe(baseSolutions[0].problem);
   });
 
   it("returns solutions for unknown roles using fallback", () => {
@@ -41,7 +59,7 @@ describe("generateSolutions", () => {
     }
   });
 
-  it("handles all 10+ defined roles", () => {
+  it("handles all 13 defined roles", () => {
     const roles = [
       "marketing",
       "sales",
@@ -64,7 +82,7 @@ describe("generateSolutions", () => {
     }
   });
 
-  it("handles all defined industries", () => {
+  it("handles all defined industries without error", () => {
     const industries = [
       "healthcare",
       "retail",
@@ -74,6 +92,9 @@ describe("generateSolutions", () => {
       "saas",
       "logistics",
       "professional-services",
+      "real-estate",
+      "manufacturing",
+      "media",
     ];
 
     for (const industry of industries) {
@@ -107,5 +128,31 @@ describe("getRoleLabel", () => {
 
   it("returns the input for unknown roles", () => {
     expect(getRoleLabel("astronaut")).toBe("astronaut");
+  });
+});
+
+describe("getSectorContext", () => {
+  it("returns sector context for known industries", () => {
+    const ctx = getSectorContext("saas");
+    expect(ctx).not.toBeNull();
+    expect(ctx!.label).toBe("SaaS & Technology");
+    expect(ctx!.sectorContext).toBeTruthy();
+  });
+
+  it("returns null for unknown industries", () => {
+    expect(getSectorContext("underwater-basket-weaving")).toBeNull();
+  });
+});
+
+describe("getIndustryLabel", () => {
+  it("returns label for known industries", () => {
+    expect(getIndustryLabel("healthcare")).toBe("Healthcare");
+    expect(getIndustryLabel("professional-services")).toBe(
+      "Professional Services"
+    );
+  });
+
+  it("returns the input for unknown industries", () => {
+    expect(getIndustryLabel("unknown")).toBe("unknown");
   });
 });

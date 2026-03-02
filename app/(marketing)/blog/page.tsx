@@ -3,9 +3,10 @@ import { BlogGrid } from "./blog-grid";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Vibepreneur",
+  title: "Blog",
   description:
     "Practical guides for professionals navigating AI displacement, career pivots, and building from expertise.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {

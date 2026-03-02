@@ -85,7 +85,7 @@ export const howItWorksCopy = {
       buyer: "VP of People Operations at companies with 200-2000 employees",
       offer:
         "Structured onboarding system that adapts to department, role, and seniority. Reduces time-to-productivity by 40% with automated check-ins and progress tracking.",
-      distributionWedge:
+      distributionChannel:
         "HR community newsletters and LinkedIn thought leadership targeting People Ops professionals.",
       firstMoves: [
         "Publish '5 signs your onboarding is costing you $50k per hire' on LinkedIn",
@@ -101,7 +101,7 @@ export const howItWorksCopy = {
         "CFO or Finance Director at scaling companies ($10M-$100M revenue)",
       offer:
         "Automated reporting pipeline that pulls from existing tools, reconciles in real-time, and delivers dashboards that update daily instead of monthly.",
-      distributionWedge:
+      distributionChannel:
         "CFO peer networks and finance-specific Slack communities.",
       firstMoves: [
         "Create a 'Finance reporting maturity assessment' as a free tool",

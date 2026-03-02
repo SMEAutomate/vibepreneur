@@ -28,18 +28,28 @@ describe("waitlistSchema", () => {
     expect(result.success).toBe(false);
   });
 
-  it("industry is optional", () => {
+  it("requires industry", () => {
     const result = waitlistSchema.safeParse({
       email: "test@example.com",
       role: "sales",
     });
-    expect(result.success).toBe(true);
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects empty industry", () => {
+    const result = waitlistSchema.safeParse({
+      email: "test@example.com",
+      role: "sales",
+      industry: "",
+    });
+    expect(result.success).toBe(false);
   });
 
   it("consent defaults to true", () => {
     const result = waitlistSchema.parse({
       email: "test@example.com",
       role: "sales",
+      industry: "saas",
     });
     expect(result.consent).toBe(true);
   });
@@ -48,6 +58,7 @@ describe("waitlistSchema", () => {
     const result = waitlistSchema.safeParse({
       email: "test@example.com",
       role: "marketing",
+      industry: "healthcare",
       source: "linkedin",
       ref: "abc123",
     });

@@ -30,8 +30,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!resolved) return {};
 
   return {
-    title: `${resolved.screen.title} | ${resolved.feature.name} | Vibepreneur`,
+    title: `${resolved.screen.title} | ${resolved.feature.name}`,
     description: resolved.screen.description,
+    alternates: {
+      canonical: `/features/${slug}/${screen}`,
+    },
   };
 }
 
