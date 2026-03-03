@@ -22,7 +22,19 @@ export type BlogThumbnailVariant =
   | "spiral-draw"
   | "ladder-steps"
   | "gear-turn"
-  | "arrow-bounce";
+  | "arrow-bounce"
+  | "calendar-check"
+  | "seed-sprout"
+  | "stack-build"
+  | "shield-glow"
+  | "signal-restore"
+  | "morph-shape"
+  | "inbox-stack"
+  | "filter-funnel"
+  | "timeline-march"
+  | "megaphone-burst"
+  | "crossroads-pause"
+  | "handshake-meet";
 
 export interface BlogPost {
   slug: string;
@@ -50,7 +62,7 @@ export const blogPosts: BlogPost[] = [
     title: "What to Do in the First 7 Days After AI Replaces Your Role",
     category: "Career Pivot",
     date: "2026-01-02",
-    thumbnail: "ladder-steps",
+    thumbnail: "calendar-check",
     excerpt:
       "The first week after losing your role to AI is critical. Not for panicking, not for upskilling. For making three specific moves that set up everything that follows.",
     readTime: "6 min read",
@@ -94,7 +106,7 @@ export const blogPosts: BlogPost[] = [
       "The 30-Day Plan to Replace Your Salary With a Small Internet Business",
     category: "Building",
     date: "2026-01-02",
-    thumbnail: "rising-bars",
+    thumbnail: "seed-sprout",
     excerpt:
       "You do not need a year-long runway or a venture-backed idea. You need 30 focused days and a structured plan to get your first paying customer.",
     readTime: "8 min read",
@@ -132,7 +144,7 @@ export const blogPosts: BlogPost[] = [
       "The Biggest Mistake Displaced Professionals Make: Learning Tools Instead of Building Assets",
     category: "Mindset",
     date: "2026-01-02",
-    thumbnail: "gear-turn",
+    thumbnail: "stack-build",
     excerpt:
       "After getting displaced by AI, the reflex is to learn new tools. But tools change every six months. Assets compound forever. Here is how to focus on the right thing.",
     readTime: "5 min read",
@@ -176,7 +188,7 @@ export const blogPosts: BlogPost[] = [
       '"I\'m Not Technical" Is Your Advantage: How Domain Expertise Wins in 2026',
     category: "Mindset",
     date: "2026-01-02",
-    thumbnail: "node-network",
+    thumbnail: "shield-glow",
     excerpt:
       "The professionals most threatened by AI are generalists with shallow technical skills. The ones most positioned to win are domain experts who understand problems deeply.",
     readTime: "6 min read",
@@ -473,7 +485,7 @@ export const blogPosts: BlogPost[] = [
     title: "Your First 10 Customers Will Not Come from Marketing",
     category: "Building",
     date: "2025-12-21",
-    thumbnail: "arrow-bounce",
+    thumbnail: "handshake-meet",
     excerpt:
       "Forget funnels, ads, and content calendars. Your first 10 customers come from direct conversations with people who already have the problem you solve.",
     readTime: "5 min read",
@@ -577,7 +589,7 @@ export const blogPosts: BlogPost[] = [
     title: "LinkedIn for Operators, Not Job Seekers",
     category: "Career Pivot",
     date: "2024-10-24",
-    thumbnail: "pulse-radar",
+    thumbnail: "megaphone-burst",
     excerpt:
       "Most LinkedIn advice is written for people looking for jobs. If you are building something, the strategy is completely different. Here is how operators use the platform.",
     readTime: "6 min read",
@@ -660,7 +672,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Network Reactivation Playbook: Reconnecting After Going Silent",
     category: "Career Pivot",
     date: "2025-02-27",
-    thumbnail: "scatter-converge",
+    thumbnail: "signal-restore",
     excerpt:
       "You have not spoken to most of your professional contacts in months or years. Reaching out now feels awkward. Here is a systematic approach to reactivating your network without the cringe.",
     readTime: "7 min read",
@@ -697,7 +709,7 @@ export const blogPosts: BlogPost[] = [
     title: "Build the Email List Before the Product",
     category: "Building",
     date: "2025-04-10",
-    thumbnail: "grid-light",
+    thumbnail: "inbox-stack",
     excerpt:
       "The order matters more than most people realise. An email list built before the product ensures you have buyers waiting on launch day, not silence.",
     readTime: "6 min read",
@@ -736,7 +748,7 @@ export const blogPosts: BlogPost[] = [
     title: "The AI Tools That Actually Matter for Solo Operators",
     category: "Building",
     date: "2025-05-22",
-    thumbnail: "orbit-rings",
+    thumbnail: "filter-funnel",
     excerpt:
       "There are thousands of AI tools. Most are distractions. Here are the categories that actually move the needle for a one-person business.",
     readTime: "7 min read",
@@ -759,7 +771,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Identity Shift Nobody Warns You About: Employee to Founder",
     category: "Career Pivot",
     date: "2025-07-03",
-    thumbnail: "split-path",
+    thumbnail: "morph-shape",
     excerpt:
       "The hardest part of becoming a founder is not the business model or the market. It is the psychological shift from deriving identity through employment to creating it yourself.",
     readTime: "6 min read",
@@ -782,7 +794,7 @@ export const blogPosts: BlogPost[] = [
     title: "When to Kill the Idea and When You Are Just Afraid",
     category: "Mindset",
     date: "2025-08-28",
-    thumbnail: "spiral-draw",
+    thumbnail: "crossroads-pause",
     excerpt:
       "Not every idea deserves to survive. But not every doubt deserves to win. Here is how to tell the difference between a bad idea and a scared founder.",
     readTime: "6 min read",
@@ -863,7 +875,7 @@ export const blogPosts: BlogPost[] = [
     title: "From Severance to First Sale: A 90 Day Transition",
     category: "Career Pivot",
     date: "2025-12-11",
-    thumbnail: "wave-flow",
+    thumbnail: "timeline-march",
     excerpt:
       "Ninety days is enough time to go from severance package to first paying customer. Not by rushing. By following a structured transition that builds on what you already know.",
     readTime: "8 min read",
