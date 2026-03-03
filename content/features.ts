@@ -71,48 +71,48 @@ export const features: FeatureConfig[] = [
         label: "Search & Filters",
         description:
           "Narrow by industry, urgency, or keyword to find the opportunities that match your background.",
-        x: "6%",
-        y: "12%",
+        x: "40%",
+        y: "13%",
       },
       {
         number: 2,
         label: "Opportunity Score",
         description:
           "Each opportunity scored 0–100 based on market size, urgency, and your personal fit.",
-        x: "6%",
-        y: "25%",
+        x: "17%",
+        y: "22%",
       },
       {
         number: 3,
         label: "Buyer & Industry Context",
         description:
           "See who actually pays and which industry vertical the opportunity belongs to.",
-        x: "35%",
-        y: "25%",
+        x: "34%",
+        y: "26%",
       },
       {
         number: 4,
         label: "Urgency Signal",
         description:
           "High, Medium, or Low, based on market timing, competitive density, and demand velocity.",
-        x: "72%",
-        y: "25%",
+        x: "76%",
+        y: "22%",
       },
       {
         number: 5,
         label: "Deep-Dive Action",
         description:
           "Click Explore to open the full opportunity detail: buyer profile, wedge strategy, and next steps.",
-        x: "85%",
-        y: "25%",
+        x: "87%",
+        y: "22%",
       },
       {
         number: 6,
         label: "Market Category Tags",
         description:
           "Industry and solution type labels so you can scan opportunities by the markets you know best.",
-        x: "55%",
-        y: "40%",
+        x: "40%",
+        y: "35%",
       },
     ],
   },
@@ -167,7 +167,7 @@ export const features: FeatureConfig[] = [
         label: "Offer Definition",
         description:
           "Name, one-line promise, and format. The foundation of your solution concept.",
-        x: "6%",
+        x: "18%",
         y: "14%",
       },
       {
@@ -175,7 +175,7 @@ export const features: FeatureConfig[] = [
         label: "Core Features",
         description:
           "Numbered feature list with prioritisation. What you actually build first.",
-        x: "6%",
+        x: "18%",
         y: "48%",
       },
       {
@@ -183,7 +183,7 @@ export const features: FeatureConfig[] = [
         label: "Buyer Outcomes",
         description:
           "Quantified results your buyer gets. The language that closes deals.",
-        x: "52%",
+        x: "55%",
         y: "14%",
       },
       {
@@ -191,7 +191,7 @@ export const features: FeatureConfig[] = [
         label: "Pricing Tiers",
         description:
           "Suggested pricing based on value metrics, not feature checklists.",
-        x: "52%",
+        x: "55%",
         y: "48%",
       },
       {
@@ -199,16 +199,16 @@ export const features: FeatureConfig[] = [
         label: "Solution Readiness",
         description:
           "Completeness score showing what's done and what's needed before launch.",
-        x: "52%",
-        y: "72%",
+        x: "55%",
+        y: "70%",
       },
       {
         number: 6,
         label: "Export & Share",
         description:
           "Generate a shareable solution brief for stakeholders, co-founders, or early testers.",
-        x: "80%",
-        y: "72%",
+        x: "82%",
+        y: "4%",
       },
     ],
   },
@@ -263,7 +263,7 @@ export const features: FeatureConfig[] = [
         label: "Ideal Customer Profile",
         description:
           "Define exactly who you're building for: role, company size, and buying triggers.",
-        x: "8%",
+        x: "18%",
         y: "14%",
       },
       {
@@ -271,7 +271,7 @@ export const features: FeatureConfig[] = [
         label: "Core Pains",
         description:
           "The specific problems your ICP faces, in their own words. Drives all messaging.",
-        x: "38%",
+        x: "42%",
         y: "14%",
       },
       {
@@ -287,7 +287,7 @@ export const features: FeatureConfig[] = [
         label: "Differentiation",
         description:
           "What makes you different from alternatives. Not features, positioning angles.",
-        x: "8%",
+        x: "18%",
         y: "52%",
       },
       {
@@ -295,7 +295,7 @@ export const features: FeatureConfig[] = [
         label: "Why Now",
         description:
           "The timing signal that creates urgency. Market shifts, regulatory changes, or emerging trends.",
-        x: "38%",
+        x: "42%",
         y: "52%",
       },
       {
@@ -359,7 +359,7 @@ export const features: FeatureConfig[] = [
         label: "Week 1: Foundation",
         description:
           "Start with positioning content, landing page, and your first lead magnet.",
-        x: "4%",
+        x: "22%",
         y: "12%",
       },
       {
@@ -367,7 +367,7 @@ export const features: FeatureConfig[] = [
         label: "Week 2: Outreach",
         description:
           "Direct outreach to 50 target buyers plus content publishing for inbound.",
-        x: "27%",
+        x: "40%",
         y: "12%",
       },
       {
@@ -375,7 +375,7 @@ export const features: FeatureConfig[] = [
         label: "Week 3: Content Push",
         description:
           "Webinars, polls, and follow-ups to build momentum from initial conversations.",
-        x: "52%",
+        x: "58%",
         y: "12%",
       },
       {
@@ -391,15 +391,15 @@ export const features: FeatureConfig[] = [
         label: "Task Status Tracking",
         description:
           "Every task has a status (done, in progress, or planned) so nothing falls through.",
-        x: "18%",
-        y: "55%",
+        x: "22%",
+        y: "50%",
       },
       {
         number: 6,
         label: "Resources & Budget",
         description:
           "Realistic estimates: time commitment, budget, and tools needed to execute.",
-        x: "4%",
+        x: "22%",
         y: "80%",
       },
     ],
@@ -455,7 +455,7 @@ export const features: FeatureConfig[] = [
         label: "Channel Fit Score",
         description:
           "Each channel scored 0–100 based on your ICP, content style, and competitive density.",
-        x: "4%",
+        x: "17%",
         y: "12%",
       },
       {
@@ -463,7 +463,7 @@ export const features: FeatureConfig[] = [
         label: "Stage Prioritisation",
         description:
           "Start here, Next, or Later, so you focus on what works now, not everything at once.",
-        x: "45%",
+        x: "42%",
         y: "12%",
       },
       {
@@ -471,7 +471,7 @@ export const features: FeatureConfig[] = [
         label: "Effort Estimate",
         description:
           "Low, Medium, or High. Realistic assessment of what each channel demands.",
-        x: "82%",
+        x: "85%",
         y: "12%",
       },
       {
@@ -479,16 +479,16 @@ export const features: FeatureConfig[] = [
         label: "Channel Description",
         description:
           "Why this channel works (or doesn't) for your specific solution and market.",
-        x: "30%",
-        y: "35%",
+        x: "38%",
+        y: "30%",
       },
       {
         number: 5,
         label: "Recommended Sequence",
         description:
           "The suggested order to launch channels. Start narrow, then expand as you learn.",
-        x: "4%",
-        y: "80%",
+        x: "17%",
+        y: "82%",
       },
       {
         number: 6,
@@ -496,7 +496,7 @@ export const features: FeatureConfig[] = [
         description:
           "Pre-built templates for email sequences, landing pages, and lead magnets tied to each channel.",
         x: "55%",
-        y: "80%",
+        y: "85%",
       },
     ],
   },
@@ -557,7 +557,7 @@ export const features: FeatureConfig[] = [
         label: "Key Metrics",
         description:
           "Signups, activations, demo requests, and conversion rate. The numbers that matter at your stage.",
-        x: "4%",
+        x: "25%",
         y: "8%",
       },
       {
@@ -565,7 +565,7 @@ export const features: FeatureConfig[] = [
         label: "Traffic Sources",
         description:
           "Which channels drive visitors and signups, with conversion rates per source.",
-        x: "4%",
+        x: "25%",
         y: "38%",
       },
       {
@@ -573,7 +573,7 @@ export const features: FeatureConfig[] = [
         label: "Experiment Results",
         description:
           "Structured tests with clear outcomes. Winners get scaled, losers get cut.",
-        x: "52%",
+        x: "62%",
         y: "38%",
       },
       {
@@ -581,7 +581,7 @@ export const features: FeatureConfig[] = [
         label: "Next Growth Moves",
         description:
           "AI-suggested next actions based on what's working in your data right now.",
-        x: "4%",
+        x: "25%",
         y: "78%",
       },
       {
@@ -589,7 +589,7 @@ export const features: FeatureConfig[] = [
         label: "Referral Tracking",
         description:
           "Two-sided referral incentives with sharing channels and projected viral growth curves.",
-        x: "52%",
+        x: "62%",
         y: "65%",
       },
       {
@@ -597,7 +597,7 @@ export const features: FeatureConfig[] = [
         label: "Revenue Projection",
         description:
           "6-month MRR forecast with conservative, base, and optimistic scenarios tied to experiment results.",
-        x: "52%",
+        x: "62%",
         y: "78%",
       },
     ],
