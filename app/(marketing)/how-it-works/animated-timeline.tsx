@@ -12,46 +12,46 @@ const STAGE_ICONS = [
   "M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941",
 ] as const;
 
+const EASE = [0.32, 0.72, 0, 1] as const;
+
 export function AnimatedTimeline() {
   const { stages } = howItWorksCopy;
   const [active, setActive] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  function handleSelect(i: number) {
+    if (i === active) return;
+    setDirection(i > active ? 1 : -1);
+    setActive(i);
+  }
 
   return (
     <div>
-      {/* Step indicators */}
-      <div className="relative flex items-center justify-between">
-        {/* Connecting line (behind nodes) */}
-        <div className="absolute inset-x-0 top-1/2 hidden h-px -translate-y-1/2 bg-neutral-200 md:block" />
-        <motion.div
-          className="absolute top-1/2 hidden h-px origin-left -translate-y-1/2 bg-brand-500 md:block"
-          style={{ left: 0 }}
-          animate={{ width: `${(active / (stages.length - 1)) * 100}%` }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        />
-
-        {stages.map((stage, i) => {
-          const isActive = i === active;
-          const isPast = i < active;
-
-          return (
+      {/* Tab bar */}
+      <div className="flex justify-center">
+        <div className="inline-flex gap-1 rounded-full bg-neutral-100 p-1">
+          {stages.map((stage, i) => (
             <button
               key={stage.title}
-              onClick={() => setActive(i)}
-              className="group relative z-10 flex flex-col items-center gap-2"
+              onClick={() => handleSelect(i)}
+              className="relative rounded-full px-3 py-1.5 text-sm font-medium transition-colors sm:px-4 sm:py-2"
             >
-              <motion.span
-                className={`flex h-10 w-10 items-center justify-center rounded-full border-2 transition-colors ${
-                  isActive
-                    ? "border-brand-600 bg-brand-600 text-white"
-                    : isPast
-                      ? "border-brand-500 bg-brand-50 text-brand-600"
-                      : "border-neutral-200 bg-white text-neutral-400 group-hover:border-neutral-300"
+              {active === i && (
+                <motion.div
+                  layoutId="stage-pill"
+                  className="absolute inset-0 rounded-full bg-white shadow-sm"
+                  transition={{ duration: 0.25, ease: EASE }}
+                />
+              )}
+              <span
+                className={`relative z-10 flex items-center gap-1.5 whitespace-nowrap ${
+                  active === i
+                    ? "text-brand-700"
+                    : "text-neutral-500 hover:text-neutral-700"
                 }`}
-                animate={isActive ? { scale: [1, 1.1, 1] } : { scale: 1 }}
-                transition={{ duration: 0.3 }}
               >
                 <svg
-                  className="h-4.5 w-4.5"
+                  className="hidden h-4 w-4 sm:block"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
@@ -63,90 +63,39 @@ export function AnimatedTimeline() {
                     d={STAGE_ICONS[i]}
                   />
                 </svg>
-              </motion.span>
-              <span
-                className={`hidden text-xs font-medium md:block ${
-                  isActive
-                    ? "text-brand-700"
-                    : isPast
-                      ? "text-brand-600"
-                      : "text-neutral-400 group-hover:text-neutral-600"
-                }`}
-              >
                 {stage.title}
               </span>
             </button>
-          );
-        })}
+          ))}
+        </div>
       </div>
 
-      {/* Expanded content panel */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={active}
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -8 }}
-          transition={{ duration: 0.3 }}
-          className="mt-10 rounded-xl border border-neutral-100 bg-white p-6 sm:p-8"
-          style={{ boxShadow: "0 1px 2px rgba(0,0,0,0.04)" }}
-        >
-          <div className="flex items-start gap-4">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
-              <svg
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d={STAGE_ICONS[active]}
-                />
-              </svg>
-            </span>
-            <div className="min-w-0">
+      {/* Content panel */}
+      <div className="relative mt-8 overflow-hidden">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, x: direction * 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: direction * -40 }}
+            transition={{ duration: 0.2, ease: EASE }}
+            className="rounded-xl border border-neutral-100 bg-white p-6 sm:p-8"
+            style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
+          >
+            <div className="flex items-baseline gap-2">
               <h3 className="text-lg font-semibold text-neutral-900">
                 {stages[active].title}
               </h3>
-              <p className="mt-1 text-sm font-medium text-brand-600">
-                Output: {stages[active].output}
-              </p>
+              <span className="text-sm font-medium text-brand-600">
+                {stages[active].output}
+              </span>
             </div>
-          </div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.12, duration: 0.3 }}
-            className="mt-4 leading-relaxed text-neutral-600"
-          >
-            {stages[active].description}
-          </motion.p>
-
-          {/* Stage navigation */}
-          <div className="mt-6 flex items-center justify-between border-t border-neutral-100 pt-4">
-            <button
-              onClick={() => setActive(Math.max(0, active - 1))}
-              disabled={active === 0}
-              className="text-sm font-medium text-neutral-400 transition-colors hover:text-neutral-600 disabled:invisible"
-            >
-              Previous
-            </button>
-            <span className="text-xs text-neutral-400">
-              {active + 1} of {stages.length}
-            </span>
-            <button
-              onClick={() => setActive(Math.min(stages.length - 1, active + 1))}
-              disabled={active === stages.length - 1}
-              className="text-sm font-medium text-brand-600 transition-colors hover:text-brand-700 disabled:invisible"
-            >
-              Next
-            </button>
-          </div>
-        </motion.div>
-      </AnimatePresence>
+            <p className="mt-3 leading-relaxed text-neutral-600">
+              {stages[active].description}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
