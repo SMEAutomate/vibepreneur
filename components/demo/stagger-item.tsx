@@ -3,7 +3,7 @@
 import { createContext, useContext, type ReactNode } from "react";
 import { motion } from "framer-motion";
 
-const MockInViewContext = createContext<boolean | null>(null);
+const MockInViewContext = createContext<boolean>(false);
 
 export function MockInViewProvider({
   inView,
@@ -29,16 +29,12 @@ interface StaggerItemProps {
 }
 
 export function StaggerItem({ index, children, className }: StaggerItemProps) {
-  const mockInView = useContext(MockInViewContext);
-
-  if (mockInView === null) {
-    return <div className={className}>{children}</div>;
-  }
+  const inView = useContext(MockInViewContext);
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 18 }}
-      animate={mockInView ? { opacity: 1, y: 0 } : undefined}
+      animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{
         delay: BASE_DELAY + index * STAGGER_INTERVAL,
         duration: 0.5,
