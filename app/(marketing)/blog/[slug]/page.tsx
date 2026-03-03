@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { blogPosts, getBlogPostBySlug, defaultAuthor } from "@/content/blog";
 import { ReadingProgress } from "./reading-progress";
 import { BlogPostArticle } from "./blog-post-article";
+import { RelatedPosts } from "./related-posts";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -130,6 +131,8 @@ export default async function BlogPostPage({ params }: Props) {
       <Section background="light">
         <BlogPostArticle post={post} />
       </Section>
+
+      <RelatedPosts currentSlug={post.slug} category={post.category} />
 
       <Section background="brand">
         <div className="mx-auto max-w-2xl text-center">
