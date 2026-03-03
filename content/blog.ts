@@ -50,7 +50,7 @@ export const blogPosts: BlogPost[] = [
     title: "What to Do in the First 7 Days After AI Replaces Your Role",
     category: "Career Pivot",
     date: "2026-01-02",
-    thumbnail: "rising-bars",
+    thumbnail: "ladder-steps",
     excerpt:
       "The first week after losing your role to AI is critical. Not for panicking, not for upskilling. For making three specific moves that set up everything that follows.",
     readTime: "6 min read",
@@ -94,7 +94,7 @@ export const blogPosts: BlogPost[] = [
       "The 30-Day Plan to Replace Your Salary With a Small Internet Business",
     category: "Building",
     date: "2026-01-02",
-    thumbnail: "orbit-rings",
+    thumbnail: "rising-bars",
     excerpt:
       "You do not need a year-long runway or a venture-backed idea. You need 30 focused days and a structured plan to get your first paying customer.",
     readTime: "8 min read",
@@ -132,7 +132,7 @@ export const blogPosts: BlogPost[] = [
       "The Biggest Mistake Displaced Professionals Make: Learning Tools Instead of Building Assets",
     category: "Mindset",
     date: "2026-01-02",
-    thumbnail: "pulse-radar",
+    thumbnail: "gear-turn",
     excerpt:
       "After getting displaced by AI, the reflex is to learn new tools. But tools change every six months. Assets compound forever. Here is how to focus on the right thing.",
     readTime: "5 min read",
@@ -220,7 +220,7 @@ export const blogPosts: BlogPost[] = [
     title: "How to Pick a Business Idea When Your Confidence Is Shot",
     category: "Mindset",
     date: "2026-01-02",
-    thumbnail: "split-path",
+    thumbnail: "scatter-converge",
     excerpt:
       "Getting displaced does a number on your confidence. You cannot wait for confidence to return before making decisions. You need a framework that works without it.",
     readTime: "5 min read",
@@ -265,7 +265,7 @@ export const blogPosts: BlogPost[] = [
     title: "The New Career Ladder: Employee to Operator to Owner",
     category: "Career Pivot",
     date: "2026-01-02",
-    thumbnail: "wave-flow",
+    thumbnail: "ladder-steps",
     excerpt:
       "The traditional career ladder (junior, senior, director, VP) is collapsing. The new ladder has three rungs: employee, operator, owner. Here is how to climb it.",
     readTime: "7 min read",
@@ -301,7 +301,7 @@ export const blogPosts: BlogPost[] = [
     title: "How to Explain Your Pivot to Friends, Family, and Recruiters",
     category: "Career Pivot",
     date: "2026-01-02",
-    thumbnail: "scatter-converge",
+    thumbnail: "split-path",
     excerpt:
       "The hardest part of pivoting after AI displacement is not the business. It is the conversation at dinner when someone asks what you do now.",
     readTime: "5 min read",
@@ -364,7 +364,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Why "Apply for More Jobs" Is the Wrong Default in 2026',
     category: "Career Pivot",
     date: "2026-01-02",
-    thumbnail: "spiral-draw",
+    thumbnail: "orbit-rings",
     excerpt:
       "The default response to job loss is to apply for more jobs. In 2026, this default is broken. Here is why, and what to do instead.",
     readTime: "6 min read",
@@ -407,7 +407,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Calm Way to Rebuild: A Weekly Operating System for Your Pivot",
     category: "Building",
     date: "2026-01-02",
-    thumbnail: "ladder-steps",
+    thumbnail: "wave-flow",
     excerpt:
       "Pivoting after displacement is stressful. Most of the stress comes from having no structure. Here is a weekly operating system that makes the pivot manageable.",
     readTime: "6 min read",
@@ -452,7 +452,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why Positioning Comes Before Product",
     category: "Building",
     date: "2025-12-28",
-    thumbnail: "gear-turn",
+    thumbnail: "pulse-radar",
     excerpt:
       "Most people build first and figure out who it is for later. That sequence costs months. Positioning first means every build decision has a buyer in mind.",
     readTime: "5 min read",
@@ -577,7 +577,7 @@ export const blogPosts: BlogPost[] = [
     title: "LinkedIn for Operators, Not Job Seekers",
     category: "Career Pivot",
     date: "2024-10-24",
-    thumbnail: "scatter-converge",
+    thumbnail: "pulse-radar",
     excerpt:
       "Most LinkedIn advice is written for people looking for jobs. If you are building something, the strategy is completely different. Here is how operators use the platform.",
     readTime: "6 min read",
@@ -637,7 +637,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Fear of Visibility: Why Smart Professionals Hide Online",
     category: "Mindset",
     date: "2025-01-16",
-    thumbnail: "pulse-radar",
+    thumbnail: "spiral-draw",
     excerpt:
       "You know you should post online. You know it would help your business. But every time you open LinkedIn, something stops you. That something has a name and a solution.",
     readTime: "6 min read",
@@ -660,7 +660,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Network Reactivation Playbook: Reconnecting After Going Silent",
     category: "Career Pivot",
     date: "2025-02-27",
-    thumbnail: "orbit-rings",
+    thumbnail: "scatter-converge",
     excerpt:
       "You have not spoken to most of your professional contacts in months or years. Reaching out now feels awkward. Here is a systematic approach to reactivating your network without the cringe.",
     readTime: "7 min read",
@@ -697,7 +697,7 @@ export const blogPosts: BlogPost[] = [
     title: "Build the Email List Before the Product",
     category: "Building",
     date: "2025-04-10",
-    thumbnail: "ladder-steps",
+    thumbnail: "grid-light",
     excerpt:
       "The order matters more than most people realise. An email list built before the product ensures you have buyers waiting on launch day, not silence.",
     readTime: "6 min read",
@@ -736,7 +736,7 @@ export const blogPosts: BlogPost[] = [
     title: "The AI Tools That Actually Matter for Solo Operators",
     category: "Building",
     date: "2025-05-22",
-    thumbnail: "grid-light",
+    thumbnail: "orbit-rings",
     excerpt:
       "There are thousands of AI tools. Most are distractions. Here are the categories that actually move the needle for a one-person business.",
     readTime: "7 min read",
