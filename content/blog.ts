@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
     slug: "first-7-days-after-ai-replaces-role",
     title: "What to Do in the First 7 Days After AI Replaces Your Role",
     category: "Career Pivot",
-    date: "2026-01-02",
+    date: "2026-03-02",
     thumbnail: "calendar-check",
     excerpt:
       "The first week after losing your role to AI is critical. Not for panicking, not for upskilling. For making three specific moves that set up everything that follows.",
@@ -105,7 +105,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "The 30-Day Plan to Replace Your Salary With a Small Internet Business",
     category: "Building",
-    date: "2026-01-02",
+    date: "2026-02-23",
     thumbnail: "seed-sprout",
     excerpt:
       "You do not need a year-long runway or a venture-backed idea. You need 30 focused days and a structured plan to get your first paying customer.",
@@ -143,7 +143,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "The Biggest Mistake Displaced Professionals Make: Learning Tools Instead of Building Assets",
     category: "Mindset",
-    date: "2026-01-02",
+    date: "2026-02-16",
     thumbnail: "stack-build",
     excerpt:
       "After getting displaced by AI, the reflex is to learn new tools. But tools change every six months. Assets compound forever. Here is how to focus on the right thing.",
@@ -187,7 +187,7 @@ export const blogPosts: BlogPost[] = [
     title:
       '"I\'m Not Technical" Is Your Advantage: How Domain Expertise Wins in 2026',
     category: "Mindset",
-    date: "2026-01-02",
+    date: "2026-02-09",
     thumbnail: "shield-glow",
     excerpt:
       "The professionals most threatened by AI are generalists with shallow technical skills. The ones most positioned to win are domain experts who understand problems deeply.",
@@ -231,7 +231,7 @@ export const blogPosts: BlogPost[] = [
     slug: "pick-business-idea-low-confidence",
     title: "How to Pick a Business Idea When Your Confidence Is Shot",
     category: "Mindset",
-    date: "2026-01-02",
+    date: "2026-02-02",
     thumbnail: "scatter-converge",
     excerpt:
       "Getting displaced does a number on your confidence. You cannot wait for confidence to return before making decisions. You need a framework that works without it.",
@@ -276,7 +276,7 @@ export const blogPosts: BlogPost[] = [
     slug: "employee-operator-owner",
     title: "The New Career Ladder: Employee to Operator to Owner",
     category: "Career Pivot",
-    date: "2026-01-02",
+    date: "2026-01-26",
     thumbnail: "ladder-steps",
     excerpt:
       "The traditional career ladder (junior, senior, director, VP) is collapsing. The new ladder has three rungs: employee, operator, owner. Here is how to climb it.",
@@ -312,7 +312,7 @@ export const blogPosts: BlogPost[] = [
     slug: "explain-your-pivot",
     title: "How to Explain Your Pivot to Friends, Family, and Recruiters",
     category: "Career Pivot",
-    date: "2026-01-02",
+    date: "2026-01-19",
     thumbnail: "split-path",
     excerpt:
       "The hardest part of pivoting after AI displacement is not the business. It is the conversation at dinner when someone asks what you do now.",
@@ -333,7 +333,7 @@ export const blogPosts: BlogPost[] = [
     slug: "cv-to-business-ideas",
     title: "How to Turn Your CV Into 10 Business Ideas (and Pick the Best One)",
     category: "Building",
-    date: "2026-01-02",
+    date: "2026-01-12",
     thumbnail: "grid-light",
     excerpt:
       "Your CV is not just a document for job applications. It is a catalogue of problems solved, processes improved, and markets understood. Here is how to mine it.",
@@ -375,7 +375,7 @@ export const blogPosts: BlogPost[] = [
     slug: "stop-applying-for-jobs",
     title: 'Why "Apply for More Jobs" Is the Wrong Default in 2026',
     category: "Career Pivot",
-    date: "2026-01-02",
+    date: "2026-01-05",
     thumbnail: "orbit-rings",
     excerpt:
       "The default response to job loss is to apply for more jobs. In 2026, this default is broken. Here is why, and what to do instead.",
@@ -419,6 +419,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Calm Way to Rebuild: A Weekly Operating System for Your Pivot",
     category: "Building",
     date: "2026-01-02",
+
     thumbnail: "wave-flow",
     excerpt:
       "Pivoting after displacement is stressful. Most of the stress comes from having no structure. Here is a weekly operating system that makes the pivot manageable.",
