@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card } from "@/components/ui/card";
+import { BlogThumbnail } from "@/components/blog/blog-thumbnail";
 import { blogPosts, type BlogPost } from "@/content/blog";
 
 const CATEGORIES = ["All", "Career Pivot", "Building", "Mindset"] as const;
@@ -39,17 +40,20 @@ function HeroCard({ post }: { post: BlogPost }) {
       viewport={{ once: true }}
     >
       <Link href={`/blog/${post.slug}`} className="block">
-        <Card className="flex flex-col gap-3">
-          <div className="flex items-center gap-3">
-            <CategoryBadge category={post.category} />
-            <PostMeta post={post} />
+        <Card className="flex flex-col gap-0 overflow-hidden p-0">
+          {post.thumbnail && <BlogThumbnail variant={post.thumbnail} />}
+          <div className="flex flex-col gap-3 p-6">
+            <div className="flex items-center gap-3">
+              <CategoryBadge category={post.category} />
+              <PostMeta post={post} />
+            </div>
+            <h2 className="text-xl font-semibold text-neutral-900">
+              {post.title}
+            </h2>
+            <p className="text-sm leading-relaxed text-neutral-600">
+              {post.excerpt}
+            </p>
           </div>
-          <h2 className="text-xl font-semibold text-neutral-900">
-            {post.title}
-          </h2>
-          <p className="text-sm leading-relaxed text-neutral-600">
-            {post.excerpt}
-          </p>
         </Card>
       </Link>
     </motion.div>
@@ -65,16 +69,19 @@ function GridCard({ post, index }: { post: BlogPost; index: number }) {
       transition={{ delay: index * 0.08 }}
     >
       <Link href={`/blog/${post.slug}`} className="block h-full">
-        <Card className="flex h-full flex-col">
-          <CategoryBadge category={post.category} />
-          <h2 className="mt-3 text-base font-semibold text-neutral-900">
-            {post.title}
-          </h2>
-          <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">
-            {post.excerpt}
-          </p>
-          <div className="mt-4">
-            <PostMeta post={post} />
+        <Card className="flex h-full flex-col overflow-hidden p-0">
+          {post.thumbnail && <BlogThumbnail variant={post.thumbnail} />}
+          <div className="flex flex-1 flex-col p-6">
+            <CategoryBadge category={post.category} />
+            <h2 className="mt-3 text-base font-semibold text-neutral-900">
+              {post.title}
+            </h2>
+            <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">
+              {post.excerpt}
+            </p>
+            <div className="mt-4">
+              <PostMeta post={post} />
+            </div>
           </div>
         </Card>
       </Link>
