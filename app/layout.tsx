@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { JsonLd } from "@/components/seo/json-ld";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 const SITE_URL = "https://vibepreneur.com";
 const SITE_NAME = "Vibepreneur";
@@ -48,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <body className="font-sans">
         <JsonLd
           data={[
@@ -59,7 +66,6 @@ export default function RootLayout({
               url: SITE_URL,
               logo: `${SITE_URL}/logo-landscape.png`,
               description: DEFAULT_DESCRIPTION,
-              sameAs: [],
             },
             {
               "@context": "https://schema.org",
@@ -70,6 +76,13 @@ export default function RootLayout({
               publisher: {
                 "@type": "Organization",
                 name: SITE_NAME,
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: `${SITE_URL}/blog?q={search_term_string}`,
+                },
               },
             },
           ]}

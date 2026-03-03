@@ -1,4 +1,18 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/marketing/hero";
+
+export const metadata: Metadata = {
+  title: "Vibepreneur | Turn Expertise Into Scalable Products",
+  description:
+    "Transform real-world experience into scalable solutions with structured go-to-market and growth systems built in. For professionals displaced by AI who want to build, not just apply.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Vibepreneur | Turn Expertise Into Scalable Products",
+    description:
+      "Transform real-world experience into scalable solutions with structured go-to-market and growth systems built in.",
+    url: "https://vibepreneur.com",
+  },
+};
 import { TheShift } from "@/components/marketing/the-shift";
 import { WhatIsVibepreneur } from "@/components/marketing/what-is-vibepreneur";
 import { HowItWorksPreview } from "@/components/marketing/how-it-works-preview";

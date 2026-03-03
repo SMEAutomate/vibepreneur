@@ -188,8 +188,10 @@ export function BlogPostArticle({ post }: { post: BlogPost }) {
 
   const graphicIndex = Math.min(3, Math.floor(post.body.length * 0.25));
 
+  const midpoint = Math.floor(post.body.length * 0.55);
+
   return (
-    <div className="mx-auto max-w-[680px]">
+    <article className="mx-auto max-w-[680px]">
       {post.body.map((paragraph, i) => (
         <div key={i}>
           {i === graphicIndex && post.steps && (
@@ -199,6 +201,16 @@ export function BlogPostArticle({ post }: { post: BlogPost }) {
             <ComparisonGraphic comparison={post.comparison} />
           )}
           {i === pullquoteIndex && <PullQuote text={post.pullquote} />}
+          {i === midpoint && (
+            <h2 className="mb-4 mt-10 text-xl font-semibold text-neutral-900">
+              {post.pullquote.length > 80
+                ? post.pullquote.slice(
+                    0,
+                    post.pullquote.indexOf(".", 30) + 1
+                  ) || post.pullquote
+                : post.pullquote}
+            </h2>
+          )}
           <motion.p
             className={[
               "mb-6 text-lg leading-[1.8] text-neutral-600",
@@ -216,6 +228,6 @@ export function BlogPostArticle({ post }: { post: BlogPost }) {
         </div>
       ))}
       <ShareButtons title={post.title} />
-    </div>
+    </article>
   );
 }

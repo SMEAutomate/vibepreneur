@@ -33,6 +33,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       ...(post.updatedDate && { modifiedTime: post.updatedDate }),
       authors: [(post.author ?? defaultAuthor).name],
+      url: `https://vibepreneur.com/blog/${slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
     },
   };
 }
@@ -47,28 +53,56 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: post.title,
-          description: post.excerpt,
-          datePublished: post.date,
-          ...(post.updatedDate && { dateModified: post.updatedDate }),
-          author: {
-            "@type": "Person",
-            name: author.name,
-            jobTitle: author.role,
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            url: `https://vibepreneur.com/blog/${slug}`,
+            image: `https://vibepreneur.com/blog/${slug}/opengraph-image`,
+            datePublished: post.date,
+            ...(post.updatedDate && { dateModified: post.updatedDate }),
+            author: {
+              "@type": "Person",
+              name: author.name,
+              jobTitle: author.role,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Vibepreneur",
+              url: "https://vibepreneur.com",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://vibepreneur.com/blog/${slug}`,
+            },
           },
-          publisher: {
-            "@type": "Organization",
-            name: "Vibepreneur",
-            url: "https://vibepreneur.com",
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://vibepreneur.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: "https://vibepreneur.com/blog",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: post.title,
+                item: `https://vibepreneur.com/blog/${slug}`,
+              },
+            ],
           },
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `https://vibepreneur.com/blog/${slug}`,
-          },
-        }}
+        ]}
       />
       <ReadingProgress />
 

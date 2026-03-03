@@ -1,5 +1,6 @@
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
+import { JsonLd } from "@/components/seo/json-ld";
 import { AnimatedInlineScreenMock } from "@/components/demo/animated-mock";
 import { howItWorksCopy } from "@/content/how-it-works";
 import { AnimatedTimeline } from "./animated-timeline";
@@ -12,13 +13,54 @@ export const metadata: Metadata = {
   description:
     "From insight to growth: how Vibepreneur turns your expertise into scalable solutions with built-in distribution.",
   alternates: { canonical: "/how-it-works" },
+  openGraph: {
+    title: "How It Works",
+    description:
+      "From insight to growth: how Vibepreneur turns your expertise into scalable solutions with built-in distribution.",
+    url: "/how-it-works",
+  },
 };
 
 export default function HowItWorksPage() {
-  const { hero, narrative } = howItWorksCopy;
+  const { hero, narrative, stages } = howItWorksCopy;
 
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "How to turn your expertise into a scalable solution with Vibepreneur",
+            description:
+              "From insight to growth: how Vibepreneur turns your expertise into scalable solutions with built-in distribution.",
+            step: stages.map((stage, i) => ({
+              "@type": "HowToStep",
+              position: i + 1,
+              name: `${stage.title}: ${stage.output}`,
+              text: stage.description,
+            })),
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://vibepreneur.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "How It Works",
+                item: "https://vibepreneur.com/how-it-works",
+              },
+            ],
+          },
+        ]}
+      />
       <Section>
         <div className="mx-auto max-w-3xl">
           <h1 className="text-display-md">{hero.headline}</h1>

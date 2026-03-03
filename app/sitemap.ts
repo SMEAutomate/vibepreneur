@@ -6,26 +6,42 @@ import { mockScreens } from "@/lib/mockScreens";
 const SITE_URL = "https://vibepreneur.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+
   const staticPages: MetadataRoute.Sitemap = [
-    { url: SITE_URL, changeFrequency: "weekly", priority: 1.0 },
+    {
+      url: SITE_URL,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 1.0,
+    },
     {
       url: `${SITE_URL}/how-it-works`,
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/pricing`,
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.9,
     },
-    { url: `${SITE_URL}/blog`, changeFrequency: "weekly", priority: 0.8 },
+    {
+      url: `${SITE_URL}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
     {
       url: `${SITE_URL}/roadmap`,
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.6,
     },
     {
       url: `${SITE_URL}/waitlist`,
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -33,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const featurePages: MetadataRoute.Sitemap = features.map((f) => ({
     url: `${SITE_URL}/features/${f.slug}`,
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
