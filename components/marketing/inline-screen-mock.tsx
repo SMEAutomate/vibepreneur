@@ -18,7 +18,7 @@ export function InlineScreenMock({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [3, 0, -1.5]);
+  const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [2, 0, -1]);
 
   return (
     <motion.div
