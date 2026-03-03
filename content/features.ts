@@ -106,6 +106,14 @@ export const features: FeatureConfig[] = [
         x: "85%",
         y: "25%",
       },
+      {
+        number: 6,
+        label: "Market Category Tags",
+        description:
+          "Industry and solution type labels so you can scan opportunities by the markets you know best.",
+        x: "55%",
+        y: "40%",
+      },
     ],
   },
   {
@@ -150,6 +158,8 @@ export const features: FeatureConfig[] = [
       "PricingPackaging",
       "UserJourneyMap",
       "FeaturePrioritizer",
+      "AIAssistant",
+      "ExportCenter",
     ],
     callouts: [
       {
@@ -190,6 +200,14 @@ export const features: FeatureConfig[] = [
         description:
           "Completeness score showing what's done and what's needed before launch.",
         x: "52%",
+        y: "72%",
+      },
+      {
+        number: 6,
+        label: "Export & Share",
+        description:
+          "Generate a shareable solution brief for stakeholders, co-founders, or early testers.",
+        x: "80%",
         y: "72%",
       },
     ],
@@ -332,6 +350,8 @@ export const features: FeatureConfig[] = [
       "ContentLaunchKit",
       "ICPDefinition",
       "RevenueProjection",
+      "OutreachStudio",
+      "LandingPageBuilder",
     ],
     callouts: [
       {
@@ -426,7 +446,6 @@ export const features: FeatureConfig[] = [
       "ContentLaunchKit",
       "LandingPageBuilder",
       "LeadMagnetBuilder",
-      "ComparisonPageBuilder",
       "ReferralProgram",
       "SEOKeywordPlanner",
     ],
@@ -469,6 +488,14 @@ export const features: FeatureConfig[] = [
         description:
           "The suggested order to launch channels. Start narrow, then expand as you learn.",
         x: "4%",
+        y: "80%",
+      },
+      {
+        number: 6,
+        label: "Content & Outreach Assets",
+        description:
+          "Pre-built templates for email sequences, landing pages, and lead magnets tied to each channel.",
+        x: "55%",
         y: "80%",
       },
     ],
@@ -521,6 +548,8 @@ export const features: FeatureConfig[] = [
       "SocialProofCollector",
       "WinLossAnalysis",
       "RevenueProjection",
+      "AIAssistant",
+      "ExportCenter",
     ],
     callouts: [
       {
@@ -553,6 +582,22 @@ export const features: FeatureConfig[] = [
         description:
           "AI-suggested next actions based on what's working in your data right now.",
         x: "4%",
+        y: "78%",
+      },
+      {
+        number: 5,
+        label: "Referral Tracking",
+        description:
+          "Two-sided referral incentives with sharing channels and projected viral growth curves.",
+        x: "52%",
+        y: "65%",
+      },
+      {
+        number: 6,
+        label: "Revenue Projection",
+        description:
+          "6-month MRR forecast with conservative, base, and optimistic scenarios tied to experiment results.",
+        x: "52%",
         y: "78%",
       },
     ],

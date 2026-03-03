@@ -422,6 +422,65 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "positioning-before-product",
+    title: "Why Positioning Comes Before Product",
+    category: "Building",
+    date: "2025-12-28",
+    excerpt:
+      "Most people build first and figure out who it is for later. That sequence costs months. Positioning first means every build decision has a buyer in mind.",
+    readTime: "5 min read",
+    body: [
+      "The instinct is understandable. You have an idea. You are excited. You want to start building. So you open your laptop and start creating the product, the course, the template, the service offering. Weeks later, you have something that exists but no clear story about who it is for or why they should care.",
+      "This is the most common mistake professionals make when turning expertise into a business. They treat positioning as marketing fluff that happens after the real work. In reality, positioning is the foundation that makes everything else easier.",
+      "Positioning answers four questions: Who is this for? What problem does it solve? Why is this approach better than the alternatives? Why should they trust you to deliver it? When you answer these before building, every subsequent decision becomes obvious. Feature scope, pricing, distribution channel, messaging, even the name.",
+      "Without positioning, you build based on assumptions. You guess what features matter. You set prices based on what feels reasonable rather than what the market values. You write copy that describes what the product does instead of what the buyer gets. You launch to silence because you never figured out where your buyers pay attention.",
+      "With positioning, you build based on evidence. You talk to 10 potential buyers before writing a line of code. You learn their language, their frustrations, their budget constraints. You discover that the feature you thought was core is actually irrelevant, and the throwaway idea you almost cut is the reason they would pay.",
+      "The positioning process does not need to be complicated. Start with a one-page canvas: ideal customer profile, their top three pains, your promise, your differentiation, and why now. Fill it in based on conversations, not assumptions. Revise it after every buyer conversation. By the time you start building, you already know what to build, who to build it for, and how to talk about it.",
+      "The professionals who skip this step end up rebuilding. They launch, get lukewarm reception, pivot the messaging, realise the audience was wrong, pivot again. Six months of iteration that could have been two weeks of conversations.",
+      "Position first. Build second. Everything else follows.",
+    ],
+    pullquote: "Position first. Build second. Everything else follows.",
+  },
+  {
+    slug: "first-ten-customers",
+    title: "Your First 10 Customers Will Not Come from Marketing",
+    category: "Building",
+    date: "2025-12-21",
+    excerpt:
+      "Forget funnels, ads, and content calendars. Your first 10 customers come from direct conversations with people who already have the problem you solve.",
+    readTime: "5 min read",
+    body: [
+      "New founders love to plan marketing campaigns. Social media strategies, content calendars, SEO keyword research, email funnels. All of that matters eventually. None of it matters for your first 10 customers.",
+      "Your first 10 customers will come from direct, one-to-one conversations. DMs, emails, phone calls, coffee meetings. You reaching out to a specific person with a specific problem and offering a specific solution. No funnel required.",
+      "This is uncomfortable because it feels like it does not scale. That is exactly the point. You are not trying to scale yet. You are trying to learn. Every conversation with a potential first customer teaches you something that no amount of market research can: whether real humans will actually pay for what you are building.",
+      "Here is the process. Make a list of 50 people who have the problem you solve. Not a demographic profile. Actual names. Pull them from LinkedIn, your professional network, industry communities, and past colleagues. These are people whose specific situations you understand because you have worked alongside them.",
+      "Send 10 messages per week. Not a sales pitch. A genuine, specific message: 'I noticed you are dealing with [specific problem]. I have been building something that addresses this. Would you be open to a 15-minute conversation about whether it could help?' Personalise every message. Reference something real about their situation.",
+      "From those 10 messages, expect 3 to 4 replies. From those replies, expect 1 to 2 conversations. From 5 weeks of this, you will have had 5 to 10 real conversations with potential buyers. Some will become customers. All will teach you something.",
+      "The knowledge you gain from these conversations is irreplaceable. You will learn which features matter and which are irrelevant. You will hear the exact language buyers use to describe their problem, which becomes your marketing copy. You will discover objections you never anticipated and discover buying triggers you never considered.",
+      "Only after you have your first 10 customers does marketing start to matter. Because now you know who your buyer is, what they care about, and what language makes them pay attention. Your marketing becomes a system for replicating the conversations that already worked, at scale.",
+      "Start with conversations. Scale with systems.",
+    ],
+    pullquote: "Start with conversations. Scale with systems.",
+    steps: [
+      {
+        label: "Week 1",
+        text: "Build a list of 50 people with the problem you solve",
+      },
+      {
+        label: "Week 2-3",
+        text: "Send 10 personalised messages per week, expect 3-4 replies",
+      },
+      {
+        label: "Week 4-5",
+        text: "Have 5-10 conversations, learn what matters to real buyers",
+      },
+      {
+        label: "Week 6+",
+        text: "Convert conversations to customers, then build systems to replicate",
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

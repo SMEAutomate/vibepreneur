@@ -74,6 +74,11 @@ export const siteCopy = {
           "Generates a launch plan with ICP definition, channel strategy, outreach sequences, and content angles. Not theory. Executable steps.",
       },
       {
+        title: "Distribution",
+        description:
+          "Channel scoring, outreach sequences, landing pages, lead magnets, and SEO. Reach buyers where they actually look, not where you hope they are.",
+      },
+      {
         title: "Growth System",
         description:
           "Traction experiments, distribution channels, referral mechanics, and visibility plays. Designed to build momentum, not just awareness.",
