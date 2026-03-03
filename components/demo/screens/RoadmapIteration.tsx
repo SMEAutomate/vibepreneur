@@ -1,4 +1,5 @@
 import { AppShell } from "../AppShell";
+import { StaggerItem } from "../stagger-item";
 
 const columns = [
   {
@@ -77,39 +78,41 @@ export function RoadmapIteration() {
       subtitle="Prioritised by traction signals, not guesswork."
     >
       <div className="grid gap-6 md:grid-cols-3">
-        {columns.map((col) => (
-          <div key={col.label}>
-            <h2 className="mb-4 text-sm font-semibold text-neutral-900">
-              {col.label}
-            </h2>
-            <div className="space-y-3">
-              {col.items.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-neutral-200 bg-white p-5"
-                >
-                  <div className="flex items-start justify-between">
-                    <p className="text-sm font-medium text-neutral-900">
-                      {item.title}
-                    </p>
-                    <span
-                      className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-medium ${priorityColors[item.priority]}`}
-                    >
-                      {item.priority}
-                    </span>
+        {columns.map((col, i) => (
+          <StaggerItem key={col.label} index={i}>
+            <div>
+              <h2 className="mb-4 text-sm font-semibold text-neutral-900">
+                {col.label}
+              </h2>
+              <div className="space-y-3">
+                {col.items.map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-2xl border border-neutral-200 bg-white p-5"
+                  >
+                    <div className="flex items-start justify-between">
+                      <p className="text-sm font-medium text-neutral-900">
+                        {item.title}
+                      </p>
+                      <span
+                        className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-medium ${priorityColors[item.priority]}`}
+                      >
+                        {item.priority}
+                      </span>
+                    </div>
+                    <div className="mt-3 flex items-start gap-2 rounded-lg bg-neutral-50 p-2.5">
+                      <span className="mt-0.5 text-[10px] text-neutral-400">
+                        Signal:
+                      </span>
+                      <p className="text-[10px] leading-relaxed text-neutral-600">
+                        {item.signal}
+                      </p>
+                    </div>
                   </div>
-                  <div className="mt-3 flex items-start gap-2 rounded-lg bg-neutral-50 p-2.5">
-                    <span className="mt-0.5 text-[10px] text-neutral-400">
-                      Signal:
-                    </span>
-                    <p className="text-[10px] leading-relaxed text-neutral-600">
-                      {item.signal}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          </StaggerItem>
         ))}
       </div>
     </AppShell>

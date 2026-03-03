@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { MockScreenRenderer } from "@/components/demo/MockScreenRenderer";
 
 interface InlineScreenMockProps {
@@ -12,14 +13,26 @@ export function InlineScreenMock({
   componentName,
   caption,
 }: InlineScreenMockProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [2, 0, -1]);
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
+      style={{ perspective: 1200 }}
     >
-      <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-lg">
+      <motion.div
+        className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-lg"
+        style={{ rotateX }}
+      >
         <div className="flex items-center gap-1.5 border-b border-neutral-100 bg-neutral-50 px-4 py-2.5">
           <span className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
           <span className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
@@ -37,7 +50,7 @@ export function InlineScreenMock({
             <MockScreenRenderer componentName={componentName} />
           </div>
         </div>
-      </div>
+      </motion.div>
       <p className="mt-4 text-center text-sm text-neutral-500">{caption}</p>
     </motion.div>
   );
