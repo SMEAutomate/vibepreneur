@@ -1,5 +1,4 @@
 import { AppShell } from "../AppShell";
-import { StaggerItem } from "../stagger-item";
 
 const weeks = [
   {
@@ -107,72 +106,71 @@ export function GoToMarketPlan() {
       }
     >
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {weeks.map((week, i) => (
-          <StaggerItem key={week.label} index={i}>
-            <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-              <div className="flex items-center gap-2">
-                <span className="text-xs font-bold text-brand-600">
-                  {week.label}
-                </span>
-                <span className="text-xs text-neutral-400">·</span>
-                <span className="text-xs font-medium text-neutral-700">
-                  {week.title}
-                </span>
-              </div>
-              <div className="mt-4 space-y-3">
-                {week.tasks.map((task) => (
-                  <div
-                    key={task.text}
-                    className="rounded-lg border border-neutral-100 p-3"
-                  >
-                    <p className="text-xs leading-relaxed text-neutral-700">
-                      {task.text}
-                    </p>
-                    <div className="mt-2 flex items-center justify-between">
-                      <span className="text-[10px] text-neutral-400">
-                        {task.channel}
-                      </span>
-                      <span
-                        className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${statusColors[task.status]}`}
-                      >
-                        {task.status === "done"
-                          ? "Done"
-                          : task.status === "in-progress"
-                            ? "In progress"
-                            : "Planned"}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+        {weeks.map((week) => (
+          <div
+            key={week.label}
+            className="rounded-2xl border border-neutral-200 bg-white p-5"
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-bold text-brand-600">
+                {week.label}
+              </span>
+              <span className="text-xs text-neutral-400">·</span>
+              <span className="text-xs font-medium text-neutral-700">
+                {week.title}
+              </span>
             </div>
-          </StaggerItem>
+            <div className="mt-4 space-y-3">
+              {week.tasks.map((task) => (
+                <div
+                  key={task.text}
+                  className="rounded-lg border border-neutral-100 p-3"
+                >
+                  <p className="text-xs leading-relaxed text-neutral-700">
+                    {task.text}
+                  </p>
+                  <div className="mt-2 flex items-center justify-between">
+                    <span className="text-[10px] text-neutral-400">
+                      {task.channel}
+                    </span>
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${statusColors[task.status]}`}
+                    >
+                      {task.status === "done"
+                        ? "Done"
+                        : task.status === "in-progress"
+                          ? "In progress"
+                          : "Planned"}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
 
-      <StaggerItem index={4}>
-        <div className="mt-8 rounded-2xl border border-neutral-200 bg-white p-6">
-          <h2 className="text-sm font-semibold text-neutral-900">
-            Resources Needed
-          </h2>
-          <div className="mt-4 grid gap-4 md:grid-cols-3">
-            {[
-              { label: "Time commitment", value: "8–10 hrs/week" },
-              { label: "Budget", value: "$0 (organic only)" },
-              { label: "Tools", value: "LinkedIn, email, landing page" },
-            ].map((r) => (
-              <div key={r.label} className="rounded-lg bg-neutral-50 p-4">
-                <p className="text-[10px] font-medium uppercase tracking-wider text-neutral-400">
-                  {r.label}
-                </p>
-                <p className="mt-1 text-sm font-medium text-neutral-800">
-                  {r.value}
-                </p>
-              </div>
-            ))}
-          </div>
+      <div className="mt-8 rounded-2xl border border-neutral-200 bg-white p-6">
+        <h2 className="text-sm font-semibold text-neutral-900">
+          Resources Needed
+        </h2>
+        <div className="mt-4 grid gap-4 md:grid-cols-3">
+          {[
+            { label: "Time commitment", value: "8–10 hrs/week" },
+            { label: "Budget", value: "$0 (organic only)" },
+            { label: "Tools", value: "LinkedIn, email, landing page" },
+          ].map((r) => (
+            <div key={r.label} className="rounded-lg bg-neutral-50 p-4">
+              <p className="text-[10px] font-medium uppercase tracking-wider text-neutral-400">
+                {r.label}
+              </p>
+              <p className="mt-1 text-sm font-medium text-neutral-800">
+                {r.value}
+              </p>
+            </div>
+          ))}
         </div>
-      </StaggerItem>
+      </div>
     </AppShell>
   );
 }

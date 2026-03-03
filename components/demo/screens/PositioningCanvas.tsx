@@ -1,5 +1,4 @@
 import { AppShell } from "../AppShell";
-import { StaggerItem } from "../stagger-item";
 
 export function PositioningCanvas() {
   return (
@@ -56,39 +55,40 @@ export function PositioningCanvas() {
               { name: "Manual", gap: "Error-prone, unscalable" },
             ],
           },
-        ].map((card, i) => (
-          <StaggerItem key={card.label} index={i}>
-            <div className="rounded-2xl border border-neutral-200 bg-white p-6">
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
-                {card.label}
-              </h3>
-              {"content" in card && (
-                <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-                  {card.content}
-                </p>
-              )}
-              {"items" in card && card.items && (
-                <ul className="mt-3 space-y-2">
-                  {card.items.map((item) => (
-                    <li
-                      key={typeof item === "string" ? item : item.name}
-                      className="flex items-start gap-2 text-sm text-neutral-600"
-                    >
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-400" />
-                      {typeof item === "string" ? (
-                        item
-                      ) : (
-                        <span>
-                          {item.name}{" "}
-                          <span className="text-neutral-400">- {item.gap}</span>
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </StaggerItem>
+        ].map((card) => (
+          <div
+            key={card.label}
+            className="rounded-2xl border border-neutral-200 bg-white p-6"
+          >
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+              {card.label}
+            </h3>
+            {"content" in card && (
+              <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+                {card.content}
+              </p>
+            )}
+            {"items" in card && card.items && (
+              <ul className="mt-3 space-y-2">
+                {card.items.map((item) => (
+                  <li
+                    key={typeof item === "string" ? item : item.name}
+                    className="flex items-start gap-2 text-sm text-neutral-600"
+                  >
+                    <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-400" />
+                    {typeof item === "string" ? (
+                      item
+                    ) : (
+                      <span>
+                        {item.name}{" "}
+                        <span className="text-neutral-400">- {item.gap}</span>
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         ))}
       </div>
     </AppShell>

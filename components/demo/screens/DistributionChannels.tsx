@@ -1,5 +1,4 @@
 import { AppShell } from "../AppShell";
-import { StaggerItem } from "../stagger-item";
 
 const channels = [
   {
@@ -70,68 +69,65 @@ export function DistributionChannels() {
       }
     >
       <div className="space-y-3">
-        {channels.map((ch, i) => (
-          <StaggerItem key={ch.name} index={i}>
-            <div className="flex items-center gap-5 rounded-2xl border border-neutral-200 bg-white p-5">
-              <div className="w-12 text-center">
-                <span
-                  className={`text-lg font-bold ${ch.fit >= 80 ? "text-emerald-600" : ch.fit >= 65 ? "text-amber-600" : "text-neutral-400"}`}
-                >
-                  {ch.fit}
-                </span>
-                <p className="text-[9px] text-neutral-400">fit</p>
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-3">
-                  <p className="text-sm font-medium text-neutral-900">
-                    {ch.name}
-                  </p>
-                  <span
-                    className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${ch.stage === "Start here" ? "bg-emerald-50 text-emerald-700" : ch.stage === "Next" ? "bg-amber-50 text-amber-700" : "bg-neutral-100 text-neutral-500"}`}
-                  >
-                    {ch.stage}
-                  </span>
-                </div>
-                <p className="mt-1 text-xs text-neutral-500">
-                  {ch.description}
-                </p>
-              </div>
-              <div className="text-right">
-                <p className="text-[10px] font-medium uppercase tracking-wider text-neutral-400">
-                  Effort
-                </p>
-                <p className="text-xs font-medium text-neutral-700">
-                  {ch.effort}
-                </p>
-              </div>
+        {channels.map((ch) => (
+          <div
+            key={ch.name}
+            className="flex items-center gap-5 rounded-2xl border border-neutral-200 bg-white p-5"
+          >
+            <div className="w-12 text-center">
+              <span
+                className={`text-lg font-bold ${ch.fit >= 80 ? "text-emerald-600" : ch.fit >= 65 ? "text-amber-600" : "text-neutral-400"}`}
+              >
+                {ch.fit}
+              </span>
+              <p className="text-[9px] text-neutral-400">fit</p>
             </div>
-          </StaggerItem>
+            <div className="flex-1">
+              <div className="flex items-center gap-3">
+                <p className="text-sm font-medium text-neutral-900">
+                  {ch.name}
+                </p>
+                <span
+                  className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${ch.stage === "Start here" ? "bg-emerald-50 text-emerald-700" : ch.stage === "Next" ? "bg-amber-50 text-amber-700" : "bg-neutral-100 text-neutral-500"}`}
+                >
+                  {ch.stage}
+                </span>
+              </div>
+              <p className="mt-1 text-xs text-neutral-500">{ch.description}</p>
+            </div>
+            <div className="text-right">
+              <p className="text-[10px] font-medium uppercase tracking-wider text-neutral-400">
+                Effort
+              </p>
+              <p className="text-xs font-medium text-neutral-700">
+                {ch.effort}
+              </p>
+            </div>
+          </div>
         ))}
       </div>
 
-      <StaggerItem index={7}>
-        <div className="mt-8 rounded-2xl border border-brand-100 bg-brand-50/30 p-6">
-          <h2 className="text-sm font-semibold text-brand-800">
-            Recommended Sequence
-          </h2>
-          <div className="mt-4 flex items-center gap-3">
-            {["LinkedIn organic", "Cold email", "Free audit tool"].map(
-              (step, i) => (
-                <div key={step} className="flex items-center gap-3">
-                  <div className="rounded-lg bg-white px-4 py-2 text-xs font-medium text-brand-700 shadow-sm">
-                    {step}
-                  </div>
-                  {i < 2 && <span className="text-neutral-300">→</span>}
+      <div className="mt-8 rounded-2xl border border-brand-100 bg-brand-50/30 p-6">
+        <h2 className="text-sm font-semibold text-brand-800">
+          Recommended Sequence
+        </h2>
+        <div className="mt-4 flex items-center gap-3">
+          {["LinkedIn organic", "Cold email", "Free audit tool"].map(
+            (step, i) => (
+              <div key={step} className="flex items-center gap-3">
+                <div className="rounded-lg bg-white px-4 py-2 text-xs font-medium text-brand-700 shadow-sm">
+                  {step}
                 </div>
-              )
-            )}
-          </div>
-          <p className="mt-3 text-xs text-brand-600">
-            Start with these three channels simultaneously. Add SEO and
-            partnerships once you have 20+ conversations.
-          </p>
+                {i < 2 && <span className="text-neutral-300">→</span>}
+              </div>
+            )
+          )}
         </div>
-      </StaggerItem>
+        <p className="mt-3 text-xs text-brand-600">
+          Start with these three channels simultaneously. Add SEO and
+          partnerships once you have 20+ conversations.
+        </p>
+      </div>
     </AppShell>
   );
 }
