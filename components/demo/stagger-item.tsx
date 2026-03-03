@@ -3,6 +3,9 @@
 import { type ReactNode } from "react";
 import { motion } from "framer-motion";
 
+const BASE_DELAY = 0.45;
+const STAGGER_INTERVAL = 0.08;
+
 interface StaggerItemProps {
   index: number;
   children: ReactNode;
@@ -12,12 +15,12 @@ interface StaggerItemProps {
 export function StaggerItem({ index, children, className }: StaggerItemProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 12 }}
+      initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{
-        delay: index * 0.06,
-        duration: 0.4,
+        delay: BASE_DELAY + index * STAGGER_INTERVAL,
+        duration: 0.5,
         ease: [0.32, 0.72, 0, 1],
       }}
       className={className}
