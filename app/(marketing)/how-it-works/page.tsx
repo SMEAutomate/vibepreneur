@@ -1,6 +1,6 @@
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
-import { InlineScreenMock } from "@/components/marketing/inline-screen-mock";
+import { AnimatedInlineScreenMock } from "@/components/demo/animated-mock";
 import { howItWorksCopy } from "@/content/how-it-works";
 import { AnimatedTimeline } from "./animated-timeline";
 import { TechnicalPillars } from "./technical-pillars";
@@ -28,7 +28,7 @@ export default function HowItWorksPage() {
         </div>
 
         <div className="mx-auto mt-12 max-w-5xl">
-          <InlineScreenMock
+          <AnimatedInlineScreenMock
             componentName="HomeOverview"
             caption="Your strategic dashboard: opportunities, GTM moves, and launch readiness at a glance."
           />

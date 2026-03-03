@@ -6,6 +6,7 @@ import { Section } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AnimatedHeadline } from "@/components/ui/animated-headline";
+import { AnimatedInlineScreenMock } from "@/components/demo/animated-mock";
 import { InlineScreenMock } from "./inline-screen-mock";
 import { AnnotatedScreenExplainer } from "./annotated-screen-explainer";
 import { FeatureScreenGallery } from "./feature-screen-gallery";
@@ -71,7 +72,7 @@ export function FeaturePageContent({ feature }: FeaturePageContentProps) {
         {/* Hero mockup */}
         {featuredScreenData && (
           <div className="mx-auto mt-12 max-w-5xl">
-            <InlineScreenMock
+            <AnimatedInlineScreenMock
               componentName={feature.featuredScreen}
               caption={`${featuredScreenData.title}: ${featuredScreenData.description}`}
             />
