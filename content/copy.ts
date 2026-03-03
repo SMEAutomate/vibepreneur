@@ -64,17 +64,17 @@ export const siteCopy = {
           "Structures your idea into a complete concept: positioning, pricing model, user journey, and feature scope. Ready for validation.",
       },
       {
-        title: "Positioning Engine",
+        title: "Positioning Studio",
         description:
           "Defines how your solution wins. Competitive angles, value propositions, objection handling, and messaging frameworks tuned to your market.",
       },
       {
-        title: "Go-To-Market Engine",
+        title: "Go-To-Market Planner",
         description:
           "Generates a launch plan with ICP definition, channel strategy, outreach sequences, and content angles. Not theory. Executable steps.",
       },
       {
-        title: "Distribution",
+        title: "Distribution Toolkit",
         description:
           "Channel scoring, outreach sequences, landing pages, lead magnets, and SEO. Reach buyers where they actually look, not where you hope they are.",
       },

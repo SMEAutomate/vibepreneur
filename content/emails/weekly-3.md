@@ -32,7 +32,7 @@ Three distribution channels consistently work for solutions built from professio
 
 ---
 
-_The Positioning Engine is now live. Define how your solution wins with competitive angles, messaging, and objection handling. [Check the roadmap →](/roadmap)_
+_The Positioning Studio is now live. Define how your solution wins with competitive angles, messaging, and objection handling. [Check the roadmap →](/roadmap)_
 
 See you next week.
 The Vibepreneur Team

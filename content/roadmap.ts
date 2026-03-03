@@ -37,7 +37,7 @@ export const roadmapColumns: Record<
     label: "Next",
     items: [
       {
-        title: "Distribution System",
+        title: "Distribution Toolkit",
         description:
           "ICP definition, channel strategy, outreach sequences, and content angles.",
         status: "in-progress",
@@ -99,6 +99,6 @@ export const weeklyUpdates: WeeklyUpdate[] = [
     week: "Week 3",
     date: "March 2026",
     title: "Positioning that wins",
-    body: "Shipped the Positioning Engine. It generates competitive angles, objection handling, and messaging frameworks tuned to your specific market. Distribution System work begins next week.",
+    body: "Shipped the Positioning Studio. It generates competitive angles, objection handling, and messaging frameworks tuned to your specific market. Distribution Toolkit work begins next week.",
   },
 ];

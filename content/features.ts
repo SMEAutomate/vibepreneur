@@ -215,10 +215,10 @@ export const features: FeatureConfig[] = [
   {
     slug: "positioning-engine",
     tag: "Positioning",
-    name: "Positioning Engine",
+    name: "Positioning Studio",
     headline: "Define how your solution wins, then prove it",
     description:
-      "The Positioning Engine gives you a complete messaging toolkit: ICP definition, positioning canvas, messaging matrix, objection handling, and competitive comparison pages. Every word grounded in your actual market context.",
+      "The Positioning Studio gives you a complete messaging toolkit: ICP definition, positioning canvas, messaging matrix, objection handling, and competitive comparison pages. Every word grounded in your actual market context.",
     iconPath:
       "M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5",
     capabilities: [
@@ -311,10 +311,10 @@ export const features: FeatureConfig[] = [
   {
     slug: "go-to-market",
     tag: "GTM",
-    name: "Go-To-Market Engine",
+    name: "Go-To-Market Planner",
     headline: "From strategy to execution in 30 days",
     description:
-      "The Go-To-Market Engine generates a complete launch plan: ideal customer profile, channel strategy, content calendar, and revenue projections. Not theory. Executable steps with clear timelines.",
+      "The Go-To-Market Planner generates a complete launch plan: ideal customer profile, channel strategy, content calendar, and revenue projections. Not theory. Executable steps with clear timelines.",
     iconPath:
       "M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z",
     capabilities: [
@@ -407,10 +407,10 @@ export const features: FeatureConfig[] = [
   {
     slug: "distribution",
     tag: "Distribution",
-    name: "Distribution",
+    name: "Distribution Toolkit",
     headline: "Reach buyers where they actually look",
     description:
-      "Distribution handles the hardest part of launching: getting your solution in front of the right people. Channel scoring, outreach sequences, landing pages, lead magnets, and SEO, all from one workspace.",
+      "The Distribution Toolkit handles the hardest part of launching: getting your solution in front of the right people. Channel scoring, outreach sequences, landing pages, lead magnets, and SEO, all from one workspace.",
     iconPath:
       "M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z",
     capabilities: [
