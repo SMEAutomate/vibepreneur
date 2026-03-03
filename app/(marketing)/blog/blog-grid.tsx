@@ -92,10 +92,12 @@ function GridCard({ post, index }: { post: BlogPost; index: number }) {
 export function BlogGrid() {
   const [active, setActive] = useState<(typeof CATEGORIES)[number]>("All");
 
+  const sorted = [...blogPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   const filtered =
-    active === "All"
-      ? blogPosts
-      : blogPosts.filter((p) => p.category === active);
+    active === "All" ? sorted : sorted.filter((p) => p.category === active);
 
   const hero = filtered[0];
   const rest = filtered.slice(1);
