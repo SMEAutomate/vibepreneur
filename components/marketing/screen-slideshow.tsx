@@ -6,11 +6,16 @@ import { MockScreenRenderer } from "@/components/demo/MockScreenRenderer";
 
 interface ScreenSlideshowProps {
   screenNames: string[];
+  children: React.ReactNode;
 }
 
 const CYCLE_MS = 4000;
+const SCALE = 0.45;
 
-export function ScreenSlideshow({ screenNames }: ScreenSlideshowProps) {
+export function ScreenSlideshow({
+  screenNames,
+  children,
+}: ScreenSlideshowProps) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -29,42 +34,38 @@ export function ScreenSlideshow({ screenNames }: ScreenSlideshowProps) {
   return (
     <div
       ref={containerRef}
-      className="relative h-44 overflow-hidden bg-neutral-50 sm:h-48"
+      className="relative h-72 overflow-hidden rounded-xl sm:h-80"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="flex items-center gap-1 border-b border-neutral-100 px-3 py-1.5">
-        <span className="h-1.5 w-1.5 rounded-full bg-neutral-300" />
-        <span className="h-1.5 w-1.5 rounded-full bg-neutral-300" />
-        <span className="h-1.5 w-1.5 rounded-full bg-neutral-300" />
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={screenNames[index]}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="absolute inset-0 origin-top-left"
+          style={{
+            transform: `scale(${SCALE})`,
+            width: `${100 / SCALE}%`,
+            height: `${100 / SCALE}%`,
+          }}
+        >
+          <MockScreenRenderer componentName={screenNames[index]} />
+        </motion.div>
+      </AnimatePresence>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-5 pt-12">
+        {children}
       </div>
 
-      <div className="relative h-[calc(100%-24px)] overflow-hidden">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={screenNames[index]}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0 origin-top-left"
-            style={{
-              transform: "scale(0.35)",
-              width: `${100 / 0.35}%`,
-              height: `${100 / 0.35}%`,
-            }}
-          >
-            <MockScreenRenderer componentName={screenNames[index]} />
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-1.5">
+      <div className="absolute right-3 top-3 flex gap-1.5">
         {screenNames.map((_, i) => (
           <span
             key={i}
             className={`h-1.5 w-1.5 rounded-full transition-colors ${
-              i === index ? "bg-brand-600" : "bg-neutral-300"
+              i === index ? "bg-white" : "bg-white/40"
             }`}
           />
         ))}

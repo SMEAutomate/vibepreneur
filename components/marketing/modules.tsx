@@ -125,18 +125,21 @@ export function Modules() {
             >
               <Link href={href} className="block h-full">
                 <Card hover className="h-full overflow-hidden p-0">
-                  <ScreenSlideshow screenNames={SLIDESHOW_SCREENS[i]} />
-                  <div className="p-6">
-                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
-                      {icons[i]}
+                  <ScreenSlideshow screenNames={SLIDESHOW_SCREENS[i]}>
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/20 text-white">
+                        {icons[i]}
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold text-white">
+                          {item.title}
+                        </h3>
+                        <p className="mt-0.5 text-xs leading-relaxed text-white/80">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-base font-semibold text-neutral-900">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-neutral-600">
-                      {item.description}
-                    </p>
-                  </div>
+                  </ScreenSlideshow>
                 </Card>
               </Link>
             </motion.div>
