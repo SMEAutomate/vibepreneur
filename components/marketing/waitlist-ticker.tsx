@@ -1,8 +1,131 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+
+const ROLES = [
+  "agency owners",
+  "architects",
+  "attorneys",
+  "brand strategists",
+  "CFOs",
+  "chief marketers",
+  "clinic directors",
+  "CMOs",
+  "coaches",
+  "commercial brokers",
+  "construction managers",
+  "consultants",
+  "creative directors",
+  "CTOs",
+  "dental practice owners",
+  "design directors",
+  "e-commerce directors",
+  "engineering managers",
+  "executive coaches",
+  "executive producers",
+  "film producers",
+  "finance directors",
+  "fitness studio owners",
+  "fleet managers",
+  "franchise owners",
+  "fund managers",
+  "general contractors",
+  "general managers",
+  "gym owners",
+  "head brewers",
+  "head chefs",
+  "hospitality directors",
+  "HR directors",
+  "insurance brokers",
+  "investment advisors",
+  "IT directors",
+  "law firm partners",
+  "logistics directors",
+  "managing directors",
+  "managing editors",
+  "managing partners",
+  "manufacturing directors",
+  "marketing directors",
+  "master electricians",
+  "master plumbers",
+  "media buyers",
+  "medical directors",
+  "operations directors",
+  "optometry practice owners",
+  "PE firm partners",
+  "pharmacy owners",
+  "photography studio owners",
+  "portfolio managers",
+  "practice managers",
+  "principal architects",
+  "principal consultants",
+  "principal engineers",
+  "procurement directors",
+  "product directors",
+  "production managers",
+  "property developers",
+  "property managers",
+  "publishing directors",
+  "R&D directors",
+  "real estate brokers",
+  "regional managers",
+  "restaurant owners",
+  "retail directors",
+  "revenue officers",
+  "salon owners",
+  "sales directors",
+  "senior advisors",
+  "senior analysts",
+  "senior brokers",
+  "senior developers",
+  "senior designers",
+  "senior partners",
+  "senior strategists",
+  "spa owners",
+  "staffing directors",
+  "studio owners",
+  "supply chain directors",
+  "technical directors",
+  "tech leads",
+  "therapy practice owners",
+  "trade contractors",
+  "training directors",
+  "treasury managers",
+  "underwriting directors",
+  "venture partners",
+  "vet practice owners",
+  "vineyard owners",
+  "VP of engineering",
+  "VP of marketing",
+  "VP of operations",
+  "VP of product",
+  "VP of sales",
+  "warehouse directors",
+  "wealth managers",
+  "workshop owners",
+  "civil engineering directors",
+  "site superintendents",
+  "structural engineers",
+  "project engineers",
+  "construction superintendents",
+  "MEP directors",
+  "estimating directors",
+  "chief engineers",
+  "preconstruction directors",
+  "safety directors",
+  "field operations managers",
+  "commissioning managers",
+  "bridge engineers",
+  "geotechnical engineers",
+  "environmental engineers",
+  "construction firm owners",
+  "land development managers",
+  "building envelope consultants",
+  "heavy civil managers",
+  "surveying firm owners",
+] as const;
 
 const ANCHOR_YEAR = 2026;
 const ANCHOR_MONTH = 2;
@@ -66,12 +189,20 @@ function computeCount(): number {
 
 export function WaitlistTicker(): React.ReactElement {
   const [count, setCount] = useState(computeCount);
+  const [roleIndex, setRoleIndex] = useState(0);
   const spanRef = useRef<HTMLSpanElement>(null);
   const prevRef = useRef(count);
 
   useEffect(() => {
-    const id = setInterval(() => setCount(computeCount()), TICK_MS);
-    return () => clearInterval(id);
+    const countId = setInterval(() => setCount(computeCount()), TICK_MS);
+    const roleId = setInterval(
+      () => setRoleIndex((i) => (i + 1) % ROLES.length),
+      2500
+    );
+    return () => {
+      clearInterval(countId);
+      clearInterval(roleId);
+    };
   }, []);
 
   useEffect(() => {
@@ -124,7 +255,21 @@ export function WaitlistTicker(): React.ReactElement {
             >
               {count.toLocaleString()}+
             </span>{" "}
-            professionals on the waitlist
+            <span className="inline-flex overflow-hidden align-bottom">
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  key={roleIndex}
+                  initial={{ y: 12, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -12, opacity: 0 }}
+                  transition={{ duration: 0.25 }}
+                  className="inline-block"
+                >
+                  {ROLES[roleIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </span>{" "}
+            on the waitlist
           </p>
         </motion.div>
 
