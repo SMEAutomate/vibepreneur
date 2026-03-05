@@ -44,7 +44,7 @@ export function Hero() {
               {hero.subheadline}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/waitlist" size="lg">
+              <Button href="/showcase" size="lg">
                 {hero.ctaPrimary}
               </Button>
               <Button href="/how-it-works" variant="secondary" size="lg">

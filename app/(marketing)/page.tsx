@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     url: "https://vibepreneur.com",
   },
 };
+import { WaitlistTicker } from "@/components/marketing/waitlist-ticker";
 import { TheShift } from "@/components/marketing/the-shift";
 import { WhatIsVibepreneur } from "@/components/marketing/what-is-vibepreneur";
 import { HowItWorksPreview } from "@/components/marketing/how-it-works-preview";
@@ -27,6 +28,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <WaitlistTicker />
       <TheShift />
       <WhatIsVibepreneur />
       <HowItWorksPreview />

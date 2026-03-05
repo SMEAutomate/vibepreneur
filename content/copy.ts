@@ -3,7 +3,7 @@ export const siteCopy = {
     headline: "Future-Proof Your Skills. Build What the Market Needs.",
     subheadline:
       "Vibepreneur helps professionals transform real-world experience into scalable solutions, structures them for the right buyers, and gives you everything you need to build and launch. Strategy, positioning, distribution, and build-ready outputs in one workspace.",
-    ctaPrimary: "Join the Waitlist",
+    ctaPrimary: "See What's Been Built",
     ctaSecondary: "See How It Works",
     trustLine: "Early access launching soon.",
   },
