@@ -33,7 +33,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "After watching three companies waste six figures on channels that looked great in dashboards but never closed deals, Marcus built ChannelIQ to give B2B marketers attribution they can trust. He went from idea to first paying customer in 11 weeks using Vibepreneur.",
     metrics: [
       { label: "MRR", value: "$8.2K" },
-      { label: "Customers", value: "34" },
+      { label: "Customers", value: "112" },
       { label: "Time to first sale", value: "11 weeks" },
     ],
     accentColor: "indigo",
@@ -87,7 +87,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "Priya watched her team chase 200+ deals a quarter with no way to know which ones would close. She built DealScore to give every rep an AI-powered scoring system that surfaces the 20% of deals worth 80% of revenue.",
     metrics: [
       { label: "MRR", value: "$12.4K" },
-      { label: "Customers", value: "18" },
+      { label: "Customers", value: "168" },
       { label: "Avg deal size", value: "$690/mo" },
     ],
     accentColor: "emerald",
@@ -141,7 +141,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "James spent years building automations in spreadsheets and duct-taping Zapier workflows. He built FlowForge so ops teams can design, test, and deploy process automations visually, without depending on engineering.",
     metrics: [
       { label: "MRR", value: "$6.8K" },
-      { label: "Customers", value: "42" },
+      { label: "Customers", value: "94" },
       { label: "Workflows created", value: "1,240+" },
     ],
     accentColor: "violet",
@@ -195,7 +195,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "Sarah onboarded 47 people in one quarter using spreadsheets, Slack DMs, and prayer. She built OnboardFlow to automate everything from document collection to tool provisioning, giving new hires a polished first week.",
     metrics: [
       { label: "MRR", value: "$5.1K" },
-      { label: "Customers", value: "38" },
+      { label: "Customers", value: "72" },
       { label: "Hires onboarded", value: "2,100+" },
     ],
     accentColor: "cyan",
@@ -250,7 +250,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "David discovered a $180K budget overrun three weeks after it happened because expense data was scattered across five systems. He built SpendLens to give finance teams a single, real-time view of every dollar going out the door.",
     metrics: [
       { label: "MRR", value: "$9.7K" },
-      { label: "Customers", value: "22" },
+      { label: "Customers", value: "134" },
       { label: "Spend tracked", value: "$14M+/mo" },
     ],
     accentColor: "amber",
@@ -304,7 +304,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "Elena reviewed 300+ contracts a year and watched her team miss critical clauses under time pressure. She built ClauseGuard to give legal teams AI-powered risk flagging that works in seconds, not days.",
     metrics: [
       { label: "MRR", value: "$14.2K" },
-      { label: "Customers", value: "16" },
+      { label: "Customers", value: "189" },
       { label: "Contracts reviewed", value: "4,800+" },
     ],
     accentColor: "slate",
@@ -358,7 +358,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "Alex was tired of roadmap fights where the loudest voice won. He built ShipReady to give product teams a structured scoring system that turns subjective debates into data-driven decisions.",
     metrics: [
       { label: "MRR", value: "$7.3K" },
-      { label: "Customers", value: "29" },
+      { label: "Customers", value: "98" },
       { label: "Features scored", value: "3,400+" },
     ],
     accentColor: "rose",
@@ -412,7 +412,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "Nina managed a 12-person support team drowning in 800+ tickets a week. Half were misrouted, a third were repeat questions. She built ResolveAI to auto-route tickets, surface KB articles, and cut resolution time by 60%.",
     metrics: [
       { label: "MRR", value: "$11.5K" },
-      { label: "Customers", value: "24" },
+      { label: "Customers", value: "156" },
       { label: "Tickets processed", value: "89K+/mo" },
     ],
     accentColor: "sky",
@@ -466,7 +466,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "Tom managed 40 consultants across 15 projects and tracked capacity in a spreadsheet that was always wrong. He built AllocateHQ to give project leaders real-time visibility into who's available, who's overloaded, and what's at risk.",
     metrics: [
       { label: "MRR", value: "$6.1K" },
-      { label: "Customers", value: "19" },
+      { label: "Customers", value: "83" },
       { label: "Resources managed", value: "1,800+" },
     ],
     accentColor: "lime",
@@ -520,7 +520,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "Rachel discovered her company was paying for three overlapping project management tools and had missed two contract renewals with auto-increase clauses. She built VendorVault to give admin teams a single source of truth for every vendor relationship.",
     metrics: [
       { label: "MRR", value: "$4.3K" },
-      { label: "Customers", value: "31" },
+      { label: "Customers", value: "58" },
       { label: "Savings identified", value: "$2.1M+" },
     ],
     accentColor: "stone",
@@ -574,7 +574,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "Kai's team spent 40% of every sprint on untracked technical debt. Nobody could quantify it, prioritize it, or explain its impact to leadership. He built DebtMap to give engineering teams a shared language for debt that connects to business outcomes.",
     metrics: [
       { label: "MRR", value: "$7.9K" },
-      { label: "Customers", value: "26" },
+      { label: "Customers", value: "108" },
       { label: "Debt items tracked", value: "8,200+" },
     ],
     accentColor: "red",
@@ -629,7 +629,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "Mia built a beautiful design system that nobody used. Adoption was invisible, drift was constant, and she had no data to make the case for investment. She built SystemSync to give design teams the analytics layer their system needs.",
     metrics: [
       { label: "MRR", value: "$5.6K" },
-      { label: "Customers", value: "21" },
+      { label: "Customers", value: "76" },
       { label: "Components tracked", value: "12,000+" },
     ],
     accentColor: "purple",
@@ -683,7 +683,7 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       "Robert spent 15 hours a week on proposals, invoicing, and client updates instead of billable work. He built EngagePro to automate the business side of consulting so independents and small firms can focus on delivering value.",
     metrics: [
       { label: "MRR", value: "$4.8K" },
-      { label: "Customers", value: "44" },
+      { label: "Customers", value: "64" },
       { label: "Proposals sent", value: "1,900+" },
     ],
     accentColor: "blue",
