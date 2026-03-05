@@ -26,7 +26,7 @@ export const pricingTiers: PricingTier[] = [
   },
   {
     name: "Pro",
-    price: "$29",
+    price: "$49",
     period: "per month",
     idealFor:
       "Professionals ready to validate and launch their first solution.",
@@ -44,7 +44,7 @@ export const pricingTiers: PricingTier[] = [
   },
   {
     name: "Max",
-    price: "$79",
+    price: "$149",
     period: "per month",
     idealFor: "Serious builders running multiple solutions or experiments.",
     features: [
@@ -60,7 +60,7 @@ export const pricingTiers: PricingTier[] = [
   },
   {
     name: "Ultra",
-    price: "$199",
+    price: "$299",
     period: "per month",
     idealFor:
       "Teams and portfolio builders scaling multiple solutions to market.",
