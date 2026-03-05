@@ -48,6 +48,12 @@ export const roadmapColumns: Record<
           "Track experiments, measure traction, and identify what's working.",
         status: "in-progress",
       },
+      {
+        title: "Build Tool Integrations",
+        description:
+          "Export product blueprints, specs, and requirements directly to your preferred build tools. Designed for AI-assisted development workflows.",
+        status: "planned",
+      },
     ],
   },
   later: {

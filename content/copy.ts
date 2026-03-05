@@ -2,7 +2,7 @@ export const siteCopy = {
   hero: {
     headline: "Future-Proof Your Skills. Build What the Market Needs.",
     subheadline:
-      "Vibepreneur helps professionals transform real-world experience into scalable solutions and brings them to market with structured go-to-market and growth systems built in.",
+      "Vibepreneur helps professionals transform real-world experience into scalable solutions, structures them for the right buyers, and gives you everything you need to build and launch. Strategy, positioning, distribution, and build-ready outputs in one workspace.",
     ctaPrimary: "Join the Waitlist",
     ctaSecondary: "See How It Works",
     trustLine: "Early access launching soon.",
@@ -10,7 +10,7 @@ export const siteCopy = {
 
   theShift: {
     headline: "The advantage is no longer experience alone. It's ownership.",
-    body: "You already know where workflows break, where teams waste time, and what buyers actually need. That knowledge has value, but only if you act on it. Vibepreneur helps you package that insight into scalable solutions, position them for the right buyers, and bring them to market with a structured system.",
+    body: "You already know where workflows break, where teams waste time, and what buyers actually need. That knowledge has value, but only if you act on it. Vibepreneur helps you package that insight into scalable solutions, build them with modern tools, and bring them to market with a structured system.",
   },
 
   howItWorks: {
@@ -26,7 +26,7 @@ export const siteCopy = {
         number: "02",
         title: "Build the solution",
         description:
-          "Turn insight into structure. Get a complete concept with positioning, pricing, user journey, and launch plan, all based on real demand signals, not guesswork.",
+          "Turn insight into a real product. Get a complete concept with positioning, pricing, user journey, and a build-ready blueprint. Every output is structured so you can start building immediately, whether you code yourself or use AI tools.",
       },
       {
         number: "03",
@@ -38,14 +38,15 @@ export const siteCopy = {
   },
 
   differentiator: {
-    headline: "Building is step one. Distribution is the real skill.",
-    body: "Most platforms help you create something. None help you sell it. Vibepreneur closes the gap between building and buying.",
+    headline:
+      "Strategy without building is a daydream. Building without strategy is a gamble.",
+    body: "Most tools force you to choose: plan or build. Vibepreneur closes the gap. From market insight to structured product to paying customers, all in one workspace.",
     bullets: [
       "Validate demand before you build",
-      "Reach buyers where they actually look",
+      "Get build-ready specs, not just strategy decks",
       "Position against alternatives with clarity",
-      "Run traction experiments from day one",
-      "Build modern visibility without being an influencer",
+      "Export structured blueprints to your build tools",
+      "Launch with distribution built into the plan",
       "Create growth loops that compound over time",
     ],
   },
@@ -61,7 +62,7 @@ export const siteCopy = {
       {
         title: "Solution Builder",
         description:
-          "Structures your idea into a complete concept: positioning, pricing model, user journey, and feature scope. Ready for validation.",
+          "Structures your idea into a buildable product: positioning, pricing model, user journey, feature scope, and technical blueprint. Ready to validate and ready to build.",
       },
       {
         title: "Positioning Studio",
@@ -88,19 +89,19 @@ export const siteCopy = {
 
   whoItsFor: {
     headline: "Built for professionals who create leverage, not content.",
-    body: "Vibepreneur is for people with real-world expertise who want to turn it into something they own. No audience required. No influencer path. Just strategic execution.",
+    body: "Vibepreneur is for people with real-world expertise who want to turn it into something they own. No audience required. No influencer path. Strategy and building, together.",
     profiles: [
       "Corporate professionals exploring optionality beyond their role",
       "Consultants who want to productize their expertise",
       "Operators who see market gaps every day but haven't built for them yet",
-      "Technical professionals who can build but need help with positioning and distribution",
+      "Builders who want strategy baked in from day one, not bolted on after launch",
     ],
   },
 
   whatIsVibepreneur: {
     headline: "What is Vibepreneur?",
     definition:
-      "Vibepreneur is a platform that helps professionals turn their real-world expertise into scalable digital products and services. It combines opportunity discovery, solution design, positioning, go-to-market planning, and growth systems in one workspace, so experienced professionals can launch solutions without needing a technical co-founder, an audience, or venture capital.",
+      "Vibepreneur is a platform that helps professionals turn their real-world expertise into scalable digital products and services. It combines opportunity discovery, solution design, positioning, go-to-market planning, growth systems, and build-ready product blueprints in one workspace. Experienced professionals can go from idea to launched product without needing a technical co-founder, an audience, or venture capital.",
     comparison: {
       left: "Traditional approach",
       right: "With Vibepreneur",
@@ -116,7 +117,7 @@ export const siteCopy = {
         },
         {
           left: "Building first, finding customers later",
-          right: "Validating demand before writing a single line of code",
+          right: "Validating demand first, then building with confidence",
         },
         {
           left: "Scattered tools for launch and growth",

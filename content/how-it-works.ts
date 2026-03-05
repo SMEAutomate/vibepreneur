@@ -1,8 +1,8 @@
 export const howItWorksCopy = {
   hero: {
-    headline: "Context beats code. Every time.",
+    headline: "Context plus code. That's the formula.",
     subheadline:
-      "You don't need to learn to build software. You need to learn to package what you already know into something the market will pay for. Here's how Vibepreneur makes that happen.",
+      "Building software has never been easier. The hard part is knowing what to build and who to sell it to. Vibepreneur gives you both: the strategic clarity and the build-ready outputs to ship something real.",
   },
 
   narrative: [
@@ -25,9 +25,9 @@ export const howItWorksCopy = {
     },
     {
       title: "Solution",
-      output: "Complete concept with pricing and user journey",
+      output: "Buildable product blueprint with pricing and user journey",
       description:
-        "Transform an opportunity into a structured solution. Positioning, pricing model, feature scope, and buyer journey, all based on market signals, not assumptions.",
+        "Transform an opportunity into a buildable product. Positioning, pricing model, feature scope, technical blueprint, and buyer journey. Everything you need to start building, grounded in market signals, not assumptions.",
     },
     {
       title: "Positioning",
@@ -73,6 +73,11 @@ export const howItWorksCopy = {
         icon: "M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z",
         title: "Workflows that produce deliverables",
         body: "Multi-step workflows with defined inputs, processes, and outputs: briefs, plans, sequences. Not open-ended conversations.",
+      },
+      {
+        icon: "M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085",
+        title: "Build-ready outputs by default",
+        body: "Every workflow produces structured artifacts you can take straight into your build process. Product specs, feature requirements, user stories, and technical briefs designed for modern AI-assisted development.",
       },
     ],
   },

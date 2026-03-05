@@ -33,6 +33,7 @@ export const pricingTiers: PricingTier[] = [
     features: [
       "5 solution concepts per month",
       "Full positioning engine",
+      "Build-ready product blueprints",
       "Go-to-market playbook",
       "ICP definition + messaging",
       "Channel strategy",
@@ -50,6 +51,7 @@ export const pricingTiers: PricingTier[] = [
     features: [
       "Unlimited solution concepts",
       "Advanced positioning + competitive analysis",
+      "Technical specs and feature requirements",
       "Full GTM engine with experiments",
       "Growth system with traction playbooks",
       "Referral + visibility strategy",
@@ -81,12 +83,12 @@ export const pricingFaq = [
   {
     question: "Do I need to code?",
     answer:
-      "No. Vibepreneur handles the technical structuring. You bring the expertise and market knowledge. The platform handles everything from concept to go-to-market plan.",
+      "You don't need to, but you can. Vibepreneur produces build-ready blueprints that work whether you code yourself, use AI tools like Cursor or Bolt, or hire a developer. You bring the expertise. The platform turns it into something buildable.",
   },
   {
     question: "Is this a course?",
     answer:
-      "No. Vibepreneur is a platform, not educational content. It produces real outputs (solution concepts, positioning frameworks, launch playbooks, and growth experiments) that you execute.",
+      "No. Vibepreneur is a platform, not educational content. It produces real outputs: product blueprints, positioning frameworks, launch playbooks, and growth experiments. Strategy and build artifacts you actually use.",
   },
   {
     question: "When do you launch?",
