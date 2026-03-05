@@ -1,21 +1,24 @@
 "use client";
 
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { Section } from "@/components/ui/section";
-import { Card } from "@/components/ui/card";
 import { siteCopy } from "@/content/copy";
 import { features } from "@/content/features";
-import { ScreenSlideshow } from "@/components/marketing/screen-slideshow";
+import { MockScreenRenderer } from "@/components/demo/MockScreenRenderer";
 
-const SLIDESHOW_SCREENS: string[][] = [
-  ["OpportunityFinder", "MarketSignals", "CompetitorRadar"],
-  ["SolutionBuilder", "PricingPackaging", "UserJourneyMap"],
-  ["PositioningCanvas", "MessagingMatrix", "ValuePropWorkshop"],
-  ["GoToMarketPlan", "ContentLaunchKit", "OutreachStudio"],
-  ["DistributionChannels", "LandingPageBuilder", "SEOKeywordPlanner"],
-  ["GrowthDashboard", "ChannelExperiments", "ReferralProgram"],
+const FEATURE_SCREENS: string[] = [
+  "OpportunityFinder",
+  "SolutionBuilder",
+  "PositioningCanvas",
+  "GoToMarketPlan",
+  "DistributionChannels",
+  "GrowthDashboard",
 ];
+
+const CYCLE_MS = 5000;
+const SCALE = 0.6;
 
 const icons = [
   <svg
@@ -106,45 +109,94 @@ const icons = [
 
 export function Modules() {
   const { modules } = siteCopy;
+  const [index, setIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(containerRef, { once: false, amount: 0.3 });
+
+  const advance = useCallback(() => {
+    setIndex((prev) => (prev + 1) % modules.items.length);
+  }, [modules.items.length]);
+
+  useEffect(() => {
+    if (!inView) return;
+    const id = setInterval(advance, CYCLE_MS);
+    return () => clearInterval(id);
+  }, [inView, advance]);
+
+  const item = modules.items[index];
+  const feature = features.find((f) => f.name === item.title);
+  const href = feature ? `/features/${feature.slug}` : "#";
 
   return (
     <Section id="modules" background="light">
       <h2 className="text-center text-display-sm">{modules.headline}</h2>
-      <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {modules.items.map((item, i) => {
-          const feature = features.find((f) => f.name === item.title);
-          const href = feature ? `/features/${feature.slug}` : "#";
 
-          return (
+      <div
+        ref={containerRef}
+        className="relative mt-16 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-lg"
+        style={{ height: "clamp(400px, 55vw, 640px)" }}
+      >
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={FEATURE_SCREENS[index]}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="absolute inset-0 origin-top-left"
+            style={{
+              transform: `scale(${SCALE})`,
+              width: `${100 / SCALE}%`,
+              height: `${100 / SCALE}%`,
+            }}
+          >
+            <MockScreenRenderer componentName={FEATURE_SCREENS[index]} />
+          </motion.div>
+        </AnimatePresence>
+
+        <Link
+          href={href}
+          className="pointer-events-auto absolute inset-x-0 bottom-0"
+        >
+          <AnimatePresence mode="wait">
             <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
+              key={index}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="bg-black/70 px-6 py-5 backdrop-blur-sm sm:px-8 sm:py-6"
             >
-              <Link href={href} className="block h-full">
-                <Card hover className="h-full overflow-hidden p-0">
-                  <ScreenSlideshow screenNames={SLIDESHOW_SCREENS[i]}>
-                    <div className="flex items-start gap-3">
-                      <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/15 text-white">
-                        {icons[i]}
-                      </div>
-                      <div className="min-w-0">
-                        <h3 className="text-base font-semibold leading-tight text-white">
-                          {item.title}
-                        </h3>
-                        <p className="mt-1 text-sm leading-snug text-white/85">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  </ScreenSlideshow>
-                </Card>
-              </Link>
+              <div className="flex items-start gap-4">
+                <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white/15 text-white">
+                  {icons[index]}
+                </div>
+                <div className="min-w-0">
+                  <h3 className="text-lg font-semibold text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-white/85">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
             </motion.div>
-          );
-        })}
+          </AnimatePresence>
+        </Link>
+
+        <div className="absolute right-4 top-4 flex gap-2">
+          {modules.items.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`h-2 w-2 rounded-full transition-all ${
+                i === index
+                  ? "w-6 bg-brand-600"
+                  : "bg-neutral-400 hover:bg-neutral-600"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </Section>
   );
