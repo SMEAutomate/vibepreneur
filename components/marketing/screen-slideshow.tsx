@@ -10,14 +10,13 @@ interface ScreenSlideshowProps {
 }
 
 const CYCLE_MS = 4000;
-const SCALE = 0.45;
+const SCALE = 0.55;
 
 export function ScreenSlideshow({
   screenNames,
   children,
 }: ScreenSlideshowProps) {
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const inView = useInView(containerRef, { once: false, amount: 0.3 });
 
@@ -26,17 +25,15 @@ export function ScreenSlideshow({
   }, [screenNames.length]);
 
   useEffect(() => {
-    if (paused || !inView) return;
+    if (!inView) return;
     const id = setInterval(advance, CYCLE_MS);
     return () => clearInterval(id);
-  }, [paused, inView, advance]);
+  }, [inView, advance]);
 
   return (
     <div
       ref={containerRef}
-      className="relative h-72 overflow-hidden rounded-xl sm:h-80"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      className="relative h-80 overflow-hidden rounded-xl sm:h-96"
     >
       <AnimatePresence mode="wait">
         <motion.div
@@ -44,7 +41,7 @@ export function ScreenSlideshow({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.4 }}
           className="absolute inset-0 origin-top-left"
           style={{
             transform: `scale(${SCALE})`,
@@ -56,19 +53,8 @@ export function ScreenSlideshow({
         </motion.div>
       </AnimatePresence>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-5 pt-12">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 rounded-b-xl bg-black/70 p-5 backdrop-blur-sm">
         {children}
-      </div>
-
-      <div className="absolute right-3 top-3 flex gap-1.5">
-        {screenNames.map((_, i) => (
-          <span
-            key={i}
-            className={`h-1.5 w-1.5 rounded-full transition-colors ${
-              i === index ? "bg-white" : "bg-white/40"
-            }`}
-          />
-        ))}
       </div>
     </div>
   );
