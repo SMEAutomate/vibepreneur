@@ -6,6 +6,16 @@ import { Section } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { siteCopy } from "@/content/copy";
 import { features } from "@/content/features";
+import { ScreenSlideshow } from "@/components/marketing/screen-slideshow";
+
+const SLIDESHOW_SCREENS: string[][] = [
+  ["OpportunityFinder", "MarketSignals", "CompetitorRadar"],
+  ["SolutionBuilder", "PricingPackaging", "UserJourneyMap"],
+  ["PositioningCanvas", "MessagingMatrix", "ValuePropWorkshop"],
+  ["GoToMarketPlan", "ContentLaunchKit", "OutreachStudio"],
+  ["DistributionChannels", "LandingPageBuilder", "SEOKeywordPlanner"],
+  ["GrowthDashboard", "ChannelExperiments", "ReferralProgram"],
+];
 
 const icons = [
   <svg
@@ -114,16 +124,19 @@ export function Modules() {
               transition={{ delay: i * 0.08 }}
             >
               <Link href={href} className="block h-full">
-                <Card hover className="h-full">
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
-                    {icons[i]}
+                <Card hover className="h-full overflow-hidden p-0">
+                  <ScreenSlideshow screenNames={SLIDESHOW_SCREENS[i]} />
+                  <div className="p-6">
+                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
+                      {icons[i]}
+                    </div>
+                    <h3 className="text-base font-semibold text-neutral-900">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="text-base font-semibold text-neutral-900">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-neutral-600">
-                    {item.description}
-                  </p>
                 </Card>
               </Link>
             </motion.div>
