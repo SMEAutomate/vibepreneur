@@ -201,6 +201,12 @@ export const siteCopy = {
         benefit: "Launch with a plan, not a prayer",
       },
       {
+        title: "Build Assistant",
+        description:
+          "Generates structured prompts for AI development tools like Cursor, Bolt, and Lovable, plus creative asset prompts for Midjourney, DALL-E, and Sora. Your specs become buildable outputs.",
+        benefit: "Turn specs into apps and assets without writing code",
+      },
+      {
         title: "Growth Operator",
         description:
           "Runs repeatable growth workflows: experiments, distribution loops, lead capture, and traction tracking.",
