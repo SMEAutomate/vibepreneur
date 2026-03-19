@@ -111,8 +111,9 @@ export const siteCopy = {
         number: "03",
         title: "The system helps you execute",
         description:
-          "Launch assets are created, GTM plans are prepared, growth workflows are activated, and daily progress briefs keep everything moving forward.",
-        detail: "Assets, launch plan, growth loops, daily briefs",
+          "Launch assets are created, build prompts are generated for your preferred dev tools, creative asset prompts are prepared for image and video generation, GTM plans are assembled, and daily progress briefs keep everything moving forward.",
+        detail:
+          "Build prompts, creative assets, launch plan, growth loops, daily briefs",
       },
     ],
   },
@@ -137,6 +138,9 @@ export const siteCopy = {
         "Landing page plan",
         "Launch asset kit",
         "GTM playbook",
+        "AI build prompts",
+        "Visual and video asset prompts",
+        "Brand identity framework",
       ],
     },
     vibepreneurExecutes: {
@@ -145,6 +149,7 @@ export const siteCopy = {
         "Content prompts",
         "Outbound campaigns",
         "Lead capture systems",
+        "Creative asset generation",
         "Experiment tracking",
         "Growth loops",
         "Daily progress briefs",
@@ -186,7 +191,7 @@ export const siteCopy = {
       {
         title: "Venture Architect",
         description:
-          "Structures your idea into a complete offer with pricing, packaging, and a buildable product spec.",
+          "Structures your idea into a complete offer with pricing, packaging, build prompts for AI development tools, and creative asset prompts for image and video generation.",
         benefit: "Go from concept to structured product in days, not months",
       },
       {
@@ -228,7 +233,7 @@ export const siteCopy = {
       {
         title: "Launch Builder",
         description:
-          "Generates the assets you need to go to market: landing pages, outreach sequences, lead magnets, content plans, and campaign structure.",
+          "Generates the assets you need to go to market: landing pages, outreach sequences, lead magnets, content plans, and campaign structure. Plus build prompts for AI dev tools (Cursor, Bolt, Lovable) and creative asset prompts for image and video generators (Midjourney, DALL-E, Sora).",
         outcome: "Launch with everything ready",
       },
       {
@@ -292,18 +297,6 @@ export const siteCopy = {
   executionFeed: {
     headline: "The system is always working.",
     body: "Real activity from ventures being built on the platform.",
-    items: [
-      { action: "Offer strategy generated", time: "2 min ago" },
-      { action: "Waitlist page drafted", time: "8 min ago" },
-      { action: "14 validation leads identified", time: "23 min ago" },
-      { action: "Channel test prepared for LinkedIn", time: "41 min ago" },
-      { action: "Pricing hypothesis updated", time: "1 hr ago" },
-      { action: "Launch checklist completed", time: "1 hr ago" },
-      { action: "ICP definition refined", time: "2 hr ago" },
-      { action: "Outbound sequence drafted", time: "3 hr ago" },
-      { action: "Competitive positioning mapped", time: "3 hr ago" },
-      { action: "Lead magnet outline created", time: "4 hr ago" },
-    ],
   },
 
   builtFor: {

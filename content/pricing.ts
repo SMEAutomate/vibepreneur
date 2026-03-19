@@ -36,6 +36,7 @@ export const pricingTiers: PricingTier[] = [
       "10 positioning iterations/mo",
       "10 asset generations/mo",
       "5 outreach sequences/mo",
+      "AI build prompts (Cursor, Bolt, Lovable)",
       "Go-to-market playbook",
       "Daily progress briefs",
       "Email support",
@@ -56,6 +57,8 @@ export const pricingTiers: PricingTier[] = [
       "30 asset generations/mo",
       "15 outreach sequences/mo",
       "15 growth experiments/mo",
+      "AI build + creative asset prompts",
+      "Claude skill generation",
       "Traction playbooks per channel",
       "Advanced competitive analysis",
       "Referral + distribution strategy",
@@ -135,6 +138,18 @@ export const featureMatrix: FeatureRow[] = [
     max: "Advanced",
   },
   {
+    feature: "AI build prompts",
+    free: false,
+    pro: true,
+    max: true,
+  },
+  {
+    feature: "Creative asset prompts (image, video)",
+    free: false,
+    pro: false,
+    max: true,
+  },
+  {
     feature: "Referral + distribution strategy",
     free: false,
     pro: false,
@@ -158,7 +173,7 @@ export const pricingFaq = [
   {
     question: "Do I need a technical background?",
     answer:
-      "No. Vibepreneur produces structured business systems, launch assets, and growth plans. If you want to build software, it generates build-ready specs you can take to any development tool or developer. You bring the expertise. The platform handles the rest.",
+      "No. Vibepreneur produces structured business systems, launch assets, and growth plans. If you want to build software, it generates structured prompts optimised for AI development tools like Cursor, Bolt, Lovable, Replit, and Claude Code. It also creates creative asset prompts for image generators (Midjourney, DALL-E) and video tools (Sora). You bring the expertise. The platform handles the rest.",
   },
   {
     question: "Do I need an existing audience?",

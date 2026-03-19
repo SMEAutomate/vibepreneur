@@ -69,7 +69,7 @@ export default function ForMarketersPage() {
         {
           question: "What if I want to build software but cannot code?",
           answer:
-            "Vibepreneur generates build-ready product specs, feature requirements, and technical briefs. You can use AI-assisted development tools or hand the specs to a developer. Your marketing expertise shapes what gets built and how it reaches buyers.",
+            "Vibepreneur generates structured build prompts optimised for AI development tools like Cursor, Bolt, Lovable, Replit, and Claude Code. It also creates creative asset prompts for ad images (Midjourney, DALL-E) and video content (Sora). Your marketing expertise shapes what gets built and how it reaches buyers.",
         },
       ]}
     />

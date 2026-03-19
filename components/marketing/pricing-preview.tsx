@@ -18,7 +18,7 @@ export function PricingPreview() {
         launch, and grow.
       </p>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {pricingTiers.map((tier, i) => (
           <motion.div
             key={tier.name}

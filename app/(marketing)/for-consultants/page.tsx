@@ -69,7 +69,7 @@ export default function ForConsultantsPage() {
         {
           question: "Do I need technical skills?",
           answer:
-            "No. Vibepreneur produces structured outputs you can use directly or hand to any developer. If you want to build software, it generates build-ready specs. If you want to launch a service product, it creates everything you need without code.",
+            "No. Vibepreneur generates structured build prompts optimised for AI development tools like Cursor, Bolt, Lovable, Replit, and Claude Code. It also creates creative asset prompts for image generators (Midjourney, DALL-E) and video tools (Sora). If you want to launch a service product, it creates everything you need without code.",
         },
       ]}
     />

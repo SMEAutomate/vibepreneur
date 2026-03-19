@@ -58,7 +58,7 @@ export default function ForOperatorsPage() {
         {
           question: "I am not a technical founder. Can I build software?",
           answer:
-            "Vibepreneur generates build-ready specs and product blueprints. You can hand these to a developer, use AI-assisted building tools, or start with a service-first version. The platform designs the product. You choose how to build it.",
+            "Vibepreneur generates structured build prompts optimised for AI development tools like Cursor, Bolt, Lovable, Replit, and Claude Code. It also creates creative asset prompts for image generators (Midjourney, DALL-E) and video tools (Sora). You can hand these to a developer, use the AI tools directly, or start with a service-first version. The platform designs the product. You choose how to build it.",
         },
         {
           question: "Is this only for SaaS products?",

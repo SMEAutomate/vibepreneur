@@ -41,15 +41,19 @@ export const howItWorksCopy = {
     },
     {
       title: "Build Layer",
-      output: "Launch-ready assets and product shape",
+      output: "Launch-ready assets, build prompts, and product shape",
       description:
-        "The system generates the assets you need to go to market: landing page plans, lead magnets, content frameworks, and product specifications. Whether you are launching a service, tool, or SaaS product, everything is tailored to your specific offer.",
+        "The system generates everything you need to bring your venture to life. Product specs structured for AI build tools (Cursor, Bolt, Lovable, Replit, Claude Code). Branding and visual asset prompts for image generators (Midjourney, DALL-E). Video ad scripts and prompts for tools like Sora. Landing page copy, lead magnets, and content frameworks. Whether you are launching a service, SaaS product, or hybrid model, every output is tailored to your specific offer and optimised for the tools you use to build it.",
       inputs: ["Structured offer", "Brand direction", "Content preferences"],
       outputs: [
+        "AI build prompts (Cursor, Bolt, Lovable)",
+        "Visual asset prompts (Midjourney, DALL-E)",
+        "Video ad prompts (Sora)",
+        "Claude skills and automation specs",
+        "Brand identity framework",
         "Landing page plan",
         "Lead magnet",
         "Product spec",
-        "Asset library",
       ],
     },
     {
@@ -109,6 +113,8 @@ export const howItWorksCopy = {
         "Market research and opportunity scoring",
         "Offer structuring and positioning",
         "Asset generation and content creation",
+        "AI build prompts for any development tool",
+        "Creative asset prompts for image and video generation",
         "Launch planning and channel strategy",
         "Growth execution and experiment tracking",
         "Daily briefs and progress reporting",
@@ -128,14 +134,14 @@ export const howItWorksCopy = {
       title: "Operator to niche workflow tool",
       persona: "Operations manager, 8 years in logistics compliance",
       journey:
-        "Described daily frustration with manual compliance tracking. Vibepreneur mapped the opportunity against existing tools and found a clear gap in automated audit trail generation. Built the product spec, landing page, and outreach strategy targeting logistics directors.",
+        "Described daily frustration with manual compliance tracking. Vibepreneur mapped the opportunity against existing tools and found a clear gap in automated audit trail generation. Built the product spec with Cursor-ready build prompts, landing page, and outreach strategy targeting logistics directors.",
       outcome: "Waitlist of 40 early-access signups from 3 LinkedIn posts.",
     },
     {
       title: "Corporate expert to validated micro-SaaS",
       persona: "Finance director, 15 years in reporting and reconciliation",
       journey:
-        "Uploaded CV and described the recurring problem of month-end reporting delays. Vibepreneur identified a micro-SaaS opportunity for automated reconciliation dashboards targeting scaling companies. Structured the offer, pricing, and built a lead magnet.",
+        "Uploaded CV and described the recurring problem of month-end reporting delays. Vibepreneur identified a micro-SaaS opportunity for automated reconciliation dashboards targeting scaling companies. Structured the offer, pricing, generated build prompts for Bolt and Lovable, and built a lead magnet.",
       outcome: "6 validation conversations booked within 10 days of launch.",
     },
   ],
@@ -158,7 +164,7 @@ export const howItWorksCopy = {
       {
         icon: "M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z",
         title: "Workflows that produce deliverables",
-        body: "Multi-step workflows with defined inputs, processes, and outputs: briefs, plans, sequences. Not open-ended conversations.",
+        body: "Multi-step workflows with defined inputs, processes, and outputs: briefs, plans, sequences, build prompts, creative asset prompts, and tool-ready outputs. Not open-ended conversations.",
       },
       {
         icon: "M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z",

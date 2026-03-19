@@ -120,9 +120,9 @@ export const features: FeatureConfig[] = [
     slug: "solution-builder",
     tag: "Solution",
     name: "Solution Builder",
-    headline: "Turn insight into a structured, launchable solution",
+    headline: "Turn insight into a structured, buildable solution",
     description:
-      "The Solution Builder transforms raw opportunities into complete product concepts with positioning, pricing tiers, user journeys, and feature prioritisation. Structure replaces guesswork.",
+      "The Solution Builder transforms raw opportunities into complete product concepts with positioning, pricing tiers, user journeys, feature prioritisation, and tool-ready build outputs. Structure replaces guesswork.",
     iconPath:
       "M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9",
     capabilities: [
@@ -149,6 +149,12 @@ export const features: FeatureConfig[] = [
         title: "Solution Brief Export",
         description:
           "A shareable one-pager with positioning, pricing, and proof points.",
+      },
+      {
+        icon: "M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z",
+        title: "AI Build Prompt Generator",
+        description:
+          "Structured prompts optimised for Cursor, Bolt, Lovable, Replit, and Claude Code. Plus visual and video asset prompts for Midjourney, DALL-E, and Sora.",
       },
     ],
     featuredScreen: "SolutionBuilder",
@@ -434,9 +440,9 @@ export const features: FeatureConfig[] = [
       },
       {
         icon: "M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z",
-        title: "SEO & Lead Magnets",
+        title: "SEO, Lead Magnets & Creative Assets",
         description:
-          "Keyword research, content roadmaps, and lead magnet concepts with distribution plans.",
+          "Keyword research, content roadmaps, lead magnet concepts, and creative asset prompts for ad images (Midjourney, DALL-E), video content (Sora), and social media visuals.",
       },
     ],
     featuredScreen: "DistributionChannels",

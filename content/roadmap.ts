@@ -51,14 +51,20 @@ export const roadmapColumns: Record<
       {
         title: "Build Tool Integrations",
         description:
-          "Export product specs, user stories, and technical briefs directly to your preferred build tools and AI-assisted development workflows.",
-        status: "planned",
+          "One-click export of build prompts, product specs, and user stories directly to Cursor, Bolt, Lovable, Replit, and Claude Code. Plus creative asset prompts for Midjourney, DALL-E, and Sora.",
+        status: "in-progress",
       },
     ],
   },
   later: {
     label: "Later",
     items: [
+      {
+        title: "Vibepreneur Builder",
+        description:
+          "A native design and build environment inside Vibepreneur. Build apps, landing pages, and digital products without leaving the platform. Your venture specs become working software in the same workspace.",
+        status: "planned",
+      },
       {
         title: "Portfolio Mode",
         description:
