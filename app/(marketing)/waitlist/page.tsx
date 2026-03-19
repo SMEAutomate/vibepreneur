@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { WaitlistContent } from "./waitlist-content";
 
 export const metadata: Metadata = {
-  title: "Join the Waitlist",
+  title: "Join the Waitlist | Vibepreneur",
   description:
-    "Be first in line when Vibepreneur launches. Get 3 personalised solution ideas based on your professional experience.",
+    "Get early access to Vibepreneur and receive personalised venture directions based on your professional experience.",
   openGraph: {
     title: "Join the Waitlist | Vibepreneur",
     description:
-      "Be first in line when Vibepreneur launches. Get 3 personalised solution ideas based on your professional experience.",
+      "Get early access and your first tailored business directions.",
   },
   alternates: {
     canonical: "/waitlist",
@@ -16,5 +17,9 @@ export const metadata: Metadata = {
 };
 
 export default function WaitlistPage() {
-  return <WaitlistContent />;
+  return (
+    <Suspense>
+      <WaitlistContent />
+    </Suspense>
+  );
 }

@@ -1,11 +1,11 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { GradientOrb } from "@/components/ui/gradient-orb";
 import { siteCopy } from "@/content/copy";
+import { ExecutionCockpitMock } from "./execution-cockpit-mock";
 
 export function Hero() {
   const { hero } = siteCopy;
@@ -16,7 +16,7 @@ export function Hero() {
   });
 
   const textY = useTransform(scrollYProgress, [0, 1], [0, 40]);
-  const mockY = useTransform(scrollYProgress, [0, 1], [0, -30]);
+  const mockY = useTransform(scrollYProgress, [0, 1], [0, -20]);
 
   return (
     <section
@@ -29,8 +29,8 @@ export function Hero() {
         color="bg-brand-100/40"
       />
 
-      <div className="container-content px-6 pb-16 pt-20 sm:px-8 sm:pt-28 lg:px-12">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+      <div className="container-content px-6 pb-20 pt-20 sm:px-8 sm:pt-28 lg:px-12">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -44,25 +44,24 @@ export function Hero() {
               {hero.subheadline}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/showcase" size="lg">
+              <Button href="/waitlist" size="lg">
                 {hero.ctaPrimary}
               </Button>
-              <Button href="/how-it-works" variant="secondary" size="lg">
+              <Button href="#how-it-works" variant="secondary" size="lg">
                 {hero.ctaSecondary}
               </Button>
             </div>
             <p className="mt-6 text-sm text-neutral-500">{hero.trustLine}</p>
           </motion.div>
 
-          <motion.div className="hidden lg:block" style={{ y: mockY }}>
-            <Image
-              src="/logo-portrait.png"
-              alt="Vibepreneur logo: turn expertise into scalable products"
-              width={567}
-              height={479}
-              className="mx-auto w-full max-w-lg"
-              priority
-            />
+          <motion.div
+            className="hidden lg:block"
+            style={{ y: mockY }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <ExecutionCockpitMock />
           </motion.div>
         </div>
       </div>

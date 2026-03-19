@@ -4,8 +4,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Showcase | Vibepreneur",
   description:
-    "See what real users are building with Vibepreneur. 13 community projects across marketing, sales, operations, and more.",
+    "Example venture build paths showing how Vibepreneur structures businesses from real-world expertise across marketing, operations, finance, and more.",
   alternates: { canonical: "/showcase" },
+  openGraph: {
+    title: "Showcase | Vibepreneur",
+    description: "Example venture build paths from real-world expertise.",
+  },
 };
 
 export default function ShowcasePage() {

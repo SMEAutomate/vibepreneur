@@ -25,6 +25,9 @@ export function FinalCta() {
             {finalCta.cta}
           </Button>
         </div>
+        <p className="relative mt-4 text-sm text-neutral-500">
+          {finalCta.subtext}
+        </p>
       </div>
     </Section>
   );

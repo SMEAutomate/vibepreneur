@@ -7,7 +7,32 @@ import { Card } from "@/components/ui/card";
 import { BlogThumbnail } from "@/components/blog/blog-thumbnail";
 import { blogPosts, type BlogPost } from "@/content/blog";
 
-const CATEGORIES = ["All", "Career Pivot", "Building", "Mindset"] as const;
+const DISPLAY_CATEGORIES = [
+  "All",
+  "For Professionals",
+  "From Experience to Business",
+  "Venture Systems",
+  "Building",
+  "Mindset",
+] as const;
+
+const CATEGORY_MAP: Record<string, string[]> = {
+  "For Professionals": [
+    "For Consultants",
+    "For Operators",
+    "For Corporate Professionals",
+    "For Marketers",
+    "Career Pivot",
+    "Productizing Expertise",
+  ],
+  "From Experience to Business": [
+    "From Experience to Business",
+    "Business Design",
+  ],
+  "Venture Systems": ["Venture Systems", "Validation & Launch"],
+  Building: ["Building"],
+  Mindset: ["Mindset"],
+};
 
 function CategoryBadge({ category }: { category: string }) {
   return (
@@ -90,14 +115,20 @@ function GridCard({ post, index }: { post: BlogPost; index: number }) {
 }
 
 export function BlogGrid() {
-  const [active, setActive] = useState<(typeof CATEGORIES)[number]>("All");
+  const [active, setActive] =
+    useState<(typeof DISPLAY_CATEGORIES)[number]>("All");
 
   const sorted = [...blogPosts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
   const filtered =
-    active === "All" ? sorted : sorted.filter((p) => p.category === active);
+    active === "All"
+      ? sorted
+      : sorted.filter((p) => {
+          const mapped = CATEGORY_MAP[active];
+          return mapped ? mapped.includes(p.category) : false;
+        });
 
   const hero = filtered[0];
   const rest = filtered.slice(1);
@@ -105,7 +136,7 @@ export function BlogGrid() {
   return (
     <div>
       <div className="mb-10 flex flex-wrap justify-center gap-2">
-        {CATEGORIES.map((cat) => (
+        {DISPLAY_CATEGORIES.map((cat) => (
           <button
             key={cat}
             onClick={() => setActive(cat)}

@@ -1,63 +1,54 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Section } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { pricingTiers, pricingFaq } from "@/content/pricing";
+import { FaqItem } from "@/components/ui/faq-item";
+import { pricingTiers, pricingFaq, featureMatrix } from "@/content/pricing";
 
-function FaqItem({ question, answer }: { question: string; answer: string }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="border-b border-neutral-100">
-      <button
-        className="flex w-full items-center justify-between py-5 text-left"
-        onClick={() => setOpen(!open)}
-      >
-        <span className="text-sm font-medium text-neutral-900">{question}</span>
-        <svg
-          className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform ${open ? "rotate-180" : ""}`}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden"
-          >
-            <p className="pb-5 text-sm leading-relaxed text-neutral-600">
-              {answer}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
+const tierStages = [
+  {
+    stage: "Explore",
+    description:
+      "Discover what you could build from your professional background.",
+    when: "You are curious about turning expertise into a business but have not committed yet.",
+    upgrade: "Upgrade when you have found an opportunity worth pursuing.",
+  },
+  {
+    stage: "Build & Launch",
+    description:
+      "Structure, build, and launch one complete venture with full execution support.",
+    when: "You have identified an opportunity and are ready to take it to market.",
+    upgrade:
+      "Upgrade when you want to run multiple experiments or ventures in parallel.",
+  },
+  {
+    stage: "Scale",
+    description:
+      "Run multiple ventures, advanced experiments, and compound growth systems.",
+    when: "You have early traction and want to accelerate or diversify.",
+    upgrade:
+      "Upgrade when you need team collaboration or portfolio management.",
+  },
+  {
+    stage: "Portfolio",
+    description:
+      "Manage a portfolio of ventures with team collaboration and advanced workflows.",
+    when: "You are running multiple ventures and need cross-venture visibility and collaboration.",
+    upgrade: null,
+  },
+];
 
 export function PricingContent() {
   return (
     <>
       <Section>
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-display-md">Choose your build capacity.</h1>
+          <h1 className="text-display-md">Start free. Scale with traction.</h1>
           <p className="mt-4 text-lg text-neutral-600">
-            Start free. Scale as you build and launch more solutions.
+            Every tier matches a stage in your business journey. Explore at no
+            cost. Upgrade when you are ready to build, launch, and grow.
           </p>
         </div>
       </Section>
@@ -80,9 +71,14 @@ export function PricingContent() {
                     Most popular
                   </span>
                 )}
-                <h3 className="text-xl font-semibold text-neutral-900">
-                  {tier.name}
-                </h3>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-neutral-900">
+                    {tier.name}
+                  </h3>
+                  <span className="rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-medium text-neutral-600">
+                    {tier.capacity}
+                  </span>
+                </div>
                 <div className="mt-3 flex items-baseline gap-1">
                   <span className="text-4xl font-bold text-neutral-900">
                     {tier.price}
@@ -117,11 +113,9 @@ export function PricingContent() {
                   ))}
                 </ul>
 
-                <p className="mt-4 text-xs text-neutral-400">{tier.capacity}</p>
-
                 <div className="mt-6">
                   <Button
-                    href="/waitlist"
+                    href={`/waitlist?tier=${tier.name.toLowerCase()}`}
                     variant={tier.highlighted ? "primary" : "secondary"}
                     className="w-full"
                   >
@@ -131,6 +125,114 @@ export function PricingContent() {
               </Card>
             </motion.div>
           ))}
+        </div>
+      </Section>
+
+      <Section>
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-center text-display-sm">
+            What happens at each stage
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-center text-neutral-600">
+            Each tier unlocks more of the Venture OS as your business grows.
+          </p>
+          <div className="mt-10 space-y-4">
+            {tierStages.map((ts, i) => (
+              <motion.div
+                key={ts.stage}
+                className="rounded-lg border border-neutral-100 bg-white p-5"
+                style={{ boxShadow: "0 1px 2px rgba(0,0,0,0.04)" }}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06 }}
+              >
+                <div className="flex items-center gap-3">
+                  <span className="rounded-full bg-brand-50 px-3 py-0.5 text-xs font-semibold text-brand-700">
+                    {pricingTiers[i].name} ({pricingTiers[i].price})
+                  </span>
+                  <span className="text-sm font-semibold text-neutral-900">
+                    {ts.stage}
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-neutral-600">
+                  {ts.description}
+                </p>
+                <p className="mt-2 text-xs text-neutral-500">
+                  <span className="font-medium">Best for:</span> {ts.when}
+                </p>
+                {ts.upgrade && (
+                  <p className="mt-1 text-xs text-brand-600">{ts.upgrade}</p>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section background="light">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-center text-display-sm">Compare all features</h2>
+          <p className="mx-auto mt-4 max-w-xl text-center text-neutral-600">
+            See exactly what each tier includes.
+          </p>
+          <div className="mt-10 overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-neutral-200">
+                  <th className="py-3 pr-4 font-medium text-neutral-500">
+                    Feature
+                  </th>
+                  {pricingTiers.map((tier) => (
+                    <th
+                      key={tier.name}
+                      className="px-4 py-3 text-center font-semibold text-neutral-900"
+                    >
+                      {tier.name}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {featureMatrix.map((row) => (
+                  <tr key={row.feature} className="border-b border-neutral-50">
+                    <td className="py-3 pr-4 text-neutral-700">
+                      {row.feature}
+                    </td>
+                    {(["free", "pro", "max", "ultra"] as const).map((tier) => {
+                      const val = row[tier];
+                      return (
+                        <td
+                          key={tier}
+                          className="px-4 py-3 text-center text-neutral-600"
+                        >
+                          {val === true ? (
+                            <svg
+                              className="mx-auto h-4 w-4 text-brand-600"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              strokeWidth={2}
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M5 13l4 4L19 7"
+                              />
+                            </svg>
+                          ) : val === false ? (
+                            <span className="text-neutral-300">&mdash;</span>
+                          ) : (
+                            <span className="text-xs font-medium">{val}</span>
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </Section>
 

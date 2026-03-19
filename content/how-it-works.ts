@@ -1,58 +1,149 @@
 export const howItWorksCopy = {
   hero: {
-    headline: "Context plus code. That's the formula.",
+    headline: "From expertise to operating business.",
     subheadline:
-      "Building software has never been easier. The hard part is knowing what to build and who to sell it to. Vibepreneur gives you both: the strategic clarity and the build-ready outputs to ship something real.",
+      "Vibepreneur follows a structured path: six stages that take you from professional background to a business with real traction. Each stage builds on the last and produces tangible outputs you can use immediately.",
   },
-
-  narrative: [
-    {
-      title: "Why context is the advantage",
-      body: "Every professional accumulates insight that most people never act on. You see where processes break, where teams lose time, and where buyers settle for mediocre solutions. That context, earned through years of real work, is more valuable than code. The missing piece has always been a way to turn it into something scalable.",
-    },
-    {
-      title: "The workflow: from insight to growth",
-      body: "Vibepreneur follows a structured path. No guesswork, no blanks to fill. Each stage builds on the last and produces tangible outputs you can use immediately.",
-    },
-  ],
 
   stages: [
     {
-      title: "Insight",
-      output: "Market opportunity map",
+      title: "Opportunity Engine",
+      output: "Ranked opportunity map",
       description:
-        "Start with your experience. The platform analyses your professional background and identifies where demand exists, competition is weak, and your expertise creates unfair advantage.",
+        "Start with your experience. The system analyses your professional background and identifies where demand exists, competition is weak, and your expertise creates unfair advantage. You get a ranked list of business opportunities, not guesswork.",
+      inputs: [
+        "CV or LinkedIn profile",
+        "Domain expertise",
+        "Industry context",
+      ],
+      outputs: [
+        "Opportunity scores",
+        "Market demand signals",
+        "Competitive gap analysis",
+      ],
     },
     {
-      title: "Solution",
-      output: "Buildable product blueprint with pricing and user journey",
+      title: "Venture Structuring",
+      output: "Structured offer with buyer profile and pricing",
       description:
-        "Transform an opportunity into a buildable product. Positioning, pricing model, feature scope, technical blueprint, and buyer journey. Everything you need to start building, grounded in market signals, not assumptions.",
+        "Your best opportunity becomes a structured business concept. The system defines who it serves, what they get, how it is priced, and how it wins against alternatives. Positioning, messaging, and buyer profiles are built in from day one.",
+      inputs: [
+        "Selected opportunity",
+        "Target market context",
+        "Competitive landscape",
+      ],
+      outputs: [
+        "Buyer persona",
+        "Offer structure",
+        "Pricing model",
+        "Positioning framework",
+      ],
     },
     {
-      title: "Positioning",
-      output: "Competitive messaging framework",
+      title: "Build Layer",
+      output: "Launch-ready assets and product shape",
       description:
-        "Define exactly how your solution wins. Competitive angles, value propositions, objection handling, and messaging tuned to your specific market segment.",
+        "The system generates the assets you need to go to market: landing page plans, lead magnets, content frameworks, and product specifications. Whether you are launching a service, tool, or SaaS product, everything is tailored to your specific offer.",
+      inputs: ["Structured offer", "Brand direction", "Content preferences"],
+      outputs: [
+        "Landing page plan",
+        "Lead magnet",
+        "Product spec",
+        "Asset library",
+      ],
     },
     {
-      title: "Launch",
-      output: "Go-to-market playbook",
+      title: "Launch Layer",
+      output: "Go-to-market playbook with channels and sequences",
       description:
-        "Get an executable launch plan: ideal customer profile, channel strategy, outreach sequences, content angles, and a timeline. Not theory. A checklist you run.",
+        "Get an executable launch plan with ideal customer profile, channel strategy, outreach sequences, content angles, and a week-by-week timeline. Not theory. A structured checklist you run.",
+      inputs: ["Launch assets", "Target buyer list", "Channel preferences"],
+      outputs: [
+        "GTM playbook",
+        "Outreach sequences",
+        "Content calendar",
+        "Channel strategy",
+      ],
     },
     {
-      title: "Growth",
-      output: "Traction experiments + distribution loops",
+      title: "Growth Layer",
+      output: "Traction experiments and distribution loops",
       description:
-        "Post-launch momentum. Run experiments across channels, measure what converts, build referral mechanics, and create visibility without needing an audience first.",
+        "Post-launch momentum. Run structured experiments across channels, measure what converts, build referral mechanics, and create distribution loops that compound. Traction is measured, not assumed.",
+      inputs: ["Launch data", "Early feedback", "Channel results"],
+      outputs: [
+        "Experiment results",
+        "Channel scores",
+        "Referral program",
+        "Growth playbook",
+      ],
+    },
+    {
+      title: "Daily Operation",
+      output: "Structured daily briefs and execution queue",
+      description:
+        "Every morning, a structured brief shows what happened, what is next, and where your input is needed. Decisions are surfaced. Progress is visible. Your business moves forward even when you are busy.",
+      inputs: ["System activity", "Metrics", "Pending decisions"],
+      outputs: [
+        "Daily brief",
+        "Prioritised action queue",
+        "Performance snapshot",
+      ],
+    },
+  ],
+
+  comparison: {
+    you: {
+      title: "You provide",
+      items: [
+        "Expertise and domain knowledge",
+        "Direction and strategic decisions",
+        "Taste and judgment calls",
+        "Buyer relationships and network",
+        "Final approval on key outputs",
+      ],
+    },
+    vibepreneur: {
+      title: "Vibepreneur provides",
+      items: [
+        "Market research and opportunity scoring",
+        "Offer structuring and positioning",
+        "Asset generation and content creation",
+        "Launch planning and channel strategy",
+        "Growth execution and experiment tracking",
+        "Daily briefs and progress reporting",
+      ],
+    },
+  },
+
+  examples: [
+    {
+      title: "Consultant to productised audit",
+      persona: "Strategy consultant, 12 years in supply chain optimisation",
+      journey:
+        "Started with a LinkedIn profile upload. Vibepreneur identified that supply chain audit frameworks were underserved in the mid-market. Structured a productised audit with tiered pricing, built a landing page, and launched outreach to VP Operations at companies with 500-5000 employees.",
+      outcome: "Validated offer with 8 demo requests in the first two weeks.",
+    },
+    {
+      title: "Operator to niche workflow tool",
+      persona: "Operations manager, 8 years in logistics compliance",
+      journey:
+        "Described daily frustration with manual compliance tracking. Vibepreneur mapped the opportunity against existing tools and found a clear gap in automated audit trail generation. Built the product spec, landing page, and outreach strategy targeting logistics directors.",
+      outcome: "Waitlist of 40 early-access signups from 3 LinkedIn posts.",
+    },
+    {
+      title: "Corporate expert to validated micro-SaaS",
+      persona: "Finance director, 15 years in reporting and reconciliation",
+      journey:
+        "Uploaded CV and described the recurring problem of month-end reporting delays. Vibepreneur identified a micro-SaaS opportunity for automated reconciliation dashboards targeting scaling companies. Structured the offer, pricing, and built a lead magnet.",
+      outcome: "6 validation conversations booked within 10 days of launch.",
     },
   ],
 
   technical: {
     headline: "Powered by real expertise, not generic AI",
     subheadline:
-      "Every workflow, agent, and framework in Vibepreneur was built from hundreds of real client interviews, consulting projects, and go-to-market launches. The system encodes what actually works, not what sounds good in a demo.",
+      "Every workflow and framework in Vibepreneur was built from hundreds of real client interviews, consulting projects, and go-to-market launches. The system encodes what actually works, not what sounds good in a demo.",
     pillars: [
       {
         icon: "M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25",
@@ -61,13 +152,8 @@ export const howItWorksCopy = {
       },
       {
         icon: "M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z",
-        title: "Specialised agents for every stage",
-        body: "Bespoke AI agents each trained on a specific task: market analysis, positioning, outreach, growth experiments. One agent, one job, done well.",
-      },
-      {
-        icon: "M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5",
-        title: "Model-agnostic by design",
-        body: "Routes each task to the best-performing AI model available. As models improve, your workspace improves. No lock-in.",
+        title: "Specialised workflows for every stage",
+        body: "Each stage has purpose-built workflows trained on specific tasks: market analysis, positioning, outreach, growth experiments. One workflow, one job, done well.",
       },
       {
         icon: "M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z",
@@ -75,9 +161,9 @@ export const howItWorksCopy = {
         body: "Multi-step workflows with defined inputs, processes, and outputs: briefs, plans, sequences. Not open-ended conversations.",
       },
       {
-        icon: "M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085",
-        title: "Build-ready outputs by default",
-        body: "Every workflow produces structured artifacts you can take straight into your build process. Product specs, feature requirements, user stories, and technical briefs designed for modern AI-assisted development.",
+        icon: "M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z",
+        title: "Feedback loops at every stage",
+        body: "Each output feeds the next stage automatically. Market signals refine positioning, positioning sharpens distribution, and traction data loops back to improve everything.",
       },
     ],
   },

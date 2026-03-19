@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { JsonLd } from "@/components/seo/json-ld";
 import "./globals.css";
 
@@ -35,6 +36,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: SITE_URL,
+    types: {
+      "application/rss+xml": [{ url: "/feed.xml", title: "Vibepreneur Blog" }],
+    },
   },
   manifest: "/manifest.json",
   icons: {
@@ -97,6 +101,7 @@ export default function RootLayout({
           ]}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );

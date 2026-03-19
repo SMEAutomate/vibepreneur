@@ -5,7 +5,6 @@ import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { AnimatedInlineScreenMock } from "@/components/demo/animated-mock";
 import { roadmapColumns, weeklyUpdates } from "@/content/roadmap";
 
 const statusVariant: Record<string, "live" | "progress" | "planned"> = {
@@ -20,6 +19,39 @@ const statusLabel: Record<string, string> = {
   planned: "Planned",
 };
 
+const phases = [
+  {
+    name: "Phase 1: Opportunity Intelligence",
+    description:
+      "Surface opportunities from professional backgrounds. Score by demand, gaps, and fit.",
+  },
+  {
+    name: "Phase 2: Venture Structuring",
+    description:
+      "Turn opportunities into structured offers with positioning, pricing, and buyer profiles.",
+  },
+  {
+    name: "Phase 3: Launch Systems",
+    description:
+      "Generate launch assets, GTM playbooks, outreach sequences, and campaign structure.",
+  },
+  {
+    name: "Phase 4: Execution Automation",
+    description:
+      "Daily briefs, task orchestration, and progress tracking across active ventures.",
+  },
+  {
+    name: "Phase 5: Growth Loops",
+    description:
+      "Traction experiments, channel scoring, referral mechanics, and compounding distribution.",
+  },
+  {
+    name: "Phase 6: Portfolio Mode",
+    description:
+      "Manage multiple ventures, compare performance, and run parallel experiments.",
+  },
+];
+
 export function RoadmapContent() {
   let cardIndex = 0;
 
@@ -27,30 +59,66 @@ export function RoadmapContent() {
     <>
       <Section>
         <div className="mx-auto max-w-3xl">
-          <h1 className="text-display-md">Building in public.</h1>
-          <p className="mt-4 text-lg text-neutral-600">
-            We share what we&apos;re building, why, and what&apos;s coming next.
-            No roadmaps locked behind a login.
+          <p className="text-sm font-medium uppercase tracking-wider text-brand-600">
+            Building in public
           </p>
-        </div>
-
-        <div className="mx-auto mt-12 max-w-5xl">
-          <AnimatedInlineScreenMock
-            componentName="RoadmapIteration"
-            caption="Track feature progress, plan iterations, and prioritise what ships next."
-          />
+          <h1 className="mt-4 text-display-md">
+            Building the venture operating system.
+          </h1>
+          <p className="mt-4 text-lg text-neutral-600">
+            We share what we are building, why, and what is coming next.
+            Transparency is how we earn trust before we earn revenue.
+          </p>
         </div>
       </Section>
 
       <Section background="light">
-        <div className="grid gap-8 md:grid-cols-3">
+        <h2 className="text-center text-display-sm">Product maturity</h2>
+        <p className="mx-auto mt-4 max-w-xl text-center text-neutral-600">
+          Six phases of development. Each phase makes the system more capable.
+        </p>
+        <div className="mx-auto mt-10 grid max-w-3xl gap-4">
+          {phases.map((phase, i) => (
+            <motion.div
+              key={phase.name}
+              className="rounded-lg border border-neutral-100 bg-white p-5"
+              style={{ boxShadow: "0 1px 2px rgba(0,0,0,0.04)" }}
+              initial={{ opacity: 0, x: -12 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06, duration: 0.35 }}
+            >
+              <div className="flex items-center gap-3">
+                <span
+                  className={`h-2.5 w-2.5 shrink-0 rounded-full ${i < 3 ? "bg-emerald-500" : i < 5 ? "bg-amber-400" : "bg-neutral-300"}`}
+                />
+                <h3 className="text-sm font-semibold text-neutral-900">
+                  {phase.name}
+                </h3>
+                <Badge
+                  variant={i < 3 ? "live" : i < 5 ? "progress" : "planned"}
+                >
+                  {i < 3 ? "Live" : i < 5 ? "In Progress" : "Planned"}
+                </Badge>
+              </div>
+              <p className="mt-2 pl-[22px] text-sm text-neutral-600">
+                {phase.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <h2 className="text-center text-display-sm">What is shipping now</h2>
+        <div className="mt-10 grid gap-8 md:grid-cols-3">
           {(["now", "next", "later"] as const).map((key) => {
             const column = roadmapColumns[key];
             return (
               <div key={key}>
-                <h2 className="mb-6 text-lg font-semibold text-neutral-900">
+                <h3 className="mb-6 text-lg font-semibold text-neutral-900">
                   {column.label}
-                </h2>
+                </h3>
                 <div className="space-y-4">
                   {column.items.map((item) => {
                     const idx = cardIndex++;
@@ -64,9 +132,9 @@ export function RoadmapContent() {
                       >
                         <Card>
                           <div className="flex items-start justify-between gap-2">
-                            <h3 className="text-sm font-semibold text-neutral-900">
+                            <h4 className="text-sm font-semibold text-neutral-900">
                               {item.title}
-                            </h3>
+                            </h4>
                             <Badge variant={statusVariant[item.status]}>
                               {statusLabel[item.status]}
                             </Badge>
@@ -85,10 +153,10 @@ export function RoadmapContent() {
         </div>
       </Section>
 
-      <Section>
+      <Section background="light">
         <h2 className="text-display-sm">Weekly updates</h2>
         <p className="mt-3 text-neutral-600">
-          What we shipped, what we learned, and what&apos;s next.
+          What we shipped, what we learned, and what is next.
         </p>
 
         <div className="mt-12 space-y-8">

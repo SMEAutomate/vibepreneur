@@ -2,10 +2,14 @@ import { RoadmapContent } from "./roadmap-content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Roadmap",
+  title: "Roadmap | Vibepreneur",
   description:
-    "Follow our progress as we build Vibepreneur in public. See what we're working on and what's coming next.",
+    "Building the venture operating system in public. See what we are shipping, what is next, and the six phases of product maturity.",
   alternates: { canonical: "/roadmap" },
+  openGraph: {
+    title: "Roadmap | Vibepreneur",
+    description: "Building the venture operating system in public.",
+  },
 };
 
 export default function RoadmapPage() {

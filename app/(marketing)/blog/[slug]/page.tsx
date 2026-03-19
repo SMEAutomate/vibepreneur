@@ -170,16 +170,17 @@ export default async function BlogPostPage({ params }: Props) {
 
       <Section background="brand">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-display-sm">
-            Ready to turn your expertise into something you own?
-          </h2>
+          <h2 className="text-display-sm">Build from what you already know.</h2>
           <p className="mt-4 text-neutral-600">
-            Join the waitlist and get 3 personalised solution ideas based on
-            your experience.
+            Vibepreneur turns your expertise into a structured venture with
+            offer design, launch assets, and growth execution built in.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href="/waitlist" size="lg">
               Join the Waitlist
+            </Button>
+            <Button href="/the-system" variant="secondary" size="lg">
+              Explore the System
             </Button>
           </div>
         </div>

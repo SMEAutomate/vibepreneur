@@ -11,10 +11,11 @@ export function PricingPreview() {
   return (
     <Section background="light">
       <h2 className="text-center text-display-sm">
-        Choose your build capacity.
+        Start free. Scale with traction.
       </h2>
       <p className="mx-auto mt-4 max-w-2xl text-center text-neutral-600">
-        Start free. Scale when you&apos;re ready.
+        Explore opportunities at no cost. Upgrade when you are ready to build,
+        launch, and grow.
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -30,10 +31,15 @@ export function PricingPreview() {
               className={`flex h-full flex-col ${tier.highlighted ? "border-brand-200 ring-1 ring-brand-100" : ""}`}
             >
               <div>
-                <h3 className="text-lg font-semibold text-neutral-900">
-                  {tier.name}
-                </h3>
-                <div className="mt-2 flex items-baseline gap-1">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold text-neutral-900">
+                    {tier.name}
+                  </h3>
+                  <span className="rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-medium text-neutral-600">
+                    {tier.capacity}
+                  </span>
+                </div>
+                <div className="mt-3 flex items-baseline gap-1">
                   <span className="text-3xl font-bold text-neutral-900">
                     {tier.price}
                   </span>
@@ -75,7 +81,7 @@ export function PricingPreview() {
                   size="sm"
                   className="w-full"
                 >
-                  {tier.name === "Free" ? tier.cta : "Join Waitlist"}
+                  {tier.cta}
                 </Button>
               </div>
             </Card>

@@ -1,136 +1,335 @@
 export const siteCopy = {
   hero: {
-    headline: "Future-Proof Your Skills. Build What the Market Needs.",
+    headline: "Your experience is already a business. We make it operational.",
     subheadline:
-      "Vibepreneur helps professionals transform real-world experience into scalable solutions, structures them for the right buyers, and gives you everything you need to build and launch. Strategy, positioning, distribution, and build-ready outputs in one workspace.",
-    ctaPrimary: "See What's Been Built",
+      "Vibepreneur turns your expertise, role history, or idea into a real business system with product strategy, launch assets, and growth execution built in.",
+    ctaPrimary: "Start My Business System",
     ctaSecondary: "See How It Works",
-    trustLine: "Early access launching soon.",
+    trustLine:
+      "Built for professionals, operators, and consultants turning expertise into ownership.",
   },
 
-  theShift: {
-    headline: "The advantage is no longer experience alone. It's ownership.",
-    body: "You already know where workflows break, where teams waste time, and what buyers actually need. That knowledge has value, but only if you act on it. Vibepreneur helps you package that insight into scalable solutions, build them with modern tools, and bring them to market with a structured system.",
+  whatIsVibepreneur: {
+    headline: "A venture operating system for professionals.",
+    body: "Vibepreneur helps professionals turn domain expertise into launchable businesses. The system identifies opportunities from your background, structures offers, creates launch assets, and supports ongoing growth execution. From first idea to operating business, in one platform.",
+  },
+
+  firstWeek: {
+    headline: "Your first business system in 7 days.",
+    subheadline:
+      "A realistic first-week operating plan. Not a promise of overnight success. A structured path from expertise to validated venture.",
+    days: [
+      {
+        day: "Day 1",
+        title: "Opportunity identified",
+        description:
+          "The system analyses your background and surfaces the highest-potential business opportunities matched to market demand.",
+      },
+      {
+        day: "Day 2",
+        title: "Offer and positioning shaped",
+        description:
+          "Your best opportunity becomes a structured offer with buyer profile, pricing model, and competitive positioning.",
+      },
+      {
+        day: "Day 3",
+        title: "Landing page and core assets",
+        description:
+          "A launch-ready landing page plan, headline variants, and core messaging assets are generated.",
+      },
+      {
+        day: "Day 4",
+        title: "Lead magnet or value hook",
+        description:
+          "A lead capture mechanism is created: assessment, template, checklist, or tool matched to your buyer.",
+      },
+      {
+        day: "Day 5",
+        title: "Outbound or content launch",
+        description:
+          "Outreach sequences, content angles, and distribution channel recommendations are prepared.",
+      },
+      {
+        day: "Day 6",
+        title: "Validation signals tracked",
+        description:
+          "The system begins tracking early interest: page visits, signups, responses, and engagement patterns.",
+      },
+      {
+        day: "Day 7",
+        title: "Review, refine, next move",
+        description:
+          "Your daily brief summarises the week. What worked, what to adjust, and what your next move should be.",
+      },
+    ],
+  },
+
+  dualPath: {
+    headline: "One platform. Two starting points.",
+    pathA: {
+      title: "Start Something New",
+      body: "Find the best venture idea from your professional background. Validate what the market needs. Launch without starting from zero.",
+      outcomes: [
+        "Discover opportunities hidden in your experience",
+        "Get a structured business model, not just an idea",
+        "Ship with positioning, pricing, and launch assets ready",
+        "Skip months of guesswork with validated demand signals",
+      ],
+      cta: "Explore Opportunities",
+    },
+    pathB: {
+      title: "Grow What You Already Have",
+      body: "Refine an existing offer, sharpen positioning, and add repeatable growth systems. Turn consulting or service expertise into scalable products.",
+      outcomes: [
+        "Strengthen your offer with structured positioning",
+        "Add growth loops that compound over time",
+        "Build launch assets and distribution channels",
+        "Move from trading time for money to scalable leverage",
+      ],
+      cta: "Scale Your Offer",
+    },
   },
 
   howItWorks: {
-    headline: "Three steps from expertise to market.",
+    headline: "From expertise to operating business in three steps.",
     steps: [
       {
         number: "01",
-        title: "Capture your expertise",
+        title: "Bring what you know",
         description:
-          "Start with what you know. Upload your CV, describe your role, or outline the recurring problems you solve. The platform identifies patterns and market gaps you're uniquely qualified to address.",
+          "Upload your CV, paste your LinkedIn, describe your expertise, or connect an existing business idea. The system maps your experience to real market demand.",
+        detail: "CV, LinkedIn, expertise, or existing idea",
       },
       {
         number: "02",
-        title: "Build the solution",
+        title: "Vibepreneur structures the opportunity",
         description:
-          "Turn insight into a real product. Get a complete concept with positioning, pricing, user journey, and a build-ready blueprint. Every output is structured so you can start building immediately, whether you code yourself or use AI tools.",
+          "The platform identifies the best business models for your background, defines who it serves, and shapes positioning, offer structure, pricing, and a launch roadmap.",
+        detail: "Business model, positioning, pricing, roadmap",
       },
       {
         number: "03",
-        title: "Launch with built-in growth",
+        title: "The system helps you execute",
         description:
-          "Every solution ships with a go-to-market playbook: ideal customer profile, messaging, channels, traction experiments, outreach templates, and visibility strategy.",
+          "Launch assets are created, GTM plans are prepared, growth workflows are activated, and daily progress briefs keep everything moving forward.",
+        detail: "Assets, launch plan, growth loops, daily briefs",
       },
     ],
   },
 
-  differentiator: {
-    headline:
-      "Strategy without building is a daydream. Building without strategy is a gamble.",
-    body: "Most tools force you to choose: plan or build. Vibepreneur closes the gap. From market insight to structured product to paying customers, all in one workspace.",
-    bullets: [
-      "Validate demand before you build",
-      "Get build-ready specs, not just strategy decks",
-      "Position against alternatives with clarity",
-      "Export structured blueprints to your build tools",
-      "Launch with distribution built into the plan",
-      "Create growth loops that compound over time",
+  whatActuallyHappens: {
+    headline: "This is not just ideation. It is structured business execution.",
+    youProvide: {
+      title: "You provide",
+      items: [
+        "CV or LinkedIn profile",
+        "Domain expertise or idea",
+        "Industry context",
+        "Existing offer (optional)",
+      ],
+    },
+    vibepreneurBuilds: {
+      title: "Vibepreneur builds",
+      items: [
+        "Opportunity map",
+        "Offer strategy",
+        "Positioning framework",
+        "Landing page plan",
+        "Launch asset kit",
+        "GTM playbook",
+      ],
+    },
+    vibepreneurExecutes: {
+      title: "Vibepreneur helps execute",
+      items: [
+        "Content prompts",
+        "Outbound campaigns",
+        "Lead capture systems",
+        "Experiment tracking",
+        "Growth loops",
+        "Daily progress briefs",
+      ],
+    },
+  },
+
+  wakeUpToProgress: {
+    headline: "Wake up to progress.",
+    body: "Your business moves forward even when you are busy. Every morning, a structured brief shows what happened, what is next, and where you are needed.",
+    brief: {
+      yesterday: [
+        "Landing page draft completed",
+        "ICP refined based on market signals",
+        "Lead magnet outline created",
+      ],
+      today: [
+        "Publish waitlist page",
+        "Generate 3 outbound angles",
+        "Prepare first validation campaign",
+      ],
+      needsInput: [
+        "Approve positioning direction (Option B recommended)",
+        "Choose pricing model for launch tier",
+      ],
+    },
+  },
+
+  aiBusinessTeam: {
+    headline: "Your business team, built in.",
+    body: "Behind the scenes, specialized workflows handle research, structuring, asset creation, and growth execution. You stay in control. The system does the heavy lifting.",
+    roles: [
+      {
+        title: "Opportunity Strategist",
+        description:
+          "Scans your background and market data to surface the highest-potential business opportunities.",
+        benefit: "Find the right opportunity faster than months of research",
+      },
+      {
+        title: "Venture Architect",
+        description:
+          "Structures your idea into a complete offer with pricing, packaging, and a buildable product spec.",
+        benefit: "Go from concept to structured product in days, not months",
+      },
+      {
+        title: "Launch Planner",
+        description:
+          "Creates your go-to-market plan with channels, outreach sequences, content strategy, and timelines.",
+        benefit: "Launch with a plan, not a prayer",
+      },
+      {
+        title: "Growth Operator",
+        description:
+          "Runs repeatable growth workflows: experiments, distribution loops, lead capture, and traction tracking.",
+        benefit: "Build momentum that compounds over time",
+      },
+      {
+        title: "Performance Analyst",
+        description:
+          "Tracks what is working, what is not, and recommends next moves based on real data.",
+        benefit: "Make decisions from evidence, not intuition",
+      },
     ],
   },
 
-  modules: {
-    headline: "Everything you need from insight to growth.",
+  ventureOs: {
+    headline: "The Venture OS. Everything from opportunity to traction.",
     items: [
       {
-        title: "Insight Engine",
+        title: "Opportunity Engine",
         description:
-          "Surfaces market opportunities from your professional experience. Identifies gaps, demand signals, and underserved segments you already understand.",
+          "Surfaces the best business opportunities from your professional background. Scores each by market demand, competitive gaps, and your unique fit.",
+        outcome: "Find what to build with confidence",
       },
       {
-        title: "Solution Builder",
+        title: "Offer & Positioning Studio",
         description:
-          "Structures your idea into a buildable product: positioning, pricing model, user journey, feature scope, and technical blueprint. Ready to validate and ready to build.",
+          "Shapes your opportunity into a structured offer with clear positioning, pricing tiers, messaging, and competitive differentiation.",
+        outcome: "Know exactly how your offer wins",
       },
       {
-        title: "Positioning Studio",
+        title: "Launch Builder",
         description:
-          "Defines how your solution wins. Competitive angles, value propositions, objection handling, and messaging frameworks tuned to your market.",
-      },
-      {
-        title: "Go-To-Market Planner",
-        description:
-          "Generates a launch plan with ICP definition, channel strategy, outreach sequences, and content angles. Not theory. Executable steps.",
-      },
-      {
-        title: "Distribution Toolkit",
-        description:
-          "Channel scoring, outreach sequences, landing pages, lead magnets, and SEO. Reach buyers where they actually look, not where you hope they are.",
+          "Generates the assets you need to go to market: landing pages, outreach sequences, lead magnets, content plans, and campaign structure.",
+        outcome: "Launch with everything ready",
       },
       {
         title: "Growth System",
         description:
-          "Traction experiments, distribution channels, referral mechanics, and visibility plays. Designed to build momentum, not just awareness.",
+          "Runs traction experiments, tracks channel performance, builds referral mechanics, and creates distribution loops that compound.",
+        outcome: "Build momentum that grows itself",
+      },
+      {
+        title: "Execution Cockpit",
+        description:
+          "Your single view into everything happening across your venture: tasks in progress, assets being built, experiments running, and metrics moving.",
+        outcome: "See the full picture, always",
+      },
+      {
+        title: "Daily Briefs",
+        description:
+          "Every morning, a structured update on what happened, what is next, and where your input is needed. Progress without daily chaos.",
+        outcome: "Stay in control without micromanaging",
       },
     ],
   },
 
-  whoItsFor: {
-    headline: "Built for professionals who create leverage, not content.",
-    body: "Vibepreneur is for people with real-world expertise who want to turn it into something they own. No audience required. No influencer path. Strategy and building, together.",
-    profiles: [
-      "Corporate professionals exploring optionality beyond their role",
-      "Consultants who want to productize their expertise",
-      "Operators who see market gaps every day but haven't built for them yet",
-      "Builders who want strategy baked in from day one, not bolted on after launch",
+  whatYouOwn: {
+    headline: "What you actually own.",
+    body: "Everything created inside Vibepreneur belongs to you. Your ideas, your offers, your audience, your business assets. The platform is the operating system. The business is yours.",
+    items: [
+      {
+        title: "Your idea",
+        description:
+          "Every opportunity, concept, and direction you explore remains yours.",
+      },
+      {
+        title: "Your offer",
+        description:
+          "The structured offer, pricing, and positioning you build is your intellectual property.",
+      },
+      {
+        title: "Your audience",
+        description:
+          "Every lead, subscriber, and customer relationship belongs to you.",
+      },
+      {
+        title: "Your assets",
+        description:
+          "Landing pages, content, outreach sequences, and launch materials are yours to export and use.",
+      },
+      {
+        title: "Your data",
+        description:
+          "Experiment results, traction metrics, and growth data stay with you.",
+      },
+      {
+        title: "Your direction",
+        description:
+          "You make every strategic decision. The system executes. You lead.",
+      },
     ],
   },
 
-  whatIsVibepreneur: {
-    headline: "What is Vibepreneur?",
-    definition:
-      "Vibepreneur is a platform that helps professionals turn their real-world expertise into scalable digital products and services. It combines opportunity discovery, solution design, positioning, go-to-market planning, growth systems, and build-ready product blueprints in one workspace. Experienced professionals can go from idea to launched product without needing a technical co-founder, an audience, or venture capital.",
-    comparison: {
-      left: "Traditional approach",
-      right: "With Vibepreneur",
-      items: [
-        {
-          left: "Months of market research before starting",
-          right: "Opportunity scoring from your background in minutes",
-        },
-        {
-          left: "Guessing at positioning and pricing",
-          right:
-            "Structured positioning canvas with ICP, messaging, and pricing tiers",
-        },
-        {
-          left: "Building first, finding customers later",
-          right: "Validating demand first, then building with confidence",
-        },
-        {
-          left: "Scattered tools for launch and growth",
-          right:
-            "Complete GTM playbook with channel strategy and outreach templates",
-        },
-        {
-          left: "No system for measuring traction",
-          right:
-            "Built-in growth dashboard with experiments and feedback loops",
-        },
-      ],
-    },
+  executionFeed: {
+    headline: "The system is always working.",
+    body: "Real activity from ventures being built on the platform.",
+    items: [
+      { action: "Offer strategy generated", time: "2 min ago" },
+      { action: "Waitlist page drafted", time: "8 min ago" },
+      { action: "14 validation leads identified", time: "23 min ago" },
+      { action: "Channel test prepared for LinkedIn", time: "41 min ago" },
+      { action: "Pricing hypothesis updated", time: "1 hr ago" },
+      { action: "Launch checklist completed", time: "1 hr ago" },
+      { action: "ICP definition refined", time: "2 hr ago" },
+      { action: "Outbound sequence drafted", time: "3 hr ago" },
+      { action: "Competitive positioning mapped", time: "3 hr ago" },
+      { action: "Lead magnet outline created", time: "4 hr ago" },
+    ],
+  },
+
+  builtFor: {
+    headline: "Built for professionals who build, not just browse.",
+    profiles: [
+      {
+        title: "Professionals future-proofing their career",
+        description:
+          "You have years of domain expertise and want to turn it into something you own. Not a side hustle. A real business system.",
+      },
+      {
+        title: "Consultants productizing services",
+        description:
+          "You solve the same problems repeatedly. It is time to package that expertise into scalable products that work without your constant presence.",
+      },
+      {
+        title: "Operators turning pain points into products",
+        description:
+          "You see recurring problems in your industry every day. You know exactly what needs to exist. Now you can build it with structure.",
+      },
+      {
+        title: "Domain experts who want leverage, not content careers",
+        description:
+          "You want ownership and scale, not an influencer path. Your expertise deserves a business model, not just a personal brand.",
+      },
+    ],
   },
 
   buildingInPublic: {
@@ -140,8 +339,10 @@ export const siteCopy = {
   },
 
   finalCta: {
-    headline: "Adapt early. Win long-term.",
-    body: "Join professionals who are turning expertise into ownership. Early access is limited.",
+    headline: "Turn experience into ownership.",
+    body: "Join the early users building structured, scalable ventures from real-world expertise. Early access is limited.",
     cta: "Join the Waitlist",
+    subtext:
+      "Free to start. No credit card required. Built for professionals ready to build.",
   },
 } as const;

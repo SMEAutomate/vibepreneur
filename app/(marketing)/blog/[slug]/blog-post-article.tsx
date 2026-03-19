@@ -2,7 +2,24 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 import type { BlogPost } from "@/content/blog";
+import { InlineBlogCta } from "@/components/marketing/inline-blog-cta";
+
+function parseInlineMarkdown(text: string): ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} className="font-semibold text-neutral-800">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
 
 function StepsGraphic({ steps }: { steps: { label: string; text: string }[] }) {
   return (
@@ -189,44 +206,62 @@ export function BlogPostArticle({ post }: { post: BlogPost }) {
   const graphicIndex = Math.min(3, Math.floor(post.body.length * 0.25));
 
   const midpoint = Math.floor(post.body.length * 0.55);
+  const ctaIndex = Math.floor(post.body.length * 0.6);
 
   return (
     <article className="mx-auto max-w-[680px]">
-      {post.body.map((paragraph, i) => (
-        <div key={i}>
-          {i === graphicIndex && post.steps && (
-            <StepsGraphic steps={post.steps} />
-          )}
-          {i === graphicIndex && !post.steps && post.comparison && (
-            <ComparisonGraphic comparison={post.comparison} />
-          )}
-          {i === pullquoteIndex && <PullQuote text={post.pullquote} />}
-          {i === midpoint && (
-            <h2 className="mb-4 mt-10 text-xl font-semibold text-neutral-900">
-              {post.pullquote.length > 80
-                ? post.pullquote.slice(
-                    0,
-                    post.pullquote.indexOf(".", 30) + 1
-                  ) || post.pullquote
-                : post.pullquote}
-            </h2>
-          )}
-          <motion.p
-            className={[
-              "mb-6 text-lg leading-[1.8] text-neutral-600",
-              i === 0 && "blog-drop-cap",
-            ]
-              .filter(Boolean)
-              .join(" ")}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ delay: i * 0.06, duration: 0.4 }}
-          >
-            {paragraph}
-          </motion.p>
-        </div>
-      ))}
+      {post.body.map((paragraph, i) => {
+        const isHeading = paragraph.startsWith("## ");
+
+        return (
+          <div key={i}>
+            {i === graphicIndex && post.steps && (
+              <StepsGraphic steps={post.steps} />
+            )}
+            {i === graphicIndex && !post.steps && post.comparison && (
+              <ComparisonGraphic comparison={post.comparison} />
+            )}
+            {i === pullquoteIndex && <PullQuote text={post.pullquote} />}
+            {i === ctaIndex && <InlineBlogCta />}
+            {i === midpoint && (
+              <h2 className="mb-4 mt-10 text-xl font-semibold text-neutral-900">
+                {post.pullquote.length > 80
+                  ? post.pullquote.slice(
+                      0,
+                      post.pullquote.indexOf(".", 30) + 1
+                    ) || post.pullquote
+                  : post.pullquote}
+              </h2>
+            )}
+            {isHeading ? (
+              <motion.h2
+                className="mb-4 mt-10 text-xl font-semibold text-neutral-900"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ delay: i * 0.06, duration: 0.4 }}
+              >
+                {paragraph.slice(3)}
+              </motion.h2>
+            ) : (
+              <motion.p
+                className={[
+                  "mb-6 text-lg leading-[1.8] text-neutral-600",
+                  i === 0 && "blog-drop-cap",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ delay: i * 0.06, duration: 0.4 }}
+              >
+                {parseInlineMarkdown(paragraph)}
+              </motion.p>
+            )}
+          </div>
+        );
+      })}
       <ShareButtons title={post.title} />
     </article>
   );

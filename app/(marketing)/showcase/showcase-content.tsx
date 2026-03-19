@@ -41,11 +41,16 @@ export function ShowcaseContent() {
     <>
       <Section>
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-display-md">Built with Vibepreneur</h1>
+          <p className="text-sm font-medium uppercase tracking-wider text-brand-600">
+            Example build paths
+          </p>
+          <h1 className="mt-4 text-display-md">
+            What ventures look like inside the system
+          </h1>
           <p className="mt-4 text-lg text-neutral-600">
-            Real products built by real operators. From idea to paying
-            customers, see how 13 builders turned domain expertise into SaaS
-            businesses.
+            These are example ventures showing how Vibepreneur would structure
+            businesses from real-world expertise. Each demonstrates the system
+            in action: from opportunity to offer to launch assets.
           </p>
         </div>
 
@@ -103,17 +108,15 @@ export function ShowcaseContent() {
                   </div>
 
                   <div className="flex flex-1 flex-col p-5">
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <span
-                          className={`inline-block rounded-full px-2.5 py-0.5 text-[10px] font-medium ${ACCENT_BG[project.accentColor] ?? "bg-neutral-100 text-neutral-600"}`}
-                        >
-                          {project.sector}
-                        </span>
-                        <h3 className="mt-2 text-lg font-semibold text-neutral-900 transition-colors group-hover:text-brand-700">
-                          {project.productName}
-                        </h3>
-                      </div>
+                    <div>
+                      <span
+                        className={`inline-block rounded-full px-2.5 py-0.5 text-[10px] font-medium ${ACCENT_BG[project.accentColor] ?? "bg-neutral-100 text-neutral-600"}`}
+                      >
+                        {project.sector}
+                      </span>
+                      <h3 className="mt-2 text-lg font-semibold text-neutral-900 transition-colors group-hover:text-brand-700">
+                        {project.productName}
+                      </h3>
                     </div>
 
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-500">
@@ -136,15 +139,9 @@ export function ShowcaseContent() {
                       ))}
                     </div>
 
-                    <div className="mt-4 border-t border-neutral-100 pt-3">
-                      <p className="text-xs text-neutral-400">
-                        <span className="font-semibold text-neutral-600">
-                          Founder
-                        </span>
-                        {project.builderRole.replace(/^Founder,?\s*/, "") &&
-                          `, ${project.builderRole.replace(/^Founder,?\s*/, "")}`}
-                      </p>
-                    </div>
+                    <p className="mt-4 border-t border-neutral-100 pt-3 text-[10px] uppercase tracking-wider text-neutral-400">
+                      How Vibepreneur would structure this
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -157,11 +154,12 @@ export function ShowcaseContent() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-display-sm">Ready to build yours?</h2>
           <p className="mt-4 text-neutral-600">
-            Join the waitlist and start turning your expertise into a product.
+            Join the waitlist and see what Vibepreneur can structure from your
+            expertise.
           </p>
           <div className="mt-6">
             <Button href="/waitlist" size="lg">
-              Join Waitlist
+              Start My Business System
             </Button>
           </div>
         </div>

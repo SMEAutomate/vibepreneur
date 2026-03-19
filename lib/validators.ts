@@ -7,6 +7,8 @@ export const waitlistSchema = z.object({
   consent: z.boolean().default(true),
   source: z.string().optional(),
   ref: z.string().optional(),
+  persona: z.string().optional(),
+  goal: z.string().optional(),
 });
 
 export type WaitlistInput = z.infer<typeof waitlistSchema>;

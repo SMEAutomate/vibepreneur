@@ -12,10 +12,12 @@ function ThanksInner() {
   const [copied, setCopied] = useState(false);
 
   const solutionsUrl = `/waitlist/your-solutions?role=${encodeURIComponent(role)}&industry=${encodeURIComponent(industry)}`;
-  const shareUrl =
+  const ref = searchParams.get("ref") ?? "";
+  const baseShareUrl =
     typeof window !== "undefined"
       ? `${window.location.origin}/waitlist`
       : "https://vibepreneur.com/waitlist";
+  const shareUrl = ref ? `${baseShareUrl}?ref=${ref}` : baseShareUrl;
 
   function handleCopy() {
     navigator.clipboard.writeText(shareUrl);

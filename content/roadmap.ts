@@ -14,21 +14,21 @@ export const roadmapColumns: Record<
     label: "Now",
     items: [
       {
-        title: "Insight Engine",
+        title: "Opportunity Intelligence",
         description:
-          "Surface market opportunities from professional experience. Identify gaps and demand signals.",
+          "Surface market opportunities from professional experience. Score by demand, competitive gaps, and personal fit.",
         status: "live",
       },
       {
-        title: "Solution Structuring",
+        title: "Venture Structuring",
         description:
-          "Turn ideas into structured concepts with positioning, pricing, and user journey.",
+          "Turn opportunities into structured business systems with positioning, pricing, offer design, and buyer profiles.",
         status: "live",
       },
       {
-        title: "Positioning Framework",
+        title: "Launch Systems",
         description:
-          "Define competitive angles, value propositions, and messaging frameworks.",
+          "Generate launch assets, GTM playbooks, outreach sequences, and campaign structure.",
         status: "live",
       },
     ],
@@ -37,21 +37,21 @@ export const roadmapColumns: Record<
     label: "Next",
     items: [
       {
-        title: "Distribution Toolkit",
+        title: "Execution Automation",
         description:
-          "ICP definition, channel strategy, outreach sequences, and content angles.",
+          "Automated daily briefs, task orchestration, and progress tracking across all active ventures.",
         status: "in-progress",
       },
       {
-        title: "Growth Dashboard",
+        title: "Growth Loops",
         description:
-          "Track experiments, measure traction, and identify what's working.",
+          "Traction experiments, channel scoring, referral mechanics, and compounding distribution workflows.",
         status: "in-progress",
       },
       {
         title: "Build Tool Integrations",
         description:
-          "Export product blueprints, specs, and requirements directly to your preferred build tools. Designed for AI-assisted development workflows.",
+          "Export product specs, user stories, and technical briefs directly to your preferred build tools and AI-assisted development workflows.",
         status: "planned",
       },
     ],
@@ -60,21 +60,21 @@ export const roadmapColumns: Record<
     label: "Later",
     items: [
       {
-        title: "Team Collaboration",
+        title: "Portfolio Mode",
         description:
-          "Build solutions with collaborators. Shared workspaces, roles, and versioning.",
+          "Manage multiple ventures from one dashboard. Compare performance, allocate focus, and run parallel experiments.",
         status: "planned",
       },
       {
-        title: "Portfolio View",
+        title: "Team Collaboration",
         description:
-          "Manage multiple solutions from one dashboard. Compare performance across bets.",
+          "Build ventures with collaborators. Shared workspaces, roles, and version control across your team.",
         status: "planned",
       },
       {
         title: "Marketplace",
         description:
-          "Connect with complementary builders. Find co-founders, distributors, and early adopters.",
+          "Connect with complementary builders. Find co-founders, distributors, and early adopters for your ventures.",
         status: "planned",
       },
     ],
@@ -93,18 +93,18 @@ export const weeklyUpdates: WeeklyUpdate[] = [
     week: "Week 1",
     date: "March 2026",
     title: "Foundation and first impressions",
-    body: "Launched the marketing site and waitlist system. Built the Insight Engine core, the part that surfaces opportunities from your experience. Early feedback from 50+ signups is shaping what we build next.",
+    body: "Launched the marketing site and waitlist system. Built the Opportunity Intelligence core, the part that surfaces business opportunities from your experience. Early feedback from 50+ signups is shaping what we build next.",
   },
   {
     week: "Week 2",
     date: "March 2026",
-    title: "Solution structuring goes live",
-    body: "The Solution Builder now produces complete concepts: positioning angle, pricing model, buyer profile, and feature scope. Testing with early users from consulting, operations, and product management backgrounds.",
+    title: "Venture structuring goes live",
+    body: "The Venture Structuring system now produces complete business concepts: positioning angle, pricing model, buyer profile, and offer design. Testing with early users from consulting, operations, and product management backgrounds.",
   },
   {
     week: "Week 3",
     date: "March 2026",
-    title: "Positioning that wins",
-    body: "Shipped the Positioning Studio. It generates competitive angles, objection handling, and messaging frameworks tuned to your specific market. Distribution Toolkit work begins next week.",
+    title: "Launch systems ship",
+    body: "Shipped the Launch Builder. It generates GTM playbooks, outreach sequences, and campaign structures tuned to your specific market. Execution Automation work begins next week.",
   },
 ];

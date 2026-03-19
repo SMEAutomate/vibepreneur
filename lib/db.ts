@@ -2,14 +2,16 @@ import { sql } from "@vercel/postgres";
 import type { WaitlistInput } from "./validators";
 
 export async function createWaitlistSignup(data: WaitlistInput) {
-  const { email, role, industry, consent, source, ref } = data;
+  const { email, role, industry, consent, source, ref, persona, goal } = data;
 
   const result = await sql`
-    INSERT INTO waitlist_signups (id, email, role, industry, consent, source, ref, created_at)
-    VALUES (gen_random_uuid(), ${email}, ${role}, ${industry ?? null}, ${consent ?? true}, ${source ?? null}, ${ref ?? null}, NOW())
+    INSERT INTO waitlist_signups (id, email, role, industry, consent, source, ref, persona, goal, created_at)
+    VALUES (gen_random_uuid(), ${email}, ${role}, ${industry ?? null}, ${consent ?? true}, ${source ?? null}, ${ref ?? null}, ${persona ?? null}, ${goal ?? null}, NOW())
     ON CONFLICT (email) DO UPDATE SET
       role = EXCLUDED.role,
-      industry = EXCLUDED.industry
+      industry = EXCLUDED.industry,
+      persona = EXCLUDED.persona,
+      goal = EXCLUDED.goal
     RETURNING id, email, role, industry
   `;
 
@@ -34,9 +36,14 @@ CREATE TABLE IF NOT EXISTS waitlist_signups (
   created_at TIMESTAMPTZ DEFAULT NOW(),
   source TEXT,
   ref TEXT,
-  consent BOOLEAN DEFAULT TRUE
+  consent BOOLEAN DEFAULT TRUE,
+  persona TEXT,
+  goal TEXT
 );
 
 CREATE INDEX IF NOT EXISTS idx_waitlist_email ON waitlist_signups (email);
 CREATE INDEX IF NOT EXISTS idx_waitlist_created ON waitlist_signups (created_at);
+
+ALTER TABLE waitlist_signups ADD COLUMN IF NOT EXISTS persona TEXT;
+ALTER TABLE waitlist_signups ADD COLUMN IF NOT EXISTS goal TEXT;
 `;
