@@ -7,6 +7,7 @@ import { DualPath } from "@/components/marketing/dual-path";
 import { WhatActuallyHappens } from "@/components/marketing/what-actually-happens";
 import { WakeUpToProgress } from "@/components/marketing/wake-up-to-progress";
 import { VentureOS } from "@/components/marketing/venture-os";
+import { PositioningDemo } from "@/components/marketing/positioning-demo";
 import { AIBusinessTeam } from "@/components/marketing/ai-business-team";
 import { WhatYouOwn } from "@/components/marketing/what-you-own";
 import { ExecutionFeed } from "@/components/marketing/execution-feed";
@@ -39,6 +40,7 @@ export default function Home() {
       <WhatActuallyHappens />
       <WakeUpToProgress />
       <VentureOS />
+      <PositioningDemo />
       <AIBusinessTeam />
       <WhatYouOwn />
       <ExecutionFeed />

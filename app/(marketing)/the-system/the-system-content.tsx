@@ -4,6 +4,33 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
+import { MockScreenRenderer } from "@/components/demo/MockScreenRenderer";
+
+const LAYER_SCREENS: (string | null)[] = [
+  "OpportunityFinder",
+  "PositioningCanvas",
+  "GoToMarketPlan",
+  "GrowthDashboard",
+  "HomeOverview",
+  null,
+];
+
+const dailyBriefItems = {
+  yesterday: [
+    "Landing page v2 published",
+    "ICP refined: VP People Ops, 200-2000 employees",
+    "Lead magnet draft completed",
+  ],
+  today: [
+    "Launch outreach sequence to 50 target buyers",
+    "Publish LinkedIn post with lead magnet hook",
+    "Set up validation tracking",
+  ],
+  needsInput: [
+    "Approve pricing tier structure",
+    "Choose Week 2 content format",
+  ],
+};
 
 const layers = [
   {
@@ -82,6 +109,166 @@ const layers = [
   },
 ];
 
+function DailyBriefMini() {
+  return (
+    <div className="rounded-xl border border-neutral-200 bg-white p-5 shadow-sm">
+      <div className="mb-4 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <svg
+            className="h-4 w-4 text-brand-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={1.5}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25H5.625a2.25 2.25 0 01-2.25-2.25V8.625c0-.621.504-1.125 1.125-1.125H6.75"
+            />
+          </svg>
+          <span className="text-sm font-semibold text-neutral-900">
+            Daily Brief
+          </span>
+        </div>
+        <span className="text-xs text-neutral-400">March 19, 2026</span>
+      </div>
+
+      <div className="space-y-3">
+        <div>
+          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-medium text-emerald-700">
+            <svg
+              className="h-2.5 w-2.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            Yesterday
+          </span>
+          <ul className="mt-1.5 space-y-1">
+            {dailyBriefItems.yesterday.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-1.5 text-xs text-neutral-600"
+              >
+                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-emerald-500" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="border-t border-neutral-100 pt-3">
+          <span className="inline-flex items-center gap-1 rounded-full bg-brand-100 px-2 py-0.5 text-[10px] font-medium text-brand-700">
+            <svg
+              className="h-2.5 w-2.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            Today
+          </span>
+          <ul className="mt-1.5 space-y-1">
+            {dailyBriefItems.today.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-1.5 text-xs text-neutral-600"
+              >
+                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-500" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="border-t border-neutral-100 pt-3">
+          <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-medium text-amber-700">
+            <svg
+              className="h-2.5 w-2.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"
+              />
+            </svg>
+            Needs input
+          </span>
+          <ul className="mt-1.5 space-y-1">
+            {dailyBriefItems.needsInput.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-1.5 text-xs font-medium text-neutral-700"
+              >
+                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-amber-500" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function LayerScreenPreview({ activeIndex }: { activeIndex: number }) {
+  const screenName = LAYER_SCREENS[activeIndex];
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={activeIndex}
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.98 }}
+        transition={{ duration: 0.3 }}
+      >
+        {screenName ? (
+          <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-lg">
+            <div className="flex items-center gap-1.5 border-b border-neutral-100 bg-neutral-50 px-4 py-2.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
+              <span className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
+              <span className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
+            </div>
+            <div className="relative h-[380px] overflow-hidden sm:h-[440px]">
+              <div
+                className="origin-top-left"
+                style={{
+                  transform: "scale(0.55)",
+                  width: "181.82%",
+                  height: "181.82%",
+                }}
+              >
+                <MockScreenRenderer componentName={screenName} />
+              </div>
+            </div>
+          </div>
+        ) : (
+          <DailyBriefMini />
+        )}
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
 export function TheSystemContent() {
   const [activeIndex, setActiveIndex] = useState(0);
   const active = layers[activeIndex];
@@ -139,81 +326,85 @@ export function TheSystemContent() {
             ))}
           </div>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeIndex}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25 }}
-              className="rounded-xl border border-neutral-200 bg-white p-8 shadow-sm"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50">
-                  <svg
-                    className="h-5 w-5 text-brand-700"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d={active.icon}
-                    />
-                  </svg>
+          <div className="space-y-6">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeIndex}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.25 }}
+                className="rounded-xl border border-neutral-200 bg-white p-8 shadow-sm"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50">
+                    <svg
+                      className="h-5 w-5 text-brand-700"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={1.5}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d={active.icon}
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span className="text-xs font-medium text-brand-600">
+                      Layer {activeIndex + 1}
+                    </span>
+                    <h2 className="text-xl font-semibold text-neutral-900">
+                      {active.title}
+                    </h2>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-xs font-medium text-brand-600">
-                    Layer {activeIndex + 1}
-                  </span>
-                  <h2 className="text-xl font-semibold text-neutral-900">
-                    {active.title}
-                  </h2>
-                </div>
-              </div>
 
-              <p className="mt-2 text-sm font-medium text-neutral-500">
-                {active.tagline}
-              </p>
+                <p className="mt-2 text-sm font-medium text-neutral-500">
+                  {active.tagline}
+                </p>
 
-              <p className="mt-4 leading-relaxed text-neutral-600">
-                {active.description}
-              </p>
+                <p className="mt-4 leading-relaxed text-neutral-600">
+                  {active.description}
+                </p>
 
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-lg bg-neutral-50 p-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
-                    Replaces
-                  </p>
-                  <p className="mt-1 text-sm text-neutral-600">
-                    {active.replaces}
-                  </p>
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-lg bg-neutral-50 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+                      Replaces
+                    </p>
+                    <p className="mt-1 text-sm text-neutral-600">
+                      {active.replaces}
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-brand-50 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-brand-500">
+                      Outcome
+                    </p>
+                    <p className="mt-1 text-sm text-neutral-800">
+                      {active.outcome}
+                    </p>
+                  </div>
                 </div>
-                <div className="rounded-lg bg-brand-50 p-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-brand-500">
-                    Outcome
-                  </p>
-                  <p className="mt-1 text-sm text-neutral-800">
-                    {active.outcome}
-                  </p>
-                </div>
-              </div>
 
-              {active.featureLink && (
-                <div className="mt-6">
-                  <Button
-                    href={active.featureLink}
-                    variant="secondary"
-                    size="sm"
-                  >
-                    Explore this layer
-                  </Button>
-                </div>
-              )}
-            </motion.div>
-          </AnimatePresence>
+                {active.featureLink && (
+                  <div className="mt-6">
+                    <Button
+                      href={active.featureLink}
+                      variant="secondary"
+                      size="sm"
+                    >
+                      Explore this layer
+                    </Button>
+                  </div>
+                )}
+              </motion.div>
+            </AnimatePresence>
+
+            <LayerScreenPreview activeIndex={activeIndex} />
+          </div>
         </div>
       </Section>
 

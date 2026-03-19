@@ -7,6 +7,9 @@ import { TechnicalPillars } from "./technical-pillars";
 import { StaggeredExamples } from "./staggered-examples";
 import { HowItWorksComparison } from "./how-it-works-comparison";
 import { ExampleJourneys } from "./example-journeys";
+import { OpportunityDemo } from "@/components/marketing/opportunity-demo";
+import { OutreachDemo } from "@/components/marketing/outreach-demo";
+import { GrowthExperimentsDemo } from "@/components/marketing/growth-experiments-demo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -82,8 +85,23 @@ export default function HowItWorksPage() {
         </div>
       </Section>
 
-      <Section>
+      <OpportunityDemo />
+
+      <Section background="light">
         <HowItWorksComparison />
+      </Section>
+
+      <Section>
+        <h2 className="text-center text-display-sm">
+          What a launch sequence looks like
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-center text-neutral-600">
+          The system generates multi-channel outreach sequences tailored to your
+          offer and buyer. Here is an example for the HR Onboarding venture.
+        </p>
+        <div className="mt-10">
+          <OutreachDemo />
+        </div>
       </Section>
 
       <Section background="light">
@@ -91,6 +109,20 @@ export default function HowItWorksPage() {
       </Section>
 
       <Section>
+        <h2 className="text-center text-display-sm">
+          How the Growth Engine tracks experiments
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-center text-neutral-600">
+          Every growth channel is a structured experiment with a hypothesis,
+          metric, and result. The system tracks what works and cuts what does
+          not.
+        </p>
+        <div className="mt-10">
+          <GrowthExperimentsDemo />
+        </div>
+      </Section>
+
+      <Section background="light">
         <h2 className="text-center text-display-sm">Example journeys</h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-neutral-600">
           Three professionals who turned domain expertise into structured
@@ -99,7 +131,7 @@ export default function HowItWorksPage() {
         <ExampleJourneys />
       </Section>
 
-      <Section background="light">
+      <Section>
         <h2 className="text-center text-display-sm">See it in action</h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-neutral-600">
           Two detailed examples of how professionals could turn their expertise
