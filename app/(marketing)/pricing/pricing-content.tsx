@@ -11,31 +11,24 @@ const tierStages = [
   {
     stage: "Explore",
     description:
-      "Discover what you could build from your professional background.",
+      "Discover where your expertise has commercial advantage. One full opportunity assessment to see what you could build.",
     when: "You are curious about turning expertise into a business but have not committed yet.",
-    upgrade: "Upgrade when you have found an opportunity worth pursuing.",
+    upgrade:
+      "Upgrade when you find an opportunity worth pursuing and want to build, position, and launch.",
   },
   {
     stage: "Build & Launch",
     description:
-      "Structure, build, and launch one complete venture with full execution support.",
-    when: "You have identified an opportunity and are ready to take it to market.",
+      "Structure your offer, refine positioning, generate launch assets, and ship. Enough iterations to find your concept and take it to market.",
+    when: "You have found an opportunity and are ready to build and launch with room to iterate.",
     upgrade:
-      "Upgrade when you want to run multiple experiments or ventures in parallel.",
+      "Upgrade when your launch is live and you need growth experiments and channel optimization.",
   },
   {
-    stage: "Scale",
+    stage: "Grow",
     description:
-      "Run multiple ventures, advanced experiments, and compound growth systems.",
-    when: "You have early traction and want to accelerate or diversify.",
-    upgrade:
-      "Upgrade when you need team collaboration or portfolio management.",
-  },
-  {
-    stage: "Portfolio",
-    description:
-      "Manage a portfolio of ventures with team collaboration and advanced workflows.",
-    when: "You are running multiple ventures and need cross-venture visibility and collaboration.",
+      "Full system with growth experiments, traction playbooks, competitive analysis, and 3x the iteration depth for active optimization.",
+    when: "You have a live venture and want to run experiments, optimize channels, and compound traction.",
     upgrade: null,
   },
 ];
@@ -47,14 +40,15 @@ export function PricingContent() {
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-display-md">Start free. Scale with traction.</h1>
           <p className="mt-4 text-lg text-neutral-600">
-            Every tier matches a stage in your business journey. Explore at no
-            cost. Upgrade when you are ready to build, launch, and grow.
+            Every tier unlocks further stages and more iteration depth. Explore
+            at no cost. Upgrade when you need the next stage or more runs to
+            refine your approach.
           </p>
         </div>
       </Section>
 
       <Section background="light">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pricingTiers.map((tier, i) => (
             <motion.div
               key={tier.name}
@@ -199,7 +193,7 @@ export function PricingContent() {
                     <td className="py-3 pr-4 text-neutral-700">
                       {row.feature}
                     </td>
-                    {(["free", "pro", "max", "ultra"] as const).map((tier) => {
+                    {(["free", "pro", "max"] as const).map((tier) => {
                       const val = row[tier];
                       return (
                         <td
