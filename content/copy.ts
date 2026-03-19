@@ -239,7 +239,7 @@ export const siteCopy = {
       {
         title: "Launch Builder",
         description:
-          "Generates the assets you need to go to market: landing pages, outreach sequences, lead magnets, content plans, and campaign structure. Plus build prompts for AI dev tools (Cursor, Bolt, Lovable) and creative asset prompts for image and video generators (Midjourney, DALL-E, Sora).",
+          "Choose a task, pick a delivery path, and get sequential copy-paste prompts optimised for any leading AI tool. Apps in Cursor, prototypes in Bolt, landing pages in Lovable, ad creatives in Midjourney, video content in Sora. The system generates the prompts. You build with the tools you already use.",
         outcome: "Launch with everything ready",
       },
       {

@@ -608,6 +608,106 @@ export const features: FeatureConfig[] = [
       },
     ],
   },
+  {
+    slug: "launch-builder",
+    tag: "Build",
+    name: "Launch Builder",
+    headline: "Choose a task. Pick a path. Get prompts that build it.",
+    description:
+      "The Launch Builder turns your venture specs into structured, sequential prompts optimised for any leading AI tool. Choose a task, select a delivery approach, and the system generates copy-paste-ready prompts using the best available prompt model. Apps, landing pages, ad creatives, brand assets, automation scripts. You build with the tools you already use.",
+    iconPath:
+      "M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z",
+    capabilities: [
+      {
+        icon: "M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z",
+        title: "Task Selection",
+        description:
+          "Choose what you need to build: a full-stack app, landing page, ad creative set, brand identity, automation script, or video content. The system pulls context from your venture data automatically.",
+      },
+      {
+        icon: "M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5",
+        title: "Delivery Path Suggestions",
+        description:
+          "For each task, the system offers 2 to 3 delivery approaches matched to your skill level and preferred tools. Build a SaaS dashboard in Cursor, prototype it in Bolt, or scaffold it in Lovable. You pick the path.",
+      },
+      {
+        icon: "M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z",
+        title: "Optimised Prompt Generation",
+        description:
+          "Sequential prompts generated using the current best prompt-creation model with framework controls that ensure consistent, high-quality outputs. Each prompt builds on the last. Copy, paste, get the result.",
+      },
+      {
+        icon: "M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z",
+        title: "Any Tool, Any Model",
+        description:
+          "Prompts optimised for Cursor, Bolt, Lovable, Replit, Claude Code, Midjourney, DALL-E, Sora, and more. As new tools and models emerge, the system adapts. Native in-app building comes later with Vibepreneur Builder.",
+      },
+      {
+        icon: "M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z",
+        title: "Venture-Aware Context",
+        description:
+          "Every prompt is pre-loaded with your positioning, buyer profile, offer structure, and brand direction. No starting from scratch. The system knows what you are building and for whom.",
+      },
+    ],
+    featuredScreen: "ExportCenter",
+    screenNames: [
+      "ExportCenter",
+      "SolutionBuilder",
+      "LandingPageBuilder",
+      "ContentLaunchKit",
+      "AIAssistant",
+    ],
+    callouts: [
+      {
+        number: 1,
+        label: "Export Format",
+        description:
+          "Choose your output format: structured prompts, project specs, or ready-to-use templates.",
+        x: "18%",
+        y: "14%",
+      },
+      {
+        number: 2,
+        label: "Target Tool",
+        description:
+          "Select the AI tool you want to build with. Prompts are optimised for each tool's strengths.",
+        x: "55%",
+        y: "14%",
+      },
+      {
+        number: 3,
+        label: "Venture Context",
+        description:
+          "Your positioning, buyer profile, and offer data are automatically included in every prompt.",
+        x: "18%",
+        y: "48%",
+      },
+      {
+        number: 4,
+        label: "Sequential Prompts",
+        description:
+          "Numbered prompt sequence. Run them in order. Each builds on the output of the last.",
+        x: "55%",
+        y: "48%",
+      },
+      {
+        number: 5,
+        label: "Copy & Execute",
+        description:
+          "One-click copy for each prompt. Paste into your tool, get the output, move to the next step.",
+        x: "18%",
+        y: "75%",
+      },
+      {
+        number: 6,
+        label: "Output Preview",
+        description:
+          "See what you will get before you start. Expected deliverables listed for each prompt sequence.",
+        x: "55%",
+        y: "75%",
+      },
+    ],
+  },
 ];
 
 export function getFeatureBySlug(slug: string): FeatureConfig | undefined {
