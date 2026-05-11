@@ -68,7 +68,9 @@ export interface BlogPost {
   };
 }
 
-export const blogPosts: BlogPost[] = [
+import { spring2026Posts } from "./blog-2026-spring";
+
+const baseBlogPosts: BlogPost[] = [
   {
     slug: "first-7-days-after-ai-replaces-role",
     title: "What to Do in the First 7 Days After AI Replaces Your Role",
@@ -1819,6 +1821,11 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 ];
+
+export const blogPosts: BlogPost[] = [
+  ...spring2026Posts,
+  ...baseBlogPosts,
+].sort((a, b) => (a.date < b.date ? 1 : -1));
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
