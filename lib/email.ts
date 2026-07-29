@@ -1,13 +1,13 @@
 import { Resend } from "resend";
 import type { GeneratedSolution } from "./solutionGenerator";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, DEFAULT_EMAIL_FROM } from "@/lib/site";
 
 function getResend(): Resend {
   return new Resend(process.env.RESEND_API_KEY);
 }
 
 function getFrom(): string {
-  return process.env.EMAIL_FROM ?? "Vibepreneur <hello@vibepreneur.com>";
+  return process.env.EMAIL_FROM ?? DEFAULT_EMAIL_FROM;
 }
 
 export async function sendWelcomeEmail(

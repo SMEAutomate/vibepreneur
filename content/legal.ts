@@ -1,6 +1,6 @@
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, CONTACT_EMAIL } from "@/lib/site";
+
 const COMPANY_NAME = "Vibepreneur";
-const CONTACT_EMAIL = "hello@vibepreneur.com";
 
 export interface LegalSection {
   heading: string;
