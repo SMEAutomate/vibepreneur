@@ -140,7 +140,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
               <span className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
               <span className="ml-3 text-[10px] text-neutral-400">
                 {screen.type === "vibepreneur"
-                  ? "app.vibepreneur.com"
+                  ? "app.vbprnr.com"
                   : `app.${project.slug}.io`}
               </span>
             </div>

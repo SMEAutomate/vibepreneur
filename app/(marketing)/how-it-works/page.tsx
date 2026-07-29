@@ -11,6 +11,7 @@ import { OpportunityDemo } from "@/components/marketing/opportunity-demo";
 import { OutreachDemo } from "@/components/marketing/outreach-demo";
 import { GrowthExperimentsDemo } from "@/components/marketing/growth-experiments-demo";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "How It Works | Vibepreneur",
@@ -51,13 +52,13 @@ export default function HowItWorksPage() {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://vibepreneur.com",
+                item: SITE_URL,
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "How It Works",
-                item: "https://vibepreneur.com/how-it-works",
+                item: `${SITE_URL}/how-it-works`,
               },
             ],
           },

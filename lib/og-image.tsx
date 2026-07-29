@@ -61,7 +61,7 @@ export function generateOgImage(
             borderRadius: 100,
           }}
         >
-          vibepreneur.com
+          vbprnr.com
         </div>
       </div>
     </div>,

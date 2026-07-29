@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { JsonLd } from "@/components/seo/json-ld";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,7 +11,6 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const SITE_URL = "https://vibepreneur.com";
 const SITE_NAME = "Vibepreneur";
 const DEFAULT_DESCRIPTION =
   "Transform real-world experience into scalable solutions with structured go-to-market and growth systems built in.";

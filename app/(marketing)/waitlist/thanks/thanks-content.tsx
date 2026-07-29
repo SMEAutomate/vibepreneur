@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { Suspense, useState } from "react";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
+import { SITE_URL } from "@/lib/site";
 
 function ThanksInner() {
   const searchParams = useSearchParams();
@@ -16,7 +17,7 @@ function ThanksInner() {
   const baseShareUrl =
     typeof window !== "undefined"
       ? `${window.location.origin}/waitlist`
-      : "https://vibepreneur.com/waitlist";
+      : `${SITE_URL}/waitlist`;
   const shareUrl = ref ? `${baseShareUrl}?ref=${ref}` : baseShareUrl;
 
   function handleCopy() {

@@ -8,6 +8,7 @@ import { blogPosts, getBlogPostBySlug, defaultAuthor } from "@/content/blog";
 import { ReadingProgress } from "./reading-progress";
 import { BlogPostArticle } from "./blog-post-article";
 import { RelatedPosts } from "./related-posts";
+import { SITE_URL } from "@/lib/site";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       ...(post.updatedDate && { modifiedTime: post.updatedDate }),
       authors: [(post.author ?? defaultAuthor).name],
-      url: `https://vibepreneur.com/blog/${slug}`,
+      url: `${SITE_URL}/blog/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -59,8 +60,8 @@ export default async function BlogPostPage({ params }: Props) {
             "@type": "BlogPosting",
             headline: post.title,
             description: post.excerpt,
-            url: `https://vibepreneur.com/blog/${slug}`,
-            image: `https://vibepreneur.com/blog/${slug}/opengraph-image`,
+            url: `${SITE_URL}/blog/${slug}`,
+            image: `${SITE_URL}/blog/${slug}/opengraph-image`,
             datePublished: post.date,
             ...(post.updatedDate && { dateModified: post.updatedDate }),
             author: {
@@ -71,11 +72,11 @@ export default async function BlogPostPage({ params }: Props) {
             publisher: {
               "@type": "Organization",
               name: "Vibepreneur",
-              url: "https://vibepreneur.com",
+              url: SITE_URL,
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://vibepreneur.com/blog/${slug}`,
+              "@id": `${SITE_URL}/blog/${slug}`,
             },
           },
           {
@@ -86,19 +87,19 @@ export default async function BlogPostPage({ params }: Props) {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://vibepreneur.com",
+                item: SITE_URL,
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "Blog",
-                item: "https://vibepreneur.com/blog",
+                item: `${SITE_URL}/blog`,
               },
               {
                 "@type": "ListItem",
                 position: 3,
                 name: post.title,
-                item: `https://vibepreneur.com/blog/${slug}`,
+                item: `${SITE_URL}/blog/${slug}`,
               },
             ],
           },

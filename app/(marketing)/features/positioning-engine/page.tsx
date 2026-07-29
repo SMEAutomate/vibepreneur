@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { features } from "@/content/features";
 import { FeaturePageContent } from "@/components/marketing/feature-page-content";
 import { JsonLd } from "@/components/seo/json-ld";
+import { SITE_URL } from "@/lib/site";
 
 const feature = features.find((f) => f.slug === "positioning-engine")!;
 
@@ -28,19 +29,19 @@ export default function PositioningEnginePage() {
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://vibepreneur.com",
+              item: SITE_URL,
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Features",
-              item: "https://vibepreneur.com/features",
+              item: `${SITE_URL}/features`,
             },
             {
               "@type": "ListItem",
               position: 3,
               name: feature.name,
-              item: `https://vibepreneur.com/features/${feature.slug}`,
+              item: `${SITE_URL}/features/${feature.slug}`,
             },
           ],
         }}

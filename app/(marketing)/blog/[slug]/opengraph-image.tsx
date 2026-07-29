@@ -115,7 +115,7 @@ export default async function OgImage({
             borderRadius: 100,
           }}
         >
-          vibepreneur.com
+          vbprnr.com
         </div>
       </div>
     </div>,

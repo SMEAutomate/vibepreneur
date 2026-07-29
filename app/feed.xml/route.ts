@@ -1,6 +1,5 @@
 import { blogPosts } from "@/content/blog";
-
-const SITE_URL = "https://vibepreneur.com";
+import { SITE_URL } from "@/lib/site";
 
 function escapeXml(str: string): string {
   return str

@@ -1,4 +1,4 @@
-const SITE_URL = "https://vibepreneur.com";
+import { SITE_URL } from "@/lib/site";
 const COMPANY_NAME = "Vibepreneur";
 const CONTACT_EMAIL = "hello@vibepreneur.com";
 

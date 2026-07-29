@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import type { GeneratedSolution } from "./solutionGenerator";
+import { SITE_URL } from "@/lib/site";
 
 function getResend(): Resend {
   return new Resend(process.env.RESEND_API_KEY);
@@ -49,7 +50,7 @@ export async function sendSolutionsEmail(
 }
 
 export function welcomeEmailHtml(role: string, industry?: string): string {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://vibepreneur.com";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL;
   const params = new URLSearchParams({ role });
   if (industry) params.set("industry", industry);
   const solutionsUrl = `${siteUrl}/waitlist/your-solutions?${params.toString()}`;

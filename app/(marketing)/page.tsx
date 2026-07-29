@@ -15,6 +15,7 @@ import { BuiltFor } from "@/components/marketing/built-for";
 import { PricingPreview } from "@/components/marketing/pricing-preview";
 import { BuildingInPublic } from "@/components/marketing/building-in-public";
 import { FinalCta } from "@/components/marketing/final-cta";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Vibepreneur | Turn Expertise Into a Business That Grows With You",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     title: "Vibepreneur | Turn Expertise Into a Business That Grows With You",
     description:
       "Turn your expertise, role history, or idea into a real business system with product strategy, launch assets, and growth execution built in.",
-    url: "https://vibepreneur.com",
+    url: SITE_URL,
   },
 };
 

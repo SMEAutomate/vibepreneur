@@ -24,33 +24,33 @@ Vibepreneur is a venture operating system for experienced professionals (consult
 
 ## Key Pages
 
-- Homepage: https://vibepreneur.com
-- How It Works: https://vibepreneur.com/how-it-works
-- The System: https://vibepreneur.com/the-system
-- Pricing: https://vibepreneur.com/pricing
-- Showcase: https://vibepreneur.com/showcase
-- Blog: https://vibepreneur.com/blog
-- Daily Brief: https://vibepreneur.com/daily-brief
-- Roadmap: https://vibepreneur.com/roadmap
-- About: https://vibepreneur.com/about
-- Waitlist: https://vibepreneur.com/waitlist
+- Homepage: https://vbprnr.com
+- How It Works: https://vbprnr.com/how-it-works
+- The System: https://vbprnr.com/the-system
+- Pricing: https://vbprnr.com/pricing
+- Showcase: https://vbprnr.com/showcase
+- Blog: https://vbprnr.com/blog
+- Daily Brief: https://vbprnr.com/daily-brief
+- Roadmap: https://vbprnr.com/roadmap
+- About: https://vbprnr.com/about
+- Waitlist: https://vbprnr.com/waitlist
 
 ## Feature Pages
 
-- Insight Engine: https://vibepreneur.com/features/insight-engine
-- Solution Builder: https://vibepreneur.com/features/solution-builder
-- Positioning Studio: https://vibepreneur.com/features/positioning-engine
-- Go-To-Market Planner: https://vibepreneur.com/features/go-to-market
-- Distribution Toolkit: https://vibepreneur.com/features/distribution
-- Growth System: https://vibepreneur.com/features/growth-system
-- Launch Builder: https://vibepreneur.com/features/launch-builder
+- Insight Engine: https://vbprnr.com/features/insight-engine
+- Solution Builder: https://vbprnr.com/features/solution-builder
+- Positioning Studio: https://vbprnr.com/features/positioning-engine
+- Go-To-Market Planner: https://vbprnr.com/features/go-to-market
+- Distribution Toolkit: https://vbprnr.com/features/distribution
+- Growth System: https://vbprnr.com/features/growth-system
+- Launch Builder: https://vbprnr.com/features/launch-builder
 
 ## Audience Pages
 
-- For Consultants: https://vibepreneur.com/for-consultants
-- For Operators: https://vibepreneur.com/for-operators
-- For Corporate Professionals: https://vibepreneur.com/for-corporate-professionals
-- For Marketers: https://vibepreneur.com/for-marketers
+- For Consultants: https://vbprnr.com/for-consultants
+- For Operators: https://vbprnr.com/for-operators
+- For Corporate Professionals: https://vbprnr.com/for-corporate-professionals
+- For Marketers: https://vbprnr.com/for-marketers
 
 ## Target Audience
 
@@ -58,8 +58,8 @@ Mid-career professionals, consultants, and domain experts looking to transition 
 
 ## Status
 
-Vibepreneur is pre-launch. Access is currently by waitlist at https://vibepreneur.com/waitlist.
+Vibepreneur is pre-launch. Access is currently by waitlist at https://vbprnr.com/waitlist.
 
 ## Contact
 
-Website: https://vibepreneur.com
+Website: https://vbprnr.com
