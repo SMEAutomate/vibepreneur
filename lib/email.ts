@@ -12,8 +12,8 @@ function getFrom(): string {
 export async function sendWelcomeEmail(
   email: string,
   role: string,
-  industry: string
-) {
+  industry?: string
+): Promise<void> {
   if (!process.env.RESEND_API_KEY) {
     console.log("[Email] Skipping welcome email, no RESEND_API_KEY");
     return;
@@ -30,9 +30,9 @@ export async function sendWelcomeEmail(
 export async function sendSolutionsEmail(
   email: string,
   role: string,
-  industry: string,
+  industry: string | undefined,
   solutions: GeneratedSolution[]
-) {
+): Promise<void> {
   if (!process.env.RESEND_API_KEY) {
     console.log("[Email] Skipping solutions email, no RESEND_API_KEY");
     return;
@@ -41,14 +41,18 @@ export async function sendSolutionsEmail(
   await getResend().emails.send({
     from: getFrom(),
     to: email,
-    subject: `Your fit test: 3 solutions for ${role} expertise in ${industry}`,
+    subject: industry
+      ? `Your fit test: 3 solutions for ${role} expertise in ${industry}`
+      : `Your fit test: 3 solutions for your ${role} expertise`,
     html: solutionsEmailHtml(role, industry, solutions),
   });
 }
 
-function welcomeEmailHtml(role: string, industry: string): string {
+export function welcomeEmailHtml(role: string, industry?: string): string {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://vibepreneur.com";
-  const solutionsUrl = `${siteUrl}/waitlist/your-solutions?role=${encodeURIComponent(role)}&industry=${encodeURIComponent(industry)}`;
+  const params = new URLSearchParams({ role });
+  if (industry) params.set("industry", industry);
+  const solutionsUrl = `${siteUrl}/waitlist/your-solutions?${params.toString()}`;
 
   return `
 <!DOCTYPE html>
@@ -88,9 +92,9 @@ function welcomeEmailHtml(role: string, industry: string): string {
 </html>`;
 }
 
-function solutionsEmailHtml(
+export function solutionsEmailHtml(
   role: string,
-  industry: string,
+  industry: string | undefined,
   solutions: GeneratedSolution[]
 ): string {
   const solutionBlocks = solutions
@@ -126,7 +130,7 @@ function solutionsEmailHtml(
   </div>
 
   <h1 style="font-size: 24px; font-weight: 700; margin-bottom: 8px;">Your fit test results</h1>
-  <p style="color: #666; margin-bottom: 24px;">Based on your ${role} expertise in ${industry}, here are three opportunities where your experience creates real market value.</p>
+  <p style="color: #666; margin-bottom: 24px;">Based on your ${role} expertise${industry ? ` in ${industry}` : ""}, here are three opportunities where your experience creates real market value.</p>
 
   ${solutionBlocks}
 

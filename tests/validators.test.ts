@@ -28,21 +28,27 @@ describe("waitlistSchema", () => {
     expect(result.success).toBe(false);
   });
 
-  it("requires industry", () => {
+  it("accepts a missing industry", () => {
+    // #given a signup from someone who skipped the optional industry step
+    // #when parsed
     const result = waitlistSchema.safeParse({
       email: "test@example.com",
       role: "sales",
     });
-    expect(result.success).toBe(false);
+    // #then it is accepted
+    expect(result.success).toBe(true);
   });
 
-  it("rejects empty industry", () => {
-    const result = waitlistSchema.safeParse({
+  it("normalises an empty industry to undefined", () => {
+    // #given the wizard submits an untouched select as an empty string
+    // #when parsed
+    const result = waitlistSchema.parse({
       email: "test@example.com",
       role: "sales",
       industry: "",
     });
-    expect(result.success).toBe(false);
+    // #then the empty string does not reach the database
+    expect(result.industry).toBeUndefined();
   });
 
   it("consent defaults to true", () => {

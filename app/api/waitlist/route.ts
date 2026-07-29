@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { ZodError } from "zod";
 import { waitlistSchema } from "@/lib/validators";
 import { createWaitlistSignup } from "@/lib/db";
 import { sendWelcomeEmail, sendSolutionsEmail } from "@/lib/email";
@@ -33,7 +34,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true, id: signupId });
   } catch (err) {
-    if (err instanceof Error && err.name === "ZodError") {
+    if (err instanceof ZodError) {
       return NextResponse.json(
         { error: "Invalid input. Please check your details." },
         { status: 400 }
