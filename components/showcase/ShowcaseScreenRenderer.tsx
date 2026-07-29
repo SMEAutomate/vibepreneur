@@ -489,6 +489,339 @@ const screenComponents: Record<string, React.ComponentType> = {
       })),
     { loading: () => <ScreenLoading /> }
   ),
+
+  // ChartTrace
+  CTAuditDashboard: dynamic(
+    () =>
+      import("./screens/charttrace/CTAuditDashboard").then((m) => ({
+        default: m.CTAuditDashboard,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CTChartReview: dynamic(
+    () =>
+      import("./screens/charttrace/CTChartReview").then((m) => ({
+        default: m.CTChartReview,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CTPayerRisk: dynamic(
+    () =>
+      import("./screens/charttrace/CTPayerRisk").then((m) => ({
+        default: m.CTPayerRisk,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CTVibeOpportunity: dynamic(
+    () =>
+      import("./screens/charttrace/CTVibeOpportunity").then((m) => ({
+        default: m.CTVibeOpportunity,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CTVibePositioning: dynamic(
+    () =>
+      import("./screens/charttrace/CTVibePositioning").then((m) => ({
+        default: m.CTVibePositioning,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+
+  // ShelfSignal
+  SHSStockRadar: dynamic(
+    () =>
+      import("./screens/shelfsignal/SHSStockRadar").then((m) => ({
+        default: m.SHSStockRadar,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SHSStorePerformance: dynamic(
+    () =>
+      import("./screens/shelfsignal/SHSStorePerformance").then((m) => ({
+        default: m.SHSStorePerformance,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SHSReorderPlanner: dynamic(
+    () =>
+      import("./screens/shelfsignal/SHSReorderPlanner").then((m) => ({
+        default: m.SHSReorderPlanner,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SHSVibeSolution: dynamic(
+    () =>
+      import("./screens/shelfsignal/SHSVibeSolution").then((m) => ({
+        default: m.SHSVibeSolution,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SHSVibeGTM: dynamic(
+    () =>
+      import("./screens/shelfsignal/SHSVibeGTM").then((m) => ({
+        default: m.SHSVibeGTM,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+
+  // SitePunch
+  SPPunchList: dynamic(
+    () =>
+      import("./screens/sitepunch/SPPunchList").then((m) => ({
+        default: m.SPPunchList,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SPSiteMap: dynamic(
+    () =>
+      import("./screens/sitepunch/SPSiteMap").then((m) => ({
+        default: m.SPSiteMap,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SPHandoverReport: dynamic(
+    () =>
+      import("./screens/sitepunch/SPHandoverReport").then((m) => ({
+        default: m.SPHandoverReport,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SPVibeOpportunity: dynamic(
+    () =>
+      import("./screens/sitepunch/SPVibeOpportunity").then((m) => ({
+        default: m.SPVibeOpportunity,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SPVibeDistribution: dynamic(
+    () =>
+      import("./screens/sitepunch/SPVibeDistribution").then((m) => ({
+        default: m.SPVibeDistribution,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+
+  // CohortLens
+  CLCohortDashboard: dynamic(
+    () =>
+      import("./screens/cohortlens/CLCohortDashboard").then((m) => ({
+        default: m.CLCohortDashboard,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CLLearnerRisk: dynamic(
+    () =>
+      import("./screens/cohortlens/CLLearnerRisk").then((m) => ({
+        default: m.CLLearnerRisk,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CLOutcomeReport: dynamic(
+    () =>
+      import("./screens/cohortlens/CLOutcomeReport").then((m) => ({
+        default: m.CLOutcomeReport,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CLVibeSolution: dynamic(
+    () =>
+      import("./screens/cohortlens/CLVibeSolution").then((m) => ({
+        default: m.CLVibeSolution,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CLVibePositioning: dynamic(
+    () =>
+      import("./screens/cohortlens/CLVibePositioning").then((m) => ({
+        default: m.CLVibePositioning,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+
+  // LaneParity
+  LPLaneBenchmark: dynamic(
+    () =>
+      import("./screens/laneparity/LPLaneBenchmark").then((m) => ({
+        default: m.LPLaneBenchmark,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  LPCarrierScorecard: dynamic(
+    () =>
+      import("./screens/laneparity/LPCarrierScorecard").then((m) => ({
+        default: m.LPCarrierScorecard,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  LPRateTrends: dynamic(
+    () =>
+      import("./screens/laneparity/LPRateTrends").then((m) => ({
+        default: m.LPRateTrends,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  LPVibeOpportunity: dynamic(
+    () =>
+      import("./screens/laneparity/LPVibeOpportunity").then((m) => ({
+        default: m.LPVibeOpportunity,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  LPVibePricing: dynamic(
+    () =>
+      import("./screens/laneparity/LPVibePricing").then((m) => ({
+        default: m.LPVibePricing,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+
+  // TenantLoop
+  TLRenewalPipeline: dynamic(
+    () =>
+      import("./screens/tenantloop/TLRenewalPipeline").then((m) => ({
+        default: m.TLRenewalPipeline,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  TLTenantHealth: dynamic(
+    () =>
+      import("./screens/tenantloop/TLTenantHealth").then((m) => ({
+        default: m.TLTenantHealth,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  TLPortfolioView: dynamic(
+    () =>
+      import("./screens/tenantloop/TLPortfolioView").then((m) => ({
+        default: m.TLPortfolioView,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  TLVibeSolution: dynamic(
+    () =>
+      import("./screens/tenantloop/TLVibeSolution").then((m) => ({
+        default: m.TLVibeSolution,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  TLVibeGTM: dynamic(
+    () =>
+      import("./screens/tenantloop/TLVibeGTM").then((m) => ({
+        default: m.TLVibeGTM,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+
+  // CycleTime
+  CYLineOverview: dynamic(
+    () =>
+      import("./screens/cycletime/CYLineOverview").then((m) => ({
+        default: m.CYLineOverview,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CYChangeoverDetail: dynamic(
+    () =>
+      import("./screens/cycletime/CYChangeoverDetail").then((m) => ({
+        default: m.CYChangeoverDetail,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CYCapacityImpact: dynamic(
+    () =>
+      import("./screens/cycletime/CYCapacityImpact").then((m) => ({
+        default: m.CYCapacityImpact,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CYVibeOpportunity: dynamic(
+    () =>
+      import("./screens/cycletime/CYVibeOpportunity").then((m) => ({
+        default: m.CYVibeOpportunity,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  CYVibeValidation: dynamic(
+    () =>
+      import("./screens/cycletime/CYVibeValidation").then((m) => ({
+        default: m.CYVibeValidation,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+
+  // RightsDesk
+  RDRightsGrid: dynamic(
+    () =>
+      import("./screens/rightsdesk/RDRightsGrid").then((m) => ({
+        default: m.RDRightsGrid,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  RDDealTracker: dynamic(
+    () =>
+      import("./screens/rightsdesk/RDDealTracker").then((m) => ({
+        default: m.RDDealTracker,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  RDRevenueSplit: dynamic(
+    () =>
+      import("./screens/rightsdesk/RDRevenueSplit").then((m) => ({
+        default: m.RDRevenueSplit,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  RDVibeSolution: dynamic(
+    () =>
+      import("./screens/rightsdesk/RDVibeSolution").then((m) => ({
+        default: m.RDVibeSolution,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  RDVibeDistribution: dynamic(
+    () =>
+      import("./screens/rightsdesk/RDVibeDistribution").then((m) => ({
+        default: m.RDVibeDistribution,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+
+  // ScopeGuard
+  SGScopeDashboard: dynamic(
+    () =>
+      import("./screens/scopeguard/SGScopeDashboard").then((m) => ({
+        default: m.SGScopeDashboard,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SGChangeLog: dynamic(
+    () =>
+      import("./screens/scopeguard/SGChangeLog").then((m) => ({
+        default: m.SGChangeLog,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SGAccountMargin: dynamic(
+    () =>
+      import("./screens/scopeguard/SGAccountMargin").then((m) => ({
+        default: m.SGAccountMargin,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SGVibeOpportunity: dynamic(
+    () =>
+      import("./screens/scopeguard/SGVibeOpportunity").then((m) => ({
+        default: m.SGVibeOpportunity,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
+  SGVibePricing: dynamic(
+    () =>
+      import("./screens/scopeguard/SGVibePricing").then((m) => ({
+        default: m.SGVibePricing,
+      })),
+    { loading: () => <ScreenLoading /> }
+  ),
 };
 
 interface ShowcaseScreenRendererProps {

@@ -725,4 +725,498 @@ export const SHOWCASE_PROJECTS: ShowcaseProject[] = [
       },
     ],
   },
+  {
+    slug: "charttrace",
+    sector: "Healthcare",
+    productName: "ChartTrace",
+    tagline:
+      "Clinical documentation audits that catch revenue leakage before the payer does",
+    builderName: "Dr. Alicia Moreau",
+    builderRole:
+      "Founder, Former Practice Director, Multi-Site Outpatient Group",
+    builderInitials: "AM",
+    story:
+      "Alicia spent nine years watching outpatient clinics lose six figures a year to downcoded claims and documentation gaps nobody caught until the payer audit landed. She built ChartTrace to run the audit continuously instead of annually, and reached her first twenty clinics before writing a line of marketing copy.",
+    metrics: [
+      { label: "MRR", value: "$14.6K" },
+      { label: "Clinics", value: "74" },
+      { label: "Time to first sale", value: "9 weeks" },
+    ],
+    accentColor: "cyan",
+    screens: [
+      {
+        componentName: "CTAuditDashboard",
+        title: "Audit Dashboard",
+        description:
+          "Documentation risk score, revenue at risk, and open findings across every clinic location.",
+        type: "product",
+      },
+      {
+        componentName: "CTChartReview",
+        title: "Chart Review",
+        description:
+          "Encounter-level review with coding gaps, supporting evidence, and one-click clinician queries.",
+        type: "product",
+      },
+      {
+        componentName: "CTPayerRisk",
+        title: "Payer Risk",
+        description:
+          "Denial patterns by payer and code family, with projected recovery for each remediation.",
+        type: "product",
+      },
+      {
+        componentName: "CTVibeOpportunity",
+        title: "Opportunity Detail",
+        description:
+          "How Alicia validated that mid-size outpatient groups feel the documentation gap hardest.",
+        type: "vibepreneur",
+      },
+      {
+        componentName: "CTVibePositioning",
+        title: "Positioning Canvas",
+        description:
+          "ChartTrace positioned against annual audit consultants rather than coding software.",
+        type: "vibepreneur",
+      },
+    ],
+  },
+  {
+    slug: "shelfsignal",
+    sector: "Retail",
+    productName: "ShelfSignal",
+    tagline:
+      "Stockout prediction for independent retailers without an ops team",
+    builderName: "Dele Adeyemi",
+    builderRole: "Founder, Former Regional Merchandising Lead",
+    builderInitials: "DA",
+    story:
+      "Dele managed replenishment for 40 stores on spreadsheets and knew exactly which SKUs would run dry before anyone else did. He built ShelfSignal to encode that judgement so independent chains could see the stockout coming without hiring a demand planner.",
+    metrics: [
+      { label: "MRR", value: "$9.7K" },
+      { label: "Store locations", value: "410" },
+      { label: "Time to first sale", value: "7 weeks" },
+    ],
+    accentColor: "rose",
+    screens: [
+      {
+        componentName: "SHSStockRadar",
+        title: "Stock Radar",
+        description:
+          "Predicted stockouts ranked by lost revenue, with days of cover and reorder urgency per SKU.",
+        type: "product",
+      },
+      {
+        componentName: "SHSStorePerformance",
+        title: "Store Performance",
+        description:
+          "Sell-through and availability by location, surfacing which stores drift from plan.",
+        type: "product",
+      },
+      {
+        componentName: "SHSReorderPlanner",
+        title: "Reorder Planner",
+        description:
+          "Suggested purchase orders with supplier lead times, minimum order quantities, and cost impact.",
+        type: "product",
+      },
+      {
+        componentName: "SHSVibeSolution",
+        title: "Solution Builder",
+        description:
+          "How Dele scoped ShelfSignal to one urgent workflow instead of a full inventory suite.",
+        type: "vibepreneur",
+      },
+      {
+        componentName: "SHSVibeGTM",
+        title: "Go-To-Market Plan",
+        description:
+          "ShelfSignal's launch through buying groups and regional retail associations.",
+        type: "vibepreneur",
+      },
+    ],
+  },
+  {
+    slug: "sitepunch",
+    sector: "Construction",
+    productName: "SitePunch",
+    tagline: "Snag lists that close out on time, from the phone in your pocket",
+    builderName: "Tomás Rivera",
+    builderRole: "Founder, Former Site Superintendent, Commercial Fit-Out",
+    builderInitials: "TR",
+    story:
+      "Tomás lost three weeks on every handover chasing subcontractors through photo threads and paper punch lists. He built SitePunch so the defect, the evidence, the owner, and the deadline live in one record that closes itself out.",
+    metrics: [
+      { label: "MRR", value: "$11.2K" },
+      { label: "Active sites", value: "230" },
+      { label: "Time to first sale", value: "6 weeks" },
+    ],
+    accentColor: "stone",
+    screens: [
+      {
+        componentName: "SPPunchList",
+        title: "Punch List",
+        description:
+          "Open defects by trade and zone, with photo evidence, owner, and days outstanding.",
+        type: "product",
+      },
+      {
+        componentName: "SPSiteMap",
+        title: "Site Map",
+        description:
+          "Floor plan overlay showing defect density by zone and which areas block handover.",
+        type: "product",
+      },
+      {
+        componentName: "SPHandoverReport",
+        title: "Handover Report",
+        description:
+          "Client-ready close-out pack with sign-offs, outstanding items, and warranty notes.",
+        type: "product",
+      },
+      {
+        componentName: "SPVibeOpportunity",
+        title: "Opportunity Detail",
+        description:
+          "How Tomás sized the handover delay problem across commercial fit-out subcontractors.",
+        type: "vibepreneur",
+      },
+      {
+        componentName: "SPVibeDistribution",
+        title: "Distribution Channels",
+        description:
+          "SitePunch's channel scoring: trade suppliers, site trials, and superintendent referrals.",
+        type: "vibepreneur",
+      },
+    ],
+  },
+  {
+    slug: "cohortlens",
+    sector: "Education",
+    productName: "CohortLens",
+    tagline:
+      "Completion analytics for training providers who get paid on outcomes",
+    builderName: "Hannah Beck",
+    builderRole: "Founder, Former Head of Learning, Vocational Training Group",
+    builderInitials: "HB",
+    story:
+      "Hannah could tell in week two which learners would drop out, but the reporting only caught it at week twelve when the funding was already at risk. She built CohortLens to move that signal forward far enough to act on.",
+    metrics: [
+      { label: "MRR", value: "$7.9K" },
+      { label: "Providers", value: "58" },
+      { label: "Learners tracked", value: "31K+" },
+    ],
+    accentColor: "purple",
+    screens: [
+      {
+        componentName: "CLCohortDashboard",
+        title: "Cohort Dashboard",
+        description:
+          "Completion forecast, at-risk learner count, and funding exposure across live cohorts.",
+        type: "product",
+      },
+      {
+        componentName: "CLLearnerRisk",
+        title: "Learner Risk",
+        description:
+          "Early-warning list with engagement signals, intervention history, and suggested next contact.",
+        type: "product",
+      },
+      {
+        componentName: "CLOutcomeReport",
+        title: "Outcome Report",
+        description:
+          "Funder-ready achievement rates by cohort, programme, and delivery site.",
+        type: "product",
+      },
+      {
+        componentName: "CLVibeSolution",
+        title: "Solution Builder",
+        description:
+          "How Hannah turned a spreadsheet heuristic into a scoped, sellable product.",
+        type: "vibepreneur",
+      },
+      {
+        componentName: "CLVibePositioning",
+        title: "Positioning Canvas",
+        description:
+          "CohortLens positioned against the LMS rather than alongside it.",
+        type: "vibepreneur",
+      },
+    ],
+  },
+  {
+    slug: "laneparity",
+    sector: "Logistics",
+    productName: "LaneParity",
+    tagline:
+      "Freight rate benchmarking that tells shippers when they are overpaying",
+    builderName: "Ingrid Halvorsen",
+    builderRole: "Founder, Former Transport Procurement Manager",
+    builderInitials: "IH",
+    story:
+      "Ingrid renegotiated lane rates twice a year with no reliable view of the market, arguing from instinct against carriers who had the data. She built LaneParity to put a defensible number on every lane before the conversation starts.",
+    metrics: [
+      { label: "MRR", value: "$16.3K" },
+      { label: "Shippers", value: "89" },
+      { label: "Lanes benchmarked", value: "12K+" },
+    ],
+    accentColor: "slate",
+    screens: [
+      {
+        componentName: "LPLaneBenchmark",
+        title: "Lane Benchmark",
+        description:
+          "Rate percentile per lane against market, with overpay exposure and renegotiation priority.",
+        type: "product",
+      },
+      {
+        componentName: "LPCarrierScorecard",
+        title: "Carrier Scorecard",
+        description:
+          "Carrier performance on rate, on-time delivery, tender acceptance, and claims.",
+        type: "product",
+      },
+      {
+        componentName: "LPRateTrends",
+        title: "Rate Trends",
+        description:
+          "Directional rate movement by corridor with contract renewal timing guidance.",
+        type: "product",
+      },
+      {
+        componentName: "LPVibeOpportunity",
+        title: "Opportunity Detail",
+        description:
+          "How Ingrid validated that mid-market shippers lack the data large ones buy.",
+        type: "vibepreneur",
+      },
+      {
+        componentName: "LPVibePricing",
+        title: "Pricing & Packaging",
+        description:
+          "LaneParity priced against recovered spend rather than seats.",
+        type: "vibepreneur",
+      },
+    ],
+  },
+  {
+    slug: "tenantloop",
+    sector: "Real Estate",
+    productName: "TenantLoop",
+    tagline: "Lease renewal risk scoring for commercial property managers",
+    builderName: "Grace Okonjo",
+    builderRole: "Founder, Former Asset Manager, Commercial Portfolio",
+    builderInitials: "GO",
+    story:
+      "Grace lost an anchor tenant she could have kept, because the warning signs sat in three systems nobody read together. She built TenantLoop to score renewal risk continuously so the retention conversation starts twelve months out, not two.",
+    metrics: [
+      { label: "MRR", value: "$13.1K" },
+      { label: "Properties", value: "640" },
+      { label: "Time to first sale", value: "10 weeks" },
+    ],
+    accentColor: "blue",
+    screens: [
+      {
+        componentName: "TLRenewalPipeline",
+        title: "Renewal Pipeline",
+        description:
+          "Upcoming expiries ranked by risk score and annual rent at stake.",
+        type: "product",
+      },
+      {
+        componentName: "TLTenantHealth",
+        title: "Tenant Health",
+        description:
+          "Per-tenant signals: payment behaviour, space utilisation, service tickets, and sentiment.",
+        type: "product",
+      },
+      {
+        componentName: "TLPortfolioView",
+        title: "Portfolio View",
+        description:
+          "Occupancy, WALT, and income concentration across the managed portfolio.",
+        type: "product",
+      },
+      {
+        componentName: "TLVibeSolution",
+        title: "Solution Builder",
+        description:
+          "How Grace structured TenantLoop around a metric asset managers already report on.",
+        type: "vibepreneur",
+      },
+      {
+        componentName: "TLVibeGTM",
+        title: "Go-To-Market Plan",
+        description:
+          "TenantLoop's launch through property management networks and industry conferences.",
+        type: "vibepreneur",
+      },
+    ],
+  },
+  {
+    slug: "cycletime",
+    sector: "Manufacturing",
+    productName: "CycleTime",
+    tagline:
+      "Changeover loss tracking for contract manufacturers running mixed lines",
+    builderName: "Viktor Novak",
+    builderRole: "Founder, Former Plant Operations Manager",
+    builderInitials: "VN",
+    story:
+      "Viktor knew changeovers were eating a fifth of his available capacity, but the MES reported uptime, not the cost of switching. He built CycleTime to make that loss visible in hours and in money, and sold the first three plants on a single screenshot.",
+    metrics: [
+      { label: "MRR", value: "$18.4K" },
+      { label: "Plants", value: "47" },
+      { label: "Time to first sale", value: "8 weeks" },
+    ],
+    accentColor: "lime",
+    screens: [
+      {
+        componentName: "CYLineOverview",
+        title: "Line Overview",
+        description:
+          "Changeover time, scrap, and capacity lost per line against the plant target.",
+        type: "product",
+      },
+      {
+        componentName: "CYChangeoverDetail",
+        title: "Changeover Detail",
+        description:
+          "Step-by-step breakdown of a single changeover with delay causes and operator notes.",
+        type: "product",
+      },
+      {
+        componentName: "CYCapacityImpact",
+        title: "Capacity Impact",
+        description:
+          "Recoverable hours and revenue if changeover time hits the benchmark quartile.",
+        type: "product",
+      },
+      {
+        componentName: "CYVibeOpportunity",
+        title: "Opportunity Detail",
+        description:
+          "How Viktor sized the changeover blind spot across mid-size contract manufacturers.",
+        type: "vibepreneur",
+      },
+      {
+        componentName: "CYVibeValidation",
+        title: "Validation Tracker",
+        description:
+          "The four plant trials Viktor ran before committing to build.",
+        type: "vibepreneur",
+      },
+    ],
+  },
+  {
+    slug: "rightsdesk",
+    sector: "Media",
+    productName: "RightsDesk",
+    tagline:
+      "Licensing and rights tracking for independent studios and catalogues",
+    builderName: "Elena Vasquez",
+    builderRole: "Founder, Former Head of Distribution, Independent Studio",
+    builderInitials: "EV",
+    story:
+      "Elena managed 300 titles across 40 territories in a spreadsheet that only she understood, and every expiring window was a revenue event nobody saw coming. She built RightsDesk to turn that institutional memory into a system her whole team could run.",
+    metrics: [
+      { label: "MRR", value: "$10.8K" },
+      { label: "Catalogues", value: "52" },
+      { label: "Titles tracked", value: "18K+" },
+    ],
+    accentColor: "red",
+    screens: [
+      {
+        componentName: "RDRightsGrid",
+        title: "Rights Grid",
+        description:
+          "Title by territory by window, showing what is licensed, available, or expiring.",
+        type: "product",
+      },
+      {
+        componentName: "RDDealTracker",
+        title: "Deal Tracker",
+        description:
+          "Licensing deals with terms, minimum guarantees, reporting obligations, and payment status.",
+        type: "product",
+      },
+      {
+        componentName: "RDRevenueSplit",
+        title: "Revenue Split",
+        description:
+          "Participation statements by title with rights-holder splits and payable balances.",
+        type: "product",
+      },
+      {
+        componentName: "RDVibeSolution",
+        title: "Solution Builder",
+        description:
+          "How Elena scoped RightsDesk for independents rather than competing with enterprise systems.",
+        type: "vibepreneur",
+      },
+      {
+        componentName: "RDVibeDistribution",
+        title: "Distribution Channels",
+        description:
+          "RightsDesk's route to market through markets, festivals, and distribution consultants.",
+        type: "vibepreneur",
+      },
+    ],
+  },
+  {
+    slug: "scopeguard",
+    sector: "Professional Services",
+    productName: "ScopeGuard",
+    tagline:
+      "Scope creep tracking that turns overservicing into a billable conversation",
+    builderName: "Callum Fraser",
+    builderRole: "Founder, Former Agency Delivery Director",
+    builderInitials: "CF",
+    story:
+      "Callum ran an agency where every account was profitable on paper and thin in reality, because nobody logged the extra round of revisions. He built ScopeGuard to price the drift while there is still time to have the conversation.",
+    metrics: [
+      { label: "MRR", value: "$8.9K" },
+      { label: "Agencies", value: "97" },
+      { label: "Time to first sale", value: "5 weeks" },
+    ],
+    accentColor: "sky",
+    screens: [
+      {
+        componentName: "SGScopeDashboard",
+        title: "Scope Dashboard",
+        description:
+          "Contracted versus delivered effort per account, with margin erosion and drift alerts.",
+        type: "product",
+      },
+      {
+        componentName: "SGChangeLog",
+        title: "Change Log",
+        description:
+          "Out-of-scope requests captured at the point of ask, with effort estimate and approval state.",
+        type: "product",
+      },
+      {
+        componentName: "SGAccountMargin",
+        title: "Account Margin",
+        description:
+          "Realised rate by account and team, showing which relationships subsidise the others.",
+        type: "product",
+      },
+      {
+        componentName: "SGVibeOpportunity",
+        title: "Opportunity Detail",
+        description:
+          "How Callum validated that agencies feel margin erosion long before they measure it.",
+        type: "vibepreneur",
+      },
+      {
+        componentName: "SGVibePricing",
+        title: "Pricing & Packaging",
+        description:
+          "ScopeGuard priced on recovered margin, with a free drift audit as the wedge.",
+        type: "vibepreneur",
+      },
+    ],
+  },
 ];
