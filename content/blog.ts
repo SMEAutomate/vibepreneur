@@ -69,6 +69,7 @@ export interface BlogPost {
 }
 
 import { spring2026Posts } from "./blog-2026-spring";
+import { summer2026Posts } from "./blog-2026-summer";
 
 const baseBlogPosts: BlogPost[] = [
   {
@@ -1823,6 +1824,7 @@ const baseBlogPosts: BlogPost[] = [
 ];
 
 export const blogPosts: BlogPost[] = [
+  ...summer2026Posts,
   ...spring2026Posts,
   ...baseBlogPosts,
 ].sort((a, b) => (a.date < b.date ? 1 : -1));
