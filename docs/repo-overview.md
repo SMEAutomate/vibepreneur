@@ -47,7 +47,7 @@ strings in Heroicons style, no icon package.
 | `remotion/`       | ~2,700  | Isolated video sub-project                        |
 | `lib/`            | ~1,390  | Business logic (916 of which is `mockScreens.ts`) |
 | `docs/`           | ~930    | Copy guides, content plans, component maps        |
-| `tests/` + `e2e/` | ~480    | 35 unit tests, 15 e2e tests                       |
+| `tests/` + `e2e/` | ~650    | 43 unit tests, 15 e2e tests                       |
 
 Actual business logic is roughly 480 lines. Everything else is content and presentation.
 
@@ -161,7 +161,7 @@ Current (after fixes):
 | --------------------- | ------------------------------- |
 | `npm run typecheck`   | Clean                           |
 | `npm run lint`        | Clean                           |
-| `npm test`            | 35/35 pass                      |
+| `npm test`            | 43/43 pass                      |
 | `npx playwright test` | 15/15 pass                      |
 | `npm run build`       | Succeeds, 172 pages prerendered |
 
@@ -222,10 +222,16 @@ All issues below were found in the 2026-07-29 audit and have been fixed.
 
 13. **`.claude/settings.local.json` auto-approved `Bash(rm:*)`.** Removed.
 
+14. **`lib/db.ts` was untested and untyped.** Both exported functions had inferred return
+    types, so `app/api/waitlist` reading `result.id` off the upsert was never checked by the
+    compiler. Added `WaitlistSignupRow` and `WaitlistSignupDetail` threaded through `sql<T>`,
+    plus 8 tests that mock `@vercel/postgres` and assert the bound values.
+
 ## Remaining gaps
 
-- `lib/db.ts` still has no test coverage. It needs a Postgres test double or an integration
-  environment, which does not exist yet.
-- The 5 remaining broad auto-approve entries in `.claude/settings.local.json`
-  (`node`, `python3`, `git`, `curl`, `sed`) are effectively arbitrary execution. Left as is,
-  since they reflect deliberate workflow choices.
+- Tests mock the Postgres driver rather than hitting a real database, so they verify the
+  query shape and bound values but not that the SQL runs. A true integration test needs a
+  throwaway Postgres instance, which the project does not have.
+- The broad auto-approve entries left in `.claude/settings.local.json` (`node`, `python3`,
+  `git`, `curl`, `sed`) are effectively arbitrary execution. Left as is, since they reflect
+  deliberate workflow choices. That file is gitignored, so the change is local only.
