@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ZodError } from "zod";
 import { waitlistSchema } from "@/lib/validators";
-import { createWaitlistSignup } from "@/lib/db";
+import { createWaitlistSignup, isDatabaseConfigured } from "@/lib/db";
 import { sendWelcomeEmail, sendSolutionsEmail } from "@/lib/email";
 import { generateSolutions } from "@/lib/solutionGenerator";
 
@@ -12,11 +12,14 @@ export async function POST(req: NextRequest) {
 
     let signupId: string | undefined;
 
-    if (process.env.POSTGRES_URL) {
+    if (isDatabaseConfigured()) {
       const result = await createWaitlistSignup(data);
       signupId = result.id;
     } else {
-      console.log("[Waitlist] No POSTGRES_URL, skipping DB write:", data);
+      console.error(
+        "[Waitlist] DATABASE_URL is not set. Signup accepted but NOT persisted:",
+        data.email
+      );
     }
 
     await sendWelcomeEmail(data.email, data.role, data.industry).catch(

@@ -1,12 +1,12 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { sql } from "@vercel/postgres";
+import { neon } from "@neondatabase/serverless";
 import { createWaitlistSignup, getSignupByEmail, migrationSQL } from "@/lib/db";
 
-vi.mock("@vercel/postgres", () => ({
-  sql: vi.fn(),
-}));
+const mockSql = vi.fn();
 
-const mockSql = vi.mocked(sql);
+vi.mock("@neondatabase/serverless", () => ({
+  neon: vi.fn(() => mockSql),
+}));
 
 /** The interpolated values of the most recent tagged-template call. */
 function lastQueryValues(): unknown[] {
@@ -29,13 +29,15 @@ const row = {
 };
 
 beforeEach(() => {
+  process.env.DATABASE_URL = "postgres://test";
   mockSql.mockReset();
+  vi.mocked(neon).mockReturnValue(mockSql as never);
 });
 
 describe("createWaitlistSignup", () => {
   it("returns the inserted row", async () => {
     // #given the database returns the upserted row
-    mockSql.mockResolvedValue({ rows: [row] } as never);
+    mockSql.mockResolvedValue([row]);
 
     // #when a signup is created
     const result = await createWaitlistSignup({
@@ -51,7 +53,7 @@ describe("createWaitlistSignup", () => {
 
   it("coalesces every omitted optional field to null", async () => {
     // #given a signup with only the two required fields
-    mockSql.mockResolvedValue({ rows: [row] } as never);
+    mockSql.mockResolvedValue([row]);
 
     // #when it is created
     await createWaitlistSignup({
@@ -69,7 +71,7 @@ describe("createWaitlistSignup", () => {
 
   it("passes optional fields through when supplied", async () => {
     // #given a fully populated signup
-    mockSql.mockResolvedValue({ rows: [row] } as never);
+    mockSql.mockResolvedValue([row]);
 
     // #when it is created
     await createWaitlistSignup({
@@ -99,7 +101,7 @@ describe("createWaitlistSignup", () => {
 
   it("upserts on the email conflict rather than failing", async () => {
     // #given a repeat signup from the same address
-    mockSql.mockResolvedValue({ rows: [row] } as never);
+    mockSql.mockResolvedValue([row]);
 
     // #when it is created
     await createWaitlistSignup({
@@ -116,7 +118,7 @@ describe("createWaitlistSignup", () => {
 describe("getSignupByEmail", () => {
   it("returns the row when one exists", async () => {
     // #given a stored signup
-    mockSql.mockResolvedValue({ rows: [row] } as never);
+    mockSql.mockResolvedValue([row]);
 
     // #when it is looked up
     const result = await getSignupByEmail("test@example.com");
@@ -128,7 +130,7 @@ describe("getSignupByEmail", () => {
 
   it("returns null when no row matches", async () => {
     // #given no stored signup
-    mockSql.mockResolvedValue({ rows: [] } as never);
+    mockSql.mockResolvedValue([]);
 
     // #when an unknown address is looked up
     const result = await getSignupByEmail("nobody@example.com");

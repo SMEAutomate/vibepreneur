@@ -29,12 +29,12 @@ cp .env.local.example .env.local
 
 Required variables:
 
-| Variable               | Description                                             |
-| ---------------------- | ------------------------------------------------------- |
-| `POSTGRES_URL`         | Vercel Postgres connection string                       |
-| `RESEND_API_KEY`       | Resend API key for email sending                        |
-| `EMAIL_FROM`           | Sender address (e.g., `Vibepreneur <hello@vbprnr.com>`) |
-| `NEXT_PUBLIC_SITE_URL` | Site URL (e.g., `http://localhost:3000`)                |
+| Variable               | Description                                                          |
+| ---------------------- | -------------------------------------------------------------------- |
+| `DATABASE_URL`         | Neon Postgres connection string (provisioned via Vercel Marketplace) |
+| `RESEND_API_KEY`       | Resend API key for email sending                                     |
+| `EMAIL_FROM`           | Sender address (e.g., `Vibepreneur <hello@vbprnr.com>`)              |
+| `NEXT_PUBLIC_SITE_URL` | Site URL (e.g., `http://localhost:3000`)                             |
 
 The app runs without these. DB writes and emails are skipped when keys are missing.
 

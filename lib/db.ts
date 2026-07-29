@@ -1,4 +1,4 @@
-import { sql } from "@vercel/postgres";
+import { neon } from "@neondatabase/serverless";
 import type { WaitlistInput } from "./validators";
 
 export interface WaitlistSignupRow {
@@ -12,12 +12,37 @@ export interface WaitlistSignupDetail extends WaitlistSignupRow {
   created_at: string;
 }
 
+/** Whether a database is configured. Callers skip persistence when false. */
+export function isDatabaseConfigured(): boolean {
+  return Boolean(process.env.DATABASE_URL);
+}
+
+/**
+ * Resolved lazily rather than at module scope. `neon()` throws when
+ * DATABASE_URL is unset, and Next.js evaluates top-level module code during
+ * the build, so eager initialisation breaks `next build` on any deploy where
+ * the variable is not yet present.
+ */
+let client: ReturnType<typeof neon> | null = null;
+
+function getSql(): ReturnType<typeof neon> {
+  if (!client) {
+    const url = process.env.DATABASE_URL;
+    if (!url) {
+      throw new Error("DATABASE_URL is not set");
+    }
+    client = neon(url);
+  }
+  return client;
+}
+
 export async function createWaitlistSignup(
   data: WaitlistInput
 ): Promise<WaitlistSignupRow> {
   const { email, role, industry, consent, source, ref, persona, goal } = data;
+  const sql = getSql();
 
-  const result = await sql<WaitlistSignupRow>`
+  const rows = (await sql`
     INSERT INTO waitlist_signups (id, email, role, industry, consent, source, ref, persona, goal, created_at)
     VALUES (gen_random_uuid(), ${email}, ${role}, ${industry ?? null}, ${consent ?? true}, ${source ?? null}, ${ref ?? null}, ${persona ?? null}, ${goal ?? null}, NOW())
     ON CONFLICT (email) DO UPDATE SET
@@ -26,20 +51,23 @@ export async function createWaitlistSignup(
       persona = EXCLUDED.persona,
       goal = EXCLUDED.goal
     RETURNING id, email, role, industry
-  `;
+  `) as WaitlistSignupRow[];
 
-  return result.rows[0];
+  return rows[0];
 }
 
 export async function getSignupByEmail(
   email: string
 ): Promise<WaitlistSignupDetail | null> {
-  const result = await sql<WaitlistSignupDetail>`
+  const sql = getSql();
+
+  const rows = (await sql`
     SELECT id, email, role, industry, created_at
     FROM waitlist_signups
     WHERE email = ${email}
-  `;
-  return result.rows[0] ?? null;
+  `) as WaitlistSignupDetail[];
+
+  return rows[0] ?? null;
 }
 
 export const migrationSQL = `

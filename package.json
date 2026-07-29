@@ -17,8 +17,8 @@
     "db:migrate": "tsx lib/db/migrate.ts"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "@vercel/analytics": "^2.0.1",
-    "@vercel/postgres": "^0.10.0",
     "framer-motion": "^11.15.0",
     "next": "^16.1.6",
     "react": "^19.0.0",
