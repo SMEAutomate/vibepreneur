@@ -21,5 +21,10 @@ export default defineConfig({
     command: "npm run dev",
     url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
+    // `vercel env pull` writes the real DATABASE_URL into .env.local, which
+    // next dev loads. Without this the waitlist tests would write rows into
+    // the production database. They only assert the redirect, so running with
+    // persistence disabled is both safe and sufficient.
+    env: { DATABASE_URL: "", RESEND_API_KEY: "" },
   },
 });
