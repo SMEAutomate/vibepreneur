@@ -47,7 +47,7 @@ strings in Heroicons style, no icon package.
 | `remotion/`       | ~2,700  | Isolated video sub-project                        |
 | `lib/`            | ~1,390  | Business logic (916 of which is `mockScreens.ts`) |
 | `docs/`           | ~930    | Copy guides, content plans, component maps        |
-| `tests/` + `e2e/` | ~330    | 26 unit tests, 9 e2e tests                        |
+| `tests/` + `e2e/` | ~480    | 35 unit tests, 15 e2e tests                       |
 
 Actual business logic is roughly 480 lines. Everything else is content and presentation.
 
@@ -86,7 +86,7 @@ Everything sits under the `(marketing)` route group, which supplies Nav and Foot
 /demo                                internal gallery, noindex
 /api/waitlist                        POST: validate, persist, email
 /api/solutions                       GET+POST: generate 3 solution ideas
-/api/email/preview                   dev-only stub
+/api/email/preview                   dev-only HTML preview of both emails
 /feed.xml /sitemap.xml /robots.txt /opengraph-image
 ```
 
