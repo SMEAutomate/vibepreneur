@@ -4,7 +4,7 @@ Marketing website and waitlist system for Vibepreneur. a platform that helps pro
 
 ## Tech Stack
 
-- **Framework:** Next.js 15 (App Router) + TypeScript
+- **Framework:** Next.js 16 (App Router, Turbopack) + TypeScript
 - **Styling:** TailwindCSS + Framer Motion
 - **Database:** Vercel Postgres
 - **Email:** Resend
@@ -16,7 +16,7 @@ Marketing website and waitlist system for Vibepreneur. a platform that helps pro
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 20+
 - npm
 
 ### Environment Setup
@@ -131,8 +131,31 @@ Without a Resend API key, the app logs email sends to console instead.
 │   └── analytics.ts                # Analytics abstraction
 ├── docs/                           # Documentation
 ├── tests/                          # Unit tests
-└── e2e/                            # Playwright E2E tests
+├── e2e/                            # Playwright E2E tests
+└── remotion/                       # Marketing video sub-project (isolated deps)
 ```
+
+## Marketing Videos
+
+Remotion sub-project at `remotion/` renders 26 marketing video concepts, each in 16:9 (1920×1080) and 9:16 (1080×1920). All clips are ≤30s.
+
+```bash
+cd remotion
+npm install
+npm run dev          # Remotion Studio at localhost:3000
+npm run render:all   # batch render all 52 MP4s to remotion/out/
+```
+
+The Remotion project has its own `package.json`, `tsconfig.json`, and is excluded from the Next.js build via `.vercelignore` and the root `tsconfig.json` `exclude`. See `remotion/README.md` for the video catalog.
+
+## Blog Markdown
+
+Blog post bodies in `content/blog.ts` and `content/blog-2026-spring.ts` support two inline patterns parsed in `app/(marketing)/blog/[slug]/blog-post-article.tsx`:
+
+- `**bold**` → `<strong>`
+- `[text](url)` → `next/link` for internal `/...` paths, `<a target="_blank">` for external
+
+Currency: write amounts as `$5,000` or `$5.7 billion`, never `5,000 dollars`.
 
 ## Deploy to Vercel
 
