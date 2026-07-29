@@ -6,7 +6,7 @@ Marketing website and waitlist system for Vibepreneur. a platform that helps pro
 
 - **Framework:** Next.js 16 (App Router, Turbopack) + TypeScript
 - **Styling:** TailwindCSS + Framer Motion
-- **Database:** Vercel Postgres
+- **Database:** Neon Postgres (`@neondatabase/serverless`)
 - **Email:** Resend
 - **Testing:** Vitest + Playwright
 - **Linting:** ESLint + Prettier
@@ -29,12 +29,12 @@ cp .env.local.example .env.local
 
 Required variables:
 
-| Variable               | Description                                                          |
-| ---------------------- | -------------------------------------------------------------------- |
-| `DATABASE_URL`         | Neon Postgres connection string (provisioned via Vercel Marketplace) |
-| `RESEND_API_KEY`       | Resend API key for email sending                                     |
-| `EMAIL_FROM`           | Sender address (e.g., `Vibepreneur <hello@vbprnr.com>`)              |
-| `NEXT_PUBLIC_SITE_URL` | Site URL (e.g., `http://localhost:3000`)                             |
+| Variable               | Description                                                    |
+| ---------------------- | -------------------------------------------------------------- |
+| `DATABASE_URL`         | Neon Postgres connection string (see Database Migration below) |
+| `RESEND_API_KEY`       | Resend API key for email sending                               |
+| `EMAIL_FROM`           | Sender address (e.g., `Vibepreneur <hello@vbprnr.com>`)        |
+| `NEXT_PUBLIC_SITE_URL` | Site URL (e.g., `http://localhost:3000`)                       |
 
 The app runs without these. DB writes and emails are skipped when keys are missing.
 
@@ -46,13 +46,17 @@ npm install
 
 ### Database Migration
 
-Run the migration to create the `waitlist_signups` table:
+Pull the connection string, then run the migration to create the
+`waitlist_signups` table. `tsx` does not auto-load `.env.local`, so the env
+must be sourced first:
 
 ```bash
-npm run db:migrate
+vercel env pull .env.local --yes
+set -a && . ./.env.local && set +a && npm run db:migrate
 ```
 
-Or run the SQL manually in your Vercel Postgres dashboard:
+The migration is idempotent and safe to re-run. Or run the SQL manually in the
+Neon dashboard:
 
 ```sql
 CREATE TABLE IF NOT EXISTS waitlist_signups (
@@ -77,10 +81,15 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ### Email Setup
 
-1. Create a [Resend](https://resend.com) account
-2. Add your API key to `.env.local`
-3. Verify your sending domain in Resend
-4. Set `EMAIL_FROM` to your verified address
+1. Create a [Resend](https://resend.com) account directly. The free tier
+   (3,000 emails/month, 100/day) is not offered through the Vercel
+   Marketplace, which starts at $20/month.
+2. Add `vbprnr.com` as a sending domain and add the SPF and DKIM records
+   Resend provides. DNS for this domain is at Namecheap, not Vercel.
+3. Generate an API key and set it on the project:
+   `vercel env add RESEND_API_KEY production`
+4. `EMAIL_FROM` is optional. Without it the sender falls back to
+   `CONTACT_EMAIL` in `lib/site.ts`.
 
 Without a Resend API key, the app logs email sends to console instead.
 
@@ -162,7 +171,9 @@ Currency: write amounts as `$5,000` or `$5.7 billion`, never `5,000 dollars`.
 1. Push to GitHub
 2. Import in [Vercel](https://vercel.com)
 3. Add environment variables in Vercel dashboard
-4. Add Vercel Postgres from the Storage tab
-5. Run migration (automatic via build or manual via `npm run db:migrate`)
+4. Add a Neon database from the Storage tab, or via
+   `vercel integration add neon --plan free_v3`, then connect it with
+   `vercel integration resource connect <resource> <project>`
+5. Run the migration (see Database Migration above)
 
 The site is optimised for Vercel deployment with static marketing pages and dynamic API routes.

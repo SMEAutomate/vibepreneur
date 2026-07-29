@@ -15,24 +15,24 @@ behaviour is: capture a waitlist signup, write it to Postgres, and send two emai
 
 The repo is best understood as three things stacked together:
 
-1. A **content site** (~160 prerendered pages) with heavy SEO and GEO investment.
-2. A **mockup engine** (~90 fake product screens) used as marketing imagery.
+1. A **content site** (215 prerendered pages) with heavy SEO and GEO investment.
+2. A **mockup engine** (~135 fake product screens) used as marketing imagery.
 3. A **lead capture funnel** (waitlist form to personalised "solution ideas" to email).
 
 ## Tech stack
 
-| Layer      | Choice                                                                |
-| ---------- | --------------------------------------------------------------------- |
-| Framework  | Next.js 16 (App Router, Turbopack), React 19, TypeScript 5.7 (strict) |
-| Styling    | TailwindCSS 3.4, custom `brand` palette, Framer Motion 11             |
-| Data       | Vercel Postgres (single `waitlist_signups` table)                     |
-| Email      | Resend                                                                |
-| SEO        | `schema-dts` JSON-LD, dynamic OG images, sitemap, RSS, `llms.txt`     |
-| Analytics  | `@vercel/analytics`                                                   |
-| Validation | Zod 3                                                                 |
-| Testing    | Vitest (unit), Playwright (e2e)                                       |
-| Tooling    | ESLint 9 flat config, Prettier, Husky + lint-staged                   |
-| Hosting    | Vercel (project `vibepreneur`, org `team_aT79...`)                    |
+| Layer      | Choice                                                                      |
+| ---------- | --------------------------------------------------------------------------- |
+| Framework  | Next.js 16 (App Router, Turbopack), React 19, TypeScript 5.7 (strict)       |
+| Styling    | TailwindCSS 3.4, custom `brand` palette, Framer Motion 11                   |
+| Data       | Neon Postgres via `@neondatabase/serverless` (one `waitlist_signups` table) |
+| Email      | Resend                                                                      |
+| SEO        | `schema-dts` JSON-LD, dynamic OG images, sitemap, RSS, `llms.txt`           |
+| Analytics  | `@vercel/analytics`                                                         |
+| Validation | Zod 3                                                                       |
+| Testing    | Vitest (unit), Playwright (e2e)                                             |
+| Tooling    | ESLint 9 flat config, Prettier, Husky + lint-staged                         |
+| Hosting    | Vercel (project `vibepreneur`, org `team_aT79...`)                          |
 
 Zero UI component libraries. Every component is hand-rolled. Icons are inline SVG path
 strings in Heroicons style, no icon package.
@@ -60,8 +60,8 @@ components. This is the single most important pattern in the repo.
 
 - `copy.ts` (347) homepage section copy
 - `features.ts` (715) seven feature configs, drives `/features/*` pages and the sitemap
-- `blog.ts` (1,832) + `blog-2026-spring.ts` (1,021) 69 posts total, spring posts spread into `blogPosts`
-- `showcase.ts` (728) 13 fictional example products
+- `blog.ts` + `blog-2026-spring.ts` + `blog-2026-summer.ts`, 103 posts total, spread into `blogPosts`
+- `showcase.ts` 22 fictional example products: 13 by role, 9 by industry
 - `solution-templates.ts` (932) + `solution-templates/industry-pools.ts` (2,469) the lead-magnet corpus
 - `pricing.ts`, `roadmap.ts`, `how-it-works.ts`, `activity-feed.ts`, `legal.ts`, `waitlist.ts`
 - `emails/*.md` weekly nurture email drafts
@@ -79,8 +79,8 @@ Everything sits under the `(marketing)` route group, which supplies Nav and Foot
 /for-consultants /for-operators /for-corporate-professionals /for-marketers
 /features/[slug]                     7 static feature pages
 /features/[slug]/[screen]            53 SSG screen deep-dive pages
-/blog  /blog/[slug]                  69 SSG posts
-/showcase  /showcase/[slug]          13 SSG fictional product case studies
+/blog  /blog/[slug]                  103 SSG posts
+/showcase  /showcase/[slug]          22 SSG fictional product case studies
 /waitlist  /waitlist/thanks  /waitlist/your-solutions
 /privacy /terms
 /demo                                internal gallery, noindex
@@ -108,9 +108,14 @@ and the strongest conversion asset in the repo.
 
 `waitlist-content.tsx` posts to `/api/waitlist`, which validates with Zod, upserts on email
 conflict into `waitlist_signups`, then fires a welcome email and a solutions email. Both DB
-and email are **optional**: missing `POSTGRES_URL` or `RESEND_API_KEY` degrades to a console
-log, so the app runs with no environment configuration. Email failures are caught and
+and email are **optional**: missing `DATABASE_URL` or `RESEND_API_KEY` degrades to a log
+line, so the app runs with no environment configuration. Email failures are caught and
 swallowed so the signup still succeeds.
+
+That optionality hid a live defect for 152 days. No environment variables were ever set on
+the deployment, so every signup returned success and was silently discarded. A Neon database
+was provisioned on 2026-07-29 and persistence is now verified end to end against production.
+Email remains unconfigured.
 
 The homepage `WaitlistTicker` displays a **synthetic** signup counter, not a real one: it is
 seeded from an anchor of 914 signups on 2026-03-05 and grows 100 to 300 per day using a
@@ -122,7 +127,7 @@ Three parallel systems render fake product UI:
 
 - `components/demo/screens/` 40 static screens (OpportunityFinder, PositioningCanvas, ...)
 - `components/demo/animated-screens/` 8 animated variants driven by `use-animation-loop.ts`
-- `components/showcase/screens/` 13 fictional products (debtmap, clauseguard, dealscore, ...) x ~5 screens each, wrapped in 6 different visual shells (Dark, Soft, Minimal, Compact, TopBar, Product) so each looks like a distinct company
+- `components/showcase/screens/` 22 fictional products x 5 screens each, wrapped in 6 visual shells (Dark, Soft, Minimal, Compact, TopBar, Product) so each looks like a distinct company. The 9 newest share two Vibepreneur-screen primitives in `components/showcase/vibe/`
 
 `lib/mockScreens.ts` is the registry (41 entries) linking screen ids to components, and
 `AnnotationLayer` overlays numbered callouts positioned by percentage coordinates from
@@ -132,9 +137,9 @@ Three parallel systems render fake product UI:
 
 This is the heaviest investment after content. Present: per-route metadata and canonicals,
 per-route dynamic OG image routes, Organization + WebSite JSON-LD, RSS feed, generated
-sitemap covering all 160+ pages, `robots.ts` excluding `/api`, `/demo` and post-signup
+sitemap covering all 179 URLs, `robots.ts` excluding `/api`, `/demo` and post-signup
 pages, and a hand-written `public/llms.txt` aimed at LLM crawlers. The 25 spring 2026 blog
-posts were explicitly written for generative-engine optimisation.
+posts, and the 34 summer 2026 posts, were explicitly written for generative-engine optimisation. The canonical origin is `vbprnr.com`, defined once in `lib/site.ts`.
 
 ### Remotion sub-project
 
