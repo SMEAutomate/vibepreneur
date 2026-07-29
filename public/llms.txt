@@ -4,44 +4,61 @@
 
 ## About
 
-Vibepreneur is a platform for experienced professionals (consultants, operators, domain experts) who want to turn their expertise into software products or productised services. It provides AI-powered workflows that guide users from opportunity identification through to market launch and growth.
+Vibepreneur is a venture operating system for experienced professionals (consultants, operators, domain experts) who want to turn their expertise into software products or productised services. It provides AI-powered workflows that guide users from opportunity identification through positioning, build, market launch, and growth.
 
 ## Core Features
 
 - Insight Engine: Analyses professional background to identify underserved market segments and score opportunities by demand, urgency, and personal fit.
-- Solution Builder: Transforms opportunities into structured solution concepts with positioning, pricing, feature scope, and buyer journey.
-- Positioning Engine: Defines competitive angles, value propositions, objection handling, and messaging for specific market segments.
-- Go-to-Market: Generates executable launch plans with ideal customer profiles, channel strategy, outreach sequences, and content angles.
-- Distribution: Builds multi-channel distribution with email sequences, social content, and partnership opportunities.
-- Growth System: Post-launch momentum with traction experiments, conversion measurement, referral mechanics, and visibility strategies.
+- Solution Builder: Transforms opportunities into complete product concepts with positioning, pricing tiers, user journeys, feature prioritisation, and tool-ready build outputs.
+- Positioning Studio: A messaging toolkit covering ICP definition, positioning canvas, messaging matrix, objection handling, and competitive comparison pages.
+- Go-To-Market Planner: Generates executable launch plans with ideal customer profile, channel strategy, content calendar, and revenue projections.
+- Distribution Toolkit: Channel scoring, outreach sequences, landing pages, lead magnets, and SEO from one workspace.
+- Growth System: Post-launch momentum with traction experiments, channel performance, referral loops, feedback patterns, and revenue projections.
+- Launch Builder: Turns venture specs into sequential, copy-paste-ready prompts optimised for leading AI build tools (Cursor, Bolt, Lovable, Replit, Claude Code) plus image and video tools.
 
 ## Pricing
 
-- Free: $0. 1 solution concept, basic positioning, opportunity assessment, community access.
-- Pro: $29/month. 3 active solutions, full positioning and GTM workflows, distribution tools.
-- Scale: $79/month. Unlimited solutions, advanced analytics, priority support, team collaboration.
+- Free: $0 forever. 1 opportunity assessment, positioning snapshot (read-only), venture readiness score, community access.
+- Pro: $49 per month. 10 opportunity assessments, 10 positioning iterations, 10 asset generations, and 5 outreach sequences per month, plus AI build prompts, go-to-market playbook, and daily progress briefs.
+- Max: $149 per month. 30 opportunity assessments, 30 positioning iterations, 30 asset generations, 15 outreach sequences, and 15 growth experiments per month, plus creative asset prompts, Claude skill generation, traction playbooks, and priority support.
 
 ## Key Pages
 
 - Homepage: https://vibepreneur.com
 - How It Works: https://vibepreneur.com/how-it-works
+- The System: https://vibepreneur.com/the-system
 - Pricing: https://vibepreneur.com/pricing
+- Showcase: https://vibepreneur.com/showcase
 - Blog: https://vibepreneur.com/blog
+- Daily Brief: https://vibepreneur.com/daily-brief
 - Roadmap: https://vibepreneur.com/roadmap
+- About: https://vibepreneur.com/about
 - Waitlist: https://vibepreneur.com/waitlist
 
 ## Feature Pages
 
 - Insight Engine: https://vibepreneur.com/features/insight-engine
 - Solution Builder: https://vibepreneur.com/features/solution-builder
-- Positioning Engine: https://vibepreneur.com/features/positioning-engine
-- Go-to-Market: https://vibepreneur.com/features/go-to-market
-- Distribution: https://vibepreneur.com/features/distribution
+- Positioning Studio: https://vibepreneur.com/features/positioning-engine
+- Go-To-Market Planner: https://vibepreneur.com/features/go-to-market
+- Distribution Toolkit: https://vibepreneur.com/features/distribution
 - Growth System: https://vibepreneur.com/features/growth-system
+- Launch Builder: https://vibepreneur.com/features/launch-builder
+
+## Audience Pages
+
+- For Consultants: https://vibepreneur.com/for-consultants
+- For Operators: https://vibepreneur.com/for-operators
+- For Corporate Professionals: https://vibepreneur.com/for-corporate-professionals
+- For Marketers: https://vibepreneur.com/for-marketers
 
 ## Target Audience
 
 Mid-career professionals, consultants, and domain experts looking to transition from service delivery to product ownership. Typical users have 10+ years of industry experience and see recurring problems they could solve at scale.
+
+## Status
+
+Vibepreneur is pre-launch. Access is currently by waitlist at https://vibepreneur.com/waitlist.
 
 ## Contact
 
