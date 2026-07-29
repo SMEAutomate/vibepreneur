@@ -199,9 +199,9 @@ export function ProductShell({
           <header className="flex items-center justify-between border-b border-neutral-200 bg-white px-8 py-5">
             <div>
               {title && (
-                <h1 className="text-lg font-semibold text-neutral-900">
+                <p className="text-lg font-semibold text-neutral-900">
                   {title}
-                </h1>
+                </p>
               )}
               {subtitle && (
                 <p className="mt-0.5 text-sm text-neutral-500">{subtitle}</p>

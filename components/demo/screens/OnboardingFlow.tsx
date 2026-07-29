@@ -48,9 +48,9 @@ export function OnboardingFlow() {
           </div>
 
           <div className="text-center">
-            <h1 className="text-xl font-semibold text-neutral-900">
+            <p className="text-xl font-semibold text-neutral-900">
               Choose your first opportunity
-            </h1>
+            </p>
             <p className="mt-2 text-sm text-neutral-500">
               Based on your Operations Manager background, here are your top
               matches.

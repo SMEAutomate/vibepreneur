@@ -91,9 +91,9 @@ export function TopBarShell({
           <div className="flex items-center justify-between border-b border-neutral-100 bg-neutral-50/50 px-6 py-4">
             <div>
               {title && (
-                <h1 className="text-base font-semibold text-neutral-900">
+                <p className="text-base font-semibold text-neutral-900">
                   {title}
-                </h1>
+                </p>
               )}
               {subtitle && (
                 <p className="mt-0.5 text-xs text-neutral-500">{subtitle}</p>

@@ -58,9 +58,9 @@ export function MinimalShell({
                 </span>
               </div>
               {title && (
-                <h1 className="text-lg font-semibold text-neutral-900">
+                <p className="text-lg font-semibold text-neutral-900">
                   {title}
-                </h1>
+                </p>
               )}
             </div>
             {subtitle && (

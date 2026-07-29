@@ -93,9 +93,9 @@ export function CompactShell({
             )}
             <div className="flex items-center gap-3">
               {title && (
-                <h1 className="text-sm font-semibold text-neutral-900">
+                <p className="text-sm font-semibold text-neutral-900">
                   {title}
-                </h1>
+                </p>
               )}
               {subtitle && (
                 <span className="text-xs text-neutral-400">{subtitle}</span>
