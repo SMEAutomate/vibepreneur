@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { roles, industries } from "@/content/waitlist";
 import { WaitlistSocialProof } from "@/components/marketing/waitlist-social-proof";
+import { trackEvent } from "@/lib/analytics";
 
 const PERSONA_OPTIONS = [
   { value: "corporate", label: "Corporate professional" },
@@ -116,7 +117,17 @@ export function WaitlistContent() {
       }
 
       const data = await res.json();
-      const params = new URLSearchParams({ role, industry });
+
+      trackEvent("waitlist_signup", {
+        persona,
+        goal,
+        role,
+        industry: industry || "unspecified",
+        source: tierParam ? `pricing-${tierParam}` : "direct",
+      });
+
+      const params = new URLSearchParams({ role });
+      if (industry) params.set("industry", industry);
       if (data.id) params.set("ref", data.id);
       window.location.href = `/waitlist/thanks?${params.toString()}`;
     } catch (err) {

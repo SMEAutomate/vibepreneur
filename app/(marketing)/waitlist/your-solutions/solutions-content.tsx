@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Section } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
@@ -13,6 +13,7 @@ import {
   getIndustryLabel,
   type GeneratedSolution,
 } from "@/lib/solutionGenerator";
+import { trackEvent } from "@/lib/analytics";
 
 function SolutionCard({
   solution,
@@ -110,6 +111,13 @@ function SolutionsInner() {
   const solutions = generateSolutions(role, industry);
   const roleLabel = getRoleLabel(role);
   const sector = industry ? getSectorContext(industry) : null;
+
+  useEffect(() => {
+    trackEvent("solutions_viewed", {
+      role,
+      industry: industry ?? "unspecified",
+    });
+  }, [role, industry]);
 
   return (
     <>

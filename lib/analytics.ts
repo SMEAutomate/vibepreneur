@@ -1,41 +1,20 @@
-type EventName =
-  | "page_view"
+import { track } from "@vercel/analytics";
+
+export type EventName =
   | "waitlist_signup"
   | "solutions_viewed"
   | "cta_clicked"
   | "referral_shared";
 
-interface AnalyticsEvent {
-  event: EventName;
-  properties?: Record<string, string | number | boolean>;
-  timestamp?: string;
-}
+export type EventProperties = Record<string, string | number | boolean | null>;
 
-class Analytics {
-  private queue: AnalyticsEvent[] = [];
-
-  track(event: EventName, properties?: AnalyticsEvent["properties"]) {
-    const entry: AnalyticsEvent = {
-      event,
-      properties,
-      timestamp: new Date().toISOString(),
-    };
-
-    this.queue.push(entry);
-
-    if (
-      typeof window !== "undefined" &&
-      process.env.NODE_ENV === "development"
-    ) {
-      console.log("[Analytics]", entry);
-    }
+export function trackEvent(
+  event: EventName,
+  properties?: EventProperties
+): void {
+  if (process.env.NODE_ENV === "development") {
+    console.log("[Analytics]", event, properties ?? {});
   }
 
-  flush() {
-    const events = [...this.queue];
-    this.queue = [];
-    return events;
-  }
+  track(event, properties);
 }
-
-export const analytics = new Analytics();
