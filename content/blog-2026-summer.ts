@@ -7,7 +7,7 @@ export const summer2026Posts: BlogPost[] = [
       "The Consulting Market Just Got Two New Competitors, and Neither of Them Bills by the Hour",
     category: "For Consultants",
     date: "2026-05-12",
-    thumbnail: "crossroads-pause",
+    thumbnail: "wave-flow",
     excerpt:
       "OpenAI and Anthropic are now openly targeting the management consulting market. That is not a threat to expertise. It is a threat to a specific way of packaging it.",
     readTime: "6 min read",
@@ -61,7 +61,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "AI Is Not Replacing Knowledge Workers. It Is Repricing Them.",
     category: "Mindset",
     date: "2026-05-14",
-    thumbnail: "filter-funnel",
+    thumbnail: "gear-turn",
     excerpt:
       "The replacement narrative is easy to argue about and useless to act on. The repricing narrative is uncomfortable, accurate, and tells you exactly what to do.",
     readTime: "6 min read",
@@ -115,7 +115,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Boring Vertical Tools Are Beating AI Wrappers, and It Is Not Close",
     category: "Building",
     date: "2026-05-16",
-    thumbnail: "shield-glow",
+    thumbnail: "pulse-radar",
     excerpt:
       "The 2026 pattern across indie founder communities is consistent: unglamorous software for unglamorous industries outperforms anything built on general AI capability.",
     readTime: "6 min read",
@@ -146,7 +146,7 @@ export const summer2026Posts: BlogPost[] = [
       "Micro-SaaS Is Heading Toward $59 Billion. Here Is Where the Growth Actually Sits.",
     category: "Business Design",
     date: "2026-05-19",
-    thumbnail: "rising-bars",
+    thumbnail: "filter-funnel",
     excerpt:
       "The headline number is impressive and mostly useless. The composition of the growth is what tells you where to build.",
     readTime: "6 min read",
@@ -196,7 +196,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Why Micro-Niches Outgrew Broad Platforms by 340%",
     category: "Business Design",
     date: "2026-05-21",
-    thumbnail: "scatter-converge",
+    thumbnail: "pulse-radar",
     excerpt:
       "The gap between niche and broad software growth is too large to be explained by market preference. Something structural changed.",
     readTime: "6 min read",
@@ -229,7 +229,7 @@ export const summer2026Posts: BlogPost[] = [
       "Your Industry Knowledge Is the Moat, Because It Was Never Written Down",
     category: "From Experience to Business",
     date: "2026-05-23",
-    thumbnail: "node-network",
+    thumbnail: "crossroads-pause",
     excerpt:
       "Models are trained on what got published. The most valuable operational knowledge in most industries never did, which is precisely why it is defensible.",
     readTime: "6 min read",
@@ -280,7 +280,7 @@ export const summer2026Posts: BlogPost[] = [
       "Fractional Work Grew 46% This Year. Treat It as the Bridge, Not the Destination.",
     category: "For Corporate Professionals",
     date: "2026-05-26",
-    thumbnail: "split-path",
+    thumbnail: "stack-build",
     excerpt:
       "Demand for fractional executives is rising fast and it is the safest exit from full-time employment. It is also a trap if you mistake it for the end state.",
     readTime: "6 min read",
@@ -331,7 +331,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "From Fractional CMO to Product Owner: The Path Most Marketers Miss",
     category: "For Marketers",
     date: "2026-05-28",
-    thumbnail: "ladder-steps",
+    thumbnail: "wave-flow",
     excerpt:
       "The fractional CMO market hit $1.27 billion this year. The marketers building something durable are the ones who noticed how repetitive the work is.",
     readTime: "6 min read",
@@ -364,7 +364,7 @@ export const summer2026Posts: BlogPost[] = [
       "Companies Now Buy Expertise in Slices. Price and Package Accordingly.",
     category: "For Consultants",
     date: "2026-05-30",
-    thumbnail: "gear-turn",
+    thumbnail: "calendar-check",
     excerpt:
       "A quarter of US businesses use fractional executives, heading for 35% by year end. Buying behaviour changed before most consultants changed their offer.",
     readTime: "6 min read",
@@ -416,7 +416,7 @@ export const summer2026Posts: BlogPost[] = [
       "94% of B2B Buyers Now Research With AI. Your Website Is No Longer the First Stop.",
     category: "For Marketers",
     date: "2026-06-02",
-    thumbnail: "signal-restore",
+    thumbnail: "calendar-check",
     excerpt:
       "Forrester's 2026 buyer research found generative AI is now the most meaningful research source in B2B purchasing, ahead of vendor sites, product experts, and sales reps.",
     readTime: "6 min read",
@@ -448,7 +448,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Generative Engine Optimisation for Solo Founders",
     category: "For Marketers",
     date: "2026-06-04",
-    thumbnail: "orbit-rings",
+    thumbnail: "filter-funnel",
     excerpt:
       "GEO has become an agency service with agency pricing. The underlying practice is simple enough that a solo founder can run it without buying anything.",
     readTime: "7 min read",
@@ -505,7 +505,7 @@ export const summer2026Posts: BlogPost[] = [
       "The Citation Economy: Why Statistics and Quotations Beat Polished Prose",
     category: "For Marketers",
     date: "2026-06-06",
-    thumbnail: "stack-build",
+    thumbnail: "pulse-radar",
     excerpt:
       "Quotations lift AI visibility around 41% and statistics around 32%. That changes what good content looks like, and most brand writing is now optimised against itself.",
     readTime: "6 min read",
@@ -562,7 +562,7 @@ export const summer2026Posts: BlogPost[] = [
       "Seat-Based Pricing Fell From 21% to 15%. Price Your Venture Accordingly.",
     category: "Business Design",
     date: "2026-06-09",
-    thumbnail: "morph-shape",
+    thumbnail: "ladder-steps",
     excerpt:
       "The per-seat model is contracting fast as software starts completing work rather than assisting with it. If you are pricing a new venture, do not inherit a dying default.",
     readTime: "6 min read",
@@ -594,7 +594,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Outcome Pricing Sounds Right and Usually Is Not",
     category: "Business Design",
     date: "2026-06-11",
-    thumbnail: "crossroads-pause",
+    thumbnail: "signal-restore",
     excerpt:
       "Charging for results is the most intellectually satisfying pricing model and the hardest to operate. Here is when it works and when it quietly destroys a business.",
     readTime: "6 min read",
@@ -645,7 +645,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Hybrid Pricing: The Model 43% of Software Companies Actually Use",
     category: "Business Design",
     date: "2026-06-13",
-    thumbnail: "gear-turn",
+    thumbnail: "handshake-meet",
     excerpt:
       "Everyone writes about outcome pricing. Most successful companies quietly run a base subscription with a usage component, and it is the right default for a new venture.",
     readTime: "6 min read",
@@ -680,7 +680,7 @@ export const summer2026Posts: BlogPost[] = [
       "Cursor at $4B, Lovable at $400M: What the Build Tool Boom Actually Means for You",
     category: "Building",
     date: "2026-06-16",
-    thumbnail: "rising-bars",
+    thumbnail: "ladder-steps",
     excerpt:
       "The AI build tool market reached $4.7 billion in 2026. The interesting number is not the market size. It is who is using these tools.",
     readTime: "6 min read",
@@ -713,7 +713,7 @@ export const summer2026Posts: BlogPost[] = [
       "41% of Code Is Now AI-Generated. The Bottleneck Moved Somewhere Worse.",
     category: "Building",
     date: "2026-06-18",
-    thumbnail: "arrow-bounce",
+    thumbnail: "signal-restore",
     excerpt:
       "84% of developers now use or plan to use AI coding tools. When production capacity stops being scarce, the scarce thing becomes knowing what is worth producing.",
     readTime: "6 min read",
@@ -768,7 +768,7 @@ export const summer2026Posts: BlogPost[] = [
       "LinkedIn Organic Reach Fell 60% to 80%. Rebuild Distribution Around It.",
     category: "For Marketers",
     date: "2026-06-20",
-    thumbnail: "signal-restore",
+    thumbnail: "ladder-steps",
     excerpt:
       "Company page reach collapsed and the platform now allocates roughly 5% of the feed to pages against 65% to personal profiles. This is deliberate, and it changes the plan.",
     readTime: "6 min read",
@@ -818,7 +818,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "The Distribution Channel Nobody Is Measuring",
     category: "For Operators",
     date: "2026-06-23",
-    thumbnail: "handshake-meet",
+    thumbnail: "node-network",
     excerpt:
       "While everyone optimises social reach, the highest-converting channel for vertical software remains the place your buyer already gathers, and it does not appear in any analytics tool.",
     readTime: "6 min read",
@@ -851,7 +851,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Buyers Are Tired of Discovery. Productise or Lose the Deal.",
     category: "For Consultants",
     date: "2026-06-25",
-    thumbnail: "timeline-march",
+    thumbnail: "filter-funnel",
     excerpt:
       "Buyer fatigue with long discovery phases and open-ended contracts is the main force pushing services toward productisation in 2026. The old model is getting harder to defend.",
     readTime: "6 min read",
@@ -882,7 +882,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "The Micro-Specialist Advantage",
     category: "Productizing Expertise",
     date: "2026-06-27",
-    thumbnail: "filter-funnel",
+    thumbnail: "orbit-rings",
     excerpt:
       "Narrowing your buyer feels like shrinking your market. In productised services it is the mechanism that makes fixed scope, premium pricing, and referral flow possible at once.",
     readTime: "6 min read",
@@ -931,7 +931,7 @@ export const summer2026Posts: BlogPost[] = [
       "From Hours to Outcomes: Repricing a Practice Without Losing the Clients",
     category: "For Consultants",
     date: "2026-06-30",
-    thumbnail: "ladder-steps",
+    thumbnail: "pulse-radar",
     excerpt:
       "Everyone agrees hourly billing is wrong. The transition is where practices break. Here is the sequence that survives contact with existing clients.",
     readTime: "6 min read",
@@ -986,7 +986,7 @@ export const summer2026Posts: BlogPost[] = [
       "The EU AI Act Transparency Deadline Is 2 August. Here Is What Actually Applies to You.",
     category: "Venture Systems",
     date: "2026-07-02",
-    thumbnail: "shield-glow",
+    thumbnail: "spiral-draw",
     excerpt:
       "Article 50 transparency obligations, general-purpose AI enforcement powers, and the full penalty regime take effect on 2 August 2026. Most small vendors are over-preparing for the wrong things.",
     readTime: "7 min read",
@@ -1038,7 +1038,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Compliance Is a Wedge, Not a Cost",
     category: "Business Design",
     date: "2026-07-04",
-    thumbnail: "shield-glow",
+    thumbnail: "scatter-converge",
     excerpt:
       "Every regulatory deadline creates a group of buyers with a date, a budget, and no idea what to do. That is the easiest market entry available to a small vendor.",
     readTime: "6 min read",
@@ -1071,7 +1071,7 @@ export const summer2026Posts: BlogPost[] = [
       "Private AI for Regulated Industries Is the Quietest Large Opportunity",
     category: "Business Design",
     date: "2026-07-07",
-    thumbnail: "orbit-rings",
+    thumbnail: "seed-sprout",
     excerpt:
       "Legal, health, and finance buyers want AI capability and cannot accept the data posture most products ship with. That gap is wide, well funded, and largely unserved below enterprise pricing.",
     readTime: "6 min read",
@@ -1103,7 +1103,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Trust-Heavy Use Cases Command Trust-Heavy Prices",
     category: "Business Design",
     date: "2026-07-09",
-    thumbnail: "shield-glow",
+    thumbnail: "timeline-march",
     excerpt:
       "The market split cleanly in 2026. Products that reduce risk hold their pricing. Products that add convenience are in a race downward.",
     readTime: "6 min read",
@@ -1156,7 +1156,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Audit Trails Are a Feature, Not Overhead",
     category: "Building",
     date: "2026-07-11",
-    thumbnail: "stack-build",
+    thumbnail: "handshake-meet",
     excerpt:
       "The least exciting thing you can build is frequently the reason a cautious buyer says yes. Products without an audit trail are among the fastest-fading categories in 2026.",
     readTime: "6 min read",
@@ -1191,7 +1191,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "The Operator's Case for Building Instead of Optimising",
     category: "For Operators",
     date: "2026-07-14",
-    thumbnail: "seed-sprout",
+    thumbnail: "gear-turn",
     excerpt:
       "Operations people spend careers making other people's systems work. The skills that requires are the same ones a vertical software venture needs, and the market finally rewards them.",
     readTime: "6 min read",
@@ -1241,7 +1241,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Agent Workflow Tooling: The Category That Has Not Been Named Yet",
     category: "Building",
     date: "2026-07-16",
-    thumbnail: "node-network",
+    thumbnail: "scatter-converge",
     excerpt:
       "Agent workflow tooling is one of the fastest-rising micro-SaaS categories and almost nobody is building the industry-specific version of it.",
     readTime: "6 min read",
@@ -1273,7 +1273,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "What to Build When Everyone Has the Same Tools",
     category: "Venture Systems",
     date: "2026-07-18",
-    thumbnail: "split-path",
+    thumbnail: "shield-glow",
     excerpt:
       "If capability is evenly distributed, differentiation has to come from somewhere else. There are only four places left, and three of them are available to a solo founder.",
     readTime: "6 min read",
@@ -1325,7 +1325,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "How to Find a Vertical Worth Building In",
     category: "Business Design",
     date: "2026-07-21",
-    thumbnail: "pulse-radar",
+    thumbnail: "node-network",
     excerpt:
       "Vertical SaaS for ignored industries tops the growth list. Ignored is the operative word, and there is a repeatable way to identify which industries qualify.",
     readTime: "6 min read",
@@ -1359,7 +1359,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "The 90-Day Path From Expertise to First Paying Customer",
     category: "Validation & Launch",
     date: "2026-07-23",
-    thumbnail: "calendar-check",
+    thumbnail: "node-network",
     excerpt:
       "A concrete plan built from what actually worked across the ventures we have documented. Three phases, explicit checkpoints, and a kill decision at day forty-five.",
     readTime: "7 min read",
@@ -1417,7 +1417,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "Write Your Kill Criteria Before You Start",
     category: "Validation & Launch",
     date: "2026-07-25",
-    thumbnail: "crossroads-pause",
+    thumbnail: "gear-turn",
     excerpt:
       "Ventures rarely die of a bad idea. They die of inertia, because nobody agreed in advance what evidence would mean stop.",
     readTime: "6 min read",
@@ -1452,7 +1452,7 @@ export const summer2026Posts: BlogPost[] = [
     title: "The Mid-2026 State of Building From Expertise",
     category: "Venture Systems",
     date: "2026-07-28",
-    thumbnail: "timeline-march",
+    thumbnail: "crossroads-pause",
     excerpt:
       "Eleven weeks of shifts in one place: what changed for consultants, operators, corporate professionals, and marketers between May and the end of July.",
     readTime: "7 min read",

@@ -7,7 +7,7 @@ export const spring2026Posts: BlogPost[] = [
       "Cursor vs Bolt vs Lovable vs Claude Code: Which AI Build Tool Wins for Non-Coder Founders in 2026",
     category: "Building",
     date: "2026-03-12",
-    thumbnail: "split-path",
+    thumbnail: "crossroads-pause",
     excerpt:
       "A 2026 head-to-head comparison of Cursor, Bolt, Lovable, and Claude Code for founders who want to ship an MVP without a development team. Includes a decision matrix by venture type.",
     readTime: "7 min read",
@@ -63,7 +63,7 @@ export const spring2026Posts: BlogPost[] = [
       "From Hourly Billing to Productized Retainers: A 90-Day Plan for Boutique Consultants",
     category: "Productizing Expertise",
     date: "2026-03-14",
-    thumbnail: "ladder-steps",
+    thumbnail: "split-path",
     excerpt:
       "A step-by-step 90-day plan to move a boutique consulting practice from hourly billing to productized fixed-scope retainers, including pricing math and a launch calendar.",
     readTime: "7 min read",
@@ -114,7 +114,7 @@ export const spring2026Posts: BlogPost[] = [
       "The Expertise Trap: 7 Ways Domain Experts Kill Their Own First Product",
     category: "From Experience to Business",
     date: "2026-03-17",
-    thumbnail: "filter-funnel",
+    thumbnail: "shield-glow",
     excerpt:
       "Domain experts have credibility but often kill their own first product through predictable failure patterns. Here are the seven traps and how to avoid each one.",
     readTime: "6 min read",
@@ -149,7 +149,7 @@ export const spring2026Posts: BlogPost[] = [
       "Value-Based Pricing for Productized Services: The 10 Percent Rule and the Conversation That Anchors It",
     category: "Productizing Expertise",
     date: "2026-03-19",
-    thumbnail: "scatter-converge",
+    thumbnail: "arrow-bounce",
     excerpt:
       "How productized service operators set prices using the 10 percent rule, the diagnostic conversation that anchors fees to outcomes, and the three failure modes to avoid.",
     readTime: "7 min read",
@@ -198,7 +198,7 @@ export const spring2026Posts: BlogPost[] = [
       "Productized Service vs Vertical SaaS vs Membership: Which Model Fits Your Expertise",
     category: "Business Design",
     date: "2026-03-21",
-    thumbnail: "crossroads-pause",
+    thumbnail: "calendar-check",
     excerpt:
       "A decision-tree guide to picking between productized services, vertical SaaS, and membership models based on your repeatability, audience density, and tolerance for time-on-tools.",
     readTime: "7 min read",
@@ -244,7 +244,7 @@ export const spring2026Posts: BlogPost[] = [
       "The 13 Productizable Jobs (And the Venture Format Each One Wins With)",
     category: "Productizing Expertise",
     date: "2026-03-24",
-    thumbnail: "grid-light",
+    thumbnail: "inbox-stack",
     excerpt:
       "A role-by-role guide to the 13 most productizable corporate jobs and the venture format that fits each one, with concrete first offers and pricing.",
     readTime: "8 min read",
@@ -290,7 +290,7 @@ export const spring2026Posts: BlogPost[] = [
       "Why Distribution Beats Product: The 30-Day Validation Sprint for Solo Founders",
     category: "Validation & Launch",
     date: "2026-03-26",
-    thumbnail: "megaphone-burst",
+    thumbnail: "signal-restore",
     excerpt:
       "72 percent of indie founders say distribution beats product. Here is the 30-day validation sprint that proves a venture before any real build, week by week.",
     readTime: "7 min read",
@@ -335,7 +335,7 @@ export const spring2026Posts: BlogPost[] = [
       "The First 3 GTM Moves for Solo Founders: A Day-by-Day Playbook for the First 14 Days",
     category: "Validation & Launch",
     date: "2026-03-31",
-    thumbnail: "timeline-march",
+    thumbnail: "handshake-meet",
     excerpt:
       "A concrete 14-day go-to-market plan for solo founders launching a new venture, with daily actions, stop signals, and a Day 14 decision matrix.",
     readTime: "6 min read",
@@ -381,7 +381,7 @@ export const spring2026Posts: BlogPost[] = [
       "The Niche-Expert Effect: Why One Specialist Outperforms 16 Generalists on LinkedIn",
     category: "For Marketers",
     date: "2026-04-02",
-    thumbnail: "pulse-radar",
+    thumbnail: "spiral-draw",
     excerpt:
       "A 2026 analysis of LinkedIn's algorithm and the niche-expert effect, with six content patterns that produce qualified leads for solo founders and consultants.",
     readTime: "6 min read",
@@ -411,7 +411,7 @@ export const spring2026Posts: BlogPost[] = [
     title: "10 LinkedIn Post Angles That Get Replies (With Templates by Role)",
     category: "For Marketers",
     date: "2026-04-07",
-    thumbnail: "inbox-stack",
+    thumbnail: "shield-glow",
     excerpt:
       "Ten LinkedIn post angles that consistently produce qualified replies in 2026, with fill-in templates and examples by role for consultants, founders, and operators.",
     readTime: "6 min read",
@@ -449,7 +449,7 @@ export const spring2026Posts: BlogPost[] = [
       "How to Design a Zero-Dollar Validation Experiment: 5 Hypothesis-to-Result Templates",
     category: "Validation & Launch",
     date: "2026-04-09",
-    thumbnail: "stack-build",
+    thumbnail: "scatter-converge",
     excerpt:
       "Five reusable validation experiment templates with hypothesis frames, success thresholds, and stop signals. Run them before any build.",
     readTime: "6 min read",
@@ -479,7 +479,7 @@ export const spring2026Posts: BlogPost[] = [
     title: "Pre-Launch Waitlist Tactics That Actually Convert in 2026",
     category: "Validation & Launch",
     date: "2026-04-14",
-    thumbnail: "handshake-meet",
+    thumbnail: "seed-sprout",
     excerpt:
       "How to design a pre-launch waitlist that produces qualified leads, not vanity email addresses, with specific conversion patterns and timing rules.",
     readTime: "6 min read",
@@ -509,7 +509,7 @@ export const spring2026Posts: BlogPost[] = [
       "From PRD to Shipped MVP in One Weekend: The AI-Build Prompt That Works",
     category: "Building",
     date: "2026-04-16",
-    thumbnail: "arrow-bounce",
+    thumbnail: "wave-flow",
     excerpt:
       "A repeatable weekend workflow for shipping an MVP from a PRD using Cursor, Bolt, Lovable, or Claude Code, with the five-part prompt structure that produces non-generic output.",
     readTime: "7 min read",
@@ -554,7 +554,7 @@ export const spring2026Posts: BlogPost[] = [
       "Why Generic AI Build Prompts Produce Generic Apps (and How to Write Better Ones)",
     category: "Building",
     date: "2026-04-21",
-    thumbnail: "signal-restore",
+    thumbnail: "calendar-check",
     excerpt:
       "Three reasons AI build prompts produce slop, the specificity hierarchy that fixes it, and six prompt anti-patterns to retire.",
     readTime: "6 min read",
@@ -586,7 +586,7 @@ export const spring2026Posts: BlogPost[] = [
       "Vertical SaaS in 2026: 12 Industries With 10,000 to 100,000 Addressable Buyers Waiting for a Specialist",
     category: "Building",
     date: "2026-04-23",
-    thumbnail: "node-network",
+    thumbnail: "filter-funnel",
     excerpt:
       "Twelve underbuilt vertical SaaS industries with sized addressable markets, the typical buyer profile, and the wedge that wins for solo founders in 2026.",
     readTime: "8 min read",
@@ -625,7 +625,7 @@ export const spring2026Posts: BlogPost[] = [
       "Portfolio Careers in 2026: Building a 3-Income Stack That Outlasts AI Displacement",
     category: "For Corporate Professionals",
     date: "2026-04-28",
-    thumbnail: "orbit-rings",
+    thumbnail: "morph-shape",
     excerpt:
       "Why the single-employer career model is breaking down in 2026, and how mid-career professionals are building a 3-income stack of salary, fractional, and venture income.",
     readTime: "7 min read",
@@ -714,7 +714,7 @@ export const spring2026Posts: BlogPost[] = [
       "Future-Proof Your Career in 14 Days: A Venture-Readiness Assessment for Corporate Professionals",
     category: "For Corporate Professionals",
     date: "2026-05-01",
-    thumbnail: "calendar-check",
+    thumbnail: "grid-light",
     excerpt:
       "A 14-day structured assessment for corporate professionals to determine whether they are ready to start a venture alongside their current role, and which venture format to pick.",
     readTime: "6 min read",
@@ -766,7 +766,7 @@ export const spring2026Posts: BlogPost[] = [
       "Why Entry-Level Disappearing Means Senior Operators Should Productize Now",
     category: "Career Pivot",
     date: "2026-05-05",
-    thumbnail: "morph-shape",
+    thumbnail: "inbox-stack",
     excerpt:
       "Entry-level role starts dropped 50 percent in core business functions between 2019 and 2024. Here is what that means for senior operators and why the rational response is to productize.",
     readTime: "6 min read",
@@ -799,7 +799,7 @@ export const spring2026Posts: BlogPost[] = [
       "The 6-Month Rule: Why Your First Venture Should Pay for Itself by Month 6",
     category: "Venture Systems",
     date: "2026-05-06",
-    thumbnail: "gear-turn",
+    thumbnail: "arrow-bounce",
     excerpt:
       "Solo-founder research shows ventures that miss the 6-month profitability benchmark rarely cross to sustainability. Here is how to architect for the rule.",
     readTime: "7 min read",
@@ -834,7 +834,7 @@ export const spring2026Posts: BlogPost[] = [
       "Daily Briefs for Founders: A Morning Ritual That Compounds in 30 Days",
     category: "Venture Systems",
     date: "2026-05-07",
-    thumbnail: "wave-flow",
+    thumbnail: "inbox-stack",
     excerpt:
       "How a structured daily brief reshapes founder decision-making over 30 days, what to include, and the trap of treating briefs as journaling.",
     readTime: "5 min read",
@@ -873,7 +873,7 @@ export const spring2026Posts: BlogPost[] = [
       "Stop Generating AI Text Dumps: The Opinionated Artifact Bar for Venture Work",
     category: "Venture Systems",
     date: "2026-05-08",
-    thumbnail: "shield-glow",
+    thumbnail: "orbit-rings",
     excerpt:
       "Most AI-generated venture documents are slop. Here are the five quality checks that separate a real venture artifact from an AI text dump.",
     readTime: "6 min read",
@@ -908,7 +908,7 @@ export const spring2026Posts: BlogPost[] = [
     title: "From Idea to First Paying Customer in 14 Days: 4 Mini-Case Studies",
     category: "Validation & Launch",
     date: "2026-05-09",
-    thumbnail: "spiral-draw",
+    thumbnail: "timeline-march",
     excerpt:
       "Four 14-day venture launch case studies grounded in common operator-to-founder patterns, with the channel, friction, and decisions for each.",
     readTime: "7 min read",
@@ -942,7 +942,7 @@ export const spring2026Posts: BlogPost[] = [
     title: "Build-in-Public for Niche B2B: When to Share, When to Stay Quiet",
     category: "For Marketers",
     date: "2026-05-10",
-    thumbnail: "filter-funnel",
+    thumbnail: "crossroads-pause",
     excerpt:
       "Build-in-public works differently for niche B2B than for consumer products. Here is the share-the-craft, withhold-the-detail pattern that produces qualified leads without giving away the venture.",
     readTime: "6 min read",
@@ -981,7 +981,7 @@ export const spring2026Posts: BlogPost[] = [
       "The Objection-Handling Library Every Productized Service Needs (Top 10 Patterns)",
     category: "For Consultants",
     date: "2026-05-11",
-    thumbnail: "inbox-stack",
+    thumbnail: "crossroads-pause",
     excerpt:
       "Ten common objections that productized service operators encounter in 2026, the response pattern for each, and the three objections that always mean you have mispositioned.",
     readTime: "7 min read",

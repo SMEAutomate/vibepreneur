@@ -134,6 +134,40 @@ test.describe("Marketing Pages", () => {
   }
 });
 
+test.describe("Blog thumbnails", () => {
+  test("each category renders its own palette", async ({ page }) => {
+    await page.goto("/blog");
+    await page.waitForTimeout(500);
+
+    const accents = await page.evaluate(() =>
+      [...document.querySelectorAll<HTMLElement>("[style*='--tn-strong']")].map(
+        (el) => getComputedStyle(el).getPropertyValue("--tn-strong").trim()
+      )
+    );
+
+    // 12 categories, each with a distinct accent. Guards against the palette
+    // map and the category union drifting apart.
+    expect(accents.length).toBeGreaterThan(50);
+    expect(new Set(accents).size).toBe(12);
+  });
+
+  test("no two posts in a category share an animation", async ({ page }) => {
+    await page.goto("/blog");
+    const pairs = await page.evaluate(() =>
+      [...document.querySelectorAll<HTMLElement>("[style*='--tn-strong']")].map(
+        (el) => {
+          const accent = getComputedStyle(el)
+            .getPropertyValue("--tn-strong")
+            .trim();
+          const shape = el.querySelector("svg")?.innerHTML.slice(0, 120) ?? "";
+          return `${accent}::${shape}`;
+        }
+      )
+    );
+    expect(new Set(pairs).size).toBe(pairs.length);
+  });
+});
+
 test.describe("SEO endpoints", () => {
   test("sitemap, robots and feed respond", async ({ request }) => {
     for (const path of ["/sitemap.xml", "/robots.txt", "/feed.xml"]) {

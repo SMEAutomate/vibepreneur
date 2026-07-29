@@ -51,7 +51,12 @@ export function RelatedPosts({
             >
               <Link href={`/blog/${post.slug}`} className="block h-full">
                 <Card className="flex h-full flex-col overflow-hidden p-0">
-                  {post.thumbnail && <BlogThumbnail variant={post.thumbnail} />}
+                  {post.thumbnail && (
+                    <BlogThumbnail
+                      variant={post.thumbnail}
+                      category={post.category}
+                    />
+                  )}
                   <div className="flex flex-1 flex-col p-6">
                     <span className="inline-block w-fit rounded-full bg-brand-50 px-3 py-0.5 text-xs font-medium text-brand-700">
                       {post.category}

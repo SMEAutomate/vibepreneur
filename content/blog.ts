@@ -36,22 +36,24 @@ export type BlogThumbnailVariant =
   | "crossroads-pause"
   | "handshake-meet";
 
+export type BlogCategory =
+  | "Career Pivot"
+  | "Building"
+  | "Mindset"
+  | "From Experience to Business"
+  | "Venture Systems"
+  | "Validation & Launch"
+  | "For Consultants"
+  | "For Operators"
+  | "For Corporate Professionals"
+  | "For Marketers"
+  | "Productizing Expertise"
+  | "Business Design";
+
 export interface BlogPost {
   slug: string;
   title: string;
-  category:
-    | "Career Pivot"
-    | "Building"
-    | "Mindset"
-    | "From Experience to Business"
-    | "Venture Systems"
-    | "Validation & Launch"
-    | "For Consultants"
-    | "For Operators"
-    | "For Corporate Professionals"
-    | "For Marketers"
-    | "Productizing Expertise"
-    | "Business Design";
+  category: BlogCategory;
   date: string;
   updatedDate?: string;
   excerpt: string;
@@ -77,7 +79,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "What to Do in the First 7 Days After AI Replaces Your Role",
     category: "Career Pivot",
     date: "2026-03-02",
-    thumbnail: "calendar-check",
+    thumbnail: "arrow-bounce",
     excerpt:
       "The first week after losing your role to AI is critical. Not for panicking, not for upskilling. For making three specific moves that set up everything that follows.",
     readTime: "6 min read",
@@ -121,7 +123,7 @@ const baseBlogPosts: BlogPost[] = [
       "The 30-Day Plan to Replace Your Salary With a Small Internet Business",
     category: "Building",
     date: "2026-02-23",
-    thumbnail: "seed-sprout",
+    thumbnail: "shield-glow",
     excerpt:
       "You do not need a year-long runway or a venture-backed idea. You need 30 focused days and a structured plan to get your first paying customer.",
     readTime: "8 min read",
@@ -159,7 +161,7 @@ const baseBlogPosts: BlogPost[] = [
       "The Biggest Mistake Displaced Professionals Make: Learning Tools Instead of Building Assets",
     category: "Mindset",
     date: "2026-02-16",
-    thumbnail: "stack-build",
+    thumbnail: "node-network",
     excerpt:
       "After getting displaced by AI, the reflex is to learn new tools. But tools change every six months. Assets compound forever. Here is how to focus on the right thing.",
     readTime: "5 min read",
@@ -203,7 +205,7 @@ const baseBlogPosts: BlogPost[] = [
       '"I\'m Not Technical" Is Your Advantage: How Domain Expertise Wins in 2026',
     category: "Mindset",
     date: "2026-02-09",
-    thumbnail: "shield-glow",
+    thumbnail: "timeline-march",
     excerpt:
       "The professionals most threatened by AI are generalists with shallow technical skills. The ones most positioned to win are domain experts who understand problems deeply.",
     readTime: "6 min read",
@@ -247,7 +249,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "How to Pick a Business Idea When Your Confidence Is Shot",
     category: "Mindset",
     date: "2026-02-02",
-    thumbnail: "scatter-converge",
+    thumbnail: "seed-sprout",
     excerpt:
       "Getting displaced does a number on your confidence. You cannot wait for confidence to return before making decisions. You need a framework that works without it.",
     readTime: "5 min read",
@@ -292,7 +294,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "The New Career Ladder: Employee to Operator to Owner",
     category: "Career Pivot",
     date: "2026-01-26",
-    thumbnail: "ladder-steps",
+    thumbnail: "split-path",
     excerpt:
       "The traditional career ladder (junior, senior, director, VP) is collapsing. The new ladder has three rungs: employee, operator, owner. Here is how to climb it.",
     readTime: "7 min read",
@@ -328,7 +330,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "How to Explain Your Pivot to Friends, Family, and Recruiters",
     category: "Career Pivot",
     date: "2026-01-19",
-    thumbnail: "split-path",
+    thumbnail: "megaphone-burst",
     excerpt:
       "The hardest part of pivoting after AI displacement is not the business. It is the conversation at dinner when someone asks what you do now.",
     readTime: "5 min read",
@@ -349,7 +351,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "How to Turn Your CV Into 10 Business Ideas (and Pick the Best One)",
     category: "Building",
     date: "2026-01-12",
-    thumbnail: "grid-light",
+    thumbnail: "spiral-draw",
     excerpt:
       "Your CV is not just a document for job applications. It is a catalogue of problems solved, processes improved, and markets understood. Here is how to mine it.",
     readTime: "7 min read",
@@ -391,7 +393,7 @@ const baseBlogPosts: BlogPost[] = [
     title: 'Why "Apply for More Jobs" Is the Wrong Default in 2026',
     category: "Career Pivot",
     date: "2026-01-05",
-    thumbnail: "orbit-rings",
+    thumbnail: "stack-build",
     excerpt:
       "The default response to job loss is to apply for more jobs. In 2026, this default is broken. Here is why, and what to do instead.",
     readTime: "6 min read",
@@ -435,7 +437,7 @@ const baseBlogPosts: BlogPost[] = [
     category: "Building",
     date: "2026-01-02",
 
-    thumbnail: "wave-flow",
+    thumbnail: "orbit-rings",
     excerpt:
       "Pivoting after displacement is stressful. Most of the stress comes from having no structure. Here is a weekly operating system that makes the pivot manageable.",
     readTime: "6 min read",
@@ -480,7 +482,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "Why Positioning Comes Before Product",
     category: "Building",
     date: "2025-12-28",
-    thumbnail: "pulse-radar",
+    thumbnail: "inbox-stack",
     excerpt:
       "Most people build first and figure out who it is for later. That sequence costs months. Positioning first means every build decision has a buyer in mind.",
     readTime: "5 min read",
@@ -501,7 +503,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "Your First 10 Customers Will Not Come from Marketing",
     category: "Building",
     date: "2025-12-21",
-    thumbnail: "handshake-meet",
+    thumbnail: "arrow-bounce",
     excerpt:
       "Forget funnels, ads, and content calendars. Your first 10 customers come from direct conversations with people who already have the problem you solve.",
     readTime: "5 min read",
@@ -541,7 +543,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "What AI Still Cannot Automate (And Why That Is Your Opportunity)",
     category: "Mindset",
     date: "2024-08-14",
-    thumbnail: "node-network",
+    thumbnail: "signal-restore",
     excerpt:
       "Everyone talks about what AI can do. The real leverage is in the gaps: judgement, context, relationships. Those gaps are where displaced professionals build durable businesses.",
     readTime: "6 min read",
@@ -605,7 +607,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "LinkedIn for Operators, Not Job Seekers",
     category: "Career Pivot",
     date: "2024-10-24",
-    thumbnail: "megaphone-burst",
+    thumbnail: "gear-turn",
     excerpt:
       "Most LinkedIn advice is written for people looking for jobs. If you are building something, the strategy is completely different. Here is how operators use the platform.",
     readTime: "6 min read",
@@ -628,7 +630,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "How to Productise Your Consulting Before Burnout Arrives",
     category: "Building",
     date: "2024-12-05",
-    thumbnail: "gear-turn",
+    thumbnail: "grid-light",
     excerpt:
       "Trading time for money works until it does not. Productising your consulting means packaging your expertise into something that scales without requiring your constant presence.",
     readTime: "7 min read",
@@ -665,7 +667,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "The Fear of Visibility: Why Smart Professionals Hide Online",
     category: "Mindset",
     date: "2025-01-16",
-    thumbnail: "spiral-draw",
+    thumbnail: "handshake-meet",
     excerpt:
       "You know you should post online. You know it would help your business. But every time you open LinkedIn, something stops you. That something has a name and a solution.",
     readTime: "6 min read",
@@ -688,7 +690,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "The Network Reactivation Playbook: Reconnecting After Going Silent",
     category: "Career Pivot",
     date: "2025-02-27",
-    thumbnail: "signal-restore",
+    thumbnail: "morph-shape",
     excerpt:
       "You have not spoken to most of your professional contacts in months or years. Reaching out now feels awkward. Here is a systematic approach to reactivating your network without the cringe.",
     readTime: "7 min read",
@@ -725,7 +727,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "Build the Email List Before the Product",
     category: "Building",
     date: "2025-04-10",
-    thumbnail: "inbox-stack",
+    thumbnail: "stack-build",
     excerpt:
       "The order matters more than most people realise. An email list built before the product ensures you have buyers waiting on launch day, not silence.",
     readTime: "6 min read",
@@ -764,7 +766,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "The AI Tools That Actually Matter for Solo Operators",
     category: "Building",
     date: "2025-05-22",
-    thumbnail: "filter-funnel",
+    thumbnail: "megaphone-burst",
     excerpt:
       "There are thousands of AI tools. Most are distractions. Here are the categories that actually move the needle for a one-person business.",
     readTime: "7 min read",
@@ -787,7 +789,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "The Identity Shift Nobody Warns You About: Employee to Founder",
     category: "Career Pivot",
     date: "2025-07-03",
-    thumbnail: "morph-shape",
+    thumbnail: "rising-bars",
     excerpt:
       "The hardest part of becoming a founder is not the business model or the market. It is the psychological shift from deriving identity through employment to creating it yourself.",
     readTime: "6 min read",
@@ -810,7 +812,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "When to Kill the Idea and When You Are Just Afraid",
     category: "Mindset",
     date: "2025-08-28",
-    thumbnail: "crossroads-pause",
+    thumbnail: "scatter-converge",
     excerpt:
       "Not every idea deserves to survive. But not every doubt deserves to win. Here is how to tell the difference between a bad idea and a scared founder.",
     readTime: "6 min read",
@@ -854,7 +856,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "Cold Outreach That Works: Patterns from 100 First Conversations",
     category: "Building",
     date: "2025-10-16",
-    thumbnail: "arrow-bounce",
+    thumbnail: "split-path",
     excerpt:
       "Cold outreach does not have to feel sleazy. After analysing 100 first conversations with buyers, these are the patterns that get responses and start real relationships.",
     readTime: "7 min read",
@@ -891,7 +893,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "From Severance to First Sale: A 90 Day Transition",
     category: "Career Pivot",
     date: "2025-12-11",
-    thumbnail: "timeline-march",
+    thumbnail: "grid-light",
     excerpt:
       "Ninety days is enough time to go from severance package to first paying customer. Not by rushing. By following a structured transition that builds on what you already know.",
     readTime: "8 min read",
@@ -943,7 +945,7 @@ const baseBlogPosts: BlogPost[] = [
       "Turn Your Work Experience Into a Business Without Starting From Scratch",
     category: "From Experience to Business",
     date: "2026-02-20",
-    thumbnail: "ladder-steps",
+    thumbnail: "arrow-bounce",
     excerpt:
       "You already have everything you need to start a business. Not a startup fantasy. A structured venture built from the problems you have spent years solving.",
     readTime: "8 min read",
@@ -993,7 +995,7 @@ const baseBlogPosts: BlogPost[] = [
       'Why Most "Build a Startup With AI" Advice Fails Experienced Professionals',
     category: "Venture Systems",
     date: "2026-02-22",
-    thumbnail: "split-path",
+    thumbnail: "grid-light",
     excerpt:
       "The internet is full of AI startup advice designed for hackers and hobbyists. Experienced professionals need a completely different approach.",
     readTime: "7 min read",
@@ -1042,7 +1044,7 @@ const baseBlogPosts: BlogPost[] = [
       "From Consultant to Scalable Offer: How to Productize What You Already Know",
     category: "From Experience to Business",
     date: "2026-02-25",
-    thumbnail: "arrow-bounce",
+    thumbnail: "inbox-stack",
     excerpt:
       "You solve the same category of problem for every client. It is time to package that expertise into something that scales without your constant presence.",
     readTime: "9 min read",
@@ -1091,7 +1093,7 @@ const baseBlogPosts: BlogPost[] = [
       "The Best Business Ideas Are Usually Hidden Inside Repeated Friction",
     category: "From Experience to Business",
     date: "2026-02-28",
-    thumbnail: "gear-turn",
+    thumbnail: "orbit-rings",
     excerpt:
       "Stop searching for breakthrough ideas. Start paying attention to the problems you watch people struggle with every day. That is where real ventures begin.",
     readTime: "7 min read",
@@ -1121,7 +1123,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "What a Venture Operating System Actually Does",
     category: "Venture Systems",
     date: "2026-03-03",
-    thumbnail: "node-network",
+    thumbnail: "stack-build",
     excerpt:
       "Prompts, tools, and builders are not the same thing as a system. Here is what it means to have an actual operating system for building a business from expertise.",
     readTime: "8 min read",
@@ -1176,7 +1178,7 @@ const baseBlogPosts: BlogPost[] = [
       "How to Validate a Business Idea From Your Expertise Before You Build Too Much",
     category: "Validation & Launch",
     date: "2026-03-05",
-    thumbnail: "filter-funnel",
+    thumbnail: "pulse-radar",
     excerpt:
       "Most failed ventures built too much before validating too little. Here is a structured validation sequence that experienced professionals can run in two weeks.",
     readTime: "8 min read",
@@ -1223,7 +1225,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "Why Structured Execution Beats Motivation Every Time",
     category: "Venture Systems",
     date: "2026-03-08",
-    thumbnail: "timeline-march",
+    thumbnail: "megaphone-burst",
     excerpt:
       "Motivation is unreliable. Systems are not. Here is why the professionals who build successfully treat execution as architecture, not willpower.",
     readTime: "7 min read",
@@ -1277,7 +1279,7 @@ const baseBlogPosts: BlogPost[] = [
       "How Operators Can Turn Internal Workflow Knowledge Into Software or Services",
     category: "From Experience to Business",
     date: "2026-03-11",
-    thumbnail: "gear-turn",
+    thumbnail: "spiral-draw",
     excerpt:
       "You manage systems every day that other companies desperately need. Here is how to turn that operational knowledge into a business.",
     readTime: "8 min read",
@@ -1325,7 +1327,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "What Your First 7 Days of Building Should Actually Look Like",
     category: "Validation & Launch",
     date: "2026-03-14",
-    thumbnail: "calendar-check",
+    thumbnail: "ladder-steps",
     excerpt:
       "Most first weeks are wasted on logo design and tool selection. Here is a structured 7-day plan for professionals turning expertise into a business.",
     readTime: "7 min read",
@@ -1375,7 +1377,7 @@ const baseBlogPosts: BlogPost[] = [
       "You Do Not Need to Become a Founder Stereotype to Build Something Valuable",
     category: "Venture Systems",
     date: "2026-03-17",
-    thumbnail: "shield-glow",
+    thumbnail: "split-path",
     excerpt:
       "The startup founder image does not fit most professionals. It does not need to. Building a valuable business from expertise requires a different model entirely.",
     readTime: "7 min read",
@@ -1409,7 +1411,7 @@ const baseBlogPosts: BlogPost[] = [
       "How Consultants Can Turn Client Work Into a Scalable Business System",
     category: "For Consultants",
     date: "2026-01-28",
-    thumbnail: "ladder-steps",
+    thumbnail: "shield-glow",
     excerpt:
       "You deliver the same category of value to every client. That pattern is not just a service. It is the foundation of a scalable business system.",
     readTime: "9 min read",
@@ -1461,7 +1463,7 @@ const baseBlogPosts: BlogPost[] = [
       "How Operators Can Build Software or Services From Repeated Workflow Pain",
     category: "For Operators",
     date: "2026-02-03",
-    thumbnail: "gear-turn",
+    thumbnail: "scatter-converge",
     excerpt:
       "The processes you manage every day are broken at every company in your industry. That is not a frustration. It is a market.",
     readTime: "8 min read",
@@ -1516,7 +1518,7 @@ const baseBlogPosts: BlogPost[] = [
       "How Corporate Professionals Can Turn Industry Experience Into Ownership",
     category: "For Corporate Professionals",
     date: "2026-02-07",
-    thumbnail: "rising-bars",
+    thumbnail: "timeline-march",
     excerpt:
       "Your career built deep industry knowledge. That knowledge has commercial value far beyond your salary. Here is how to claim it.",
     readTime: "8 min read",
@@ -1568,7 +1570,7 @@ const baseBlogPosts: BlogPost[] = [
       "How Marketers Can Turn Audience Insight Into Products, Tools, or Growth Systems",
     category: "For Marketers",
     date: "2026-02-12",
-    thumbnail: "megaphone-burst",
+    thumbnail: "orbit-rings",
     excerpt:
       "You understand buyers, channels, and conversion better than most founders. That distribution expertise is the foundation of a product business.",
     readTime: "8 min read",
@@ -1601,7 +1603,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "How Project Managers Can Build Businesses From Coordination Chaos",
     category: "For Operators",
     date: "2026-02-17",
-    thumbnail: "node-network",
+    thumbnail: "seed-sprout",
     excerpt:
       "You spend your days managing handoffs, dependencies, and process breakdowns. Those coordination problems are not just your job. They are your market.",
     readTime: "7 min read",
@@ -1630,7 +1632,7 @@ const baseBlogPosts: BlogPost[] = [
       'How Subject-Matter Experts Can Build Without Becoming "Startup People"',
     category: "For Corporate Professionals",
     date: "2026-02-24",
-    thumbnail: "shield-glow",
+    thumbnail: "node-network",
     excerpt:
       "You do not need a hoodie, a pitch deck, or a garage. You need your expertise, a structured system, and the willingness to own what you build.",
     readTime: "7 min read",
@@ -1661,7 +1663,7 @@ const baseBlogPosts: BlogPost[] = [
       "How Agency and Service Professionals Can Create Offers That Scale Beyond Time",
     category: "Productizing Expertise",
     date: "2026-03-01",
-    thumbnail: "stack-build",
+    thumbnail: "megaphone-burst",
     excerpt:
       "You are trading hours for revenue. Here is how to restructure your service into something that earns while you sleep, without losing the quality that built your reputation.",
     readTime: "8 min read",
@@ -1712,7 +1714,7 @@ const baseBlogPosts: BlogPost[] = [
       "How Internal Process Experts Can Turn Hidden Knowledge Into a Real Product",
     category: "For Operators",
     date: "2026-03-06",
-    thumbnail: "orbit-rings",
+    thumbnail: "timeline-march",
     excerpt:
       "The processes you built for your organisation exist in identical form at thousands of other companies. That invisible expertise is a product waiting to be packaged.",
     readTime: "7 min read",
@@ -1743,7 +1745,7 @@ const baseBlogPosts: BlogPost[] = [
       "How Commercial Professionals Can Spot Better Venture Opportunities Than Most Founders",
     category: "For Corporate Professionals",
     date: "2026-03-10",
-    thumbnail: "pulse-radar",
+    thumbnail: "gear-turn",
     excerpt:
       "You have spent years listening to what buyers actually want. That repeated buyer exposure gives you venture insight that most founders spend years trying to acquire.",
     readTime: "7 min read",
@@ -1775,7 +1777,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "How to Find the Best Business Model for Your Background",
     category: "Business Design",
     date: "2026-03-13",
-    thumbnail: "crossroads-pause",
+    thumbnail: "wave-flow",
     excerpt:
       "Not every expertise turns into the same kind of business. Here is how different professional backgrounds map to different venture types.",
     readTime: "9 min read",

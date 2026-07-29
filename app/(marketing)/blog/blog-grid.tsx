@@ -5,7 +5,8 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { BlogThumbnail } from "@/components/blog/blog-thumbnail";
-import { blogPosts, type BlogPost } from "@/content/blog";
+import { paletteFor } from "@/components/blog/blog-palettes";
+import { blogPosts, type BlogPost, type BlogCategory } from "@/content/blog";
 
 const DISPLAY_CATEGORIES = [
   "All",
@@ -34,9 +35,13 @@ const CATEGORY_MAP: Record<string, string[]> = {
   Mindset: ["Mindset"],
 };
 
-function CategoryBadge({ category }: { category: string }) {
+function CategoryBadge({ category }: { category: BlogCategory }) {
+  const palette = paletteFor(category);
   return (
-    <span className="inline-block w-fit rounded-full bg-brand-50 px-3 py-0.5 text-xs font-medium text-brand-700">
+    <span
+      className="inline-block w-fit rounded-full px-3 py-0.5 text-xs font-medium"
+      style={{ backgroundColor: palette.bg, color: palette.strong }}
+    >
       {category}
     </span>
   );
@@ -66,7 +71,13 @@ function HeroCard({ post }: { post: BlogPost }) {
     >
       <Link href={`/blog/${post.slug}`} className="block">
         <Card className="flex flex-col gap-0 overflow-hidden p-0">
-          {post.thumbnail && <BlogThumbnail variant={post.thumbnail} />}
+          {post.thumbnail && (
+            <BlogThumbnail
+              variant={post.thumbnail}
+              category={post.category}
+              size="tall"
+            />
+          )}
           <div className="flex flex-col gap-3 p-6">
             <div className="flex items-center gap-3">
               <CategoryBadge category={post.category} />
@@ -95,7 +106,9 @@ function GridCard({ post, index }: { post: BlogPost; index: number }) {
     >
       <Link href={`/blog/${post.slug}`} className="block h-full">
         <Card className="flex h-full flex-col overflow-hidden p-0">
-          {post.thumbnail && <BlogThumbnail variant={post.thumbnail} />}
+          {post.thumbnail && (
+            <BlogThumbnail variant={post.thumbnail} category={post.category} />
+          )}
           <div className="flex flex-1 flex-col p-6">
             <CategoryBadge category={post.category} />
             <h2 className="mt-3 text-base font-semibold text-neutral-900">
