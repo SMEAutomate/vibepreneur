@@ -10,6 +10,34 @@ function getFrom(): string {
   return process.env.EMAIL_FROM ?? DEFAULT_EMAIL_FROM;
 }
 
+const DEFAULT_SOLUTIONS_DELAY_MINUTES = 5;
+
+/**
+ * The welcome and solutions emails both fire on the same request. Sending them
+ * back to back puts two messages in the inbox within seconds, so the solutions
+ * email is scheduled a few minutes out to land as its own moment.
+ *
+ * Set SOLUTIONS_EMAIL_DELAY_MINUTES to 0 to send immediately.
+ */
+export function solutionsDelayMinutes(): number {
+  const raw = process.env.SOLUTIONS_EMAIL_DELAY_MINUTES;
+  if (raw === undefined || raw === "") return DEFAULT_SOLUTIONS_DELAY_MINUTES;
+  const parsed = Number(raw);
+  return Number.isFinite(parsed) && parsed >= 0
+    ? parsed
+    : DEFAULT_SOLUTIONS_DELAY_MINUTES;
+}
+
+/**
+ * Resend accepts an ISO 8601 timestamp for `scheduledAt` and holds the message
+ * until then, so the delay costs no infrastructure on our side. Returns
+ * undefined when the delay is zero, so the field is omitted entirely.
+ */
+export function scheduledAtFromNow(minutes: number): string | undefined {
+  if (minutes <= 0) return undefined;
+  return new Date(Date.now() + minutes * 60_000).toISOString();
+}
+
 export async function sendWelcomeEmail(
   email: string,
   role: string,
@@ -39,6 +67,8 @@ export async function sendSolutionsEmail(
     return;
   }
 
+  const scheduledAt = scheduledAtFromNow(solutionsDelayMinutes());
+
   await getResend().emails.send({
     from: getFrom(),
     to: email,
@@ -46,6 +76,7 @@ export async function sendSolutionsEmail(
       ? `Your fit test: 3 solutions for ${role} expertise in ${industry}`
       : `Your fit test: 3 solutions for your ${role} expertise`,
     html: solutionsEmailHtml(role, industry, solutions),
+    ...(scheduledAt ? { scheduledAt } : {}),
   });
 }
 
