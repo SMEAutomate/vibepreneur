@@ -72,6 +72,7 @@ export interface BlogPost {
 
 import { spring2026Posts } from "./blog-2026-spring";
 import { summer2026Posts } from "./blog-2026-summer";
+import { august2026Posts } from "./blog-2026-august";
 
 const baseBlogPosts: BlogPost[] = [
   {
@@ -1826,6 +1827,7 @@ const baseBlogPosts: BlogPost[] = [
 ];
 
 export const blogPosts: BlogPost[] = [
+  ...august2026Posts,
   ...summer2026Posts,
   ...spring2026Posts,
   ...baseBlogPosts,
